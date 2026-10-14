@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Boutique Olfactive, parfumerie française de niche à Bordeaux · Maquette de refonte</title>
+<meta name="description" content="Maquette de refonte de laboutiqueolfactive.fr préparée par Monsieur.H : la sélection française et engagée de La[b.o], un guide olfactif, l'atelier kokedama réservable en deux clics.">
+<meta property="og:title" content="La[b.o] · La Boutique Olfactive — maquette de refonte par Monsieur.H">
+<meta property="og:description" content="Parfumerie française, indépendante et engagée au 22 rue Bouffard, Bordeaux : une proposition de site qui met en avant les créateurs, les engagements et l'atelier kokedama.">
+<meta property="og:image" content="https://i0.wp.com/laboutiqueolfactive.fr/wp-content/uploads/2026/07/IMG-20260707-WA0015.jpg?w=1200">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i0.wp.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3efe7; --paper2:#e9e3d7; --card:#fbf9f4; --line:#d8d0c1; --ink:#23272b; --mute:#5a5f63;
+  --slate:#46525e; --slate-d:#313a43; --on-slate:#ffffff; --on-slate-m:#d3dae0;
+  --copper:#9a4a22; --copper-l:#d9a27c; --moss:#4f5a2e; --moss-l:#dfe3cf;
+  --serif:"Young Serif",Georgia,serif; --sans:"Lexend",system-ui,-apple-system,sans-serif;
+  --gut:16px; --max:1200px; --r:2px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 15px/1.65 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;z-index:200}
+.skip:focus{top:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+@media(min-width:768px){:root{--gut:32px}}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.br{color:var(--copper);font-weight:400}
+.lab{font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.lab::before{content:"[ ";color:var(--copper)} .lab::after{content:" ]";color:var(--copper)}
+.lab.plain::before,.lab.plain::after{content:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:var(--r);transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--copper);border-color:var(--copper);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn.light{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.light:hover{background:var(--copper-l);border-color:var(--copper-l)}
+.btn.line-l{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.line-l:hover{background:#fff;color:var(--ink)}
+.btn.block{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.lnk{font:500 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;background:none;border-top:0;border-left:0;border-right:0;padding-left:0;padding-right:0;cursor:pointer}
+.lnk:hover{color:var(--copper)}
+
+/* bandeau maquette */
+.proto{background:var(--ink);color:#e9e3d7;font:400 11.5px/1.4 var(--sans);letter-spacing:.04em;text-align:center;padding:7px var(--gut)}
+.proto b{font-weight:500;color:#fff}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(243,239,231,.96);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo .mk{font:300 27px/1 var(--sans);letter-spacing:.01em;color:#4a4a4a}
+.logo .mk i{font-style:normal;color:var(--copper);font-weight:400}
+.logo small{font:400 9.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-top:5px}
+nav.main{display:none}
+nav.main a{font:400 12.5px/1 var(--sans);letter-spacing:.06em;text-decoration:none;padding:8px 2px;border-bottom:1px solid transparent}
+nav.main a:hover,nav.main a[aria-current=page]{border-color:var(--copper);color:var(--copper)}
+.hd-act{display:flex;align-items:center;gap:4px}
+.icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:0;border-radius:50%}
+.icon-btn:hover{background:var(--paper2)}
+.icon-btn svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.4}
+.count{position:absolute;top:6px;right:4px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--copper);color:#fff;font:500 10px/17px var(--sans);text-align:center}
+.count[data-n="0"]{display:none}
+@media(min-width:1000px){nav.main{display:flex;gap:26px}.burger{display:none!important}}
+.mnav{position:fixed;inset:0;z-index:120;background:var(--slate-d);color:#fff;padding:20px var(--gut);display:none;flex-direction:column;overflow:auto}
+.mnav.open{display:flex}
+.mnav a{font:400 26px/1.2 var(--serif);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.mnav .x{align-self:flex-end;color:#fff}
+.mnav p{color:var(--on-slate-m);font-size:13px;margin-top:24px}
+
+main{min-height:70vh}
+.view{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view{animation:none}*{transition:none!important}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr;background:var(--slate);color:var(--on-slate)}
+.hero-t{padding:40px var(--gut) 44px;display:flex;flex-direction:column;justify-content:center}
+.hero .lab{color:var(--on-slate-m)} .hero .lab::before,.hero .lab::after{color:var(--copper-l)}
+.hero h1{font-size:clamp(34px,6.4vw,64px);margin:18px 0 18px;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--copper-l)}
+.hero p.lead{font-size:16px;color:var(--on-slate-m);max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.hero-i{position:relative;min-height:340px;background:#3a444e}
+.hero-i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-i figcaption{position:absolute;left:12px;bottom:12px;background:rgba(35,39,43,.82);color:#fff;font:400 11px/1.3 var(--sans);letter-spacing:.08em;padding:7px 10px}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr 1fr}.hero-t{padding:64px 56px 64px max(var(--gut),calc((100vw - var(--max))/2 + 32px))}.hero-i{min-height:600px}}
+
+.reass{border-bottom:1px solid var(--line);background:var(--card)}
+.reass ul{list-style:none;margin:0;padding:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.reass li{font-size:12.5px;line-height:1.4;display:flex;gap:9px;align-items:flex-start}
+.reass li b{font-weight:500;display:block}
+.reass svg{flex:none;width:20px;height:20px;stroke:var(--copper);fill:none;stroke-width:1.4;margin-top:1px}
+@media(min-width:900px){.reass ul{grid-template-columns:repeat(4,1fr)}}
+
+section.blk{padding:56px 0}
+@media(min-width:900px){section.blk{padding:88px 0}}
+.sh{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;margin-bottom:28px}
+.sh h2{font-size:clamp(28px,4.4vw,44px);margin-top:10px;max-width:20ch}
+.sh p{max-width:52ch;color:var(--mute);margin:10px 0 0}
+
+/* cartes produit */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}}
+@media(min-width:1100px){.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none}
+.card .ph{position:relative;aspect-ratio:4/5;background:var(--paper2);overflow:hidden;border-radius:var(--r)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.035)}
+.card .tg{position:absolute;left:8px;top:8px;display:flex;flex-wrap:wrap;gap:4px}
+.pill{display:inline-block;background:var(--card);color:var(--ink);font:500 10px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:6px 7px;border-radius:var(--r)}
+.pill.new{background:var(--copper);color:#fff}
+.pill.eng{background:var(--moss-l);color:var(--moss)}
+.card .mh{margin-top:12px;font:500 10.5px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--copper)}
+.card h3{font-size:18px;margin:5px 0 4px}
+.card .fm{font-size:12.5px;color:var(--mute);line-height:1.45}
+.card .pr{margin-top:6px;font-weight:400;font-size:14px}
+.ph-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 22px/1.2 var(--serif);color:var(--mute);padding:16px;text-align:center}
+
+.scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,62%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 calc(-1 * var(--gut));padding-left:var(--gut);padding-right:var(--gut);scrollbar-width:thin}
+.scroller>*{scroll-snap-align:start}
+@media(min-width:760px){.scroller{grid-auto-columns:minmax(220px,28%)}}
+@media(min-width:1100px){.scroller{grid-auto-columns:minmax(220px,23%)}}
+
+/* et si */
+.etsi{background:var(--paper2)}
+.etsi-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+@media(min-width:900px){.etsi-grid{grid-template-columns:.9fr 1.1fr;gap:56px}}
+.etsi h2{font-size:clamp(30px,4.8vw,50px)}
+.etsi .quad{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* engagements */
+.eng-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:760px){.eng-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.eng-grid{grid-template-columns:repeat(4,1fr)}}
+.eng-grid div{background:var(--paper);padding:24px 20px}
+.eng-grid h3{font-size:21px;margin:10px 0 8px}
+.eng-grid p{color:var(--mute);font-size:14px;margin:0}
+
+/* split */
+.split{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr;gap:64px}.split.rev>:first-child{order:2}}
+.split figure{margin:0;position:relative}
+.split figure img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--paper2);border-radius:var(--r)}
+.split h2{font-size:clamp(28px,4.4vw,46px);margin:12px 0 16px}
+.quote{font:400 clamp(22px,3vw,30px)/1.3 var(--serif);margin:0 0 14px}
+.quote::before{content:"« "} .quote::after{content:" »"}
+
+/* atelier */
+.atelier{background:var(--moss);color:#fff}
+.atelier .lab{color:#dfe3cf}.atelier .lab::before,.atelier .lab::after{color:var(--copper-l)}
+.atelier p{color:#e6e9dc}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 22px}
+.facts div{border-top:1px solid rgba(255,255,255,.35);padding-top:10px}
+.facts b{display:block;font:400 22px/1.1 var(--serif);color:#fff}
+.facts span{font-size:12px;color:#dfe3cf}
+
+/* maisons index */
+.mx{columns:1;column-gap:32px;margin:0;padding:0;list-style:none}
+@media(min-width:600px){.mx{columns:2}}
+@media(min-width:1000px){.mx{columns:3}}
+.mx li{break-inside:avoid;border-top:1px solid var(--line);padding:11px 0;display:flex;justify-content:space-between;gap:12px}
+.mx li a,.mx li span.n{text-decoration:none;font-weight:400}
+.mx li a:hover{color:var(--copper)}
+.mx li small{color:var(--mute);font-size:12.5px;text-align:right}
+
+/* visit */
+.visit{background:var(--slate-d);color:#fff}
+.visit .lab{color:var(--on-slate-m)}.visit .lab::before,.visit .lab::after{color:var(--copper-l)}
+.visit-g{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:900px){.visit-g{grid-template-columns:1.2fr 1fr 1fr;gap:48px}}
+.visit h2{font-size:clamp(28px,4vw,42px);margin:12px 0 14px}
+.visit p,.visit li{color:#d6dbe0}
+.visit ul{list-style:none;padding:0;margin:0}
+.visit li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.stat{font:400 44px/1 var(--serif);color:#fff}
+.visit a{color:#fff}
+
+footer.site{background:var(--ink);color:#cfd3d6;font-size:13px;padding:40px 0 90px}
+.ft{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(min-width:900px){.ft{grid-template-columns:2fr 1fr 1fr 1fr}}
+footer h3{font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:10px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{padding:3px 0}
+footer a{text-decoration:none}
+footer a:hover{color:var(--copper-l)}
+.legal{margin-top:30px;padding-top:16px;border-top:1px solid #3a3f44;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:12px;color:#a9afb4}
+
+/* collection */
+.ch{padding:40px 0 18px;border-bottom:1px solid var(--line)}
+.ch h1{font-size:clamp(32px,5.4vw,56px);margin:10px 0 10px}
+.ch p{color:var(--mute);max-width:62ch;margin:0}
+.tabs{display:flex;gap:6px;margin:22px 0 0;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:transparent;padding:10px 16px;border-radius:30px;font-size:13px}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.fbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;position:sticky;top:64px;background:var(--paper);z-index:20;border-bottom:1px solid var(--line)}
+.fbar .ct{font-size:13px;color:var(--mute)}
+.fbar select{border:1px solid var(--line);background:var(--card);padding:9px 10px;border-radius:var(--r);font-size:13px;max-width:52vw}
+.layout{display:grid;grid-template-columns:1fr;gap:24px;padding:24px 0 72px}
+@media(min-width:1000px){.layout{grid-template-columns:240px 1fr;gap:40px}}
+.filters{display:none}
+.filters.open{display:block;position:fixed;inset:0;z-index:110;background:var(--paper);padding:20px var(--gut) 100px;overflow:auto}
+@media(min-width:1000px){.filters,.filters.open{display:block;position:static;padding:0;overflow:visible}.fopen{display:none!important}.filters .fclose,.filters .fapply{display:none}}
+.fg{border-top:1px solid var(--line);padding:14px 0 6px}
+.fg h2{font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:30px;padding:8px 12px;font-size:12.5px;line-height:1}
+.chip[aria-pressed=true]{background:var(--copper);border-color:var(--copper);color:#fff}
+.chip.small{padding:6px 10px;font-size:12px}
+.fhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.fapply{position:fixed;left:var(--gut);right:var(--gut);bottom:16px}
+.empty{padding:40px 0;color:var(--mute)}
+
+/* fiche */
+.crumb{font-size:12px;color:var(--mute);padding:16px 0}
+.crumb a{text-decoration:none}.crumb a:hover{color:var(--copper)}
+.pdp{display:grid;grid-template-columns:1fr;gap:26px;padding-bottom:40px}
+@media(min-width:900px){.pdp{grid-template-columns:1.1fr 1fr;gap:56px}}
+.gal{display:grid;gap:8px}
+.gal .main{position:relative;aspect-ratio:4/5;background:var(--paper2);overflow:hidden;border-radius:var(--r)}
+.gal .main img{width:100%;height:100%;object-fit:cover}
+.thumbs{display:flex;gap:8px}
+.thumbs button{width:72px;aspect-ratio:1;border:1px solid var(--line);padding:0;background:var(--paper2);overflow:hidden;border-radius:var(--r)}
+.thumbs button[aria-current=true]{border-color:var(--copper);outline:1px solid var(--copper)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+@media(min-width:900px){.pinfo{position:sticky;top:90px;align-self:start}}
+.pinfo h1{font-size:clamp(32px,4.4vw,48px);margin:8px 0 6px}
+.pinfo .mh a{color:var(--copper);text-decoration:none;font:500 12px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.pinfo .sub{color:var(--mute);font-size:14px;margin-bottom:16px}
+.pinfo .price{font:400 26px/1 var(--serif);margin:14px 0 18px}
+.fmts{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px;border:0;padding:0}
+.fmts legend{font:500 11px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;padding:0}
+.fmt{position:relative}
+.fmt input{position:absolute;opacity:0;width:1px;height:1px}
+.fmt span{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;border:1px solid var(--line);background:var(--card);padding:10px 14px;min-width:96px;border-radius:var(--r);font-size:13px;cursor:pointer}
+.fmt span small{color:var(--mute);font-size:11.5px}
+.fmt input:checked+span{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fmt input:focus-visible+span{outline:2px solid var(--copper);outline-offset:2px}
+.fmt input:disabled+span{opacity:.5;text-decoration:line-through;cursor:not-allowed}
+.perks{list-style:none;padding:14px 0 0;margin:16px 0 0;border-top:1px solid var(--line);font-size:13px}
+.perks li{display:flex;gap:10px;padding:5px 0}
+.perks li::before{content:"[+]";color:var(--copper);font-weight:500;flex:none}
+.engs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
+.pyr{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:8px 0 0}
+.pyr div{background:var(--card);padding:14px 16px;display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:baseline}
+.pyr b{font:500 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
+.pyr span{font-size:14.5px}
+.pd-more{display:grid;grid-template-columns:1fr;gap:36px;padding:40px 0;border-top:1px solid var(--line)}
+@media(min-width:900px){.pd-more{grid-template-columns:1fr 1fr;gap:64px}}
+.pd-more h2{font-size:28px;margin:10px 0 14px}
+.reviews{border:1px dashed var(--copper);background:var(--card);padding:22px;border-radius:var(--r)}
+.reviews h2{font-size:24px;margin:8px 0 8px}
+.reviews p{color:var(--mute);font-size:14px;margin:0}
+
+/* atelier page / booking */
+.book{background:var(--card);border:1px solid var(--line);padding:20px;border-radius:var(--r)}
+.slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0 16px}
+@media(min-width:600px){.slots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.slot{border:1px solid var(--line);background:var(--paper);padding:10px;text-align:left;border-radius:var(--r);font-size:13px;line-height:1.3}
+.slot b{display:block;font-weight:500}
+.slot[aria-pressed=true]{border-color:var(--moss);background:var(--moss);color:#fff}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:var(--r);background:var(--paper)}
+.stepper button{width:44px;height:44px;border:0;background:none;font-size:18px}
+.stepper output{min-width:40px;text-align:center;font-weight:500}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0 12px;padding-top:12px;border-top:1px solid var(--line)}
+.total b{font:400 26px/1 var(--serif)}
+.note{font-size:12.5px;color:var(--mute)}
+
+/* découverte */
+.quiz{max-width:820px;margin:0 auto;padding:36px 0 80px}
+.qprog{display:flex;gap:6px;margin:16px 0 26px}
+.qprog i{flex:1;height:3px;background:var(--line)}
+.qprog i.on{background:var(--copper)}
+.quiz h2{font-size:clamp(26px,4vw,40px);margin-bottom:20px}
+.opts{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;border:1px solid var(--line);background:var(--card);padding:16px 18px;border-radius:var(--r);min-height:76px}
+.opt b{font:400 19px/1.2 var(--serif)}
+.opt span{font-size:13px;color:var(--mute)}
+.opt:hover{border-color:var(--copper)}
+.opt[aria-pressed=true]{border-color:var(--copper);box-shadow:inset 0 0 0 1px var(--copper)}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:10px}
+.why{font-size:12.5px;color:var(--moss);margin-top:6px}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;border-left:1px solid var(--copper)}
+.tl li{position:relative;padding:0 0 24px 22px}
+.tl li::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;background:var(--copper);border-radius:50%}
+.tl b{display:block;font:400 20px/1.2 var(--serif)}
+.tl span{color:var(--mute);font-size:14px}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mosaic img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;background:var(--paper2);border-radius:var(--r)}
+.mosaic img:first-child{grid-column:span 2;aspect-ratio:16/10}
+
+/* tiroir panier */
+.scrim{position:fixed;inset:0;background:rgba(35,39,43,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:100;transform:translateX(102%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+.drawer,.notes{visibility:hidden}
+.drawer.on,.notes.on{visibility:visible}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:14px var(--gut);border-bottom:1px solid var(--line)}
+.dh h2{font-size:24px}
+.db{flex:1;overflow:auto;padding:12px var(--gut)}
+.df{border-top:1px solid var(--line);padding:14px var(--gut) 18px;background:var(--card)}
+.ship{font-size:12.5px;margin-bottom:12px}
+.bar{height:4px;background:var(--line);margin-top:6px;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--moss);transition:width .3s}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.li img,.li .ph0{width:64px;height:80px;object-fit:cover;background:var(--paper2);border-radius:var(--r)}
+.li h3{font-size:16px;margin:0 0 2px}
+.li .m{font-size:12px;color:var(--mute)}
+.li .q{display:flex;align-items:center;gap:6px;margin-top:6px}
+.li .q button{width:30px;height:30px;border:1px solid var(--line);background:var(--card);border-radius:var(--r)}
+.rm{background:none;border:0;font-size:12px;text-decoration:underline;color:var(--mute);padding:4px 0}
+.gift{background:var(--moss-l);color:var(--moss);font-size:12.5px;padding:10px 12px;margin:12px 0;border-radius:var(--r)}
+.cc{display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:4px 0 12px}
+.cc input{margin-top:3px;accent-color:var(--moss);width:18px;height:18px}
+.sum{display:flex;justify-content:space-between;font-size:14px;margin:4px 0}
+.sum.t{font:400 20px/1.3 var(--serif);margin:8px 0 12px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 16px;font-size:13px;z-index:140;opacity:0;pointer-events:none;transition:all .25s;max-width:calc(100% - 32px);border-radius:var(--r)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* notes de refonte */
+.nbtn{position:fixed;right:14px;bottom:14px;z-index:80;display:inline-flex;align-items:center;gap:8px;background:var(--copper);color:#fff;border:0;border-radius:30px;padding:12px 16px;font:500 12px/1 var(--sans);letter-spacing:.06em;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.nbtn:hover{background:var(--ink)}
+.notes{position:fixed;inset:auto 0 0 0;max-height:88vh;z-index:130;background:var(--card);border-top:3px solid var(--copper);transform:translateY(105%);transition:transform .3s ease;display:flex;flex-direction:column}
+@media(min-width:900px){.notes{inset:0 0 0 auto;width:540px;max-height:none;border-top:0;border-left:3px solid var(--copper);transform:translateX(105%)}}
+.notes.on{transform:none}
+.notes .nb{overflow:auto;padding:4px var(--gut) 28px}
+.notes h2{font-size:26px}
+.notes ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.notes li{counter-increment:n;border-top:1px solid var(--line);padding:16px 0}
+.notes li h3{font:400 19px/1.25 var(--serif);margin:0 0 8px;display:flex;gap:10px}
+.notes li h3::before{content:"[" counter(n) "]";color:var(--copper);font:500 13px/1.9 var(--sans)}
+.notes dl{margin:0;display:grid;grid-template-columns:1fr;gap:6px;font-size:13.5px}
+.notes dt{font:500 10.5px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.notes dd{margin:0}
+.notes .intro{font-size:13.5px;color:var(--mute);margin:10px 0 6px}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<div class="proto" role="note">Maquette préparée pour <b>La Boutique Olfactive</b> par <b>Monsieur.H</b> · non contractuelle</div>
+
+<header class="site">
+  <div class="wrap hd">
+    <button class="icon-btn burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav" id="burger"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <a class="logo" href="#accueil" aria-label="La Boutique Olfactive, accueil"><span class="mk" aria-hidden="true">La<i>[</i>b.o<i>]</i></span><small>La Boutique Olfactive</small></a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#collection">Les parfums</a>
+      <a href="#maisons">Les maisons</a>
+      <a href="#decouverte">Trouver mon parfum</a>
+      <a href="#atelier">Atelier kokedama</a>
+      <a href="#maison">La boutique</a>
+    </nav>
+    <div class="hd-act">
+      <a class="icon-btn" href="#decouverte" aria-label="Guide olfactif"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Ouvrir le panier"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="count" id="cartCount" data-n="0">0</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="icon-btn x" id="mclose" aria-label="Fermer le menu"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <a href="#accueil">Accueil</a>
+  <a href="#collection">Les parfums</a>
+  <a href="#maisons">Les maisons françaises</a>
+  <a href="#decouverte">Trouver mon parfum</a>
+  <a href="#atelier">Atelier kokedama</a>
+  <a href="#maison">La boutique &amp; notre histoire</a>
+  <p>22 rue Bouffard, Bordeaux · du mardi au samedi, 10 h – 19 h</p>
+</div>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a class="logo" href="#accueil" style="color:#fff"><span class="mk" style="color:#e9e3d7" aria-hidden="true">La<i style="color:var(--copper-l)">[</i>b.o<i style="color:var(--copper-l)">]</i></span><small style="color:#a9afb4">La Boutique Olfactive · Bordeaux</small></a>
+        <p style="margin-top:16px;max-width:38ch">Parfumerie de niche exclusivement française, indépendante et responsable. 22 rue Bouffard, 33000 Bordeaux.</p>
+      </div>
+      <div><h3>Boutique</h3><ul><li><a href="#collection">Les parfums</a></li><li><a href="#collection/maison-parfums">Parfums de maison</a></li><li><a href="#maisons">Les maisons</a></li><li><a href="#atelier">Atelier kokedama</a></li></ul></div>
+      <div><h3>Conseil</h3><ul><li><a href="#decouverte">Trouver mon parfum</a></li><li><a href="#maison">Notre histoire</a></li><li><a href="mailto:contact@laboutiqueolfactive.fr">contact@laboutiqueolfactive.fr</a></li><li><a href="tel:+33557594478">05 57 59 44 78</a></li></ul></div>
+      <div><h3>Suivre</h3><ul><li><a href="https://www.instagram.com/laboutiqueolfactive/" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/laboutiqueolfactive/" rel="noopener">Facebook</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 La Boutique Olfactive · Mentions légales · CGV · Livraison · Cookies</span><span>Maquette Monsieur.H</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
+  <div class="dh"><h2 id="dTitle">Votre panier</h2><button class="icon-btn" id="dClose" aria-label="Fermer le panier"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="db" id="dBody"></div>
+  <div class="df" id="dFoot"></div>
+</aside>
+
+<button class="nbtn" id="notesBtn" aria-controls="notes" aria-expanded="false"><span aria-hidden="true">[ ]</span> Notes de refonte</button>
+<aside class="notes" id="notes" role="dialog" aria-modal="true" aria-labelledby="nTitle" aria-hidden="true">
+  <div class="dh"><h2 id="nTitle">Notes de refonte</h2><button class="icon-btn" id="nClose" aria-label="Fermer les notes"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="nb">
+    <p class="intro">Relevés faits sur laboutiqueolfactive.fr le 14 octobre 2026. Chaque point : ce qui se passe aujourd'hui → ce que fait la maquette → ce que vous y gagnez.</p>
+    <ol>
+      <li><h3>Un site lent, chargé de modules</h3><dl>
+        <dt>Aujourd'hui</dt><dd>171 requêtes et au moins 2,1 Mo transférés pour l'accueil ; chargement complet mesuré à 5,5 s lors de notre visite sur ordinateur, 11,6 s lors d'un premier test. Slider Revolution, Font Awesome et 4 familles de polices (Poppins, Raleway, Roboto, Playfair) chargées en parallèle.</dd>
+        <dt>Dans la maquette</dt><dd>Deux polices, aucun slider, images redimensionnées par le CDN, une seule page légère qui affiche chaque rubrique sans rechargement.</dd>
+        <dt>Bénéfice</dt><dd>Plus de visiteurs mobiles qui restent, meilleur classement Google (Core Web Vitals).</dd></dl></li>
+      <li><h3>Des restes de thème en anglais</h3><dl>
+        <dt>Aujourd'hui</dt><dd>« Add to wishlist » répété 18 fois sur l'accueil, « Search for », « SHOPPING CART », « LOGIN », et « ADDRESS / PHONE » sur la page contact. Prix au format « € 32,00 », adresses produits en /product/.</dd>
+        <dt>Dans la maquette</dt><dd>Tout en français, prix au format « 32 € », adresses propres (/parfum/nuit-d-ivresse).</dd>
+        <dt>Bénéfice</dt><dd>Une image cohérente avec une parfumerie qui défend la création française.</dd></dl></li>
+      <li><h3>La sélection est difficile à explorer</h3><dl>
+        <dt>Aujourd'hui</dt><dd>155 références dans « La sélection », un menu déroulant de 40 maisons, et un texte d'accueil qui demande de « glisser le curseur sur l'onglet déroulant » (impossible au doigt sur mobile). Votre ligne « Et si… » est noyée dans la liste.</dd>
+        <dt>Dans la maquette</dt><dd>Filtres famille, ambiance, engagement et maison ; guide « Trouver mon parfum » en 4 questions qui recommande parmi vos parfums ; une page « Maisons » avec la ville de chaque créateur ; « Et si… » mise en avant dès l'accueil.</dd>
+        <dt>Bénéfice</dt><dd>Le conseil de la boutique transposé en ligne : plus de paniers, moins d'hésitation.</dd></dl></li>
+      <li><h3>L'atelier kokedama mérite une vraie réservation</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Trois versions du tarif groupe (–20 % de 3 à 6, –15 % de 3 à 5, –20 % de 3 à 5 avec 5 personnes max), des codes promo à saisir à la main, une liste de 27 dates qui n'est pas dans l'ordre chronologique, plus un renvoi vers Wecandoo.</dd>
+        <dt>Dans la maquette</dt><dd>Prochains créneaux dans l'ordre, nombre de participants, remise duo/groupe calculée automatiquement, bon cadeau en un clic.</dd>
+        <dt>Bénéfice</dt><dd>Plus de réservations en direct (sans commission de plateforme) et des ateliers complets.</dd></dl></li>
+      <li><h3>Fiches produits : l'essentiel est caché</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Description centrée en gris clair (#7c7c80 sur blanc, contraste 4,2:1, sous le seuil de 4,5:1), notes noyées dans un paragraphe, l'échantillon offert annoncé seulement sur l'accueil, des adresses comme /cherry-harley-…-maie-piou-2-2 pour Banana Oud.</dd>
+        <dt>Dans la maquette</dt><dd>Pyramide olfactive lisible, maison et ville du créateur, engagements en badges, échantillon offert et click &amp; collect visibles à côté du bouton, parfums associés.</dd>
+        <dt>Bénéfice</dt><dd>Achat plus rassurant et pages mieux comprises par Google.</dd></dl></li>
+      <li><h3>Référencement et accessibilité</h3><dl>
+        <dt>Aujourd'hui</dt><dd>37 images sur 72 sans texte alternatif sur l'accueil (22/49 sur « Notre histoire ») ; « Notre histoire » n'a pas de H1 et sa meta description contient une coquille (« ainsi nque ») ; 6 liens Instagram pointent vers instagram.com/ et non vers votre compte.</dd>
+        <dt>Dans la maquette</dt><dd>Un H1 et une description par page, textes alternatifs partout, liens réels vers @laboutiqueolfactive, données structurées « Store » (adresse, horaires) prévues pour la recherche locale « parfumerie de niche Bordeaux ».</dd>
+        <dt>Bénéfice</dt><dd>Visibilité locale et site utilisable par tous.</dd></dl></li>
+      <li><h3>Des signaux de confiance à mettre à jour</h3><dl>
+        <dt>Aujourd'hui</dt><dd>« © 2020 » en pied de page ; dans les CGV, le nom d'une autre société (« ONNORIUM »), une adresse e-mail mal orthographiée (« laboutiqueolfcative.fr »), et des clauses cookies et CNIL antérieures au RGPD (« En naviguant sur le site, il les accepte »).</dd>
+        <dt>Dans la maquette</dt><dd>Pied de page daté, vos 5/5 Google (140 avis) et votre Instagram quotidien mis en avant, pages légales à réécrire avec un bandeau cookies conforme.</dd>
+        <dt>Bénéfice</dt><dd>Un site à la hauteur de votre réputation en boutique.</dd></dl></li>
+    </ol>
+    <p class="intro">Les prix affichés sont ceux de votre site le 14/10/2026. Les avis clients et le paiement sont des emplacements à connecter : aucun avis n'est inventé.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var IMG="https://i0.wp.com/laboutiqueolfactive.fr/wp-content/uploads/";
+function im(p,w){return IMG+p+"?w="+(w||700);}
+
+var MAISONS={
+  "poecile":{n:"Poécile",v:"Auvergne",d:"Des parfums-voyages à travers les régions françaises : la Réunion, la Corse, la Bretagne, l'Alsace. Vegan et unisexes."},
+  "divine":{n:"Divine Parfums",v:"Dinard",d:"Maison bretonne fondée par Yvon Mouchel, fondateur et parfumeur."},
+  "inspiration-olfactive":{n:"Inspiration Olfactive",v:"Grasse",d:"Née à Grasse en 2021, fondée par Stéphanie Avinent Teisseire, parfumeuse indépendante. Ingrédients majoritairement d'origine naturelle."},
+  "parfumens":{n:"Parfumens",v:"Bordeaux",d:"« Le parfum qui a du sens » : des parfums bien-être 100 % naturels, à base d'huiles essentielles, créés à Bordeaux."},
+  "jemme":{n:"J'EMME Parfums",v:"Grasse – Bruxelles",d:"Chaque flacon renferme une pierre (grenat, améthyste, cornaline…) ; alcool de blé bio, flacons ressourçables."},
+  "fascent":{n:"Fascent",v:"Lille",d:"Des eaux de parfum joyeuses et gourmandes."},
+  "sabe-masson":{n:"Sabé Masson",v:"Paris",d:"La maison pionnière du parfum de soin, solide et sans alcool."},
+  "unika":{n:"UNIKA",v:"Grasse",d:"Maison de parfumerie de niche française et indépendante, des parfums numérotés comme des carnets de voyage."},
+  "bontemps":{n:"Bontemps Paris",v:"Paris",d:"Parfumerie fine et durable : eaux de parfum concentrées dans l'alcool végétal de blé."},
+  "maie-piou":{n:"Maie Piou",v:"Paris",d:"Parfumerie d'auteur et engagée, imaginée par Jean-Charles Sommerard."},
+  "essential":{n:"Essential Parfums",v:"Paris",d:"Des signatures de grands parfumeurs, comme Dominique Ropion."},
+  "pdm":{n:"Parfumeurs du Monde",v:"Sud-Ouest",d:"Haute parfumerie française 100 % naturelle, confiée à des parfumeurs comme Michel Roudnitska, Thierry Bernard ou Marc-Antoine Corticchiato."},
+  "geodora":{n:"Geodora",v:"Grasse",d:"Haute parfumerie éco-conçue, composée par Gérard Gatty : des essences éthiques et de l'alcool de blé bio, concentrées à 18 %."},
+  "harold-maude":{n:"Harold&Maude",v:"Paris",d:"Des eaux de parfum intenses, écrites comme des lettres d'amour."},
+  "velvetvelo":{n:"Velvetvelo",v:"Nice",d:"Des eaux de parfum sans alcool."},
+  "berdoues":{n:"Berdoues 1902",v:"Toulouse",d:"Maison toulousaine née en 1902 : eaux de Cologne rechargeables et grands crus floraux."},
+  "lab-o":{n:"La Boutique Olfactive",v:"Bordeaux",d:"« Et si… », la première ligne de parfums de maison signée La[b.o] : création française artisanale et responsable, parfum de Grasse."},
+  "sourceur":{n:"Le Sourceur",v:"Nantes",d:"Parfums d'ambiance 100 % naturels et éco-sourcés, par Stéphane Piquart."}
+};
+/* Index complet des maisons (menu du site actuel) */
+var INDEX=[["100BON","Lyon"],["AEMIUM","Paris – Grasse"],["Aital","Lozère"],["Berdoues 1902","Toulouse","berdoues"],["Bloom","Tarbes"],["Bontemps Paris","Paris","bontemps"],["Cépages Parfums","Grasse"],["Chamboule Tout","Sud-Est"],["Divine Parfums","Dinard","divine"],["Domaine Singulier","Rituels pour l'intérieur"],["Elaïo Parfums","Bordeaux"],["Essential Parfums","Paris","essential"],["Et si… (La[b.o])","Bordeaux","lab-o"],["Fascent","Lille","fascent"],["FiiliT Parfum du Voyage","Paris"],["Geodora","Grasse","geodora"],["Harold&Maude","Paris","harold-maude"],["Immortelle Cap-Ferret","Anne Flipo"],["Impudence Parfums","Bordeaux"],["Inspiration Olfactive","Grasse","inspiration-olfactive"],["J'EMME Parfums","Grasse – Bruxelles","jemme"],["L'Atelier Parfum","Paris"],["La Cirerie de Gascogne","Sud-Ouest"],["La Petite Madeleine","Troyes"],["Le Sourceur","Nantes","sourceur"],["Les archives parfums","Valence"],["Les Fleurs de Bach Authentiques","Paris"],["Maie Piou","Paris","maie-piou"],["Maison Matthieu Meneuvrier","Paris – Londres"],["Marine Coton","Grasse"],["Olfactivement Votre","Bordeaux"],["Ombres Portées Parfumeur","Bordeaux"],["OPPIDUM","Sud-Ouest"],["Parfumens","Bordeaux","parfumens"],["Parfumeurs du Monde","Sud-Ouest","pdm"],["Poécile","Auvergne","poecile"],["Sabé Masson","Paris","sabe-masson"],["UNIKA","Grasse","unika"],["Velvetvelo","Nice","velvetvelo"]];
+
+var FAM={floral:"Floral",boise:"Boisé",ambre:"Ambré & épicé",gourmand:"Gourmand",frais:"Frais & hespéridé"};
+var AMB={apaisant:"Apaisant",sensuel:"Sensuel",energie:"Énergisant"};
+var ENG={naturel:"100 % naturel",vegan:"Vegan",sansalcool:"Sans alcool",rechargeable:"Rechargeable",bio:"Alcool de blé bio"};
+
+/* Catalogue : relevé sur /wp-json/wc/store/v1/products le 14/10/2026. Prix réels ; x = format épuisé. */
+var P=[
+ {h:"nuit-divresse-eau-de-parfum-poecile",n:"Nuit d’Ivresse",m:"poecile",t:"Eau de parfum",u:"soi",nw:1,fam:["gourmand","ambre"],amb:["sensuel"],eng:["vegan"],f:[["15 ml",32],["50 ml",72]],i:["2026/10/20261014_101804.jpg","2026/10/20261014_101943.jpg"],l:[["Rhum brun","Banane flambée","Ananas"],["Vanille","Poivre noir","Ylang-ylang","Cannelle"],["Benjoin","Fève tonka","Muscs","Bois d’acajou"]],s:"Destination l’île de la Réunion : une vanille Bourbon et un rhum brun, la chaleur d’une soirée autour d’un feu sur la plage."},
+ {h:"ete-immortel-eau-de-parfum-poecile",n:"Été Immortel",m:"poecile",t:"Eau de parfum",u:"soi",fam:["frais"],amb:["energie"],eng:["vegan"],f:[["15 ml",32],["50 ml",72]],i:["2026/06/1000090051.jpg"],sig:"Immortelle",s:"Destination Corse : une sieste à l’ombre du maquis, bercée par les notes chaudes et dorées de l’immortelle. Créé par le parfumeur Patrice Revillard."},
+ {h:"bleu-asgard-poecile-eau-de-parfum-50ml-2",n:"Bleu Asgard",m:"poecile",t:"Eau de parfum",u:"soi",fam:["frais","boise"],amb:["energie"],eng:["vegan"],f:[["15 ml",32],["50 ml",72]],i:["2025/09/Bleu-Asgard_1.jpg","2025/09/Bleu-Asgard_2.jpg"],sig:"Algues bretonnes",s:"Destination Bretagne : le bleu profond de l’océan, la force des vagues atlantiques et la fraîcheur des embruns. Un hespéridé marin."},
+ {h:"terre-ambree-eau-de-parfum-50ml-poecile-parfums",n:"Terre Ambrée",m:"poecile",t:"Eau de parfum",u:"soi",fam:["ambre"],amb:["sensuel"],eng:["vegan"],f:[["15 ml",32],["50 ml",72]],i:["2024/10/Terre-Ambree_1.jpg","2024/10/Terre-Ambree_2.jpg"],l:[["Mandarine confite","Safran"],["Gingembre","Cannelle","Fève tonka"],["Santal","Ambre"]],s:"Destination Alsace : la tombée de la nuit, les maisons qui s’illuminent et la fraîcheur qui se change en douceur."},
+ {h:"lhomme-sage-eau-de-parfum-divine-parfums",n:"L’homme sage",m:"divine",t:"Eau de parfum",u:"soi",fam:["boise","ambre"],amb:["sensuel"],eng:[],f:[["50 ml",97,1],["100 ml",155]],i:["2026/09/22735.jpg","2026/09/en-chemin-1.png"],p:[["Safran","Mandarine","Cardamome","Litchi"],["Baumes","Bois nobles","Immortelle","Patchouli"],["Mousse","Ambre","Encens"]],s:"Un accord boisé aux notes résolument masculines, signé Yvon Mouchel."},
+ {h:"linspiratrice-eau-de-parfum-divine-parfums",n:"L’inspiratrice",m:"divine",t:"Eau de parfum",u:"soi",fam:["floral","ambre"],amb:["sensuel"],eng:[],f:[["50 ml",97,1],["100 ml",155]],i:["2026/09/22737.jpg","2026/09/P1012917-1024x768-1.jpg"],l:[["Bergamote de Calabre","Ylang des Comores"],["Rose","Pivoine","Patchouli"],["Vétiver","Vanille","Fève tonka","Muscs blancs"]],s:"« Elle éclaire le monde qui l’entoure. » La rencontre majestueuse et brûlante de la rose et du patchouli."},
+ {h:"lesprit-libre-eau-de-parfum-divine-parfums",n:"L’esprit libre",m:"divine",t:"Eau de parfum",u:"soi",fam:["floral"],amb:["sensuel"],eng:[],f:[["50 ml",97],["100 ml",155,1]],i:["2026/09/22736-1.jpg","2026/09/5-EA-RESIZED-1024x750-1.jpg"],l:[["Bergamote","Vert de mandarine"],["Pivoine","Magnolia","Absolue et beurre d’iris"],["Muscs","Ambre gris"]],s:"La clarté d’un ciel d’été : une brise verte et fruitée, une onde florale, puis le sourire bleu de l’iris. Le parfum de la liberté."},
+ {h:"happy-chic-patchouli-extrait-de-parfum-50ml-inspiration-olfactive",n:"Happy Chic Patchouli",m:"inspiration-olfactive",t:"Extrait de parfum",u:"soi",nw:1,fam:["gourmand","ambre"],amb:["sensuel"],eng:[],f:[["50 ml",99]],i:["2026/09/COLLECTIONS-LATITUDE-INTENSE-Patchouli.png","2026/09/HAPPY-CHIC-PATCHOULI-CHOCOLAT-500x500-1.png"],p:[["Chocolat","Prune"],["Patchouli","Fève tonka"],["Bois de santal","Vanille","Ambre"]],s:"Libre, mystérieux et envoûtant : une interprétation intense du patchouli, à la concentration exceptionnelle."},
+ {h:"rocknrose-attitude-extrait-de-parfum-50ml-inspiration-olfactive",n:"Rock’n’Rose Attitude",m:"inspiration-olfactive",t:"Extrait de parfum",u:"soi",fam:["floral","ambre"],amb:["sensuel"],eng:[],f:[["50 ml",99]],i:["2025/10/rock-n-rose-attitude-1.jpg","2025/10/rockn-rose-1.jpg"],p:[["Cerise noire","Cassis","Amande"],["Rose","Iris","Patchouli"],["Vanille","Cuir","Labdanum"]],s:"Un chypré hautement concentré : un départ cerise, une rose irisée et un accord cuiré addictif."},
+ {h:"cedre-authentique-eau-de-parfum-50ml-inspiration-olfactive",n:"Cèdre Authentique",m:"inspiration-olfactive",t:"Eau de parfum",u:"soi",fam:["boise","ambre"],amb:[],eng:[],f:[["50 ml",82]],i:["2025/09/%C2%A9LiveandShoot-6608-Copie-scaled-1.jpg","2025/09/3-2.jpg"],p:[["Poivre","Citron","Ciste"],["Bois de cèdre","Encens"],["Vétiver","Vanille","Ambre gris"]],s:"La nature comme source d’inspiration, l’audace sans la frime : le cèdre brut, adouci de vanille et d’ambre gris."},
+ {h:"neroli-boheme-eau-de-parfum-50ml-inspiration-olfactive",n:"Néroli Bohème",m:"inspiration-olfactive",t:"Eau de parfum",u:"soi",fam:["floral","frais"],amb:["apaisant"],eng:["vegan"],f:[["50 ml",82]],i:["2025/09/%C2%A9LiveandShoot-6603-Copie-scaled-1.jpg","2025/09/3-1.jpg"],p:[["Pamplemousse","Néroli","Bergamote"],["Fleur d’oranger","Rose","Osmanthus"],["Muscs blancs"]],s:"Bohème chic, un peu désinvolte : un parfum réconfortant, tout en discrétion, où le néroli épouse une rose fruitée musquée."},
+ {h:"joie-edt-30ml-100-naturel",n:"Joie",m:"parfumens",t:"Eau de toilette bien-être",u:"soi",nw:1,fam:["floral","boise"],amb:["energie"],eng:["naturel","vegan"],f:[["30 ml",59.9]],i:["2026/09/20260905_121035-rotated.jpg"],p:[["Cassis"],["Rose"],["Bois de Ho","Myrte rouge"]],s:"Pensée pour renforcer la joie et l’optimisme : un sourire olfactif, aux huiles essentielles tonifiantes."},
+ {h:"confiance-edt-30ml-100-naturel",n:"Confiance",m:"parfumens",t:"Eau de toilette bien-être",u:"soi",nw:1,fam:["frais","boise"],amb:["apaisant"],eng:["naturel","vegan"],f:[["30 ml",59.9]],i:["2026/09/20260905_121134-rotated.jpg"],p:[["Bergamote"],["Genévrier"],["Cèdre"]],s:"Un parfum dédié au moment présent, pour s’affirmer et gagner en confiance."},
+ {h:"lacher-prise-edt-30ml-100-naturel",n:"Lâcher-Prise",m:"parfumens",t:"Eau de toilette bien-être",u:"soi",nw:1,fam:["ambre"],amb:["apaisant"],eng:["naturel","vegan"],f:[["30 ml",59.9]],i:["2026/09/20260905_121116-rotated.jpg"],p:[["Verveine exotique"],["Magnolia","Encens oliban"],["Myrrhe","Benjoin"]],s:"Un ambré dédié au relâchement et à la détente, 100 % naturel, bio ou issu de récoltes sauvages."},
+ {h:"paix-interieure-edt-30ml-100-naturel",n:"Paix Intérieure",m:"parfumens",t:"Eau de toilette bien-être",u:"soi",nw:1,fam:["floral"],amb:["apaisant"],eng:["naturel","vegan"],f:[["30 ml",59.9]],i:["2026/09/20260905_121004-rotated.jpg"],p:[["Petit-grain bigarade"],["Fleur d’oranger","Lavande fine"],["Vanille"]],s:"Une invitation à se (re)connecter à soi et à (re)trouver le chemin de la sérénité."},
+ {h:"en-plein-coeur-eau-de-parfum-jemme",n:"En plein cœur",m:"jemme",t:"Eau de parfum",u:"soi",fam:["boise","frais"],amb:[],eng:["bio","rechargeable"],f:[["10 ml",30],["50 ml",78]],i:["2026/08/20260813_120452.jpg","2022/02/20260813_120541.jpg"],p:[["Clémentine","Poivre"],["Rose sauvage","Baume de sapin","Aiguilles de pin"]],s:"Un boisé ambré entre rose sauvage et forêt de pins, frais et minéral, par le parfumeur Patrice Revillard."},
+ {h:"lespace-dun-instant-jemme-eau-de-parfum-100ml",n:"L’espace d’un instant",m:"jemme",t:"Eau de parfum",u:"soi",fam:["boise","frais"],amb:[],eng:["bio","rechargeable"],f:[["10 ml",30],["50 ml",78]],i:["2022/02/20260813_115743.jpg","2022/02/Photo-4-parfums-2-scaled.jpg"],l:[["Cardamome","Baies de genièvre","Angélique"],["Bergamote","Géranium"],["Cèdre","Vétiver"]],s:"L’ancrage : un boisé frais et sec pour vivre pleinement le moment présent. Une pierre de grenat dans chaque flacon."},
+ {h:"au-dela-des-nuages-jemme-eau-de-parfum-100ml",n:"Au-delà des Nuages",m:"jemme",t:"Eau de parfum",u:"soi",fam:["boise","ambre"],amb:["apaisant"],eng:["bio","rechargeable"],f:[["10 ml",30,1],["50 ml",78]],i:["2022/02/20260813_120337.jpg","2022/02/page-3-Essence-universelle.jpg"],p:[["Lavande","Bergamote","Encens","Cyprès","Poivre noir"],["Carotte","Iris","Angélique"],["Cèdre de Virginie","Benjoin","Vétiver","Styrax"]],s:"La plénitude : un parfum spirituel qui invite à la méditation, avec une améthyste, pierre de sagesse."},
+ {h:"corn-star-eau-de-parfum-fascent",n:"Corn Star",m:"fascent",t:"Eau de parfum",u:"soi",fam:["gourmand"],amb:["energie"],eng:[],f:[["30 ml",55],["Coffret 3 × 20 ml",69]],i:["2026/05/CS-scaled.png","2026/05/CS-boite.png"],l:[["Pop-corn","Poire d’amour"],["Eau de coco"],["Chamallow musqué"]],s:"Une montée d’adrénaline sensorielle, tout en douceur : le croquant d’un pop-corn tout juste soufflé et la douceur d’un chamallow."},
+ {h:"parfum-solide-sans-alcool-georges-et-moi-sabe-masson",n:"Georges et moi",m:"sabe-masson",t:"Parfum solide",u:"soi",fam:["boise","floral"],amb:[],eng:["sansalcool"],f:[["Bâton",42]],i:["2020/11/SABEMASSON-231213-351-PLAT-DETOURE-CARRE-2.jpg"],l:[["Bergamote","Feuille de citronnier"],["Rose","Ylang-ylang","Gingembre","Magnolia grandiflora"],["Vétiver","Cèdre"]],s:"Un parfum solide et sans alcool, unisexe, boisé floral et épicé, à glisser sur les points de pulsation."},
+ {h:"n4-oud-osmanthus-eau-de-parfum-100ml-unika",n:"N°4 Oud Osmanthus",m:"unika",t:"Eau de parfum",u:"soi",fam:["boise","floral"],amb:["sensuel"],eng:[],f:[["30 ml",69],["100 ml",145]],i:["2024/03/Oud-Osmanthus-scaled.jpg","2024/02/20240229_103002-scaled.jpg"],p:[["Osmanthus","Prune","Pêche"],["Rose","Violette","Abricot"],["Oud","Patchouli","Vanille"]],s:"Le oud sous un autre regard : l’osmanthus floral et fruité conjugué aux notes boisées d’un oud précieux."},
+ {h:"n3-feve-tonka-sesame-eau-de-parfum-100ml-unika",n:"N°3 Fève tonka Sésame",m:"unika",t:"Eau de parfum",u:"soi",fam:["boise","gourmand"],amb:["sensuel"],eng:[],f:[["30 ml",69],["100 ml",145]],i:["2024/03/Feve-Tonka-Sesame-scaled.jpg","2024/02/20240229_103002-scaled.jpg"],p:[["Bergamote","Citron","Eucalyptus"],["Sésame","Notes boisées"],["Fève tonka","Note cuir","Santal"]],s:"Un doux instant de bonheur, enveloppant et épicurien : sésame torréfié, cuir et fève tonka."},
+ {h:"n5-cedrat-myrte-immortelle-eau-de-parfum-100ml-unika",n:"N°5 Cédrat Myrte Immortelle",m:"unika",t:"Eau de parfum",u:"soi",fam:["frais","boise"],amb:["sensuel"],eng:[],f:[["30 ml",69],["100 ml",145]],i:["2024/03/Cedrat-Myrte-Immortelle-scaled.jpg","2024/02/20240229_103002-scaled.jpg"],p:[["Cédrat","Myrte","Pamplemousse"],["Figue"]],s:"Un hommage personnel de la créatrice à la Corse : l’immortelle, les notes hespéridées et aromatiques de l’île de Beauté."},
+ {h:"le-grand-saut-edp-concentree-50ml-bontemps-paris",n:"Le Grand Saut",m:"bontemps",t:"Eau de parfum concentrée",u:"soi",fam:["boise","gourmand"],amb:["sensuel"],eng:[],f:[["50 ml",115]],i:["2025/10/BONTEMPS-packshot03-1.jpg","2025/10/BONTEMPS-LGS01.jpg"],facts:"Concentrée à 25 % dans l’alcool végétal de blé · 44 matières premières · non genré",s:"Celui des audacieux, de ceux qui n’ont pas peur d’oser : il habille les rêves du dimanche et les aventures du quotidien."},
+ {h:"amoureux-du-temps-edp-concentree-50ml-bontemps-paris",n:"Amoureux du Temps",m:"bontemps",t:"Eau de parfum concentrée",u:"soi",fam:["floral","gourmand"],amb:[],eng:[],f:[["50 ml",115]],i:["2025/10/BONTEMPS-packshot02.jpg","2025/10/BONTEMPS-ADT01.jpg"],facts:"Concentrée à 20 % dans l’alcool végétal de blé · 59 matières premières · non genré",s:"Un rayon de soleil sur la peau, une gourmandise joyeuse, pour ceux qui aiment la vie comme une fête."},
+ {h:"cherry-harley-eau-de-parfum-100ml-maie-piou-2-2",n:"Banana Oud",m:"maie-piou",t:"Eau de parfum",u:"soi",fam:["gourmand","ambre"],amb:["sensuel"],eng:[],f:[["50 ml",120],["100 ml",190]],i:["2025/07/1000056516.jpg","2025/07/1000056798.jpg"],l:[["Banane","Rhum brun"],["Oud"],["Musc"]],s:"Funky et gourmand comme un dessert à la banane flambé au rhum, calfeutré de oud, sur un air des années 80."},
+ {h:"cherry-harley-eau-de-parfum-100ml-maie-piou-3",n:"Wood You",m:"maie-piou",t:"Eau de parfum · Ambrogyne",u:"soi",fam:["boise","ambre"],amb:["energie"],eng:[],f:[["50 ml",120],["100 ml",190]],i:["2025/07/1000056514-1.jpg","2025/07/1000056579.jpg"],l:[["Baies roses","Gingembre"],["Maté"],["Bois"]],s:"Esprit du bois, es-tu là ? Un souffle magnétique, une force protectrice qui ancre à l’essentiel."},
+ {h:"cherry-harley-eau-de-parfum-100ml-maie-piou-2",n:"Bloody Neroli",m:"maie-piou",t:"Eau de parfum · Ambrogyne",u:"soi",fam:["floral","ambre"],amb:[],eng:[],f:[["50 ml",120],["100 ml",190]],i:["2025/07/1000056513-4.jpg","2025/07/1000056788.jpg"],l:[["Poires sauvages","Épices"],["Fleurs charnelles","Néroli"]],s:"Tendre comme un nuage poudré, vertigineux comme une caresse de feu : la caresse du jour et le vertige de la nuit."},
+ {h:"velvet-iris-dominique-ropion-eau-de-parfum-100ml-essential-parfums",n:"Velvet Iris",m:"essential",t:"Eau de parfum · Dominique Ropion",u:"soi",fam:["floral","boise"],amb:["sensuel"],eng:[],f:[["100 ml",94]],i:["2025/07/20250523_131940.jpg"],l:[["Poivre rose","Buchu","Galbanum"],["Iris"],["Bois ambrés et crémeux"]],s:"« J’ai imaginé un iris boisé comme une ode aux pétales veloutés de la fleur. » Un peau-à-peau infiniment charnel."},
+ {h:"makeda-eau-de-parfum-100-naturelle-par-alexandre-helwani-les-parfumeurs-du-monde",n:"Makeda",m:"pdm",t:"Eau de parfum · Alexandre Helwani",u:"soi",fam:["ambre","boise","floral"],amb:["sensuel"],eng:["naturel","bio"],f:[["50 ml",145]],i:["2024/06/pdm-makeda-50ml-2000x2000-copie_1100x-1.jpg","2024/06/pdm-makeda-beautyshot-50ml-2000x2000copie_1100x.jpg"],p:[["Bergamote","Mandarine","Lentisque","Baies roses"],["Beurre d’iris","Rose","Ambrette","Osmanthus"],["Vanille","Santal","Tabac","Labdanum"]],s:"Un élixir mystique au sillage lumineux d’iris et de vanille, en hommage aux paysages de l’Éthiopie."},
+ {h:"tsingy-eau-de-parfum-100-naturelle-par-thierry-bernard-les-parfumeurs-du-monde",n:"Tsingy",m:"pdm",t:"Eau de parfum · Thierry Bernard",u:"soi",fam:["floral","boise"],amb:["sensuel"],eng:["naturel","bio"],f:[["50 ml",145]],i:["2024/06/pdm-tsingy-50ml-2000x2000_1100x.jpg","2024/06/pdm-tsingy2-beautyshot-50ml-2000x2000_1100x.jpg"],p:[["Baies roses","Combava","Citron vert","Mandarine"],["Frangipanier","Ylang","Vanille","Fève tonka","Basilic tropical"]],s:"Une jungle de pierres au cœur de Madagascar : un floral boisé tropical, une caresse d’élémi sur fond vanillé."},
+ {h:"agua-nativa-eau-de-parfum-100-naturelle-par-michel-roudnitska-les-parfumeurs-du-monde",n:"Agua Nativa",m:"pdm",t:"Eau de parfum · Michel Roudnitska",u:"soi",fam:["frais","boise"],amb:["energie"],eng:["naturel","bio"],f:[["50 ml",145]],i:["2024/06/pdm-agua-nativa-50ml-2000x2000_1100x.jpg","2024/06/pdm-agua-nativa-beautyshot-50ml-2000x2000_1100x.jpg"],p:[["Menthe","Basilic","Pamplemousse","Orange","Ylang"],["Petit grain citronnier","Géranium","Clou de girofle","Cannelle","Piri piri","Palo santo"],["Vanille","Patchouli","Vétiver"]],s:"Le parfum cérémoniel de la forêt amazonienne, inspiré par les Shipibos : un hespéridé boisé aux accents chamaniques."},
+ {h:"osmanthus-noir-eau-de-parfum-100-naturelle-les-parfumeurs-du-monde",n:"Osmanthus Noir",m:"pdm",t:"Eau de parfum · Marc-Antoine Corticchiato",u:"soi",fam:["floral","ambre"],amb:["sensuel"],eng:["naturel"],f:[["50 ml",145]],i:["2025/07/20250716_183257.jpg"],sig:"Osmanthus",s:"« C’est son caractère sombre, dense et charnel, entre encre et huile, qui me fascine. » Une fleur d’osmanthus mûrie dans l’huile et la nuit."},
+ {h:"un-balcon-sur-lazur-eau-de-parfum-eco-concue-geodora",n:"Un balcon sur l’Azur",m:"geodora",t:"Eau de parfum éco-conçue",u:"soi",fam:["frais"],amb:["apaisant"],eng:["bio"],f:[["30 ml",60],["60 ml",85,1],["120 ml",125,1]],i:["2025/07/Un-Balcon-sur-lAzur-rotated.jpg"],l:[["Agrumes","Lavande"],["Brise marine"],["Bois méditerranéens"]],s:"Un souffle de Méditerranée : l’instant suspendu d’un matin ensoleillé face à la mer. Composé par Gérard Gatty."},
+ {h:"eau-de-parfum-symphonie-oranger",n:"Symphonie Oranger",m:"geodora",t:"Eau de parfum éco-conçue",u:"soi",fam:["floral","frais"],amb:["sensuel"],eng:["bio"],f:[["30 ml",60],["60 ml",85,1],["120 ml",125,1]],i:["2023/08/Symphonie-Oranger.jpg"],l:[["Mandarine de Calabre"],["Ylang-ylang des Comores","Fleur d’oranger"],["Fève tonka","Vétiver"]],s:"Un floral oranger poudré, sur un fond chaleureux adouci par un vétiver mystérieux. Concentré à 18 %, unisexe."},
+ {h:"eau-de-parfum-aphrodisiac-blend",n:"Aphrodisiac Blend",m:"geodora",t:"Eau de parfum éco-conçue",u:"soi",fam:["boise","ambre"],amb:["sensuel"],eng:["bio"],f:[["30 ml",60],["60 ml",85],["120 ml",125,1]],i:["2023/08/Aphrodisiac-Blend.jpg"],l:[["Bushman candle de Namibie","Rhum ambré"],["Patchouli de Bali","Bois de gaïac","Gurjum"],["Cèdre","Vétiver"]],s:"Un chypré boisé ambré où le désir et la séduction se mélangent, à la tenue exceptionnelle."},
+ {h:"delicieusement-petillante-eau-de-parfum-intense",n:"Délicieusement Pétillante",m:"harold-maude",t:"Eau de parfum intense",u:"soi",fam:["frais","floral"],amb:["energie"],eng:[],f:[["50 ml",130],["100 ml",190]],i:["2025/03/Delicieusement-Petillante-Gris-scaled.jpeg","2025/03/Macro-1-1-scaled.jpeg"],sig:"Citron de Sicile",s:"« Tu me manques ! » Un long vent de fraîcheur : hespéridé, floral, fruité et musqué."},
+ {h:"delicieusement-sensuelle-eau-de-parfum-intense",n:"Délicieusement Sensuelle",m:"harold-maude",t:"Eau de parfum intense",u:"soi",fam:["floral","boise"],amb:["sensuel"],eng:[],f:[["50 ml",130,1],["100 ml",190]],i:["2025/03/Delicieusement-Sensuelle-Gris-scaled.jpeg","2025/03/Delicieusement-Sensuelle-scaled.jpg"],l:[["Rose de Turquie","Jasmin d’Égypte"],["Fleur d’oranger","Tubéreuse d’Inde"]],s:"Un parfum charnel et addictif à porter à fleur de peau, au cœur floral chaud et voluptueux."},
+ {h:"archimede-in-love-eau-de-parfum-sans-alcool-100ml-velvetvelo",n:"Archimède in Love",m:"velvetvelo",t:"Eau de parfum sans alcool",u:"soi",fam:["floral","gourmand"],amb:["sensuel"],eng:["sansalcool"],f:[["100 ml",99]],i:["2024/09/20240912_134015-scaled.jpg"],l:[["Accord framboise"],["Rose absolue","Géranium bourbon"],["Accord violette"]],s:"Un baiser au parfum de framboise : géranium, violette, jasmin, magnolia et mimosa fondus en une texture fluide."},
+ {h:"ieau-de-parfum-grand-cru-peng-lai-100ml",n:"Peng Lai, Grand Cru",m:"berdoues",t:"Eau de parfum",u:"soi",fam:["floral"],amb:["sensuel"],eng:[],f:[["100 ml",69]],i:["2023/09/PENG_LAI_2.jpg"],sig:"Osmanthus de Chine",s:"Péng Lái, l’île mythique de la déesse des fleurs : un grand cru floral qui révèle l’osmanthus de Chine."},
+ {h:"eau-de-cologne-1902-coton-125ml",n:"Cologne 1902 Coton",m:"berdoues",t:"Eau de Cologne",u:"soi",fam:["floral"],amb:["apaisant"],eng:["vegan","rechargeable"],f:[["125 ml",18]],i:["2023/02/Coton.jpg"],l:[["Bergamote"],["Beurre d’iris"],["Musc"]],s:"Un pschitt de douceur, réconfortant comme un nuage. 98 % d’origine naturelle, fabriquée en France."},
+ {h:"eau-de-cologne-1902-verveine-yuzu-125ml",n:"Cologne 1902 Verveine Yuzu",m:"berdoues",t:"Eau de Cologne",u:"soi",fam:["frais"],amb:["energie"],eng:["rechargeable"],f:[["125 ml",18]],i:["2023/02/Verveine-Yuzu-1.jpg"],l:[["Verveine"],["Yuzu"],["Musc"]],s:"Un pschitt d’énergie tout en douceur, subtilement vivifiant et pétillant."},
+ /* maison */
+ {h:"et-si-le-santal-parfums-de-maison-la-boutique-olfactive",n:"Et si… le santal",m:"lab-o",t:"Parfum de maison",u:"maison",nw:1,fam:["boise","ambre"],amb:["sensuel"],eng:[],f:[["Bougie 180 g",39],["Diffuseur 100 ml",39]],i:["2026/10/Et-si.-le-santal.jpg","2026/10/Bougie-Santal.jpg"],l:[["Poivre noir","Élémi"],["Rose","Jasmin","Fève tonka"],["Bois de santal","Cèdre","Ambre"]],s:"Et si… le santal enveloppait les instants. Le parfum d’un moment pour soi, réconfortant, aux notes lactées."},
+ {h:"et-si-le-figuier-parfums-de-maison-la-boutique-olfactive",n:"Et si… le figuier",m:"lab-o",t:"Parfum de maison",u:"maison",nw:1,fam:["frais"],amb:["energie"],eng:[],f:[["Bougie 180 g",39],["Diffuseur 100 ml",39]],i:["2026/10/Et-si.-le-figuier.jpg","2026/10/Bougie-Figuier.jpg"],l:[["Herbe coupée","Feuille de figuier"],["Laurier","Pomme","Figue sèche"],["Bois de figuier","Cèdre"]],s:"Et si… le figuier prolongeait les beaux jours. Le parfum d’un été à l’ombre d’un figuier."},
+ {h:"et-si-les-fleurs-blanches-parfums-de-maison-la-boutique-olfactive",n:"Et si… les fleurs blanches",m:"lab-o",t:"Parfum de maison",u:"maison",nw:1,fam:["floral"],amb:["sensuel"],eng:[],f:[["Bougie 180 g",39],["Diffuseur 100 ml",39]],i:["2026/10/Et-si.-les-fleurs-blanches.jpg","2026/10/Bougie-Fleurs-blanches.jpg"],l:[["Anis étoilé","Céleri"],["Tubéreuse","Jasmin","Mimosa"],["Vanille"]],s:"Et si… les fleurs blanches réveillaient les sens. Un bouquet voluptueux, délicatement végétal."},
+ {h:"et-si-la-fleur-doranger-parfums-de-maison-la-boutique-olfactive",n:"Et si… la fleur d’oranger",m:"lab-o",t:"Parfum de maison",u:"maison",nw:1,fam:["floral"],amb:["apaisant"],eng:[],f:[["Bougie 180 g",39],["Diffuseur 100 ml",39]],i:["2026/10/Et-si.-la-fleur-doranger.jpg","2026/10/Bougie-Fleur-doranger.jpg"],l:[["Petit grain"],["Fleur d’oranger"],["Miel"]],s:"Et si… la fleur d’oranger laissait le soleil entrer. Un doux parfum solaire et réconfortant."},
+ {h:"le-saut-brume-dinterieur-100ml",n:"Le Saut",m:"sourceur",t:"Brume d’intérieur",u:"maison",fam:["boise"],amb:["energie"],eng:["naturel"],f:[["100 ml",38]],i:["2025/03/20250324_162619-scaled.jpg"],l:[["Vétiver d’Haïti","Cyprès","Lemongrass"],["Myrrhe","Tubéreuse"]],s:"Puisé dans les rituels de purification haïtiens : pour se recentrer les jours de travail."},
+ {h:"neda-brume-dinterieur-100ml",n:"Neda",m:"sourceur",t:"Brume d’intérieur",u:"maison",fam:["frais"],amb:["energie"],eng:["naturel"],f:[["100 ml",38]],i:["2025/03/20250324_162647-scaled.jpg"],l:[["Mandora","Eucalyptus"],["Fleur d’oranger","Lavande"],["Fève tonka"]],s:"Un accord Cologne frais et revigorant, hommage aux nymphes du jardin des Hespérides."},
+ {h:"sharavati-brume-dinterieur-100ml",n:"Sharavati",m:"sourceur",t:"Brume d’intérieur",u:"maison",fam:["floral"],amb:["sensuel"],eng:["naturel"],f:[["100 ml",38]],i:["2025/03/20250324_162555-scaled.jpg"],l:[["Rose","Géranium Bourbon"],["Jasmin","Patchouli"]],s:"Le cœur de l’Inde : la rencontre de la rose et du jasmin en un bouquet charnel."}
+];
+var BYH={};P.forEach(function(p){BYH[p.h]=p;});
+
+/* Ateliers kokedama : créneaux publiés sur le site (jeudi 17h30-19h30, samedi 11h-13h, 2 dimanches de décembre) */
+var SESS=[["2026-10-15","Jeudi 15 octobre","17 h 30 – 19 h 30"],["2026-10-17","Samedi 17 octobre","11 h – 13 h"],["2026-10-22","Jeudi 22 octobre","17 h 30 – 19 h 30"],["2026-10-24","Samedi 24 octobre","11 h – 13 h"],["2026-10-29","Jeudi 29 octobre","17 h 30 – 19 h 30"],["2026-10-31","Samedi 31 octobre","11 h – 13 h"],["2026-11-05","Jeudi 5 novembre","17 h 30 – 19 h 30"],["2026-11-07","Samedi 7 novembre","11 h – 13 h"],["2026-11-12","Jeudi 12 novembre","17 h 30 – 19 h 30"],["2026-11-14","Samedi 14 novembre","11 h – 13 h"],["2026-11-19","Jeudi 19 novembre","17 h 30 – 19 h 30"],["2026-11-21","Samedi 21 novembre","11 h – 13 h"],["2026-11-26","Jeudi 26 novembre","17 h 30 – 19 h 30"],["2026-11-28","Samedi 28 novembre","11 h – 13 h"],["2026-12-06","Dimanche 6 décembre","11 h – 13 h"],["2026-12-13","Dimanche 13 décembre","11 h – 13 h"]];
+
+var PH={facade:"2026/07/IMG-20260707-WA0015.jpg",facade2:"2026/07/20260206_181007.jpg",vitrine:"2026/07/IMG-20260707-WA0013.jpg",devanture:"2026/07/20251220_100533-1-2-rotated.jpg",mousse:"2024/04/20240325_160043-scaled.jpg",etag:"2022/05/IMG_20220526_205646_552.jpg",etag2:"2025/01/20250113_142858-scaled.jpg",inter:"2023/02/IMG_99481.jpg",koke:"2020/11/20221213_175339-rotated.jpg",koke2:"2026/07/20251212_191005.jpg",mains:"2021/06/LBO_fullsize-186-scaled.jpg",table:"2020/11/20230126_124359.jpg",boule:"2021/02/20200723_122234-scaled.jpg",vitrine2:"2026/07/IMG-20260707-WA0011.jpg"};
+
+/* utilitaires */
+function $(s,c){return (c||document).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+function eur(v){var s=(Math.round(v*100)/100).toFixed(2).replace(".",",");return s.replace(",00","")+" €";}
+function minP(p){var a=p.f.filter(function(x){return !x[2];});if(!a.length)a=p.f;return Math.min.apply(null,a.map(function(x){return x[1];}));}
+function priceLabel(p){var ps=p.f.map(function(x){return x[1];});var mn=Math.min.apply(null,ps),mx=Math.max.apply(null,ps);return mn===mx?eur(mn):"dès "+eur(mn);}
+function imgTag(path,alt,w,cls,eager){return '<img src="'+im(path,w)+'" alt="'+esc(alt)+'"'+(cls?' class="'+cls+'"':'')+(eager?' fetchpriority="high"':' loading="lazy"')+' decoding="async" onerror="this.style.visibility=\'hidden\'">';}
+function famLabel(p){return p.fam.map(function(f){return FAM[f];}).join(" · ");}
+
+function card(p){
+  var mz=MAISONS[p.m];var tags="";
+  if(p.nw)tags+='<span class="pill new">Nouveauté</span>';
+  if(p.eng.indexOf("naturel")>-1)tags+='<span class="pill eng">100 % naturel</span>';
+  else if(p.eng.indexOf("sansalcool")>-1)tags+='<span class="pill eng">Sans alcool</span>';
+  return '<a class="card" href="#parfum/'+p.h+'"><div class="ph"><span class="ph-fallback" aria-hidden="true">'+esc(p.n)+'</span>'+imgTag(p.i[0],p.n+" — "+p.t+" "+mz.n,520)+'<div class="tg">'+tags+'</div></div><span class="mh">'+esc(mz.n)+' · '+esc(mz.v)+'</span><h3>'+esc(p.n)+'</h3><span class="fm">'+esc(p.t)+' — '+esc(famLabel(p))+'</span><span class="pr">'+priceLabel(p)+'</span></a>';
+}
+
+/* méta par vue */
+function setMeta(title,desc){document.title=title+" · La Boutique Olfactive, Bordeaux";var m=$('meta[name="description"]');if(m)m.setAttribute("content",desc);}
+
+/* ---------- ACCUEIL ---------- */
+function vHome(){
+  setMeta("Parfumerie française de niche","La[b.o], parfumerie de niche exclusivement française, indépendante et responsable, 22 rue Bouffard à Bordeaux. Plus de 30 maisons, conseil, ateliers kokedama.");
+  var nouveautes=P.filter(function(p){return p.nw&&p.u==="soi";});
+  var etsi=P.filter(function(p){return p.m==="lab-o";});
+  var h='';
+  h+='<section class="hero"><div class="hero-t"><span class="lab">Parfumerie indépendante · Bordeaux · depuis 2019</span>';
+  h+='<h1>La parfumerie française, <em>indépendante</em> et engagée.</h1>';
+  h+='<p class="lead">Au 22 rue Bouffard, à deux pas des places Gambetta et Pey-Berland, un écrin de nature dédié aux créateurs et parfumeurs français. Une sélection née de rencontres, de coups de cœur et d’histoires.</p>';
+  h+='<div class="ctas"><a class="btn light" href="#decouverte">Trouver mon parfum</a><a class="btn line-l" href="#atelier">Réserver un atelier kokedama</a></div></div>';
+  h+='<figure class="hero-i" style="margin:0">'+imgTag(PH.facade,"La façade gris ardoise de La Boutique Olfactive, rue Bouffard à Bordeaux, habillée de plantes",1400,"",true)+'<figcaption>22 rue Bouffard · Bordeaux</figcaption></figure></section>';
+  h+='<div class="reass"><ul class="wrap">';
+  h+='<li><svg viewBox="0 0 24 24"><path d="M3 7h12v9H3zM15 10h4l2 3v3h-6"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg><span><b>Livraison offerte dès 95 €</b>ou forfait France 10 €</span></li>';
+  h+='<li><svg viewBox="0 0 24 24"><path d="M9 3h6v3l2 3v11H7V9l2-3z"/></svg><span><b>Échantillon offert</b>avec chaque parfum</span></li>';
+  h+='<li><svg viewBox="0 0 24 24"><path d="M4 10 12 4l8 6v10H4z"/><path d="M10 20v-6h4v6"/></svg><span><b>Click &amp; collect</b>retrait rue Bouffard</span></li>';
+  h+='<li><svg viewBox="0 0 24 24"><path d="M4 9h16v4H4zM6 13h12v8H6zM12 9v12M12 9c-2-4-6-4-6-1s6 1 6 1 6 2 6-1-4-3-6 1"/></svg><span><b>Emballage cadeau</b>et message sur demande</span></li>';
+  h+='</ul></div>';
+
+  h+='<section class="blk"><div class="wrap"><div class="sh"><div><span class="lab">La sélection du moment</span><h2>Les dernières arrivées en boutique</h2></div><a class="lnk" href="#collection">Toute la sélection</a></div>';
+  h+='<div class="scroller" role="list">'+nouveautes.concat(P.filter(function(p){return p.m==="divine";})).map(function(p){return '<div role="listitem">'+card(p)+'</div>';}).join("")+'</div></div></section>';
+
+  h+='<section class="blk etsi"><div class="wrap etsi-grid"><div><span class="lab">Signé La[b.o]</span><h2 style="margin:12px 0 16px">Et si… le parfum trouvait sa place chez vous ?</h2><p>« Et si… » est la première ligne de parfums de maison imaginée par la boutique. Quatre histoires, en bougie de 180 g ou en diffuseur de 100 ml : une création française artisanale et responsable, parfum de Grasse.</p><p class="note" style="margin-bottom:18px">Bougie 180 g : environ 45 h de combustion.</p><a class="btn" href="#collection/maison-parfums">Découvrir « Et si… » · 39 €</a></div>';
+  h+='<div class="quad">'+etsi.map(card).join("")+'</div></div></section>';
+
+  h+='<section class="blk"><div class="wrap"><div class="sh"><div><span class="lab">Nos engagements</span><h2>Un parfum ne se choisit pas uniquement avec le nez.</h2></div><p>« Il se choisit aussi avec le cœur. » Chaque maison est sélectionnée pour son savoir-faire, son engagement et sa singularité.</p></div>';
+  h+='<div class="eng-grid"><div><span class="lab">01</span><h3>Exclusivement français</h3><p>Plus de 30 maisons françaises, de Grasse à Lille, de Dinard à Nice, et plusieurs créateurs bordelais.</p></div><div><span class="lab">02</span><h3>Indépendants</h3><p>Des créateurs et parfumeurs libres, choisis pour leurs histoires et leurs rencontres plutôt que pour leur notoriété.</p></div><div><span class="lab">03</span><h3>Naturel &amp; responsable</h3><p>Une attention particulière aux compositions les plus naturelles et aux démarches éco-responsables, souvent artisanales.</p></div><div><span class="lab">04</span><h3>Le conseil avant la vente</h3><p>Le temps d’écouter, de faire sentir et de raconter : en boutique, ou par message si vous êtes loin.</p></div></div>';
+  h+='<p style="margin-top:22px"><a class="lnk" href="#collection/naturel">Voir les parfums 100 % naturels</a></p></div></section>';
+
+  h+='<section class="blk atelier"><div class="wrap split"><figure>'+imgTag(PH.mains,"Mains qui façonnent une boule de mousse lors d’un atelier kokedama",900)+'</figure><div><span class="lab">L’atelier végétal</span><h2>Créez votre kokedama, rue Bouffard.</h2><p>Le kokedama, « boule de mousse », est un art végétal japonais devenu la mascotte de la boutique : il symbolise notre planète sur laquelle s’épanouit une plante. Depuis 2019, la boutique propose de créer le vôtre, dans une ambiance conviviale et musicale.</p>';
+  h+='<div class="facts"><div><b>2 h</b><span>matériel fourni</span></div><div><b>50 €</b><span>par personne</span></div><div><b>Jeu. &amp; sam.</b><span>17 h 30 · 11 h</span></div></div>';
+  h+='<div class="ctas" style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn light" href="#atelier">Choisir un créneau</a><a class="btn line-l" href="#atelier/offrir">Offrir un atelier</a></div></div></div></section>';
+
+  h+='<section class="blk"><div class="wrap split rev"><figure>'+imgTag(PH.devanture,"Devant la vitrine de La Boutique Olfactive, rue Bouffard",900)+'</figure><div><span class="lab">Notre histoire</span><h2>Vingt ans de parfumerie, une boutique à taille humaine.</h2><p class="quote">Je voulais créer un lieu où l’on prend le temps.</p><p>Après plus de vingt ans dans la parfumerie, dont quinze chez Beauté Prestige International – Shiseido, David ouvre La Boutique Olfactive le 16 juillet 2019 : un lieu où le conseil prime sur la vente.</p><a class="lnk" href="#maison">Lire notre histoire</a></div></div></section>';
+
+  h+=visitBlock();
+  return h;
+}
+
+function visitBlock(){
+  var h='<section class="blk visit"><div class="wrap visit-g"><div><span class="lab">Venir sentir</span><h2>22 rue Bouffard, 33000 Bordeaux</h2><p>À deux pas des places Gambetta et Pey-Berland. Poussez la porte : on prend le temps de vous écouter et de vous faire sentir.</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=La+Boutique+Olfactive+22+rue+Bouffard+Bordeaux" rel="noopener">Itinéraire</a> · <a href="tel:+33557594478">05 57 59 44 78</a></p></div>';
+  h+='<div><span class="lab">Horaires</span><ul style="margin-top:12px"><li><span>Mardi – samedi</span><span>10 h – 19 h</span></li><li><span>Dimanche, lundi</span><span>Fermé</span></li><li><span>Ateliers</span><span>Jeu. 17 h 30 · Sam. 11 h</span></li></ul></div>';
+  h+='<div><span class="lab">Ils en parlent</span><p style="margin-top:12px"><span class="stat">5/5</span><br>sur Google · 140 avis</p><p><span class="stat" style="font-size:30px">@laboutiqueolfactive</span><br>2,6k abonnés · une publication par jour<br><a href="https://www.instagram.com/laboutiqueolfactive/" rel="noopener">Suivre sur Instagram</a></p><p class="note" style="color:#b9c1c8">Module avis Google à connecter (avis réels uniquement).</p></div></div></section>';
+  return h;
+}
+
+/* ---------- COLLECTION ---------- */
+var F={u:"soi",fam:[],amb:[],eng:[],m:"",sort:"sel"};
+function vCollection(arg){
+  F={u:"soi",fam:[],amb:[],eng:[],m:"",sort:"sel"};
+  if(arg==="maison-parfums")F.u="maison";
+  else if(arg&&ENG[arg])F.eng=[arg];
+  else if(arg&&MAISONS[arg]){F.m=arg;F.u=P.filter(function(p){return p.m===arg;})[0].u;}
+  setMeta("Les parfums","Parfums de niche français : filtrez par famille olfactive, ambiance, engagement (100 % naturel, sans alcool, vegan) ou maison. Sélection La[b.o] Bordeaux.");
+  var h='<div class="wrap"><div class="ch"><span class="lab">La sélection</span><h1>Parfums de créateurs français</h1><p>Plus de 30 maisons indépendantes et engagées. Un échantillon est offert avec chaque parfum ; un doute ? Passez à la boutique ou demandez conseil.</p>';
+  h+='<div class="tabs" role="group" aria-label="Type de parfum"><button class="tab" data-u="soi" aria-pressed="'+(F.u==="soi")+'">Parfums pour soi</button><button class="tab" data-u="maison" aria-pressed="'+(F.u==="maison")+'">Parfums de maison</button></div></div>';
+  h+='<div class="fbar"><button class="btn ghost fopen" id="fopen" style="min-height:40px;padding:0 14px">Filtrer</button><span class="ct" id="ct" aria-live="polite"></span><label class="sr" for="sort">Trier</label><select id="sort"><option value="sel">Sélection de la boutique</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option><option value="az">De A à Z</option></select></div>';
+  h+='<div class="layout"><aside class="filters" id="filters" aria-label="Filtres"><div class="fhead"><span class="lab plain" style="font-size:13px">Filtres</span><button class="icon-btn fclose" id="fclose" aria-label="Fermer les filtres"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>';
+  h+=fgroup("Famille","fam",FAM)+fgroup("Ambiance","amb",AMB)+fgroup("Engagement","eng",ENG);
+  h+='<div class="fg"><h2>Maison</h2><label class="sr" for="fm">Maison</label><select id="fm" style="width:100%;border:1px solid var(--line);background:var(--card);padding:10px;border-radius:2px"><option value="">Toutes les maisons</option>'+Object.keys(MAISONS).map(function(k){return '<option value="'+k+'"'+(F.m===k?' selected':'')+'>'+esc(MAISONS[k].n)+' — '+esc(MAISONS[k].v)+'</option>';}).join("")+'</select></div>';
+  h+='<div class="fg"><button class="lnk" id="freset">Tout effacer</button></div><button class="btn block fapply" id="fapply">Voir les parfums</button></aside>';
+  h+='<div><div class="grid" id="grid"></div></div></div></div>';
+  return h;
+}
+function fgroup(title,key,map){return '<div class="fg"><h2>'+title+'</h2><div class="chips">'+Object.keys(map).map(function(k){return '<button class="chip" data-k="'+key+'" data-v="'+k+'" aria-pressed="'+(F[key].indexOf(k)>-1)+'">'+map[k]+'</button>';}).join("")+'</div></div>';}
+function fillGrid(){
+  var list=P.filter(function(p){
+    if(p.u!==F.u)return false;
+    if(F.m&&p.m!==F.m)return false;
+    if(F.fam.length&&!F.fam.some(function(f){return p.fam.indexOf(f)>-1;}))return false;
+    if(F.amb.length&&!F.amb.some(function(f){return p.amb.indexOf(f)>-1;}))return false;
+    if(F.eng.length&&!F.eng.every(function(f){return p.eng.indexOf(f)>-1;}))return false;
+    return true;});
+  if(F.sort==="asc")list.sort(function(a,b){return minP(a)-minP(b);});
+  if(F.sort==="desc")list.sort(function(a,b){return minP(b)-minP(a);});
+  if(F.sort==="az")list.sort(function(a,b){return a.n.localeCompare(b.n,"fr");});
+  $("#grid").innerHTML=list.length?list.map(card).join(""):'<p class="empty">Aucun parfum ne réunit tous ces critères. <button class="lnk" id="freset2">Effacer les filtres</button> ou <a class="lnk" href="#decouverte">laissez-vous guider</a>.</p>';
+  $("#ct").textContent=list.length+(list.length>1?" parfums":" parfum");
+  var r2=$("#freset2");if(r2)r2.onclick=resetF;
+}
+function resetF(){F.fam=[];F.amb=[];F.eng=[];F.m="";$("#fm").value="";$$(".chip").forEach(function(c){c.setAttribute("aria-pressed","false");});fillGrid();}
+function bindCollection(){
+  fillGrid();
+  $$(".tab").forEach(function(b){b.onclick=function(){F.u=b.dataset.u;F.m="";$("#fm").value="";$$(".tab").forEach(function(x){x.setAttribute("aria-pressed",String(x===b));});fillGrid();};});
+  $$(".chip").forEach(function(c){c.onclick=function(){var a=F[c.dataset.k],v=c.dataset.v,i=a.indexOf(v);if(i>-1)a.splice(i,1);else a.push(v);c.setAttribute("aria-pressed",String(i<0));fillGrid();};});
+  $("#fm").onchange=function(){F.m=this.value;if(F.m){F.u=P.filter(function(p){return p.m===F.m;})[0].u;$$(".tab").forEach(function(x){x.setAttribute("aria-pressed",String(x.dataset.u===F.u));});}fillGrid();};
+  $("#sort").onchange=function(){F.sort=this.value;fillGrid();};
+  $("#freset").onclick=resetF;
+  var fl=$("#filters");
+  $("#fopen").onclick=function(){fl.classList.add("open");document.body.style.overflow="hidden";$("#fclose").focus();};
+  function cl(){fl.classList.remove("open");document.body.style.overflow="";$("#fopen").focus();}
+  $("#fclose").onclick=cl;$("#fapply").onclick=cl;
+}
+
+/* ---------- FICHE ---------- */
+function pyramid(p){
+  if(p.p){var lb=["Tête","Cœur","Fond"];return '<div class="pyr">'+p.p.map(function(r,i){return '<div><b>'+lb[i]+'</b><span>'+esc(r.join(", "))+'</span></div>';}).join("")+'</div>';}
+  if(p.l){return '<div class="pyr">'+p.l.map(function(r,i){return '<div><b>'+(i===0?"Départ":i===p.l.length-1?"Sillage":"Puis")+'</b><span>'+esc(r.join(", "))+'</span></div>';}).join("")+'</div><p class="note" style="margin-top:8px">Notes dans l’ordre donné par la maison.</p>';}
+  if(p.sig){return '<div class="pyr"><div><b>Signature</b><span>'+esc(p.sig)+'</span></div></div><p class="note" style="margin-top:8px">Pyramide détaillée à compléter avec la maison.</p>';}
+  if(p.facts){return '<div class="pyr"><div><b>Formule</b><span>'+esc(p.facts)+'</span></div></div><p class="note" style="margin-top:8px">Pyramide détaillée à compléter avec la maison.</p>';}
+  return "";
+}
+function vProduct(h){
+  var p=BYH[h];if(!p)return null;var mz=MAISONS[p.m];
+  setMeta(p.n+" — "+mz.n,p.n+", "+p.t.toLowerCase()+" de "+mz.n+" ("+mz.v+"). "+p.s.slice(0,110));
+  var first=p.f.findIndex(function(x){return !x[2];});
+  var out='<div class="wrap"><nav class="crumb" aria-label="Fil d’Ariane"><a href="#accueil">Accueil</a> / <a href="#collection'+(p.u==="maison"?"/maison-parfums":"")+'">'+(p.u==="maison"?"Parfums de maison":"Les parfums")+'</a> / <a href="#collection/'+p.m+'">'+esc(mz.n)+'</a> / <span aria-current="page">'+esc(p.n)+'</span></nav>';
+  out+='<div class="pdp"><div class="gal"><div class="main"><span class="ph-fallback" aria-hidden="true">'+esc(p.n)+'</span><img id="gmain" src="'+im(p.i[0],1000)+'" alt="'+esc(p.n+" — "+p.t+" "+mz.n)+'" fetchpriority="high" onerror="this.style.visibility=\'hidden\'"></div>';
+  if(p.i.length>1)out+='<div class="thumbs">'+p.i.map(function(s,i){return '<button data-src="'+im(s,1000)+'" aria-label="Voir la photo '+(i+1)+'" aria-current="'+(i===0)+'">'+imgTag(s,"",160)+'</button>';}).join("")+'</div>';
+  out+='</div><div class="pinfo"><div class="mh"><a href="#collection/'+p.m+'">'+esc(mz.n)+' · '+esc(mz.v)+'</a></div><h1>'+esc(p.n)+'</h1><p class="sub">'+esc(p.t)+' — '+esc(famLabel(p))+'</p>';
+  if(p.eng.length)out+='<div class="engs">'+p.eng.map(function(e){return '<span class="pill eng">'+ENG[e]+'</span>';}).join("")+'</div>';
+  out+='<p class="price" id="pprice">'+(first>-1?eur(p.f[first][1]):"Épuisé")+'</p>';
+  out+='<fieldset class="fmts"><legend>Format</legend>'+p.f.map(function(x,i){return '<label class="fmt"><input type="radio" name="fmt" value="'+i+'"'+(i===first?" checked":"")+(x[2]?" disabled":"")+'><span>'+esc(x[0])+'<small>'+(x[2]?"Épuisé":eur(x[1]))+'</small></span></label>';}).join("")+'</fieldset>';
+  out+='<button class="btn block" id="add"'+(first<0?" disabled":"")+'>Ajouter au panier</button>';
+  out+='<ul class="perks"><li>Échantillon offert avec chaque parfum (selon disponibilité)</li><li>Livraison offerte dès 95 € · forfait France 10 €</li><li>Click &amp; collect au 22 rue Bouffard, mardi – samedi</li><li>Emballage cadeau et message personnalisé sur demande</li></ul>';
+  out+='<p style="margin-top:16px"><a class="lnk" href="mailto:contact@laboutiqueolfactive.fr?subject='+encodeURIComponent("Conseil : "+p.n)+'">Demander conseil sur ce parfum</a></p></div></div>';
+  out+='<div class="pd-more"><div><span class="lab">L’histoire</span><h2>'+esc(p.n)+'</h2><p>'+esc(p.s)+'</p><span class="lab" style="display:block;margin-top:26px">Pyramide olfactive</span>'+pyramid(p)+'</div>';
+  out+='<div><span class="lab">La maison</span><h2>'+esc(mz.n)+' <span style="color:var(--mute);font-size:.7em">— '+esc(mz.v)+'</span></h2><p>'+esc(mz.d)+'</p><a class="lnk" href="#collection/'+p.m+'">Toute la maison '+esc(mz.n)+'</a>';
+  out+='<div class="reviews" style="margin-top:30px"><span class="lab">Avis clients · emplacement</span><h2>Les avis arriveront ici</h2><p>Gabarit vide : le module d’avis vérifiés sera connecté à la mise en ligne. Aucun avis n’est affiché tant qu’il n’a pas été déposé par un client.</p></div></div></div>';
+  var rel=P.filter(function(x){return x.h!==p.h&&x.u===p.u&&x.fam.some(function(f){return p.fam.indexOf(f)>-1;});}).sort(function(a,b){return (b.m===p.m)-(a.m===p.m)||(b.fam.filter(function(f){return p.fam.indexOf(f)>-1;}).length-a.fam.filter(function(f){return p.fam.indexOf(f)>-1;}).length);}).slice(0,4);
+  out+='<section style="padding:20px 0 72px;border-top:1px solid var(--line)"><div class="sh"><div><span class="lab">Dans la même veine</span><h2 style="font-size:30px">Vous aimerez aussi</h2></div></div><div class="grid g4">'+rel.map(card).join("")+'</div></section></div>';
+  return out;
+}
+function bindProduct(h){
+  var p=BYH[h];
+  $$(".thumbs button").forEach(function(b){b.onclick=function(){$("#gmain").src=b.dataset.src;$("#gmain").style.visibility="";$$(".thumbs button").forEach(function(x){x.setAttribute("aria-current",String(x===b));});};});
+  $$('input[name="fmt"]').forEach(function(r){r.onchange=function(){$("#pprice").textContent=eur(p.f[+r.value][1]);};});
+  var a=$("#add");if(a)a.onclick=function(){var r=$('input[name="fmt"]:checked');if(!r)return;var x=p.f[+r.value];addToCart({k:p.h+"|"+x[0],n:p.n,m:MAISONS[p.m].n,fmt:x[0],pr:x[1],img:p.i[0]});};
+}
+
+/* ---------- ATELIER ---------- */
+var BK={s:null,n:1};
+function upcoming(){var t=new Date();t.setHours(0,0,0,0);return SESS.filter(function(s){return new Date(s[0]+"T12:00:00")>=t;});}
+function bookPrice(n){if(n===2)return 90;if(n>=3)return n*40;return 50;}
+function vAtelier(arg){
+  setMeta("Atelier kokedama à Bordeaux","Atelier de création kokedama à Bordeaux, 22 rue Bouffard : 2 h, matériel fourni, 50 € par personne. Le jeudi 17 h 30 – 19 h 30 et le samedi 11 h – 13 h. Réservez en ligne ou offrez-le.");
+  BK={s:null,n:1};var up=upcoming().slice(0,9);
+  var h='<div class="wrap"><div class="ch" style="border:0"><span class="lab">Atelier végétal · Bordeaux</span><h1>L’atelier kokedama</h1><p>« Venez avec vos mains et votre sourire, on s’occupe du reste ! » Deux heures pour créer votre boule de mousse, dans une ambiance conviviale, musicale et décontractée.</p></div>';
+  h+='<div class="split" style="padding:10px 0 56px;align-items:start"><div><div class="mosaic">'+imgTag(PH.koke,"Kokedama réalisé à la boutique : plante aux feuilles graphiques sur sa boule de mousse",900)+imgTag(PH.table,"Table de l’atelier avec plantes, mousse et outils",500)+imgTag(PH.boule,"Boule de mousse terminée posée sur la table",500)+'</div>';
+  h+='<h2 style="font-size:28px;margin:28px 0 10px">Le kokedama, qu’est-ce que c’est ?</h2><p>Littéralement « boule de mousse » : un art végétal japonais apparu dans les années 1990, à la croisée du bonsaï et de l’ikebana. La plante pousse dans un substrat arrondi et verdoyant, que l’on pose sur une coupelle, une ardoise ou en suspension.</p><p>Tout le matériel est fourni et chaque participant repart avec sa création.</p></div>';
+  h+='<div class="book" id="book"><span class="lab">Réserver</span><h2 style="font-size:26px;margin:8px 0 4px">Choisissez votre créneau</h2><p class="note">Jeudi 17 h 30 – 19 h 30 · samedi 11 h – 13 h · 2 h · 50 € par personne</p>';
+  h+='<div class="slots" role="group" aria-label="Créneaux disponibles">'+(up.length?up.map(function(s){return '<button class="slot" data-d="'+s[0]+'" aria-pressed="false"><b>'+s[1]+'</b>'+s[2]+'</button>';}).join(""):'<p class="note">Les prochaines dates seront publiées bientôt.</p>')+'</div>';
+  h+='<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><span id="plab">Participants</span><div class="stepper" role="group" aria-labelledby="plab"><button id="nm" aria-label="Retirer un participant">−</button><output id="nv" aria-live="polite">1</output><button id="np" aria-label="Ajouter un participant">+</button></div></div>';
+  h+='<div class="total"><span id="bdesc">1 personne</span><b id="btot">50 €</b></div><p class="note" id="bnote">Duo : 90 € au lieu de 100 €. De 3 à 5 personnes : –20 %. La remise s’applique toute seule, sans code.</p>';
+  h+='<button class="btn block" id="bAdd" disabled style="margin-top:10px">Choisissez une date</button>';
+  h+='<div id="offrir" style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)"><span class="lab">Offrir</span><p style="margin:8px 0 12px">Le bon cadeau atelier kokedama (50 €) est valable un an ; la personne choisit ensuite sa date.</p><button class="btn ghost block" id="gAdd">Offrir un atelier · 50 €</button></div></div></div></div>';
+  h+=visitBlock();
+  return h;
+}
+function bindAtelier(arg){
+  function upd(){$("#nv").textContent=BK.n;var t=bookPrice(BK.n);$("#btot").textContent=eur(t);$("#bdesc").textContent=BK.n+(BK.n>1?" personnes":" personne")+(BK.n===2?" · remise duo":BK.n>=3?" · remise groupe":"");var b=$("#bAdd");b.disabled=!BK.s;b.textContent=BK.s?"Réserver · "+eur(t):"Choisissez une date";}
+  $$(".slot").forEach(function(s){s.onclick=function(){BK.s=s.dataset.d;$$(".slot").forEach(function(x){x.setAttribute("aria-pressed",String(x===s));});upd();};});
+  $("#nm").onclick=function(){if(BK.n>1){BK.n--;upd();}};
+  $("#np").onclick=function(){if(BK.n<5){BK.n++;upd();}else toast("5 participants maximum par session : appelez-nous pour un groupe.");};
+  $("#bAdd").onclick=function(){var s=SESS.filter(function(x){return x[0]===BK.s;})[0];addToCart({k:"atelier|"+BK.s+"|"+BK.n,n:"Atelier kokedama",m:s[1]+" · "+s[2],fmt:BK.n+(BK.n>1?" personnes":" personne"),pr:bookPrice(BK.n),img:PH.mains,single:1});};
+  $("#gAdd").onclick=function(){addToCart({k:"bon-kokedama",n:"Bon cadeau atelier kokedama",m:"Valable 1 an",fmt:"1 personne",pr:50,img:PH.table});};
+  if(arg==="offrir"){setTimeout(function(){var o=$("#offrir");if(o){o.scrollIntoView({block:"center"});$("#gAdd").focus({preventScroll:true});}},60);}
+}
+
+/* ---------- MAISONS ---------- */
+function vMaisons(){
+  setMeta("Les maisons françaises","Toutes les maisons de parfum françaises et indépendantes sélectionnées par La Boutique Olfactive à Bordeaux, avec leur ville d’origine.");
+  var h='<div class="wrap"><div class="ch"><span class="lab">Index des créateurs</span><h1>Les maisons françaises</h1><p>De Grasse à Lille, de Dinard à Nice, et jusqu’à Bordeaux : les maisons indépendantes présentes à la boutique. Les maisons soulignées sont visibles dans cette maquette ; les autres le seront sur le site final.</p></div>';
+  h+='<div style="padding:28px 0 72px"><ul class="mx">'+INDEX.map(function(x){return '<li>'+(x[2]?'<a href="#collection/'+x[2]+'" style="text-decoration:underline;text-decoration-color:var(--copper);text-underline-offset:4px">'+esc(x[0])+'</a>':'<span class="n">'+esc(x[0])+'</span>')+'<small>'+esc(x[1])+'</small></li>';}).join("")+'</ul></div></div>';
+  return h;
+}
+
+/* ---------- LA MAISON ---------- */
+function vMaison(){
+  setMeta("Notre histoire","L’histoire de La Boutique Olfactive : David, vingt ans de parfumerie, une boutique indépendante ouverte le 16 juillet 2019 au 22 rue Bouffard à Bordeaux.");
+  var h='<div class="wrap"><div class="ch" style="border:0"><span class="lab">Notre histoire · depuis 2019</span><h1>Enchanté et bienvenue.</h1><p>« Le parfum est un langage silencieux. Il accompagne nos souvenirs, révèle notre personnalité et laisse une empreinte unique. »</p></div>';
+  h+='<div class="split" style="padding:20px 0 56px;align-items:start"><figure style="margin:0">'+imgTag(PH.vitrine,"Vitrine de la boutique avec le logo La[b.o]",900)+'</figure><div><h2 style="font-size:32px;margin-bottom:14px">Une passion devenue un métier</h2><p>Pendant plus de vingt ans, David a évolué dans l’univers de la parfumerie : conseiller puis manager en parfumerie, puis quinze ans commercial et formateur chez Beauté Prestige International – Shiseido, auprès de maisons comme Serge Lutens, Issey Miyake ou Narciso Rodriguez.</p><p>Au fil du temps, une évidence : retrouver une relation plus humaine avec le parfum, ses créateurs et les personnes qui le choisissent. Créer un lieu où le conseil prime sur la vente.</p>';
+  h+='<span class="lab" style="display:block;margin:28px 0 14px">Repères</span><ol class="tl"><li><b>2018</b><span>Avec Pierre, un ami de longue date, naît l’idée d’une boutique indépendante, française, créative et végétale.</span></li><li><b>16 juillet 2019</b><span>La Boutique Olfactive ouvre au 22 rue Bouffard, à Bordeaux. Le kokedama devient la mascotte de la boutique.</span></li><li><b>2022</b><span>David poursuit l’aventure seul, avec la même passion et la même exigence.</span></li><li><b>Aujourd’hui</b><span>Plus de 30 maisons françaises, des ateliers, et « Et si… », la première ligne de parfums de maison signée La[b.o].</span></li></ol></div></div>';
+  h+='<section class="blk" style="border-top:1px solid var(--line)"><div class="split rev"><div class="mosaic">'+imgTag(PH.mousse,"Présentoir de parfums posés sur la mousse, entre les plantes",900)+imgTag(PH.etag,"Étagères de la boutique garnies de flacons",500)+imgTag(PH.inter,"Intérieur de la boutique fleuri",500)+'</div><div><span class="lab">Notre philosophie</span><h2>Un écrin de nature, un laboratoire de tendances olfactives.</h2><p>Chaque maison est sélectionnée avec soin. Au-delà des fragrances : des rencontres, des histoires et de l’humain. Des créateurs exclusivement français et indépendants, des savoir-faire authentiques, des démarches sincères, souvent artisanales.</p><p class="quote" style="margin-top:18px">Un parfum ne se choisit pas uniquement avec le nez. Il se choisit aussi avec le cœur.</p><a class="btn" href="#maisons" style="margin-top:8px">Découvrir les maisons</a></div></div></section></div>';
+  h+=visitBlock();
+  return h;
+}
+
+/* ---------- DÉCOUVERTE ---------- */
+var QZ=[
+ {k:"u",q:"Pour qui cherchez-vous un parfum ?",o:[["moi","Pour moi","Un parfum à porter au quotidien ou pour les grands soirs"],["offrir","Pour offrir","On vous guide, l’emballage cadeau est offert"],["maison","Pour la maison","Bougie, diffuseur ou brume d’intérieur"]]},
+ {k:"fam",q:"Quel univers vous attire le plus ?",o:[["floral","Les fleurs","Rose, iris, fleur d’oranger, jasmin"],["boise","Les bois","Cèdre, santal, vétiver, oud"],["ambre","L’ambre et les épices","Safran, encens, benjoin, cannelle"],["gourmand","La gourmandise","Vanille, fève tonka, fruits, rhum"],["frais","La fraîcheur","Agrumes, embruns, herbes, verveine"]]},
+ {k:"amb",q:"Que doit-il vous apporter ?",o:[["apaisant","De l’apaisement","Douceur, cocon, sérénité"],["sensuel","De la sensualité","Un sillage chaud et enveloppant"],["energie","De l’énergie","Un éclat pétillant, une bouffée d’air"]]},
+ {k:"eng",q:"Un engagement qui compte pour vous ?",o:[["naturel","100 % naturel","Compositions entièrement naturelles"],["sansalcool","Sans alcool","Parfum solide ou eau sans alcool"],["vegan","Vegan","Formules vegan revendiquées par la maison"],["","Peu importe","Je veux surtout le coup de cœur"]]}
+];
+var QA={};var QI=0;
+function vDecouverte(){
+  setMeta("Trouver mon parfum","Guide olfactif en 4 questions : La Boutique Olfactive vous recommande des parfums de créateurs français parmi sa sélection.");
+  QA={};QI=0;
+  return '<div class="wrap"><div class="quiz" id="quiz"></div></div>'+visitBlock();
+}
+function drawQuiz(){
+  var z=$("#quiz");if(!z)return;
+  if(QI>=QZ.length){z.innerHTML=results();bindResults();return;}
+  var q=QZ[QI];
+  var h='<span class="lab">Guide olfactif · question '+(QI+1)+' sur '+QZ.length+'</span><div class="qprog" aria-hidden="true">'+QZ.map(function(_,i){return '<i class="'+(i<=QI?"on":"")+'"></i>';}).join("")+'</div>';
+  h+='<h1 style="font-size:clamp(28px,4.4vw,44px);margin-bottom:22px" tabindex="-1" id="qh">'+q.q+'</h1><div class="opts" role="group" aria-labelledby="qh">'+q.o.map(function(o){return '<button class="opt" data-v="'+o[0]+'" aria-pressed="'+(QA[q.k]===o[0])+'"><b>'+o[1]+'</b><span>'+o[2]+'</span></button>';}).join("")+'</div>';
+  h+='<div class="qnav">'+(QI>0?'<button class="lnk" id="qback">Question précédente</button>':'<span></span>')+'<span class="note">Les recommandations viennent de la sélection de la boutique.</span></div>';
+  z.innerHTML=h;
+  $$(".opt",z).forEach(function(b){b.onclick=function(){QA[q.k]=b.dataset.v;QI++;drawQuiz();var t=$("#qh");if(t)t.focus({preventScroll:true});window.scrollTo(0,0);};});
+  var bk=$("#qback");if(bk)bk.onclick=function(){QI--;drawQuiz();};
+}
+function results(){
+  var u=QA.u==="maison"?"maison":"soi";
+  var sc=P.filter(function(p){return p.u===u;}).map(function(p){
+    var s=0,why=[];
+    if(p.fam.indexOf(QA.fam)>-1){s+=3;why.push(FAM[QA.fam].toLowerCase());}
+    if(p.amb.indexOf(QA.amb)>-1){s+=2;why.push(AMB[QA.amb].toLowerCase());}
+    if(QA.eng){if(p.eng.indexOf(QA.eng)>-1){s+=2;why.push(ENG[QA.eng].toLowerCase());}else s-=4;}
+    if(p.nw)s+=0.3;
+    return {p:p,s:s,why:why};}).sort(function(a,b){return b.s-a.s||minP(a.p)-minP(b.p);});
+  var top=sc.slice(0,3);
+  var h='<span class="lab">Votre sélection</span><h1 style="font-size:clamp(28px,4.4vw,44px);margin:12px 0 10px" tabindex="-1" id="qh">Trois parfums à sentir en priorité</h1><p style="color:var(--mute);max-width:56ch">'+(QA.u==="offrir"?"Pour offrir, l’emballage cadeau et un message personnalisé sont proposés sur demande. ":"")+'Un échantillon est offert avec chaque parfum ; et si vous passez rue Bouffard, on vous les fait sentir.</p>';
+  if(QA.eng&&top[0]&&top[0].s<0)h+='<p class="note">Aucun parfum de cette maquette ne réunit tous vos critères : voici les plus proches.</p>';
+  h+='<div class="grid" style="margin-top:22px">'+top.map(function(r){return '<div>'+card(r.p)+(r.why.length?'<p class="why">Pour vous : '+esc(r.why.join(", "))+'</p>':'')+'</div>';}).join("")+'</div>';
+  h+='<div class="qnav" style="margin-top:32px"><button class="lnk" id="qagain">Recommencer</button><a class="btn" href="#collection">Voir toute la sélection</a></div>';
+  return h;
+}
+function bindResults(){var a=$("#qagain");if(a)a.onclick=function(){QA={};QI=0;drawQuiz();};var t=$("#qh");if(t)t.focus({preventScroll:true});}
+
+/* ---------- PANIER ---------- */
+var CART=[];
+function cartTotal(){return CART.reduce(function(a,x){return a+x.pr*x.q;},0);}
+function addToCart(it){
+  var ex=CART.filter(function(x){return x.k===it.k;})[0];
+  if(ex){if(!it.single)ex.q++;}else{it.q=1;CART.push(it);}
+  renderCart();openCart();
+}
+var CC=false;
+function renderCart(){
+  var n=CART.reduce(function(a,x){return a+x.q;},0);var c=$("#cartCount");c.textContent=n;c.dataset.n=n;
+  var b=$("#dBody"),f=$("#dFoot");
+  if(!CART.length){b.innerHTML='<p style="margin:20px 0 14px">Votre panier est vide.</p><a class="btn ghost block" href="#decouverte" data-close>Trouver mon parfum</a>';f.innerHTML="";bindClose();return;}
+  b.innerHTML=CART.map(function(x,i){return '<div class="li">'+'<img src="'+im(x.img,160)+'" alt="" onerror="this.style.visibility=\'hidden\'"><div><h3>'+esc(x.n)+'</h3><div class="m">'+esc(x.m)+' · '+esc(x.fmt)+'</div><div class="q">'+(x.single?'':'<button data-i="'+i+'" data-d="-1" aria-label="Diminuer la quantité">−</button><span>'+x.q+'</span><button data-i="'+i+'" data-d="1" aria-label="Augmenter la quantité">+</button>')+'</div><button class="rm" data-r="'+i+'">Retirer</button></div><div>'+eur(x.pr*x.q)+'</div></div>';}).join("")+(CART.some(function(x){return !/atelier|bon-/.test(x.k);})?'<div class="gift">[+] Un échantillon est glissé dans votre colis avec chaque parfum (selon disponibilité).</div>':'');
+  var t=cartTotal(),rest=Math.max(0,95-t),onlyAtelier=CART.every(function(x){return /^atelier|^bon-/.test(x.k);});
+  var ship=onlyAtelier||CC?0:(rest>0?10:0);
+  var fh='';
+  if(!onlyAtelier){fh+='<div class="ship">'+(CC?"Retrait gratuit en boutique, 22 rue Bouffard.":rest>0?"Plus que <b>"+eur(rest)+"</b> pour la livraison offerte.":"<b>Livraison offerte.</b>")+'<div class="bar"><i style="width:'+Math.min(100,t/95*100)+'%"></i></div></div>';
+  fh+='<label class="cc"><input type="checkbox" id="ccb"'+(CC?" checked":"")+'><span>Click &amp; collect : je retire ma commande en boutique (mardi – samedi, 10 h – 19 h)</span></label>';}
+  fh+='<div class="sum"><span>Sous-total</span><span>'+eur(t)+'</span></div>'+(onlyAtelier?'':'<div class="sum"><span>Livraison</span><span>'+(ship?eur(ship):"Offerte")+'</span></div>')+'<div class="sum t"><span>Total</span><span>'+eur(t+ship)+'</span></div><button class="btn block" id="checkout">Commander</button><p class="note" style="margin:8px 0 0;text-align:center">Emballage cadeau et message sur demande à l’étape suivante.</p>';
+  f.innerHTML=fh;
+  $$("[data-d]",b).forEach(function(x){x.onclick=function(){var it=CART[+x.dataset.i];it.q+=+x.dataset.d;if(it.q<1)CART.splice(+x.dataset.i,1);renderCart();};});
+  $$("[data-r]",b).forEach(function(x){x.onclick=function(){CART.splice(+x.dataset.r,1);renderCart();};});
+  var cc=$("#ccb");if(cc)cc.onchange=function(){CC=cc.checked;renderCart();};
+  $("#checkout").onclick=function(){toast("Maquette : le paiement sécurisé sera branché à la mise en ligne.");};
+  bindClose();
+}
+function bindClose(){$$("[data-close]").forEach(function(a){a.addEventListener("click",closeCart);});}
+var lastFocus=null;
+function openCart(){lastFocus=document.activeElement;$("#drawer").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#scrim").classList.add("on");$("#dClose").focus();}
+function closeCart(){$("#drawer").classList.remove("on");$("#drawer").setAttribute("aria-hidden","true");$("#scrim").classList.remove("on");if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+function openNotes(){lastFocus=document.activeElement;$("#notes").classList.add("on");$("#notes").setAttribute("aria-hidden","false");$("#notesBtn").setAttribute("aria-expanded","true");$("#scrim").classList.add("on");$("#nClose").focus();}
+function closeNotes(){$("#notes").classList.remove("on");$("#notes").setAttribute("aria-hidden","true");$("#notesBtn").setAttribute("aria-expanded","false");$("#scrim").classList.remove("on");$("#notesBtn").focus();}
+var tt;function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on");},3200);}
+function openMenu(){$("#mnav").classList.add("open");$("#burger").setAttribute("aria-expanded","true");$("#mclose").focus();}
+function closeMenu(){$("#mnav").classList.remove("open");$("#burger").setAttribute("aria-expanded","false");}
+
+/* ---------- ROUTEUR ---------- */
+function route(){
+  var hs=(location.hash||"#accueil").slice(1).split("/");var r=hs[0]||"accueil",arg=hs.slice(1).join("/");
+  var app=$("#app"),html=null,after=null,nav=r;
+  closeMenu();if($("#drawer").classList.contains("on"))closeCart();
+  if(r==="accueil")html=vHome();
+  else if(r==="collection"){html=vCollection(arg);after=bindCollection;}
+  else if(r==="parfum"){html=vProduct(arg);after=function(){bindProduct(arg);};nav="collection";}
+  else if(r==="maison")html=vMaison();
+  else if(r==="maisons")html=vMaisons();
+  else if(r==="atelier"){html=vAtelier(arg);after=function(){bindAtelier(arg);};}
+  else if(r==="decouverte"){html=vDecouverte();after=drawQuiz;}
+  if(html===null){html=vHome();nav="accueil";}
+  app.innerHTML='<div class="view">'+html+'</div>';
+  $$("nav.main a").forEach(function(a){if(a.getAttribute("href")==="#"+nav)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  if(after)after();
+  if(arg!=="offrir")window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);
+$("#cartBtn").onclick=openCart;$("#dClose").onclick=closeCart;
+$("#scrim").onclick=function(){if($("#notes").classList.contains("on"))closeNotes();else closeCart();};
+$("#notesBtn").onclick=openNotes;$("#nClose").onclick=closeNotes;
+$("#burger").onclick=openMenu;$("#mclose").onclick=closeMenu;
+$$("#mnav a").forEach(function(a){a.addEventListener("click",closeMenu);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if($("#notes").classList.contains("on"))closeNotes();else if($("#drawer").classList.contains("on"))closeCart();else closeMenu();var fl=$("#filters");if(fl&&fl.classList.contains("open")){fl.classList.remove("open");document.body.style.overflow="";}}});
+renderCart();route();
+})();
+</script>
+</body>
+</html>

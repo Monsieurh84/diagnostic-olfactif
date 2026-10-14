@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Taizo · Parfumerie de niche à Cannes — maquette de refonte</title>
+<meta name="description" content="Maquette de refonte de taizo.fr : la parfumerie de niche du 120 rue d'Antibes à Cannes, avec ses maisons, ses parfums, le click &amp; collect et la commande en ligne.">
+<meta property="og:title" content="Taizo · L'exclusivité des fragrances, rue d'Antibes">
+<meta property="og:description" content="Maquette non contractuelle préparée par Monsieur.H : boutique en ligne, répertoire des maisons et guide olfactif pour Taizo, Cannes.">
+<meta property="og:image" content="https://taizo.fr/upload/slidesHP/1/52ac4844-f531-4141-b41e-b7ca452687d3.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Taizo","description":"Parfumerie de niche, soins et maquillage à Cannes","address":{"@type":"PostalAddress","streetAddress":"120 rue d'Antibes","postalCode":"06400","addressLocality":"Cannes","addressCountry":"FR"},"telephone":"+33 4 93 39 57 58","email":"pcs@taizo.fr","url":"https://taizo.fr"}
+</script>
+<style>
+:root{
+  --ecume:#F2F6F6;      /* fond : écume de la baie */
+  --blanc:#FFFFFF;
+  --sable:#E9E4DA;      /* pierre claire de la façade */
+  --ink:#0B2A30;        /* lagon profond */
+  --ink-2:#3C565B;      /* texte secondaire (contraste AA sur écume) */
+  --lagon:#1B6F79;      /* turquoise Taizo assombri pour le texte et les boutons */
+  --turquoise:#35A3B0;  /* turquoise signature du logo */
+  --neon:#F0C24B;       /* lumière de l'enseigne la nuit */
+  --line:#C9D6D7;
+  --radius:18px;
+  --arch:999px 999px 18px 18px;
+  --serif:"Bodoni Moda", "Didot", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter:16px;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--ecume);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:4px}
+[tabindex="-1"]:focus{outline:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:100}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+@media(min-width:900px){:root{--gutter:40px}}
+
+/* bandeau maquette */
+.mock{background:var(--ink);color:#DDEBEC;font-size:12px;letter-spacing:.04em;text-align:center;padding:6px var(--gutter)}
+.mock b{color:#fff;font-weight:600}
+
+/* en-tête */
+.top{background:var(--lagon);color:#fff;font-size:12.5px}
+.top .wrap{display:flex;gap:18px;align-items:center;justify-content:space-between;min-height:34px;flex-wrap:wrap}
+.top a{text-decoration:none}
+.top .msg{display:flex;gap:18px;overflow:hidden;white-space:nowrap}
+.top .msg span:nth-child(n+2){display:none}
+@media(min-width:760px){.top .msg span:nth-child(n+2){display:inline}}
+.lang{display:flex;gap:2px;border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:2px}
+.lang button{background:none;border:0;padding:2px 10px;border-radius:99px;font-size:11.5px;font-weight:600;letter-spacing:.08em;color:#fff}
+.lang button[aria-pressed=true]{background:#fff;color:var(--lagon)}
+header.site{position:sticky;top:0;z-index:40;background:rgba(242,246,246,.94);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:68px;gap:8px}
+.logo{justify-self:center;display:block;line-height:0}
+.logo img{height:46px;width:auto}
+nav.main{display:none}
+nav.main a,.nav-r a{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:8px 2px;border-bottom:1.5px solid transparent}
+nav.main a[aria-current=page]{border-color:var(--turquoise)}
+nav.main a:hover,.nav-r a:hover{border-color:var(--ink)}
+.nav-r{justify-self:end;display:flex;align-items:center;gap:10px}
+.nav-r .txt{display:none}
+.icon-btn{background:none;border:0;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;position:relative}
+.icon-btn:hover{background:rgba(27,111,121,.08)}
+.icon-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5}
+.badge{position:absolute;top:5px;right:4px;min-width:18px;height:18px;border-radius:9px;background:var(--lagon);color:#fff;font-size:10.5px;font-weight:700;display:grid;place-items:center;padding:0 4px}
+.badge[hidden]{display:none}
+.burger{justify-self:start}
+@media(min-width:1000px){
+  nav.main{display:flex;gap:26px}
+  .burger{display:none}
+  .nav-r .txt{display:inline-block}
+}
+.mnav{position:fixed;inset:0;z-index:60;background:var(--ink);color:#fff;padding:22px var(--gutter);display:none;flex-direction:column;gap:6px}
+.mnav.open{display:flex}
+.mnav a{font:400 30px/1.35 var(--serif);font-style:italic;text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.mnav .close{align-self:flex-end;color:#fff}
+.mnav p{font-size:13px;color:#BFD6D8;margin-top:auto}
+
+/* typo */
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lagon)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.005em}
+h1{font-size:clamp(40px,8.5vw,92px)}
+h2{font-size:clamp(30px,5vw,54px)}
+h3{font-size:24px}
+.it{font-style:italic}
+.lead{font-size:clamp(17px,2vw,20px);line-height:1.6;color:var(--ink-2);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:99px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font-weight:600;font-size:14px;letter-spacing:.04em;text-decoration:none}
+.btn:hover{background:var(--lagon);border-color:var(--lagon)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.light:hover{background:var(--neon);border-color:var(--neon)}
+.btn.block{width:100%}
+section{padding:64px 0}
+@media(min-width:900px){section{padding:104px 0}}
+
+/* arche : écho de la rotonde de la façade */
+.arch{border-radius:var(--arch);overflow:hidden;background:var(--sable)}
+.arch img{width:100%;height:100%;object-fit:cover}
+
+/* accueil */
+.hero{padding:28px 0 56px}
+.hero .wrap{display:grid;gap:30px}
+.hero .arch{aspect-ratio:5/4;max-height:46vh;width:100%;position:relative}
+.hero .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,42,48,.55))}
+.hero .cap{position:absolute;left:0;right:0;bottom:18px;z-index:1;color:#fff;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.hero h1 .it{color:var(--lagon)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:13.5px;color:var(--ink-2)}
+.hero .facts span::before{content:"✦";color:var(--turquoise);margin-right:8px}
+@media(min-width:900px){
+  .hero{padding:48px 0 90px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
+  .hero .arch{aspect-ratio:auto;max-height:none;height:min(76vh,720px);order:2}
+}
+
+.marquee{background:var(--ink);color:#fff;overflow:hidden;padding:18px 0;border-block:1px solid var(--ink)}
+.marquee .track{display:flex;gap:44px;width:max-content;animation:defile 70s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee a{font:italic 400 24px/1 var(--serif);text-decoration:none;white-space:nowrap;opacity:.92}
+.marquee a:hover{color:var(--neon)}
+.marquee a::after{content:"·";margin-left:44px;color:var(--turquoise)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+.split{display:grid;gap:36px}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr;gap:72px;align-items:center}}
+.quote{font:italic 400 clamp(24px,3.4vw,38px)/1.3 var(--serif)}
+.quote::before{content:"“";color:var(--turquoise)}
+.quote::after{content:"”";color:var(--turquoise)}
+.src{font-size:13px;color:var(--ink-2);margin-top:14px}
+
+.sensai{background:#0A0A0A;color:#F3F0EA;position:relative;overflow:hidden}
+.sensai .split{align-items:stretch}
+.sensai .ph{border-radius:var(--radius);overflow:hidden;min-height:320px}
+.sensai .ph img{width:100%;height:100%;object-fit:cover}
+.sensai .eyebrow{color:var(--neon)}
+.sensai p{color:#D9D4CA}
+.sensai .kanji{font:400 13px/1 var(--sans);letter-spacing:.4em;color:#9C978D;text-transform:uppercase}
+
+.grid{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{background:var(--blanc);border:1px solid var(--line);border-radius:var(--radius);padding:10px 10px 16px;display:flex;flex-direction:column;gap:10px;text-decoration:none;transition:transform .25s,box-shadow .25s;min-width:0}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(11,42,48,.45)}
+.card .arch{aspect-ratio:4/5}
+.card .b{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lagon);padding:0 4px;overflow-wrap:anywhere}
+.card .n{font:italic 400 21px/1.15 var(--serif);padding:0 4px;overflow-wrap:anywhere}
+.card .p{font-size:12.5px;color:var(--ink-2);padding:0 4px;margin-top:auto}
+.sechead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:34px}
+
+.finder{background:var(--lagon);color:#fff;border-radius:28px;padding:38px 24px;display:grid;gap:22px;position:relative;overflow:hidden}
+.finder .eyebrow{color:#CFF0F3}
+.finder::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(255,255,255,.25);box-shadow:0 0 0 28px rgba(255,255,255,.05),0 0 0 56px rgba(255,255,255,.04)}
+@media(min-width:900px){.finder{grid-template-columns:1.4fr 1fr;padding:64px;align-items:center}}
+
+.boutique .arch{aspect-ratio:3/2;border-radius:var(--radius) var(--radius) var(--radius) var(--radius)}
+.info{display:grid;gap:4px;margin-top:22px;font-size:15px}
+.info a{text-decoration-color:var(--turquoise);text-underline-offset:3px}
+
+/* collection */
+.pagehead{padding:44px 0 26px}
+.tabs{display:flex;gap:6px;background:var(--blanc);border:1px solid var(--line);border-radius:99px;padding:4px;width:max-content;max-width:100%;margin-top:24px}
+.tabs button{border:0;background:none;padding:10px 18px;border-radius:99px;font-weight:600;font-size:14px}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.filters{display:grid;gap:14px;margin:26px 0 30px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--blanc);border-radius:99px;padding:9px 16px;font-size:13.5px;font-weight:500}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);flex:1 1 200px;min-width:0}
+.field input,.field select{font:500 15px var(--sans);letter-spacing:0;text-transform:none;color:var(--ink);background:var(--blanc);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px;width:100%}
+.count{font-size:13.5px;color:var(--ink-2)}
+.hint{font-size:12.5px;color:var(--ink-2);background:var(--blanc);border:1px dashed var(--line);border-radius:12px;padding:10px 14px}
+.more{display:flex;justify-content:center;margin-top:34px}
+.az{columns:2;column-gap:24px}
+@media(min-width:760px){.az{columns:4}}
+.az .l{break-inside:avoid;margin-bottom:22px}
+.az .l b{display:block;font:italic 400 30px/1 var(--serif);color:var(--turquoise);margin-bottom:8px}
+.az a{display:block;text-decoration:none;padding:4px 0;font-size:15px}
+.az a:hover{color:var(--lagon);text-decoration:underline}
+.az a small{color:var(--ink-2);font-size:12px}
+
+/* fiche */
+.crumbs{font-size:13px;color:var(--ink-2);padding:22px 0 10px;display:flex;flex-wrap:wrap;gap:6px}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.pdp{display:grid;gap:32px;padding-bottom:40px}
+@media(min-width:900px){.pdp{grid-template-columns:1fr 1fr;gap:64px;align-items:start}.pdp .gal{position:sticky;top:96px}}
+.pdp .arch{aspect-ratio:4/5}
+.pdp figcaption{font-size:12px;color:var(--ink-2);margin-top:10px;text-align:center}
+.price{font:500 18px var(--sans);margin:16px 0 4px}
+.price small{display:block;font-size:12.5px;font-weight:400;color:var(--ink-2)}
+.opt{margin-top:22px}
+.opt legend{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;padding:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.radios{display:grid;gap:8px}
+.radios label{display:flex;gap:12px;align-items:flex-start;background:var(--blanc);border:1px solid var(--line);border-radius:14px;padding:13px 14px;cursor:pointer}
+.radios label:has(input:checked){border-color:var(--lagon);box-shadow:inset 0 0 0 1px var(--lagon)}
+.radios input{accent-color:var(--lagon);margin-top:4px}
+.radios small{display:block;color:var(--ink-2);font-size:12.5px}
+.actions{display:grid;gap:10px;margin-top:22px}
+.pyr{display:grid;gap:10px;margin-top:10px}
+.pyr div{border:1.5px dashed var(--line);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:rgba(255,255,255,.5)}
+.pyr b{font:italic 400 19px var(--serif)}
+.pyr span{font-size:13px;color:var(--ink-2)}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:#FFF4D6;color:#6A4D00;border-radius:6px;padding:3px 8px;vertical-align:middle}
+details.acc{border-top:1px solid var(--line);padding:16px 0}
+details.acc summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+details.acc summary::after{content:"+";font-size:20px;line-height:1}
+details.acc[open] summary::after{content:"–"}
+.reviews{border:1.5px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;background:rgba(255,255,255,.5)}
+
+/* marque */
+.brandhero{display:grid;gap:28px;padding:20px 0 50px}
+@media(min-width:900px){.brandhero{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}}
+.brandhero .arch{aspect-ratio:4/5}
+
+/* découverte */
+.quiz{background:var(--blanc);border:1px solid var(--line);border-radius:28px;padding:26px 20px;max-width:860px;margin:0 auto}
+@media(min-width:760px){.quiz{padding:48px}}
+.steps{display:flex;gap:6px;margin-bottom:22px}
+.steps i{flex:1;height:3px;border-radius:2px;background:var(--line)}
+.steps i.on{background:var(--lagon)}
+.qopts{display:grid;gap:10px;margin-top:22px}
+@media(min-width:640px){.qopts{grid-template-columns:1fr 1fr}}
+.qopt{text-align:left;background:var(--ecume);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
+.qopt:hover{border-color:var(--lagon)}
+.qopt b{display:block;font:italic 400 21px/1.2 var(--serif)}
+.qopt small{color:var(--ink-2);font-size:13px}
+.result .grid{margin-top:24px}
+.svc{display:grid;gap:14px;margin-top:40px}
+@media(min-width:760px){.svc{grid-template-columns:repeat(3,1fr)}}
+.svc div{background:var(--blanc);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.svc b{font:italic 400 22px var(--serif);display:block;margin-bottom:6px}
+.svc p{margin:0;font-size:14px;color:var(--ink-2)}
+
+/* tiroir panier */
+.scrim{position:fixed;inset:0;background:rgba(11,42,48,.45);z-index:70;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--ecume);z-index:80;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;visibility:hidden}
+.drawer.on{transform:none;visibility:visible}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.drawer .body{flex:1;overflow:auto;padding:16px 20px;display:grid;gap:12px;align-content:start}
+.drawer footer{padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:12px;background:var(--blanc)}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;background:var(--blanc);border:1px solid var(--line);border-radius:14px;padding:8px}
+.li .arch{width:64px;height:80px;border-radius:999px 999px 8px 8px}
+.li b{font:italic 400 18px/1.15 var(--serif);display:block}
+.li small{color:var(--ink-2);font-size:12px}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--ecume)}
+.empty{text-align:center;color:var(--ink-2);padding:40px 0}
+.ok{background:#E6F4F1;border:1px solid #A7D5CB;border-radius:14px;padding:16px;font-size:14px}
+
+/* notes de refonte */
+.notes-btn{position:fixed;left:12px;bottom:12px;z-index:50;background:var(--neon);color:var(--ink);border:0;border-radius:99px;padding:9px 14px;font-size:12px;font-weight:700;letter-spacing:.06em;box-shadow:0 8px 22px -10px rgba(0,0,0,.5)}
+.notes{position:fixed;inset:auto 0 0 0;max-height:88vh;z-index:90;background:var(--ink);color:#E3EEEF;border-radius:22px 22px 0 0;transform:translateY(105%);transition:transform .3s;overflow:auto;visibility:hidden}
+.notes.on{transform:none;visibility:visible}
+@media(min-width:900px){.notes{inset:0 auto 0 0;width:520px;max-height:none;border-radius:0 22px 22px 0;transform:translateX(-105%)}}
+.notes .in{padding:24px 22px 40px}
+.notes h2{font-size:32px;color:#fff}
+.notes ol{padding:0;margin:20px 0 0;list-style:none;counter-reset:n;display:grid;gap:14px}
+.notes li{counter-increment:n;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px}
+.notes li::before{content:counter(n,decimal-leading-zero);font:italic 400 24px var(--serif);color:var(--neon)}
+.notes li h3{font:600 15.5px/1.35 var(--sans);color:#fff;margin:4px 0 8px}
+.notes dl{margin:0;display:grid;gap:6px;font-size:13.5px;line-height:1.5}
+.notes dt{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8FC9CF}
+.notes dd{margin:0 0 4px}
+.notes .x{float:right;color:#fff}
+.toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;z-index:95;opacity:0;pointer-events:none;transition:.25s;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+
+footer.site{background:var(--ink);color:#CFE0E2;padding:56px 0 90px;margin-top:40px}
+footer.site .cols{display:grid;gap:30px}
+@media(min-width:900px){footer.site .cols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer.site h3{font-size:22px;color:#fff;margin-bottom:12px}
+footer.site a{display:block;text-decoration:none;padding:3px 0;font-size:14px}
+footer.site a:hover{color:var(--neon)}
+footer.site .fine{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:18px;font-size:12px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.foot-logo{height:54px;width:auto;filter:brightness(0) invert(1);opacity:.95;margin-bottom:14px}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<div class="mock">Maquette préparée pour <b>Taizo</b> par <b>Monsieur.H</b> · non contractuelle</div>
+<div class="top">
+  <div class="wrap">
+    <div class="msg"><span>Click &amp; collect au 120 rue d'Antibes</span><span>Conseil au +33 (0)4 93 39 57 58</span><span>Distributeur exclusif Sensai</span></div>
+    <div class="lang" role="group" aria-label="Langue">
+      <button type="button" aria-pressed="true" data-lang="fr">FR</button>
+      <button type="button" aria-pressed="false" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+<header class="site">
+  <div class="wrap">
+    <button class="icon-btn burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav" id="burger"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></button>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#collection">Parfums</a>
+      <a href="#collection/maisons">Maisons</a>
+      <a href="#decouverte">Trouver mon parfum</a>
+    </nav>
+    <a class="logo" href="#accueil" aria-label="Taizo, accueil"><img src="https://taizo.fr/Design/Images/logo.png" alt="Taizo" width="120" height="46"></a>
+    <div class="nav-r">
+      <nav class="main" aria-label="Navigation secondaire"><a href="#marque/sensai">Sensai</a><a href="#maison">La Maison</a></nav>
+      <button class="icon-btn" type="button" id="cartBtn" aria-label="Ma sélection, 0 article"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="badge" hidden>0</span></button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="icon-btn close" type="button" id="mclose" aria-label="Fermer le menu"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#accueil">Accueil</a>
+  <a href="#collection">Parfums</a>
+  <a href="#collection/maisons">Maisons A–Z</a>
+  <a href="#marque/sensai">Sensai, en exclusivité</a>
+  <a href="#decouverte">Trouver mon parfum</a>
+  <a href="#maison">La Maison</a>
+  <p>120 rue d'Antibes, 06400 Cannes · +33 (0)4 93 39 57 58 · pcs@taizo.fr</p>
+</div>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="foot-logo" src="https://taizo.fr/Design/Images/logo.png" alt="Taizo" width="140" height="54" loading="lazy">
+        <p style="max-width:34ch;margin:0">L'exclusivité des fragrances. Parfumerie de niche, soins et maquillage, rue d'Antibes à Cannes.</p>
+      </div>
+      <div><h3>Boutique</h3><a href="#collection">Tous les parfums</a><a href="#collection/maisons">Maisons A–Z</a><a href="#marque/sensai">Sensai</a><a href="#decouverte">Trouver mon parfum</a></div>
+      <div><h3>Services</h3><a href="#decouverte">Click &amp; collect</a><a href="#decouverte">Livraison</a><a href="tel:+33493395758">Conseil par téléphone</a><a href="mailto:pcs@taizo.fr">pcs@taizo.fr</a></div>
+      <div><h3>Taizo</h3><a href="#maison">La Maison</a><a href="#maison">120 rue d'Antibes, Cannes</a><a href="https://www.instagram.com/taizo_official/" rel="noopener">Instagram @taizo_official</a><a href="#maison">Mentions légales</a></div>
+    </div>
+    <div class="fine"><span>© Taizo · SAS Taizo, Cannes</span><span>Maquette · Développé par Monsieur.H</span></div>
+  </div>
+</footer>
+
+<button class="notes-btn" type="button" id="notesBtn" aria-controls="notes" aria-expanded="false">✦ Notes de refonte</button>
+<aside class="notes" id="notes" aria-label="Notes de refonte" aria-hidden="true">
+  <div class="in">
+    <button class="icon-btn x" type="button" id="notesClose" aria-label="Fermer les notes"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="eyebrow" style="color:#8FC9CF">Taizo · relevé du 14 octobre 2026</p>
+    <h2>Ce que la refonte change</h2>
+    <p style="font-size:14px;margin:12px 0 0">Chaque point part d'un constat mesuré sur taizo.fr, puis montre ce que fait cette maquette.</p>
+    <ol>
+      <li><h3>On ne peut rien acheter en ligne</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Aucun panier ni aucun prix. Chaque page marque se termine par « Tous les produits du catalogue sont disponibles en magasin ». La bio Instagram demande de commander par e-mail ou par téléphone.</dd>
+        <dt>Dans la maquette</dt><dd>Chaque parfum a sa fiche avec « Ajouter à ma sélection », un tiroir de commande, le choix entre click &amp; collect rue d'Antibes et livraison, et l'envoi d'une demande en un geste.</dd>
+        <dt>Bénéfice</dt><dd>Taizo vend aussi quand la boutique est fermée, et une clientèle internationale de passage à Cannes peut recommander depuis chez elle.</dd></dl></li>
+      <li><h3>Le site n'est pas fait pour le mobile</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Il n'y a pas de balise meta viewport. Sur smartphone, le téléphone affiche donc la page desktop en réduction : menu sur une ligne, textes en 14 px. Le site tourne sur jQuery 1.11.0 (2014).</dd>
+        <dt>Dans la maquette</dt><dd>La conception part du mobile : menu plein écran, filtres que l'on fait défiler au doigt, boutons d'au moins 44 px, aucun défilement horizontal à 375 px.</dd>
+        <dt>Bénéfice</dt><dd>Les touristes et plaisanciers cherchent sur leur téléphone. Google classe aussi les sites d'après leur version mobile.</dd></dl></li>
+      <li><h3>Google ne voit ni la maison ni les parfums</h3><dl>
+        <dt>Aujourd'hui</dt><dd>La page d'accueil n'a aucun H1. Six pages marques (D'Orsay, Essential Parfums, L'Entropiste, Maison Crivelli, Tom Ford, Trudon) n'ont ni title ni meta description. La page D'Orsay est publiée à l'adresse /taizo.html. Une seule page porte sur les parfums, et il n'existe aucune page par parfum.</dd>
+        <dt>Dans la maquette</dt><dd>Un H1 et un title par page. Une page par maison et une page par parfum (par exemple « Santal 33 · Le Labo · Taizo Cannes »), avec des données structurées Store et Product.</dd>
+        <dt>Bénéfice</dt><dd>Taizo peut apparaître dans les recherches du type « Baccarat Rouge 540 Cannes » ou « parfumerie de niche Cannes ». Aujourd'hui, ces recherches profitent à d'autres sites.</dd></dl></li>
+      <li><h3>Les parfums tiennent en une ligne de texte</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Sur chaque page marque, les parfums sont listés en une ligne, séparés par des tirets bas : « Beloved woman _ Dia woman _ … ». Douze marques n'en citent aucun. Il y a des coquilles : « Khiel's », « Portrait of a Llady ».</dd>
+        <dt>Dans la maquette</dt><dd>Plus de 200 parfums cités par Taizo deviennent des fiches, avec filtres, recherche, répertoire des maisons de A à Z et suggestions de parfums proches.</dd>
+        <dt>Bénéfice</dt><dd>Le client explore la sélection au lieu de lire une liste. On voit que la profondeur de l'offre est l'atout de Taizo.</dd></dl></li>
+      <li><h3>Un lien du menu mène à une page vide</h3><dl>
+        <dt>Aujourd'hui</dt><dd>« Institut de beauté », dans le menu principal, affiche « Contenu indisponible ». Sur l'accueil, 39 images sur 40 n'ont pas de texte alternatif. Certaines vignettes sont des fichiers de 1707 × 2560 px.</dd>
+        <dt>Dans la maquette</dt><dd>Aucune page morte. Chaque image a un texte alternatif, les visuels se chargent au fil du défilement et les cadres en arche reprennent la rotonde de la façade.</dd>
+        <dt>Bénéfice</dt><dd>Une image soignée, conforme à l'accessibilité, et des pages plus légères. Au relevé, l'accueil fait 60 requêtes et 3,9 Mo transférés (5,5 Mo décompressés).</dd></dl></li>
+      <li><h3>L'exclusivité Sensai est noyée dans le menu</h3><dl>
+        <dt>Aujourd'hui</dt><dd>« Distributeur exclusif de la marque Sensai » n'apparaît qu'à la fin du texte de la page Boutique. Sensai est rangé dans le sous-menu Soins, comme une marque parmi d'autres.</dd>
+        <dt>Dans la maquette</dt><dd>Sensai a son chapitre sur l'accueil, une entrée directe dans le menu et sa propre page.</dd>
+        <dt>Bénéfice</dt><dd>Une raison concrète de choisir Taizo plutôt qu'une autre parfumerie, mise en avant dès l'accueil.</dd></dl></li>
+      <li><h3>Les prix ne sont pas publiés</h3><dl>
+        <dt>Aujourd'hui</dt><dd>taizo.fr n'affiche aucun prix.</dd>
+        <dt>Dans la maquette</dt><dd>Les fiches indiquent « Prix en boutique » et la commande passe par une demande. Les pyramides olfactives et les avis sont des gabarits vides, clairement signalés. Aucun prix, note ou avis n'a été inventé.</dd>
+        <dt>Bénéfice</dt><dd>Dans la vraie boutique, les prix, formats et notes de Taizo seront en ligne et le paiement sera direct (Shopify), en français et en anglais.</dd></dl></li>
+    </ol>
+  </div>
+</aside>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true">
+  <header><h2 id="dtitle" style="font-size:28px" class="it">Ma sélection</h2><button class="icon-btn" type="button" id="dclose" aria-label="Fermer la sélection"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+  <div class="body" id="dbody"></div>
+  <footer id="dfoot"></footer>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var IMG="https://taizo.fr/upload/produits/";
+/* Relevé taizo.fr (pages marques) : [slug, nom, image, parfums cités par Taizo] */
+var B=[
+["acqua-di-parma","Acqua di Parma","3/ADPADP082755-50ML.5.H1.jpg","Colonia|Acqua Nobile"],
+["aesop","Aesop","82/100109cb-8692-4a4e-8095-56bed7f9b927.jpeg","Marrakech Intense|Tacit|Gloam|Karst|Erémia|Hwyl|Eidesis"],
+["amouage","Amouage","2/434009763-276455972172299-151135903825704691-n.jpg","Beloved Woman|Dia Woman|Fate Woman|Journey Woman|Lyric Woman|Memoir Woman|Reflection Woman|Silver Man"],
+["armani-prive","Armani Privé","83/431186463-966518651795988-4194981149816981643-n.jpg","Eccentrico|Bois d'Encens|Améthyste|Pivoine|Rose d'Arabie"],
+["atelier-des-ors","Atelier des Ors","8/800c9507-5507-4350-b612-b0e5e9f8a9f7.jpeg","Lune Féline|Larmes du Désert|Pink Me Up"],
+["bdk","BDK Parfums","95/IMG-4312.jpeg","Pas ce soir|Bouquet de Hongrie|Oud Abramad|Tubéreuse Impériale|Wood Jasmin"],
+["boadicea","Boadicea the Victorious","102/4b4920dc-bd91-4eec-99ed-5bc7b3b64c93.jpeg","Blue Sapphire|Rebellious"],
+["boucheron","Boucheron","98/458369746-1901024837039781-568091510344552314-n.jpg","Tubéreuse de Madras|Oud de Carthage|Ambre d'Alexandrie|Iris de Syracuse|Néroli d'Ispahan|Vanille de Zanzibar|Santal de Kandy"],
+["byredo","Byredo","5/HERO-3-EID-BS-ECOM-SPOTVIRE-1400x1400-IMAGE-noLogo-noTagline.jpg","Mister Marvelous"],
+["byron","Byron","110/3b6c90e0-2d3d-4093-a212-6049db484bf2.jpeg","The Chronic|Mula Mula"],
+["casamorati","Casamorati","84/CASAMORATI-Home.jpg","Bouquet|Gran Ballo|La Tosca"],
+["clive-christian","Clive Christian","6/e4a473f7-9773-48e3-8256-e3f33b4b3aa3.jpeg",""],
+["costume-national","Costume National","7/433988909-6520298624739878-6071076054462600416-n.jpg","21|Homme|Scent Intense"],
+["creed","Creed","66/0dceb2a0-4755-4670-a319-d4a644dc1914.jpeg",""],
+["dorsay","D'Orsay","124/476389081-604406725676110-7872124669387322151-n.jpg",""],
+["diptyque","Diptyque","9/363495170-233200069676256-2107902515688953834-n.jpg",""],
+["frederic-malle","Éditions de Parfums Frédéric Malle","12/433910441-441654461632195-3039458126127432899-n.jpg","Cologne Bigarade|French Lover|Musc Ravageur|Portrait of a Lady|Une Fleur de Cassie"],
+["elisire","Élisire","115/IMG-4455.jpg","Eau Papaguéna|Ambre Nomade|Élixir Absolu|Poudre Désir|Jasmin Paradis|Desired|Oderose|Érose|Extrait Noir"],
+["escentric-molecules","Escentric Molecules","10/434060594-770168378431380-3600321987791825657-n.jpg","Escentric 01|Escentric 02|Escentric 03"],
+["essential-parfums","Essential Parfums","125/479083352-1194366079029742-5976089523377430559-n.jpg","Bois Impérial|Fig Infusion"],
+["etro","Etro","11/ETRO-Jacquard.jpg","Jacquard|Rajasthan"],
+["ex-nihilo","Ex Nihilo","94/IMG-4631.jpg","Atlas Fever|Citizen X|Fleur Narcotique|Galvanize"],
+["hierbas-de-ibiza","Hierbas de Ibiza","13/HIERBAS-DE-IBIZA-AGUA-DE-COLONIA.jpg","Agua de Colonia|Bálsamo Corporal|Sales de Baño"],
+["houbigant","Houbigant","14/490999375-1790248245167227-6501789139137484212-n.jpg","Fougère Royale|Quelques Fleurs Extrait|Quelques Fleurs"],
+["initio","Initio","16/433468246-804734874901657-497053150021358957-n.jpg","Magnetic Blend|Absolute Aphrodisiac|Atomic Rose|Rehab|Oud for Greatness|Musk Therapy"],
+["isabey","Isabey","17/39200356-fa36-4687-a2db-72df5a61d159.jpeg","Fleur Nocturne|Gardénia"],
+["jean-charles-brosseau","Jean-Charles Brosseau","18/JC-BROSSEAU-OMBRE-ORIENTALE.jpg","Ombre Orientale|Ombre Platine|Ombre Rose"],
+["juliette-has-a-gun","Juliette Has a Gun","19/Juliette-1.jpg","Vengeance Extrême|Miss Charming|Gentlewoman"],
+["keiko-mecheri","Keiko Mecheri","74/Keiko-Mecheri-4.jpg","Datura Blanche|Iris d'Argent|Patchoulissime Pure|The Beautiful Ones"],
+["kiehls","Kiehl's","86/Musk-Eau-de-Toilette-Spray-.jpg","Musk|Aromatic Mist|Body Cleanser"],
+["kilian","Kilian Paris","59/Killian-1.jpg","Moonlight in Heaven|Good Girl Gone Bad|Love|Rolling in Love|Angels' Share"],
+["artisan-parfumeur","L'Artisan Parfumeur","4/LAP-BRANDPAGE-1322x881.jpg","Amour Nocturne|Mûre et Musc|Premier Figuier"],
+["lentropiste","L'Entropiste","126/485357696-999834295010986-4149514888867706637-n.jpg",""],
+["le-labo","Le Labo","116/433185696-440216108577632-2064835098500155511-n.jpg","Santal 33|Another 13|Rose 31|Baie 19"],
+["rosine","Les Parfums de Rosine","77/Ballerina-N1.jpg","Ballerina|Glam Rose|La Rose de Rosine|Rosissimo"],
+["lorenzo-villoresi","Lorenzo Villoresi","21/LORENZO-VILLORESI-TEINT-DE-NEIGE-CrystaL.jpg","Teint de Neige"],
+["lubin","Lubin","22/Lubin-2.jpg","Gin Fizz|Idole de Lubin|L de Lubin|Nuit de Longchamp|Galaor|Simbad"],
+["maison-crivelli","Maison Crivelli","123/bbfad0f7-ef08-4ca9-9560-0752fad7cabf.jpeg","Tubéreuse Astrale|Oud Maracujà"],
+["mfk","Maison Francis Kurkdjian","87/433962679-764059219008985-8139837025772737958-n.jpg","Baccarat Rouge 540|Oud|724|Grand Soir"],
+["mpg","Maître Parfumeur et Gantier","104/Patchouli-1969.jpg","Patchouli 1969|Bahiana|Datura"],
+["marc-antoine-barrois","Marc-Antoine Barrois","106/631d17de-eef8-4972-a6b6-1a8d020f6b0b.jpg","B683|Ganymede"],
+["marialux","MariaLux","24/MariaL-AveMogadess.jpg","Ave"],
+["matiere-premiere","Matière Première","49/462542118-499111429829868-4518653278357100506-n.jpg",""],
+["mdci","MDCI Parfums","31/353848480-801323714642950-9098639412082332455-n.jpg","Péché Cardinal|Fêtes Persanes"],
+["memo","Memo Paris","76/Unknown-8.jpg","French Leather|Irish Leather|Kedu|Quartier Latin|Shams Oud"],
+["miller-harris","Miller Harris","25/Miller-Harris-1.jpg","Scherzo|Secret Gardenia|La Fumée|Leather Rouge"],
+["mind-games","Mind Games","127/IMG-3243.jpg",""],
+["mizensir","Mizensir","68/491270065-1037058108484006-3470779640148179391-n.jpg","L'Envers du Paradis"],
+["moncler","Moncler","121/433988905-959108089259231-7733803037395201110-n.jpg","Le Solstice|La Cordée|Le Bois Glacé|Haute Montagne|Le Cèdre Bleu"],
+["nasomatto","Nasomatto","26/367367944-894997141986391-3473620796584113159-n.jpg","Black Afgano|Blamage|Nuda"],
+["nicolai","Nicolaï","103/Nicolai-1.jpg","Patchouli Sublime|Oud Sublime"],
+["nishane","Nishane","120/2541e8c0-0e95-4368-b2f8-7b7fd59bee65.jpeg","Ani X|Hacivat X|Fan Your Flames X|Hundred Silent Ways X|Wulong Cha X"],
+["olivier-durbano","Olivier Durbano","28/OLIVIER-DURBANO-PARFUM-DE-PIERRE-DE-POEME.jpg","Pierres de Poèmes"],
+["ormonde-jayne","Ormonde Jayne","78/491105929-1027745892618344-4306027717577807599-n.jpg","Montabaco Intensivo|Nawab of Oudh|Qi|Tsarina"],
+["orto-parisi","Orto Parisi","29/413160480-2121008968244245-7399927211194958423-n.jpg","Bergamask|Stercus|Viride"],
+["pantheon","Pantheon Roma","101/Pantheon-2.jpg","Dolce Passione"],
+["parfums-de-marly","Parfums de Marly","88/Parfums-de-Marly-1.jpg","Byerley|Darcy|Godolphin|Herod|Meliora|Delina|Cassili|Greenley"],
+["penhaligons","Penhaligon's","32/434018481-929657271897586-2160986387128950761-n.jpg","Collection Portraits|Halfeti|Blenheim Bouquet|Opus|Artemisia"],
+["perris","Perris Monte Carlo","33/433537446-733993398850286-4504744696489200208-n.jpg","Musk Extrême"],
+["profumum-roma","Profumum Roma","34/05790c15-6e90-4981-95f5-9a567434d0b4.jpeg","Acqua di Sale|Patchouly"],
+["puredistance","Puredistance","70/Puredistance3.jpg",""],
+["robert-piguet","Robert Piguet","89/Robert-Piguet-Gamme.jpg","Fracas|Gardenia|V|Chai|Oud|Mademoiselle"],
+["roja","Roja Parfums","105/bf80654e-7c68-4f1d-b9ba-7862ca4bd1f1.jpeg","Amber Aoud|Elixir|Elysium"],
+["serge-lutens","Serge Lutens","23/434003990-733921848731662-9048289908085975160-n.jpg","Cèdre|Féminité du Bois|Fleurs d'Oranger"],
+["shl-777","Stéphane Humbert Lucas 777","80/69f8b757-fbae-4762-8e4a-ea107277a000.jpeg","Mortal Skin"],
+["storie-veneziane","Storie Veneziane","73/0aada551-e8ad-424b-93b8-d9bf1c374c09.jpeg","Alessandrite|Rosso|Mica d'Oro|Lady Code|Just Bloom|Casanova|Sea Bliss"],
+["the-different-company","The Different Company","37/the-different-company-2.jpg","Majaina Sin|Pure Eve|Santo Incienso"],
+["the-harmonist","The Harmonist","96/IMG-4722.jpg","Velvet Fire|Desired Earth|Matrix Metal|Golden Wood|Sacred Water|Hypnotizing Fire|Royal Earth|Metal Flower|Magnetic Wood|Guiding Water"],
+["tiziana-terenzi","Tiziana Terenzi","107/4de55dd2-92bd-4d42-9a51-960e572f95df.jpeg",""],
+["tom-ford","Tom Ford","122/431161010-799941368161307-3010228568147814553-n.jpg","Tobacco Vanille|Rose Prick|Oud Wood"],
+["trudon","Trudon","15/6b94fa98-26da-4017-8cd5-4c468d13e65e.jpeg",""],
+["une-nuit-nomade","Une Nuit Nomade","119/Une-Nuit-Nomade-001.jpg","Sugar Leather|Sun Bleached|Suma Oriental"],
+["van-cleef-arpels","Van Cleef & Arpels","99/459530717-1061668238691523-3626832625889488076-n.jpg",""],
+["widian","Widian · Aj Arabia","71/a0e59f95-3839-40f2-a861-c84b4f411bed.jpeg","Luban|Hili|Granada|London|Almond"],
+["xerjoff","Xerjoff","90/cac68894-58cf-42e8-b847-b410f5871fc2.jpeg","Accento Overdose|Alexandria II|Amber Star|Star Musk|Erba Pura|Golden Dallah|La Capitale"],
+["ys-uzac","Ys Uzac","91/YS-UZAC-Lale-on-charcoal2.jpg","Métaboles|Monodie|Lale|Sacre du Printemps"],
+["sensai","Sensai","36/3f98399d-1201-48c2-950e-ca4e6e6cb8ac.jpeg",""]
+];
+/* Visuels supplémentaires relevés (pages marques) */
+var GAL={
+ "sensai":["36/b5083f66-57ba-4565-b86d-2961b9dd1f1f.jpeg","36/09aee439-279c-436b-b983-34c23c5e8151.jpeg","36/8205260a-43b4-4f08-97a8-79f76edf3c05.jpeg"],
+ "frederic-malle":["12/433975776-385593497650728-3739789565759780281-n.jpg","12/375756249-323520996833308-5467583640443591749-n.jpg"],
+ "kilian":["59/Killian-2.jpg","59/Killian-3.jpg","59/Killian-4.jpg"],
+ "mfk":["87/434011638-1108282897044364-1169622044493616115-n.jpg","87/433536368-973032811065702-8785407580844656514-n.jpg"],
+ "le-labo":["116/387568354-356757200125103-8316824440571025947-n.jpg","116/433559520-1330942467588330-34277773911809218-n.jpg","116/433962689-708181287909825-3253845628833297695-n.jpg"],
+ "xerjoff":["90/Xerjoff-1.jpg","90/Xerjoff-2.jpg","90/Xerjoff-3.jpg"],
+ "parfums-de-marly":["88/Parfums-de-Marly-2.jpg","88/Parfums-de-Marly-3.jpg","88/Parfums-de-Marly-4.jpg"],
+ "roja":["105/ROJA-1.jpg","105/Roja-2.jpg","105/Roja-3.jpg"],
+ "nishane":["120/194a85c8-7b75-4603-878f-9ffa087adb42.jpeg","120/60ff5d24-795b-48cc-9495-7389b4ed59e7.jpeg"],
+ "clive-christian":["6/433933808-430365682721893-7796922477539382637-n.jpg","6/f6e1b9b9-c10e-4d24-b0b8-48cd244b8ea9.jpeg"],
+ "creed":["66/ab9829df-77ec-4a8f-8fda-5b4085d5cb88.jpeg","66/a1585992-c6c3-4bf4-9800-aa3cbfc5a962.jpeg"],
+ "diptyque":["9/433982103-1398998900738820-7400459704262732780-n.jpg","9/490e7002-8130-4919-a6ef-18f7339ec893.jpeg"],
+ "penhaligons":["32/434001011-293733050412968-6794525797139231292-n.jpg","32/434033579-1571272390272483-340208831670168763-n.jpg"],
+ "serge-lutens":["23/397100381-1040926070561717-409886435128038482-n.jpg","23/433980100-1133896807765864-3964027953119298639-n.jpg"],
+ "amouage":["2/433536376-924885545849304-7134151044336671580-n.jpg"],
+ "lorenzo-villoresi":["21/LORENZO-VILLORESI-GAMME.jpg","21/LORENZO-VILLORESI-TEINT-DE-NEIGE-EDT.jpg"]
+};
+/* Textes des maisons, repris des pages taizo.fr */
+var TXT={
+ "sensai":"Poussé par la quête d'une beauté infinie, Sensai associe des technologies de soin parmi les plus avancées à un ingrédient signature, la Soie de Koishimaru. Science et nature s'y rencontrent pour une peau soyeuse. Taizo en est le distributeur exclusif.",
+ "frederic-malle":"Quand, en 2000, Frédéric Malle invente le terme « éditeur de parfums », c'est pour produire des compositions uniques dans un esprit de liberté totale. Comme un éditeur avec ses auteurs, il laisse les parfumeurs signer leurs créations.",
+ "kilian":"Depuis 2007, la maison créée par Kilian Hennessy conçoit des parfums d'exception, avec des matières premières de grande qualité et une philosophie éco-luxe : ses flacons sont rechargeables. Son ambition : remettre le parfum sur son piédestal.",
+ "lorenzo-villoresi":"Depuis son premier voyage au Moyen-Orient, en 1981, Lorenzo Villoresi se passionne pour les épices et les essences. Il en a d'abord tiré des pots-pourris et des fragrances personnalisées pour ses proches, avant d'étudier la parfumerie et la distillation.",
+ "clive-christian":"Clive Christian est devenu le dépositaire d'une parfumerie britannique fondée en 1872. Il a fait un point d'honneur de rendre au parfum son luxe authentique et de renouer avec les valeurs d'origine de la maison.",
+ "diptyque":"Diptyque est un parfumeur exigeant, visionnaire et passionné. Parfums pour soi, soins et senteurs pour la maison portent une signature olfactive singulière, faite de belles matières premières et d'accords inattendus.",
+ "xerjoff":"Chez Xerjoff, chaque parfum est pensé comme une œuvre : flacon de cristal, coffret de bois laqué. XJ Shooting Stars saisit le moment où « le ciel rencontre la terre ».",
+ "mfk":"Francis Kurkdjian, l'un des parfumeurs contemporains les plus célébrés, a imaginé un territoire d'expression libre, sensuel et généreux. Sa collection, conçue dans la tradition de la parfumerie française, se porte comme un vestiaire olfactif.",
+ "parfums-de-marly":"Au XVIIIe siècle, Louis XV, passionné de senteurs, commandait chaque jour des parfums pour ses appartements. Parfums de Marly puise dans cette cour du roi, quand la France était le fer de lance de la parfumerie.",
+ "roja":"Roja Parfums a été créé par le parfumeur britannique Roja Dove, réputé pour ne travailler qu'avec les meilleurs matériaux : rose de mai, jasmin de Grasse, ambre gris naturel.",
+ "nishane":"Nishane est née à Istanbul. Elle s'inspire des traditions de la ville, de sa vision moderne et de son caractère cosmopolite pour porter un regard singulier sur la parfumerie artistique.",
+ "amouage":"Depuis plus de trente ans, Amouage met en valeur un patrimoine de création et une maîtrise de la parfumerie. La maison assemble des ingrédients rares et précieux venus du monde entier.",
+ "creed":"Fondée à Londres en 1760 par James Henry Creed, la maison devient vite la favorite de la cour d'Angleterre, puis des cours d'Europe.",
+ "penhaligons":"L'aventure Penhaligon's commence à l'ère victorienne et continue aujourd'hui avec des fragrances pour ceux qui veulent se distinguer : femmes audacieuses ou dandys contemporains.",
+ "serge-lutens":"Né en 1942 à Lille, Serge Lutens est un rêveur. Enfant, on le disait déjà « dans la lune ». Ses parfums portent cette part d'imaginaire."
+};
+/* Visuels propres à un parfum, uniquement quand la photo relevée montre clairement ce flacon */
+var PIMG={"mfk|Baccarat Rouge 540":"87/433962679-764059219008985-8139837025772737958-n.jpg","frederic-malle|Portrait of a Lady":"12/433910441-441654461632195-3039458126127432899-n.jpg"};
+var UNIVERS={
+ "Soins":"3LAB, Acqua di Parma, Aesop, Alpeor, Bellefontaine, Cellcosmet, Diptyque, Esthederm, EviDenS de Beauté, Ingrid Millet, Kiehl's, La Reine Capricieuse, Maria Galland, Menard, Nescens, Sensai, Shiseido, Valmont",
+ "Maquillage":"Face Stockholm, Menard, Sensai, Serge Lutens",
+ "Intérieur":"Acqua di Parma, L'Artisan Parfumeur, Cire Trudon, Diptyque, Dr Vranjes, Frédéric Malle, Lorenzo Villoresi, Maison Francis Kurkdjian, Maître Parfumeur et Gantier, Penhaligon's"
+};
+/* Familles déduites du NOM du parfum uniquement (en attendant les notes communiquées par Taizo) */
+var FAM=[
+ {k:"bois",l:"Oud & bois",d:"Oud, santal, cèdre, encens",re:/\b(oud|aoud|oudh|wood|bois|santal|c[eè]dre|encens|incienso|luban|kandy)\b/i},
+ {k:"fleurs",l:"Rose & fleurs",d:"Rose, tubéreuse, jasmin, iris",re:/(rose|fleur|jasmin|tub[ée]reuse|gard[ée]nia|iris|pivoine|cassie|n[ée]roli|bouquet|datura|flower|bloom|ballerina|rosissimo|oderose|[ée]rose|lale|oranger)/i},
+ {k:"frais",l:"Agrumes & cologne",d:"Colognes, eaux, sel, montagne",re:/(colonia|cologne|bigarade|acqua|agua|sale|erba|fizz|water|bergamask|glac|montagne|sea|neige|aromatic)/i},
+ {k:"cuir",l:"Musc, cuir & tabac",d:"Musc, cuir, tabac, patchouli",re:/(musc|musk|leather|cuir|tabac|tobacco|montabaco|patchoul|mortal skin)/i},
+ {k:"ambre",l:"Ambre & vanille",d:"Ambre, vanille, élixirs",re:/(ambre|amber|vanill|sugar|[ée]lixir|dallah|aphrodisiac|orientale|oriental)/i}
+];
+function slug(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/&/g,"et").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+var BR={},P=[],PH={};
+B.forEach(function(b){
+  var o={s:b[0],n:b[1],img:IMG+b[2],p:b[3]?b[3].split("|"):[]};BR[o.s]=o;
+  o.p.forEach(function(name){
+    var h=slug(o.s+"-"+name);
+    var fam=FAM.filter(function(f){return f.re.test(name);}).map(function(f){return f.k;});
+    var key=o.s+"|"+name;
+    var pr={h:h,n:name,b:o,fam:fam,img:PIMG[key]?IMG+PIMG[key]:o.img,own:!!PIMG[key]};
+    P.push(pr);PH[h]=pr;
+  });
+});
+var BRANDS=B.map(function(b){return BR[b[0]];});
+var PERF_BRANDS=BRANDS.filter(function(b){return b.s!=="sensai";});
+var app=document.getElementById("app");
+function famLabel(k){for(var i=0;i<FAM.length;i++)if(FAM[i].k===k)return FAM[i].l;return "";}
+
+function card(p){
+  return '<a class="card" href="#parfum/'+p.h+'"><div class="arch"><img src="'+p.img+'" alt="'+esc(p.own?(p.n+" de "+p.b.n):("Univers "+p.b.n+" chez Taizo"))+'" loading="lazy" width="400" height="500"></div><span class="b">'+esc(p.b.n)+'</span><span class="n">'+esc(p.n)+'</span><span class="p">Prix en boutique</span></a>';
+}
+function brandCard(b){
+  var c=b.p.length;
+  return '<a class="card" href="#marque/'+b.s+'"><div class="arch"><img src="'+b.img+'" alt="Univers '+esc(b.n)+' chez Taizo" loading="lazy" width="400" height="500"></div><span class="n">'+esc(b.n)+'</span><span class="p">'+(c?c+" parfum"+(c>1?"s":"")+" cité"+(c>1?"s":""):"Gamme à découvrir en boutique")+'</span></a>';
+}
+function pick(arr){return arr.map(function(h){return PH[h];}).filter(Boolean);}
+
+var FEATURED=pick(["mfk-baccarat-rouge-540","frederic-malle-portrait-of-a-lady","parfums-de-marly-delina","kilian-angels-share","le-labo-santal-33","nishane-hacivat-x","roja-elysium","tom-ford-tobacco-vanille"]);
+
+/* ---------- ACCUEIL ---------- */
+function vHome(){
+  var mq=PERF_BRANDS.map(function(b){return '<a href="#marque/'+b.s+'" tabindex="-1">'+esc(b.n)+'</a>';}).join("");
+  return ''+
+  '<section class="hero"><div class="wrap">'+
+   '<div class="arch"><img src="https://taizo.fr/upload/slidesHP/1/52ac4844-f531-4141-b41e-b7ca452687d3.jpeg" alt="La façade en rotonde de la boutique Taizo, enseigne éclairée, rue d\'Antibes à Cannes" width="1422" height="1068" fetchpriority="high"><span class="cap">120 rue d\'Antibes · Cannes</span></div>'+
+   '<div><p class="eyebrow">Parfumerie de niche · Cannes</p>'+
+   '<h1>L\'exclusivité <span class="it">des fragrances</span></h1>'+
+   '<p class="lead" style="margin-top:20px">Taizo réunit à quelques pas de la Croisette plus de 70 maisons de parfum rares, des soins d\'exception et l\'exclusivité Sensai. Désormais, réservez en ligne et retirez en boutique, ou faites-vous livrer.</p>'+
+   '<div class="ctas"><a class="btn" href="#collection">Découvrir les parfums</a><a class="btn ghost" href="#decouverte">Trouver mon parfum</a></div>'+
+   '<div class="facts"><span>Click &amp; collect rue d\'Antibes</span><span>Conseil par téléphone</span><span>FR · EN</span></div></div>'+
+  '</div></section>'+
+  '<div class="marquee" aria-label="Quelques maisons présentes chez Taizo"><div class="track">'+mq+mq+'</div></div>'+
+  '<section><div class="wrap split">'+
+   '<div><p class="eyebrow">La maison</p><h2 style="margin-top:12px">Pionnière des <span class="it">marques confidentielles</span></h2></div>'+
+   '<div><p class="quote">Parcourant les capitales du monde à la recherche de produits rares, son fondateur ramène de ses voyages les dernières tendances de la beauté.</p>'+
+   '<p class="src">Taizo a été la première boutique à proposer Frédéric Malle, Kilian, Lorenzo Villoresi, Clive Christian, Diptyque, Valmont, Bellefontaine…</p>'+
+   '<p style="margin-top:22px"><a class="btn ghost" href="#maison">L\'histoire de Taizo</a></p></div>'+
+  '</div></section>'+
+  '<section style="padding-top:0"><div class="wrap">'+
+   '<div class="sechead"><div><p class="eyebrow">Sélection de la boutique</p><h2 style="margin-top:10px">Les parfums <span class="it">que l\'on vient chercher</span></h2></div><a class="btn ghost" href="#collection">Tous les parfums</a></div>'+
+   '<div class="grid">'+FEATURED.map(card).join("")+'</div>'+
+  '</div></section>'+
+  '<section class="sensai"><div class="wrap split">'+
+   '<div class="ph"><img src="'+IMG+'36/3f98399d-1201-48c2-950e-ca4e6e6cb8ac.jpeg" alt="Soins Sensai sur fond noir" loading="lazy" width="800" height="800"></div>'+
+   '<div style="align-self:center"><p class="kanji">Soie de Koishimaru</p><p class="eyebrow" style="margin-top:18px">En exclusivité chez Taizo</p><h2 style="margin-top:12px">Sensai, <span class="it">la beauté soyeuse</span></h2>'+
+   '<p style="margin:18px 0 26px;max-width:52ch">'+TXT.sensai+'</p><a class="btn light" href="#marque/sensai">Découvrir Sensai</a></div>'+
+  '</div></section>'+
+  '<section><div class="wrap">'+
+   '<div class="sechead"><div><p class="eyebrow">Répertoire</p><h2 style="margin-top:10px">Maisons <span class="it">de A à Z</span></h2></div><a class="btn ghost" href="#collection/maisons">Voir les '+PERF_BRANDS.length+' maisons</a></div>'+
+   '<div class="grid">'+pickBrands(["frederic-malle","kilian","clive-christian","lorenzo-villoresi","xerjoff","roja","amouage","diptyque"]).map(brandCard).join("")+'</div>'+
+  '</div></section>'+
+  '<section style="padding-top:0"><div class="wrap"><div class="finder">'+
+   '<div><p class="eyebrow">Guide olfactif</p><h2 style="margin-top:10px">Trois questions, <span class="it">trois parfums</span></h2><p style="margin:14px 0 0;max-width:48ch;color:#E2F4F6">Une matière qui vous attire, une intention, un mode de retrait. Le guide choisit parmi les parfums présents chez Taizo, puis un conseiller confirme par téléphone ou en boutique.</p></div>'+
+   '<div><a class="btn light" href="#decouverte">Commencer le guide</a></div>'+
+  '</div></div></section>'+
+  '<section class="boutique" style="padding-top:0"><div class="wrap split">'+
+   '<div class="arch"><img src="https://taizo.fr/upload/image/22aba5b6-d5ff-421f-a0ef-c4ba9c2f300f.jpeg" alt="Intérieur de la boutique Taizo : étagères éclairées de flacons" loading="lazy" width="1024" height="683"></div>'+
+   '<div><p class="eyebrow">La boutique</p><h2 style="margin-top:10px">Rue d\'Antibes, <span class="it">Cannes</span></h2>'+
+   '<p class="lead" style="margin-top:16px">Commandez en ligne, Taizo prépare votre sélection et vous la remet en boutique, ou vous la fait livrer.</p>'+
+   '<div class="info"><span>120 rue d\'Antibes, 06400 Cannes</span><a href="tel:+33493395758">+33 (0)4 93 39 57 58</a><a href="mailto:pcs@taizo.fr">pcs@taizo.fr</a><a href="https://www.google.com/maps/search/Taizo+120+rue+d%27Antibes+Cannes" rel="noopener">Itinéraire</a></div></div>'+
+  '</div></section>';
+}
+function pickBrands(a){return a.map(function(s){return BR[s];}).filter(Boolean);}
+
+/* ---------- COLLECTION ---------- */
+var st={fam:"",brand:"",q:"",n:24,tab:"parfums"};
+function vCollection(tab){
+  st.tab=tab||"parfums";
+  var opts=PERF_BRANDS.filter(function(b){return b.p.length;}).map(function(b){return '<option value="'+b.s+'"'+(st.brand===b.s?" selected":"")+'>'+esc(b.n)+'</option>';}).join("");
+  return '<div class="wrap"><div class="pagehead"><p class="eyebrow">La collection</p><h1 style="font-size:clamp(38px,7vw,72px);margin-top:10px">'+(st.tab==="maisons"?'Maisons <span class="it">de A à Z</span>':'Parfums <span class="it">rares</span>')+'</h1>'+
+   '<p class="lead" style="margin-top:14px">'+P.length+' parfums cités par Taizo, venus de '+PERF_BRANDS.length+' maisons. Chaque référence se réserve en ligne et se retire rue d\'Antibes.</p>'+
+   '<div class="tabs" role="tablist" aria-label="Affichage"><button role="tab" type="button" id="tabP" aria-selected="'+(st.tab==="parfums")+'">Parfums</button><button role="tab" type="button" id="tabM" aria-selected="'+(st.tab==="maisons")+'">Maisons A–Z</button></div></div>'+
+   '<div id="cbody">'+(st.tab==="parfums"?
+   '<div class="filters"><div class="chips" role="group" aria-label="Famille"><button type="button" class="chip" data-fam="" aria-pressed="'+(st.fam==="")+'">Tout</button>'+FAM.map(function(f){return '<button type="button" class="chip" data-fam="'+f.k+'" aria-pressed="'+(st.fam===f.k)+'">'+f.l+'</button>';}).join("")+'</div>'+
+   '<div class="row"><label class="field">Maison<select id="fBrand"><option value="">Toutes les maisons</option>'+opts+'</select></label><label class="field">Rechercher<input id="fQ" type="search" placeholder="Santal 33, Delina…" value="'+esc(st.q)+'" autocomplete="off"></label></div>'+
+   '<p class="hint">Familles provisoires : elles sont déduites du nom du parfum. Les vraies familles et pyramides viendront des fiches de Taizo.</p>'+
+   '<p class="count" id="count" aria-live="polite"></p></div><div class="grid" id="pgrid"></div><div class="more" id="more"></div>'
+   : vAZ())+'</div></div>';
+}
+function vAZ(){
+  var groups={};PERF_BRANDS.slice().sort(function(a,b){return slug(a.n).localeCompare(slug(b.n));}).forEach(function(b){var l=slug(b.n).charAt(0).toUpperCase();(groups[l]=groups[l]||[]).push(b);});
+  var out='<div class="az" style="margin-top:30px">';
+  Object.keys(groups).sort().forEach(function(l){out+='<div class="l"><b>'+l+'</b>'+groups[l].map(function(b){return '<a href="#marque/'+b.s+'">'+esc(b.n)+' <small>'+(b.p.length?b.p.length:"·")+'</small></a>';}).join("")+'</div>';});
+  out+='</div><h2 style="margin:50px 0 20px;font-size:34px">Et aussi <span class="it">en boutique</span></h2><div class="svc">';
+  Object.keys(UNIVERS).forEach(function(k){out+='<div><b>'+k+'</b><p>'+UNIVERS[k]+'</p></div>';});
+  return out+'</div>';
+}
+function filtered(){
+  var q=slug(st.q);
+  return P.filter(function(p){
+    if(st.fam&&p.fam.indexOf(st.fam)<0)return false;
+    if(st.brand&&p.b.s!==st.brand)return false;
+    if(q&&slug(p.n+" "+p.b.n).indexOf(q)<0)return false;
+    return true;
+  });
+}
+function drawGrid(){
+  var g=document.getElementById("pgrid");if(!g)return;
+  var r=filtered();
+  g.innerHTML=r.slice(0,st.n).map(card).join("")||'<p class="empty" style="grid-column:1/-1">Aucun parfum ne correspond. Essayez une autre maison ou appelez la boutique.</p>';
+  document.getElementById("count").textContent=r.length+" parfum"+(r.length>1?"s":"");
+  document.getElementById("more").innerHTML=r.length>st.n?'<button class="btn ghost" type="button" id="moreBtn">Afficher plus ('+(r.length-st.n)+')</button>':"";
+}
+function bindCollection(){
+  var tp=document.getElementById("tabP"),tm=document.getElementById("tabM");
+  tp.onclick=function(){location.hash="#collection";};
+  tm.onclick=function(){location.hash="#collection/maisons";};
+  if(st.tab!=="parfums")return;
+  document.querySelectorAll(".chip[data-fam]").forEach(function(c){c.onclick=function(){st.fam=c.getAttribute("data-fam");st.n=24;document.querySelectorAll(".chip[data-fam]").forEach(function(x){x.setAttribute("aria-pressed",String(x===c));});drawGrid();};});
+  document.getElementById("fBrand").onchange=function(e){st.brand=e.target.value;st.n=24;drawGrid();};
+  document.getElementById("fQ").oninput=function(e){st.q=e.target.value;st.n=24;drawGrid();};
+  document.getElementById("more").onclick=function(e){if(e.target.id==="moreBtn"){st.n+=24;drawGrid();}};
+  drawGrid();
+}
+
+/* ---------- FICHE PARFUM ---------- */
+function related(p){
+  var same=P.filter(function(x){return x.b===p.b&&x!==p;});
+  var fam=P.filter(function(x){return x.b!==p.b&&x.fam.some(function(f){return p.fam.indexOf(f)>=0;});});
+  var out=same.slice(0,2).concat(fam.slice(0,8));
+  if(out.length<4)out=out.concat(FEATURED.filter(function(x){return x!==p&&out.indexOf(x)<0;}));
+  return out.slice(0,4);
+}
+function vProduct(h){
+  var p=PH[h];if(!p)return vNotFound();
+  var b=p.b,txt=TXT[b.s];
+  return '<div class="wrap"><nav class="crumbs" aria-label="Fil d\'Ariane"><a href="#accueil">Accueil</a><span aria-hidden="true">/</span><a href="#collection">Parfums</a><span aria-hidden="true">/</span><a href="#marque/'+b.s+'">'+esc(b.n)+'</a><span aria-hidden="true">/</span><span aria-current="page">'+esc(p.n)+'</span></nav>'+
+  '<div class="pdp"><figure class="gal" style="margin:0"><div class="arch"><img src="'+p.img+'" alt="'+esc(p.own?(p.n+" de "+b.n):("Univers "+b.n+" photographié par Taizo"))+'" width="800" height="1000"></div><figcaption>'+(p.own?"Visuel publié par Taizo":"Visuel de la maison publié par Taizo. Le packshot du parfum viendra de la fiche produit.")+'</figcaption></figure>'+
+  '<div><a class="eyebrow" style="text-decoration:none" href="#marque/'+b.s+'">'+esc(b.n)+'</a><h1 style="font-size:clamp(40px,6vw,68px);margin-top:10px" class="it">'+esc(p.n)+'</h1>'+
+  (p.fam.length?'<p style="margin:12px 0 0;font-size:14px;color:var(--ink-2)">Famille indicative : '+p.fam.map(famLabel).join(" · ")+'</p>':"")+
+  '<p class="price">Prix en boutique<small>Taizo ne publie pas encore ses prix en ligne. La boutique confirme le prix et le format avant toute commande.</small></p>'+
+  '<fieldset class="opt"><legend>Format</legend><div class="radios"><label><input type="radio" name="fmt" value="Format à confirmer" checked><span>Format à confirmer avec la boutique<small>Les contenances disponibles seront listées ici.</small></span></label></div></fieldset>'+
+  '<fieldset class="opt"><legend>Recevoir</legend><div class="radios">'+
+   '<label><input type="radio" name="mode" value="Click & collect" checked><span>Click &amp; collect, 120 rue d\'Antibes<small>Taizo prépare votre flacon et vous prévient quand il est prêt.</small></span></label>'+
+   '<label><input type="radio" name="mode" value="Livraison"><span>Livraison<small>Zones et délais à définir avec Taizo.</small></span></label>'+
+   '<label><input type="radio" name="mode" value="Essai en boutique"><span>Essai en boutique avant achat<small>Le parfum vous attend au comptoir pour un essai.</small></span></label></div></fieldset>'+
+  '<div class="actions"><button class="btn block" type="button" id="addBtn">Ajouter à ma sélection</button><a class="btn ghost block" href="tel:+33493395758">Conseil au +33 (0)4 93 39 57 58</a></div>'+
+  '<details class="acc" open style="margin-top:26px"><summary>Pyramide olfactive <span class="tag">Gabarit</span></summary><div class="pyr"><div><b>Tête</b><span>À renseigner avec Taizo</span></div><div><b>Cœur</b><span>À renseigner avec Taizo</span></div><div><b>Fond</b><span>À renseigner avec Taizo</span></div></div></details>'+
+  '<details class="acc"><summary>La maison '+esc(b.n)+'</summary><p style="color:var(--ink-2)">'+(txt?esc(txt):"Le texte de présentation de la maison, déjà rédigé par Taizo sur son site actuel, viendra ici.")+'</p><a href="#marque/'+b.s+'">Tous les parfums '+esc(b.n)+'</a></details>'+
+  '<details class="acc"><summary>Retrait, livraison &amp; conseil</summary><p style="color:var(--ink-2)">Retrait au 120 rue d\'Antibes à Cannes. Conseil au +33 (0)4 93 39 57 58 ou à pcs@taizo.fr. Les conditions de livraison et de retour seront précisées par Taizo.</p></details>'+
+  '</div></div>'+
+  '<section style="padding:50px 0"><h2 style="font-size:36px;margin-bottom:24px">Avis clients <span class="tag">Gabarit</span></h2><div class="reviews"><p style="margin:0;font:italic 400 22px var(--serif)">Les avis vérifiés apparaîtront ici</p><p style="margin:8px 0 0;font-size:14px;color:var(--ink-2)">Emplacement prévu pour les avis vérifiés après achat. Aucun avis n\'est affiché dans la maquette.</p></div></section>'+
+  '<section style="padding:20px 0 60px"><div class="sechead"><h2 style="font-size:36px">Vous aimerez <span class="it">aussi</span></h2></div><div class="grid">'+related(p).map(card).join("")+'</div></section></div>';
+}
+
+/* ---------- MARQUE ---------- */
+function vBrand(s){
+  var b=BR[s];if(!b)return vNotFound();
+  var gal=(GAL[s]||[]).map(function(g){return '<div class="arch" style="aspect-ratio:4/5"><img src="'+IMG+g+'" alt="Univers '+esc(b.n)+' chez Taizo" loading="lazy" width="400" height="500"></div>';}).join("");
+  var list=P.filter(function(p){return p.b===b;});
+  var isS=s==="sensai";
+  return '<div class="wrap"><nav class="crumbs" aria-label="Fil d\'Ariane"><a href="#accueil">Accueil</a><span aria-hidden="true">/</span><a href="#collection/maisons">Maisons</a><span aria-hidden="true">/</span><span aria-current="page">'+esc(b.n)+'</span></nav>'+
+  '<div class="brandhero"><div class="arch"><img src="'+b.img+'" alt="Univers '+esc(b.n)+' chez Taizo" width="800" height="1000"></div><div>'+
+  '<p class="eyebrow">'+(isS?"Distributeur exclusif · Soins":"Maison de parfum")+'</p><h1 style="font-size:clamp(40px,7vw,80px);margin-top:10px">'+esc(b.n)+'</h1>'+
+  '<p class="lead" style="margin-top:18px">'+(TXT[s]?esc(TXT[s]):"Le texte de présentation de la maison, déjà rédigé par Taizo, viendra ici, enrichi pour le référencement.")+'</p>'+
+  '<p style="margin-top:22px;font-size:14px;color:var(--ink-2)">'+(list.length?list.length+" parfum"+(list.length>1?"s":"")+" cité"+(list.length>1?"s":"")+" par Taizo. Toute la gamme est disponible en magasin.":"Toute la gamme est disponible en magasin. Les références seront mises en ligne avec Taizo.")+'</p>'+
+  '<div class="ctas" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn" href="tel:+33493395758">Demander conseil</a><a class="btn ghost" href="mailto:pcs@taizo.fr?subject='+encodeURIComponent(b.n)+'">Écrire à la boutique</a></div>'+
+  '</div></div>'+
+  (list.length?'<section style="padding:30px 0 60px"><h2 style="font-size:36px;margin-bottom:24px">Les parfums '+esc(b.n)+'</h2><div class="grid">'+list.map(card).join("")+'</div></section>':"")+
+  (gal?'<section style="padding:20px 0 60px"><h2 style="font-size:30px;margin-bottom:20px">En boutique</h2><div class="grid">'+gal+'</div></section>':"")+
+  '</div>';
+}
+
+/* ---------- LA MAISON ---------- */
+function vMaison(){
+  return '<div class="wrap"><div class="pagehead"><p class="eyebrow">La Maison</p><h1 style="font-size:clamp(40px,8vw,84px);margin-top:10px">Taizo, <span class="it">rue d\'Antibes</span></h1></div>'+
+  '<div class="split" style="padding-bottom:60px"><div class="arch" style="aspect-ratio:4/5"><img src="https://taizo.fr/upload/image/Taizo%2002.jpeg" alt="La rotonde vitrée de la boutique Taizo, la nuit" loading="lazy" width="800" height="1000"></div>'+
+  '<div><p class="lead">La maison Taizo est une pionnière des soins et des parfums d\'exception. Elle met un point d\'honneur à surprendre sa clientèle internationale et à être à la hauteur de ses attentes.</p>'+
+  '<p style="margin-top:18px">Son fondateur parcourt les capitales du monde à la recherche de produits rares et en rapporte les dernières tendances de la beauté. Taizo a été la première boutique à proposer des marques confidentielles devenues des références : les Éditions de Parfums Frédéric Malle, Kilian, Lorenzo Villoresi, Clive Christian, Diptyque, Valmont, Bellefontaine. La maison est aussi le distributeur exclusif de Sensai.</p>'+
+  '<div class="info" style="margin-top:28px"><b style="font:italic 400 24px var(--serif)">Nous rendre visite</b><span>120 rue d\'Antibes, 06400 Cannes</span><a href="tel:+33493395758">+33 (0)4 93 39 57 58</a><a href="mailto:pcs@taizo.fr">pcs@taizo.fr</a><span style="color:var(--ink-2)">Horaires : à renseigner avec Taizo</span><span style="color:var(--ink-2)">Avis Google : 4,1/5 (221 avis), affichés sur la fiche Google de la boutique</span></div></div></div>'+
+  '<section style="padding-top:20px"><h2 style="font-size:40px;margin-bottom:24px">Quatre <span class="it">univers</span></h2><div class="svc" style="margin-top:0">'+
+   '<div><b>Parfums</b><p>'+PERF_BRANDS.length+' maisons de niche et de haute parfumerie, de '+esc(PERF_BRANDS[0].n)+' à '+esc(PERF_BRANDS[PERF_BRANDS.length-1].n)+'.</p><p style="margin-top:10px"><a href="#collection/maisons">Voir le répertoire</a></p></div>'+
+   Object.keys(UNIVERS).map(function(k){return '<div><b>'+k+'</b><p>'+UNIVERS[k]+'</p></div>';}).join("")+
+  '</div></section>'+
+  '<section style="padding-top:0"><div class="hint" style="font-size:13px"><b>Mentions légales</b> (repris du site actuel) : SAS Taizo, RCS Cannes 411 826 134, 120 rue d\'Antibes, 06400 Cannes.</div></section></div>';
+}
+
+/* ---------- DÉCOUVERTE ---------- */
+var Q=[
+ {t:"Pour qui cherchez-vous ?",o:[["moi","Pour moi","Un parfum qui me ressemble"],["offrir","À offrir","Taizo emballe et conseille"]]},
+ {t:"Quelle matière vous attire ?",o:FAM.map(function(f){return [f.k,f.l,f.d];})},
+ {t:"Comment souhaitez-vous le découvrir ?",o:[["Click & collect","Click & collect","Je le récupère rue d'Antibes"],["Livraison","Livraison","Je le reçois chez moi"],["Essai en boutique","Essai en boutique","Je veux d'abord le sentir"]]}
+];
+var ans=[];
+function vDecouverte(){
+  return '<div class="wrap"><div class="pagehead" style="text-align:center"><p class="eyebrow">Guide olfactif</p><h1 style="font-size:clamp(38px,7vw,72px);margin-top:10px">Trouver <span class="it">mon parfum</span></h1><p class="lead" style="margin:14px auto 0">Trois questions pour choisir parmi les parfums présents chez Taizo. Un conseiller confirme ensuite, comme en boutique.</p></div>'+
+  '<div class="quiz" id="quiz" aria-live="polite"></div>'+
+  '<div class="svc"><div><b>Click &amp; collect</b><p>Réservez en ligne. Votre flacon vous attend au 120 rue d\'Antibes.</p></div><div><b>Livraison</b><p>Recevez votre sélection où que vous soyez. Modalités à définir avec Taizo.</p></div><div><b>Conseil</b><p>Une question sur une référence ? +33 (0)4 93 39 57 58 ou pcs@taizo.fr.</p></div></div>'+
+  '<p class="hint" style="margin-top:20px">Dans la maquette, le guide s\'appuie sur le nom des parfums. Dans le site final, il utilisera les notes renseignées par Taizo.</p></div>';
+}
+function drawQuiz(){
+  var z=document.getElementById("quiz");if(!z)return;
+  var i=ans.length;
+  var bars='<div class="steps" aria-hidden="true">'+Q.map(function(_,k){return '<i class="'+(k<=i?"on":"")+'"></i>';}).join("")+'</div>';
+  if(i<Q.length){
+    var q=Q[i];
+    z.innerHTML=bars+'<p class="eyebrow">Question '+(i+1)+' sur '+Q.length+'</p><h2 style="font-size:clamp(28px,4vw,40px);margin-top:8px">'+q.t+'</h2><div class="qopts">'+q.o.map(function(o){return '<button type="button" class="qopt" data-v="'+esc(o[0])+'"><b>'+esc(o[1])+'</b><small>'+esc(o[2])+'</small></button>';}).join("")+'</div>'+(i?'<p style="margin-top:18px"><button type="button" class="btn ghost" id="qback">Retour</button></p>':"");
+    z.querySelectorAll(".qopt").forEach(function(b){b.onclick=function(){ans.push(b.getAttribute("data-v"));drawQuiz();var h=z.querySelector("h2");if(h){h.setAttribute("tabindex","-1");h.focus();}};});
+    var bk=document.getElementById("qback");if(bk)bk.onclick=function(){ans.pop();drawQuiz();};
+  }else{
+    var fam=ans[1],mode=ans[2];
+    var pool=P.filter(function(p){return p.fam.indexOf(fam)>=0;}).sort(function(){return Math.random()-.5;});
+    /* une maison différente par suggestion */
+    var seen={},res=[];
+    pool.forEach(function(p){if(!seen[p.b.s]&&res.length<3){seen[p.b.s]=1;res.push(p);}});
+    z.innerHTML='<div class="result">'+bars+'<p class="eyebrow">Votre sélection · '+esc(famLabel(fam))+'</p><h2 style="font-size:clamp(28px,4vw,40px);margin-top:8px">Trois parfums <span class="it">à découvrir chez Taizo</span></h2>'+
+    '<p style="color:var(--ink-2);margin:10px 0 0">'+(ans[0]==="offrir"?"Pour offrir. ":"")+'Mode choisi : '+esc(mode)+'. Ajoutez-les à votre sélection, Taizo vous recontacte pour confirmer.</p>'+
+    '<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">'+res.map(card).join("")+'</div>'+
+    '<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px"><button class="btn" type="button" id="qadd">Tout ajouter à ma sélection</button><button class="btn ghost" type="button" id="qre">Recommencer</button></div></div>';
+    document.getElementById("qre").onclick=function(){ans=[];drawQuiz();};
+    document.getElementById("qadd").onclick=function(){res.forEach(function(p){addItem(p,mode);});openCart();};
+  }
+}
+
+function vNotFound(){return '<div class="wrap" style="padding:80px 16px;text-align:center"><h1 style="font-size:48px">Page introuvable</h1><p><a class="btn" href="#accueil">Retour à l\'accueil</a></p></div>';}
+
+/* ---------- PANIER (sélection) ---------- */
+var cart=[];var sent=false;
+function addItem(p,mode){
+  sent=false;
+  var f=cart.filter(function(c){return c.p===p;})[0];
+  if(f)f.q++;else cart.push({p:p,q:1,mode:mode||"Click & collect"});
+  drawCart();toast("« "+p.n+" » ajouté à votre sélection");
+}
+function drawCart(){
+  var n=cart.reduce(function(a,c){return a+c.q;},0);
+  var bd=document.getElementById("badge");bd.textContent=n;bd.hidden=!n;
+  document.getElementById("cartBtn").setAttribute("aria-label","Ma sélection, "+n+" article"+(n>1?"s":""));
+  var body=document.getElementById("dbody"),foot=document.getElementById("dfoot");
+  if(sent){body.innerHTML='<div class="ok"><b>Demande prête à partir.</b><br>Dans le site final, Taizo reçoit la commande, confirme le prix et le format, puis prépare le retrait ou l\'envoi (ou encaisse directement si les prix sont en ligne).<br><br><i>Maquette : aucune donnée n\'est envoyée.</i></div>';foot.innerHTML='<button class="btn block" type="button" id="dnew">Continuer la visite</button>';document.getElementById("dnew").onclick=function(){cart=[];sent=false;drawCart();closeCart();};return;}
+  if(!cart.length){body.innerHTML='<div class="empty"><p style="font:italic 400 22px var(--serif);color:var(--ink)">Votre sélection est vide</p><p>Ajoutez un parfum depuis sa fiche ou le guide olfactif.</p><a class="btn ghost" href="#collection" id="dgo">Voir les parfums</a></div>';foot.innerHTML="";var g=document.getElementById("dgo");g.onclick=closeCart;return;}
+  body.innerHTML=cart.map(function(c,i){return '<div class="li"><div class="arch"><img src="'+c.p.img+'" alt="" loading="lazy" width="64" height="80"></div><div><small>'+esc(c.p.b.n)+'</small><b>'+esc(c.p.n)+'</b><small>Prix en boutique · '+esc(c.mode)+'</small></div><div class="qty"><button type="button" data-i="'+i+'" data-d="-1" aria-label="Retirer un '+esc(c.p.n)+'">−</button><span aria-label="Quantité">'+c.q+'</span><button type="button" data-i="'+i+'" data-d="1" aria-label="Ajouter un '+esc(c.p.n)+'">+</button></div></div>';}).join("");
+  foot.innerHTML='<fieldset><legend class="eyebrow" style="margin-bottom:8px">Recevoir</legend><div class="radios"><label><input type="radio" name="dm" value="cc" checked><span>Click &amp; collect · 120 rue d\'Antibes</span></label><label><input type="radio" name="dm" value="liv"><span>Livraison · modalités Taizo</span></label></div></fieldset>'+
+  '<p style="margin:0;font-size:13px;color:var(--ink-2)">Les prix ne sont pas publiés en ligne : Taizo confirme le montant avant de valider la commande.</p><button class="btn block" type="button" id="dsend">Envoyer ma demande</button>';
+  body.querySelectorAll(".qty button").forEach(function(b){b.onclick=function(){var c=cart[+b.getAttribute("data-i")];c.q+=+b.getAttribute("data-d");if(c.q<1)cart.splice(cart.indexOf(c),1);drawCart();};});
+  document.getElementById("dsend").onclick=function(){sent=true;drawCart();};
+}
+var lastFocus=null;
+function openCart(){lastFocus=document.activeElement;var d=document.getElementById("drawer");d.classList.add("on");d.setAttribute("aria-hidden","false");document.getElementById("scrim").classList.add("on");setTimeout(function(){document.getElementById("dclose").focus();},50);}
+function closeCart(){var d=document.getElementById("drawer");d.classList.remove("on");d.setAttribute("aria-hidden","true");document.getElementById("scrim").classList.remove("on");if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+document.getElementById("cartBtn").onclick=openCart;
+document.getElementById("dclose").onclick=closeCart;
+document.getElementById("scrim").onclick=function(){closeCart();closeNotes();};
+
+/* notes */
+var nb=document.getElementById("notesBtn"),nt=document.getElementById("notes");
+function openNotes(){nt.classList.add("on");nt.setAttribute("aria-hidden","false");nb.setAttribute("aria-expanded","true");document.getElementById("scrim").classList.add("on");setTimeout(function(){document.getElementById("notesClose").focus();},50);}
+function closeNotes(){if(!nt.classList.contains("on"))return;nt.classList.remove("on");nt.setAttribute("aria-hidden","true");nb.setAttribute("aria-expanded","false");document.getElementById("scrim").classList.remove("on");nb.focus();}
+nb.onclick=function(){nt.classList.contains("on")?closeNotes():openNotes();};
+document.getElementById("notesClose").onclick=closeNotes;
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeCart();closeNotes();closeMenu();}});
+
+/* menu mobile */
+var mn=document.getElementById("mnav"),bg=document.getElementById("burger");
+function closeMenu(){if(!mn.classList.contains("open"))return;mn.classList.remove("open");bg.setAttribute("aria-expanded","false");}
+bg.onclick=function(){mn.classList.add("open");bg.setAttribute("aria-expanded","true");document.getElementById("mclose").focus();};
+document.getElementById("mclose").onclick=function(){closeMenu();bg.focus();};
+mn.addEventListener("click",function(e){if(e.target.tagName==="A")closeMenu();});
+
+/* langue : visuel seulement */
+var tt;
+function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on");},2600);}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){if(b.getAttribute("data-lang")==="en")toast("English version planned · language selector shown for the mock-up only");};});
+
+/* routeur */
+var TITLES={accueil:"Taizo · Parfumerie de niche à Cannes",collection:"Parfums de niche · Taizo Cannes",maison:"La Maison · Taizo, 120 rue d'Antibes, Cannes",decouverte:"Trouver mon parfum · Taizo Cannes"};
+function route(){
+  var h=(location.hash||"#accueil").slice(1),parts=h.split("/"),r=parts[0]||"accueil",html,title;
+  if(r==="collection"){html=vCollection(parts[1]==="maisons"?"maisons":"parfums");title=parts[1]==="maisons"?"Maisons de parfum A–Z · Taizo Cannes":TITLES.collection;}
+  else if(r==="parfum"){html=vProduct(parts[1]);var p=PH[parts[1]];title=p?p.n+" · "+p.b.n+" · Taizo Cannes":"Taizo";}
+  else if(r==="marque"){html=vBrand(parts[1]);var b=BR[parts[1]];title=b?b.n+" à Cannes · Taizo":"Taizo";}
+  else if(r==="maison"){html=vMaison();title=TITLES.maison;}
+  else if(r==="decouverte"){html=vDecouverte();title=TITLES.decouverte;}
+  else {r="accueil";html=vHome();title=TITLES.accueil;}
+  app.innerHTML=html;document.title=title;
+  document.querySelectorAll("nav.main a").forEach(function(a){var t=a.getAttribute("href").slice(1).split("/")[0];a.toggleAttribute("aria-current",false);if(t===r&&(r!=="collection"||a.getAttribute("href")==="#"+h||(h==="collection"&&a.getAttribute("href")==="#collection")))a.setAttribute("aria-current","page");});
+  if(r==="collection")bindCollection();
+  if(r==="decouverte")drawQuiz();
+  if(r==="parfum"&&PH[parts[1]]){document.getElementById("addBtn").onclick=function(){var m=document.querySelector('input[name=mode]:checked');addItem(PH[parts[1]],m?m.value:"Click & collect");openCart();};}
+  window.scrollTo(0,0);
+  var h1=app.querySelector("h1");if(h1&&route.ran){h1.setAttribute("tabindex","-1");h1.focus({preventScroll:true});}
+  route.ran=true;
+}
+window.addEventListener("hashchange",route);
+drawCart();route();
+})();
+</script>
+</body>
+</html>

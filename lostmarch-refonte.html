@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lostmarc'h — Parfums de Bretagne nés à Crozon · L'Apothicaire des Océans</title>
+<meta name="description" content="Maquette de refonte : les eaux précieuses Lostmarc'h, parfums bretons inspirés par la presqu'île de Crozon. Coffret découverte, guide olfactif et 32 Boutiks partenaires.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Lostmarc'h — L'Apothicaire des Océans (maquette de refonte)">
+<meta property="og:description" content="Proposition de refonte préparée par Monsieur.H : immersion bretonne, site rapide, guide olfactif et carte des Boutiks.">
+<meta property="og:image" content="https://www.lostmarch.bzh/img/cms/bae-bcrozon-bae.jpg">
+<meta name="theme-color" content="#0c2229">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.lostmarch.bzh">
+<link rel="preload" as="image" href="https://www.lostmarch.bzh/img/cms/bae-bcrozon-bae-mobile.jpg" media="(max-width: 700px)">
+<link rel="preload" as="image" href="https://www.lostmarch.bzh/img/cms/bae-bcrozon-bae.jpg" media="(min-width: 701px)">
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abysse:#0c2229; --ardoise:#17363f; --houle:#24505a;
+  --verre:#7faeb5; --verre-f:#2b6670; --brume:#d7e6e6;
+  --ecume:#f4f1ea; --sable:#e7dfcf; --galet:#c9c1b2;
+  --ajonc:#d9a62a; --bruyere:#7b4f73;
+  --ink:#10262d; --ink-2:#3d5258;
+  --r:3px; --max:1180px;
+  --ff-d:"Playfair Display SC", Georgia, serif;
+  --ff-i:"Playfair Display", Georgia, serif;
+  --ff-b:"Karla", system-ui, -apple-system, Segoe UI, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ecume);color:var(--ink);font:400 16px/1.6 var(--ff-b);overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--verre-f);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ajonc);outline-offset:3px;border-radius:2px}
+[tabindex="-1"]:focus{outline:none}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--ff-d);font-weight:400;line-height:1.12;margin:0 0 .5em;letter-spacing:.02em}
+.it{font-family:var(--ff-i);font-style:italic}
+.kicker{font:700 .72rem/1.2 var(--ff-b);letter-spacing:.22em;text-transform:uppercase;color:var(--verre-f);margin:0 0 .9rem}
+.on-dark .kicker,.kicker.l{color:var(--verre)}
+.btn{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.75em 1.4em;border-radius:var(--r);border:1px solid currentColor;background:transparent;text-decoration:none;font:700 .8rem/1 var(--ff-b);letter-spacing:.16em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ajonc{background:var(--ajonc);border-color:var(--ajonc);color:var(--abysse)}
+.btn-ajonc:hover{background:#e8b83f}
+.btn-abysse{background:var(--abysse);border-color:var(--abysse);color:var(--ecume)}
+.btn-abysse:hover{background:var(--houle)}
+.btn-ghost-l{color:var(--ecume)}
+.btn-ghost-l:hover{background:rgba(244,241,234,.12)}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+
+/* Bandeau maquette */
+.proto{background:var(--abysse);color:var(--brume);font-size:.74rem;letter-spacing:.06em;text-align:center;padding:6px 12px}
+.proto strong{color:var(--ajonc);font-weight:700}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:40;background:var(--ecume);border-bottom:1px solid var(--galet)}
+.hdr-in{display:flex;justify-content:space-between;align-items:center;min-height:68px;gap:16px}
+.brand{order:1;display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;color:var(--ink);line-height:1}
+.brand b{font:400 1.32rem/1 var(--ff-d);letter-spacing:.32em;margin-right:-.32em}
+.brand small{font:500 .6rem/1 var(--ff-b);letter-spacing:.26em;text-transform:uppercase;margin-top:6px;color:var(--ink-2)}
+.nav{order:2}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px}
+.nav a{color:var(--ink);text-decoration:none;font:500 .76rem/1 var(--ff-b);letter-spacing:.1em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a[aria-current="page"]{border-bottom-color:var(--ink)}
+.tools{order:3;display:flex;justify-content:flex-end;gap:6px}
+.icon-btn{position:relative;width:44px;height:44px;display:grid;place-items:center;background:none;border:0;border-radius:50%}
+.icon-btn:hover{background:var(--sable)}
+.icon-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5}
+.badge{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--ajonc);color:var(--abysse);font:700 .66rem/18px var(--ff-b);text-align:center}
+.burger{display:none}
+@media (max-width:1120px){
+  .burger{display:grid;order:0}
+  .brand{align-items:center}
+  .nav{position:fixed;inset:0 0 0 auto;width:min(86vw,360px);background:var(--abysse);transform:translateX(105%);transition:transform .3s;z-index:60;padding:80px 28px 28px;visibility:hidden}
+  .nav.open{transform:none;visibility:visible}
+  .nav ul{flex-direction:column;gap:6px}
+  .nav a{color:var(--ecume);font:400 1.5rem/1.5 var(--ff-d);letter-spacing:.06em;text-transform:none;display:block;padding:8px 0}
+  .nav .close-nav{position:absolute;top:16px;right:16px;color:var(--ecume)}
+}
+@media (min-width:1121px){.close-nav{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:min(88vh,760px);color:var(--ecume);display:flex;align-items:flex-end;overflow:hidden;background:var(--abysse)}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{animation:drift 26s ease-in-out infinite alternate;transform-origin:60% 60%}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,34,41,.15) 0%,rgba(12,34,41,.0) 30%,rgba(12,34,41,.72) 78%,rgba(12,34,41,.92) 100%)}
+.hero-in{position:relative;z-index:2;padding-bottom:120px;padding-top:120px}
+.hero h1{font-size:clamp(2.1rem,6.2vw,4.4rem);max-width:15ch;margin-bottom:.35em}
+.hero p.lead{font-size:clamp(1rem,1.6vw,1.2rem);max-width:52ch;color:#e8efee}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.coords{position:absolute;z-index:2;right:20px;top:22px;font:500 .7rem/1.4 var(--ff-b);letter-spacing:.22em;text-transform:uppercase;color:var(--brume);text-align:right;opacity:.9}
+.waves{position:absolute;left:0;right:0;bottom:-1px;height:90px;z-index:3;pointer-events:none}
+.waves svg{position:absolute;bottom:0;left:0;width:200%;height:100%}
+.waves .w1{animation:swell 16s linear infinite;opacity:.35}
+.waves .w2{animation:swell 11s linear infinite reverse;opacity:.6}
+.waves .w3{animation:none}
+@keyframes swell{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.spray{position:absolute;inset:0;z-index:1;pointer-events:none}
+.spray i{position:absolute;bottom:-10px;width:4px;height:4px;border-radius:50%;background:rgba(244,241,234,.55);animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-70vh) translateX(30px);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Sections */
+section{padding:84px 0}
+.on-dark{background:var(--abysse);color:var(--ecume)}
+.on-dark a{color:var(--verre)}
+.on-dark a.btn-ajonc{color:var(--abysse)}
+.on-dark a.btn-ghost-l,.on-dark .alts a{color:var(--ecume)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin:0}
+.sec-head p{margin:0;max-width:46ch;color:var(--ink-2)}
+.on-dark .sec-head p{color:var(--brume)}
+.divider{display:block;width:100%;height:46px}
+
+/* Lexique : défilement horizontal */
+.lex{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin}
+@media (min-width:1100px){.lex{grid-auto-columns:calc((100% - 72px)/4.4)}}
+.lex-card{scroll-snap-align:start;background:#fff;border:1px solid var(--sable);border-radius:var(--r);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:border-color .2s, box-shadow .2s}
+.lex-card:hover{border-color:var(--verre);box-shadow:0 10px 30px -18px rgba(12,34,41,.5)}
+.lex-card figure{margin:0;background:linear-gradient(180deg,#fff,#f3f5f4);aspect-ratio:381/430;display:grid;place-items:center;overflow:hidden}
+.lex-card figure img{width:78%;mix-blend-mode:multiply}
+.lex-body{padding:16px 18px 20px;border-top:1px solid var(--sable)}
+.lex-body h3{font-size:1.35rem;margin:0 0 4px}
+.lex-mean{font:italic 400 1rem/1.35 var(--ff-i);color:var(--bruyere);margin:0 0 10px;min-height:1.35em}
+.lex-meta{display:flex;justify-content:space-between;align-items:baseline;font-size:.85rem;color:var(--ink-2)}
+.lex-meta b{color:var(--ink);font-size:1rem;white-space:nowrap}
+
+/* Coffret band */
+.kevan{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+@media (min-width:820px){.kevan{grid-template-columns:.9fr 1.1fr}}
+.kevan-img{background:#fff;border-radius:var(--r);padding:20px;display:grid;place-items:center}
+.kevan-img img{max-height:360px;width:auto}
+.kevan h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.vials{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 22px;padding:0;list-style:none}
+.vials li{font:500 .78rem/1 var(--ff-b);letter-spacing:.06em;padding:8px 10px;border:1px solid rgba(127,174,181,.55);border-radius:20px}
+.promise{display:flex;gap:14px;align-items:flex-start;background:rgba(127,174,181,.12);border-left:3px solid var(--ajonc);padding:14px 16px;margin:0 0 22px;font-size:.95rem}
+
+/* Paysages */
+.lands{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:860px){.lands{grid-template-columns:repeat(4,1fr)}}
+.land{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;color:var(--ecume);text-decoration:none;display:flex;align-items:flex-end;background:var(--ardoise)}
+.land img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.land:hover img{transform:scale(1.06)}
+.land::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(12,34,41,.85))}
+.land span{position:relative;z-index:2;padding:16px}
+.land b{display:block;font:400 1.3rem/1.15 var(--ff-d)}
+.land small{font-size:.82rem;color:var(--brume)}
+
+/* Maison teaser */
+.split{display:grid;gap:36px;align-items:center}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr;gap:64px}}
+.hermine{mix-blend-mode:multiply;max-width:340px}
+blockquote.press{margin:26px 0 0;padding:0 0 0 18px;border-left:2px solid var(--verre);font:italic 400 1.15rem/1.45 var(--ff-i)}
+blockquote.press cite{display:block;margin-top:8px;font:500 .78rem/1.3 var(--ff-b);font-style:normal;letter-spacing:.08em;color:var(--ink-2)}
+.pillars{display:grid;gap:14px;margin:22px 0 0;padding:0;list-style:none}
+.pillars li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:.95rem}
+.pillars svg{width:24px;height:24px;stroke:var(--verre-f);fill:none;stroke-width:1.4;margin-top:2px}
+
+/* Carte */
+.map-shell{display:grid;gap:22px}
+@media (min-width:900px){.map-shell{grid-template-columns:1.25fr 1fr}}
+.map-box{position:relative;background:linear-gradient(180deg,#123039,#0c2229);border-radius:var(--r);overflow:hidden}
+.map-box svg{width:100%;height:auto;display:block}
+.map-land{fill:#e7dfcf;stroke:#c9c1b2;stroke-width:.4}
+.map-isle{fill:#e7dfcf}
+.map-grid{stroke:rgba(127,174,181,.18);stroke-width:.3}
+.mk{cursor:pointer}
+.mk circle{fill:var(--bruyere);stroke:#fff;stroke-width:.7;transition:r .2s}
+.mk.dim circle{fill:#9aa7a6;opacity:.45}
+.mk.on circle{fill:var(--ajonc);stroke:var(--abysse);r:4.2}
+.mk:focus{outline:none}.mk:focus-visible circle{stroke:var(--ajonc);stroke-width:1.6}
+.map-legend{position:absolute;left:12px;bottom:10px;font-size:.72rem;color:var(--brume);letter-spacing:.06em}
+.map-far{position:absolute;right:10px;top:10px;background:rgba(12,34,41,.82);color:var(--ecume);font-size:.75rem;padding:8px 10px;border-radius:var(--r);max-width:46%}
+.map-far b{color:var(--ajonc)}
+@media (max-width:700px){.map-far{position:static;max-width:none;border-radius:0}.map-legend{position:static;padding:6px 12px 10px;margin:0}}
+
+.store-tools{display:grid;gap:12px;margin-bottom:14px}
+.field{display:grid;gap:6px}
+.field label{font:700 .72rem/1 var(--ff-b);letter-spacing:.16em;text-transform:uppercase}
+.field input,.field select{min-height:46px;border:1px solid var(--galet);border-radius:var(--r);padding:0 14px;background:#fff;font:inherit;color:var(--ink);width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:38px;padding:0 14px;border-radius:20px;border:1px solid var(--galet);background:#fff;font:500 .82rem/1 var(--ff-b);letter-spacing:.03em}
+.chip[aria-pressed="true"]{background:var(--abysse);border-color:var(--abysse);color:var(--ecume)}
+.chip .n{opacity:.65;margin-left:4px}
+.stores{list-style:none;margin:0;padding:0;max-height:520px;overflow:auto;border-top:1px solid var(--galet)}
+.stores li{border-bottom:1px solid var(--galet)}
+.store{display:grid;grid-template-columns:1fr auto;gap:4px 12px;width:100%;text-align:left;background:none;border:0;padding:14px 6px}
+.store:hover,.store.on{background:#fff}
+.store b{font:400 1.02rem/1.25 var(--ff-d);letter-spacing:.02em}
+.store span{grid-column:1;font-size:.88rem;color:var(--ink-2)}
+.store em{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font:700 .7rem/1 var(--ff-b);letter-spacing:.1em;text-transform:uppercase;color:var(--verre-f)}
+.store-go{display:inline-block;margin:0 6px 12px;font-size:.84rem}
+.count{font-size:.88rem;color:var(--ink-2);margin:0 0 8px}
+
+/* Herbier */
+.herb{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.herb-it{border:1px solid rgba(127,174,181,.35);border-radius:var(--r);padding:16px}
+.herb-it h3{font-size:1.15rem;margin:0 0 6px;color:var(--ecume)}
+.herb-it p{margin:0 0 6px;font-size:.88rem;color:var(--brume)}
+.herb-it a{font-size:.9rem;margin-right:8px}
+.date-todo{display:inline-block;font:700 .64rem/1 var(--ff-b);letter-spacing:.12em;text-transform:uppercase;color:var(--abysse);background:var(--ajonc);padding:4px 6px;border-radius:2px;margin-bottom:8px}
+
+/* Réassurance */
+.reass{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:34px 0;border-top:1px solid var(--galet)}
+@media (min-width:860px){.reass{grid-template-columns:repeat(4,1fr)}}
+.reass div{font-size:.9rem;color:var(--ink-2)}
+.reass b{display:block;color:var(--ink);font:400 1.05rem/1.3 var(--ff-d);margin-bottom:2px}
+
+/* Collection */
+.page-hero{padding:56px 0 30px;border-bottom:1px solid var(--galet)}
+.page-hero h1{font-size:clamp(2rem,5vw,3.4rem)}
+.page-hero p{max-width:62ch;color:var(--ink-2);margin:0}
+.crumb{font-size:.8rem;color:var(--ink-2);margin-bottom:14px}
+.crumb a{color:var(--ink-2)}
+.filters{display:grid;gap:14px;padding:22px 0;position:sticky;top:68px;background:var(--ecume);z-index:5;border-bottom:1px solid var(--galet)}
+.filters .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters .lab{font:700 .7rem/1 var(--ff-b);letter-spacing:.16em;text-transform:uppercase;margin-right:6px;min-width:90px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:30px 0}
+@media (min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:22px}}
+@media (min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
+.grid .lex-card figure{aspect-ratio:381/440}
+.empty{padding:40px 0;color:var(--ink-2)}
+.amb-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.amb-tags span{font-size:.7rem;letter-spacing:.06em;padding:3px 7px;border-radius:12px;background:var(--brume);color:var(--ink)}
+.oos{font-size:.75rem;color:var(--bruyere);font-weight:700}
+
+/* Fiche */
+.pdp{display:grid;gap:30px;padding:30px 0 60px}
+@media (min-width:900px){.pdp{grid-template-columns:1.05fr 1fr;gap:56px}}
+.gal{display:grid;gap:10px}
+.gal-main{background:#fff;border-radius:var(--r);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+.gal-main img{max-height:100%;width:auto;object-fit:contain}
+.gal-main.cover img{width:100%;height:100%;object-fit:cover}
+.thumbs{display:flex;gap:8px}
+.thumbs button{width:76px;height:76px;padding:0;border:1px solid var(--galet);border-radius:var(--r);background:#fff;overflow:hidden}
+.thumbs button[aria-current="true"]{border:2px solid var(--abysse)}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.pdp h1{font-size:clamp(2.1rem,5vw,3.2rem);margin-bottom:.15em}
+.pdp .mean{font:italic 400 1.2rem/1.4 var(--ff-i);color:var(--bruyere);margin:0 0 14px}
+.pdp .meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.9rem;color:var(--ink-2);margin-bottom:16px}
+.price{font:400 1.7rem/1 var(--ff-d);margin:6px 0 18px}
+.price small{font:500 .8rem var(--ff-b);color:var(--ink-2);letter-spacing:.05em}
+.buy{display:grid;gap:10px}
+.trybox{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;border:1px dashed var(--verre-f);border-radius:var(--r);padding:12px;background:#fff;margin-top:8px}
+.trybox img{width:64px;height:64px;object-fit:cover;border-radius:2px}
+.trybox p{margin:0;font-size:.9rem}
+.trybox button{margin-top:6px;background:none;border:0;padding:0;color:var(--verre-f);text-decoration:underline;font-weight:700}
+.gifts{font-size:.88rem;color:var(--ink-2);margin:10px 0 0;padding-left:18px}
+/* Pyramide en colonne d'eau */
+.column{margin:30px 0 8px;border-radius:var(--r);overflow:hidden}
+.stratum{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:16px 18px;align-items:center}
+.stratum .lvl{font:700 .7rem/1.3 var(--ff-b);letter-spacing:.14em;text-transform:uppercase}
+.stratum .lvl i{display:block;font:italic 400 .92rem/1.2 var(--ff-i);letter-spacing:0;text-transform:none;opacity:.85;margin-top:3px}
+.stratum p{margin:0;font-size:1rem}
+.s1{background:#e3eeee;color:var(--ink)}
+.s2{background:#7faeb5;color:var(--abysse)}
+.s3{background:#24505a;color:var(--ecume)}
+.s4{background:#0c2229;color:var(--ecume)}
+.acc{border-top:1px solid var(--galet)}
+.acc details{border-bottom:1px solid var(--galet)}
+.acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:16px 2px;font:700 .8rem/1 var(--ff-b);letter-spacing:.14em;text-transform:uppercase;min-height:48px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font:400 1.4rem/1 var(--ff-b)}
+.acc details[open] summary::after{content:"–"}
+.acc .in{padding:0 2px 18px;font-size:.95rem;color:var(--ink-2)}
+.story{display:grid;gap:28px;align-items:center;padding:56px 0}
+@media (min-width:860px){.story{grid-template-columns:1fr 1fr;gap:56px}}
+.story img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover}
+.story p{font-size:1.05rem}
+.reviews{border:2px dashed var(--galet);border-radius:var(--r);padding:26px;text-align:center;color:var(--ink-2)}
+.reviews h2{font-size:1.5rem;color:var(--ink)}
+.reviews .tag{display:inline-block;font:700 .66rem/1 var(--ff-b);letter-spacing:.14em;text-transform:uppercase;background:var(--sable);color:var(--ink);padding:6px 8px;border-radius:2px;margin-bottom:12px}
+
+/* Maison */
+.manifest{font:400 clamp(1.4rem,3vw,2.1rem)/1.35 var(--ff-i);font-style:italic;max-width:30ch}
+.values{display:grid;gap:18px}
+@media (min-width:760px){.values{grid-template-columns:repeat(2,1fr)}}
+.val{background:#fff;border:1px solid var(--sable);border-radius:var(--r);padding:24px}
+.val h3{font-size:1.25rem}
+.val p{margin:0;font-size:.95rem;color:var(--ink-2)}
+.timeline{list-style:none;padding:0;margin:0;display:grid;gap:0;border-left:2px solid var(--verre);}
+.timeline li{padding:0 0 22px 20px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ecume);border:2px solid var(--verre-f)}
+.timeline b{font:400 1.1rem var(--ff-d)}
+.addr{font-style:normal}
+
+/* Guide */
+.guide{max-width:760px;margin:0 auto}
+.steps{display:flex;gap:6px;margin-bottom:26px}
+.steps span{flex:1;height:4px;border-radius:2px;background:rgba(127,174,181,.3)}
+.steps span.on{background:var(--ajonc)}
+.q fieldset{border:0;padding:0;margin:0}
+.q legend{font:400 clamp(1.5rem,3.4vw,2.2rem)/1.2 var(--ff-d);margin-bottom:20px;padding:0}
+.opts{display:grid;gap:10px}
+@media (min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;pointer-events:none}
+.opt label{display:block;border:1px solid rgba(127,174,181,.5);border-radius:var(--r);padding:16px 18px;min-height:64px;cursor:pointer;transition:background .2s,border-color .2s}
+.opt label small{display:block;color:var(--brume);font-size:.84rem;margin-top:3px}
+.opt input:checked+label{background:rgba(217,166,42,.14);border-color:var(--ajonc)}
+.opt input:focus-visible+label{outline:3px solid var(--ajonc);outline-offset:2px}
+.q-nav{display:flex;justify-content:space-between;gap:10px;margin-top:24px}
+.result{display:grid;gap:22px;align-items:center}
+@media (min-width:720px){.result{grid-template-columns:220px 1fr}}
+.result .bottle{background:#fff;border-radius:var(--r);padding:12px}
+.result h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+.alts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.alts a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(127,174,181,.5);border-radius:24px;padding:4px 14px 4px 4px;text-decoration:none;color:var(--ecume)}
+.alts img{width:34px;height:34px;border-radius:50%;object-fit:cover;background:#fff}
+
+/* Footer */
+.foot{background:var(--abysse);color:var(--brume);padding:60px 0 30px;font-size:.92rem}
+.foot-grid{display:grid;gap:30px}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.foot h2{font-size:1rem;letter-spacing:.14em;color:var(--ecume)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:var(--brume)}
+.foot .brand b{color:var(--ecume)}
+.foot .brand small{color:var(--verre)}
+.foot .brand{align-items:flex-start}
+.credit{border-top:1px solid rgba(127,174,181,.25);margin-top:40px;padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.8rem}
+
+/* Drawer panier */
+.scrim{position:fixed;inset:0;background:rgba(12,34,41,.5);z-index:70;opacity:0;visibility:hidden;transition:opacity .25s}
+.scrim.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(100vw,420px);background:var(--ecume);z-index:80;transform:translateX(102%);transition:transform .3s;display:flex;flex-direction:column;visibility:hidden}
+.drawer.on{transform:none;visibility:visible}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--galet)}
+.drawer header h2{margin:0;font-size:1.4rem}
+.tide{padding:14px 20px;background:#fff;border-bottom:1px solid var(--galet);font-size:.86rem}
+.tide-bar{height:8px;border-radius:4px;background:var(--brume);overflow:hidden;margin-top:8px}
+.tide-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--verre),var(--houle));transition:width .4s}
+.lines{flex:1;overflow:auto;padding:6px 20px;list-style:none;margin:0}
+.line{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--sable);align-items:center}
+.line img{width:64px;height:76px;object-fit:contain;background:#fff;border-radius:2px}
+.line b{font:400 1rem/1.2 var(--ff-d)}
+.line small{display:block;color:var(--ink-2);font-size:.8rem}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--galet);border-radius:var(--r);margin-top:6px}
+.qty button{width:32px;height:32px;background:none;border:0}
+.qty span{min-width:22px;text-align:center;font-size:.9rem}
+.drawer footer{padding:16px 20px 22px;border-top:1px solid var(--galet);display:grid;gap:10px;background:#fff}
+.sum{display:flex;justify-content:space-between;font:400 1.2rem var(--ff-d)}
+.upsell{font-size:.86rem;background:var(--brume);padding:10px 12px;border-radius:var(--r)}
+.upsell button{background:none;border:0;padding:0;text-decoration:underline;font-weight:700;color:var(--verre-f)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,200%);visibility:hidden;background:var(--abysse);color:var(--ecume);padding:12px 18px;border-radius:var(--r);z-index:90;transition:transform .3s;font-size:.9rem;max-width:calc(100vw - 32px)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+
+/* Notes de refonte */
+.notes-btn{position:fixed;left:14px;bottom:14px;z-index:65;background:var(--ajonc);color:var(--abysse);border:0;border-radius:24px;padding:10px 16px;font:700 .74rem/1 var(--ff-b);letter-spacing:.12em;text-transform:uppercase;box-shadow:0 8px 20px -8px rgba(12,34,41,.6);min-height:44px}
+.notes{position:fixed;left:0;top:0;bottom:0;width:min(100vw,560px);background:#fff;z-index:85;transform:translateX(-102%);transition:transform .3s;overflow:auto;visibility:hidden}
+.notes.on{transform:none;visibility:visible}
+.notes header{position:sticky;top:0;background:var(--abysse);color:var(--ecume);padding:18px 22px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.notes header h2{margin:0;font-size:1.35rem}
+.notes header p{margin:4px 0 0;font-size:.8rem;color:var(--brume)}
+.notes ol{margin:0;padding:10px 22px 30px;list-style:none;counter-reset:n}
+.notes li{counter-increment:n;padding:18px 0;border-bottom:1px solid var(--sable)}
+.notes li h3{font-size:1.1rem;display:flex;gap:10px}
+.notes li h3::before{content:counter(n,decimal-leading-zero);font:700 .8rem/1.6 var(--ff-b);color:var(--verre-f)}
+.notes dl{margin:0;display:grid;gap:8px;font-size:.9rem}
+.notes dt{font:700 .66rem/1 var(--ff-b);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.notes dd{margin:0}
+.notes dd.gain{color:var(--verre-f);font-weight:500}
+@media (max-width:600px){.notes-btn{padding:8px 12px;font-size:.66rem;min-height:40px;left:10px;bottom:10px}}
+.notes .meth{font-size:.78rem;color:var(--ink-2);padding:0 22px 30px}
+</style>
+</head>
+<body>
+<div class="proto" role="note">Maquette préparée pour <strong>Lostmarc'h</strong> par Monsieur.H · non contractuelle</div>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <button class="icon-btn burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <button class="icon-btn close-nav" id="closeNav" aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+      <ul>
+        <li><a href="#collection" data-nav="collection">Eaux précieuses</a></li>
+        <li><a href="#decouverte" data-nav="decouverte">Trouver mon parfum</a></li>
+        <li><a href="#maison" data-nav="maison">La Maison</a></li>
+        <li><a href="#boutiks" data-nav="boutiks">Boutiks</a></li>
+      </ul>
+    </nav>
+    <a class="brand" href="#accueil" aria-label="Lostmarc'h, retour à l'accueil"><b>LOSTMARC'H</b><small>L'Apothicaire des Océans</small></a>
+    <div class="tools">
+      <button class="icon-btn" id="cartBtn" aria-label="Ouvrir le panier, 0 article" aria-controls="drawer" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#accueil"><b>LOSTMARC'H</b><small>L'Apothicaire des Océans</small></a>
+        <p style="margin-top:18px;max-width:34ch">Maison de parfum bretonne indépendante, depuis 2006. Inspirée par la plage de Lostmarc'h, à l'extrémité de la presqu'île de Crozon.</p>
+      </div>
+      <div>
+        <h2>Collections</h2>
+        <ul>
+          <li><a href="#collection">Eaux précieuses</a></li>
+          <li><a href="#collection/chez-soi">Bougies &amp; brumes</a></li>
+          <li><a href="#decouverte">Coffret Découverte Kevan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>La Maison</h2>
+        <ul>
+          <li><a href="#maison">Notre histoire</a></li>
+          <li><a href="#boutiks">Les 32 Boutiks</a></li>
+          <li><a href="#maison/herbier">Journal olfactif</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <address class="addr">Finistérienne de Parfums<br>6 rue de Porstrein<br>29200 Brest</address>
+        <p style="margin:10px 0 0"><a href="mailto:contact@lostmarch.bzh">contact@lostmarch.bzh</a><br><a href="https://www.instagram.com/lostmarch_fr/" rel="noopener" target="_blank">Instagram @lostmarch_fr</a></p>
+      </div>
+    </div>
+    <div class="credit"><span>© Lostmarc'h · L'Apothicaire des Océans</span><span>Maquette de refonte · Développé par Monsieur.H</span></div>
+  </div>
+</footer>
+
+<!-- Panier -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+  <header><h2 id="drawerTitle">Votre panier</h2><button class="icon-btn" id="closeCart" aria-label="Fermer le panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button></header>
+  <div class="tide" id="tide"></div>
+  <ul class="lines" id="lines"></ul>
+  <footer id="cartFoot"></footer>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Notes de refonte -->
+<button class="notes-btn" id="notesBtn" aria-controls="notes" aria-expanded="false">Notes de refonte</button>
+<aside class="notes" id="notes" role="dialog" aria-modal="true" aria-labelledby="notesTitle" aria-hidden="true">
+  <header>
+    <div><h2 id="notesTitle">Notes de refonte</h2><p>Relevé sur lostmarch.bzh le 14/10/2026 · mesures navigateur, desktop</p></div>
+    <button class="icon-btn" id="closeNotes" aria-label="Fermer les notes" style="color:var(--ecume)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </header>
+  <ol>
+    <li><h3>Une vidéo de 69 Mo avant le premier parfum</h3><dl>
+      <dt>Aujourd'hui</dt><dd>L'accueil charge <code>video.mp4</code> (69,2 Mo annoncés par le serveur), l'API Google Maps 3 fois alors qu'aucune carte n'est affichée, et reCAPTCHA : 51 requêtes, chargement complet mesuré à 9,3 s (8,0 s dans le constat initial). Sur mobile (375 px), la même vidéo est chargée et la page fait 9 635 px de haut.</dd>
+      <dt>Dans la maquette</dt><dd>Votre photo de la plage de Crozon (226 Ko, 118 Ko en version mobile) avec une houle et des embruns dessinés en SVG/CSS (quelques Ko), sans script tiers. Le premier parfum apparaît dès le deuxième écran.</dd>
+      <dt>Bénéfice</dt><dd class="gain">Même immersion, page lisible en 1 à 2 s en 4G : moins d'abandons, meilleur score Core Web Vitals (critère de classement Google).</dd></dl></li>
+    <li><h3>Le coffret Kevan, votre meilleur argument, est caché</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Le Coffret Découverte Kevan (9 × 2 ml, 30 €, remboursé en bon d'achat sur un 100 ml) est en 10<sup>e</sup> et dernière position de « Eaux précieuses ». Il n'apparaît ni sur l'accueil, ni sur les fiches parfums, qui ne proposent aucun produit associé.</dd>
+      <dt>Dans la maquette</dt><dd>Le coffret est proposé dans l'accueil, sur chaque fiche (« Essayer d'abord »), dans le panier et à la fin du guide olfactif en 4 questions.</dd>
+      <dt>Bénéfice</dt><dd class="gain">On n'achète pas un parfum à 79 € sans l'avoir senti : le coffret transforme les visiteurs hésitants en clients, puis en acheteurs de 100 ml.</dd></dl></li>
+    <li><h3>Pas de H1, des titres Google incohérents</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Aucun H1 sur l'accueil ni sur « Eaux précieuses ». Titres de fiches : « Aôd » (3 caractères), « Iroaz », « Din Dan », mais 126 à 128 caractères pour Hermine, Atao, Ael-Mat. Meta descriptions de 442 à 657 caractères sur les fiches, vides sur La Marque, Bougies &amp; Brumes, Avis, Blog, Contact, Presse. <code>/sitemap.xml</code> renvoie 404 et aucun sitemap n'est déclaré dans robots.txt.</dd>
+      <dt>Dans la maquette</dt><dd>Un H1 par page, des titres structurés (« Aôd — Eau de toilette mixte bretonne | Lostmarc'h ») et une description de 150 caractères par page (visible dans l'onglet du navigateur en naviguant).</dd>
+      <dt>Bénéfice</dt><dd class="gain">Être trouvé sur « parfum breton », « parfum Crozon », « parfum iodé » : des recherches où la maison est légitime.</dd></dl></li>
+    <li><h3>Les 32 Boutiks : une carte lourde, en partie en anglais</h3><dl>
+      <dt>Aujourd'hui</dt><dd>La page Boutiks charge Google Maps, affiche « Your location » et « Radius » en anglais, et ne permet pas de filtrer par ville.</dd>
+      <dt>Dans la maquette</dt><dd>Une carte légère dessinée en SVG avec vos 32 adresses réelles, une recherche par ville ou code postal, des filtres par département et un lien d'itinéraire par adresse.</dd>
+      <dt>Bénéfice</dt><dd class="gain">Plus de visites chez vos partenaires, et une page qui peut se positionner sur « parfum breton Quimper / Brest / Saint-Malo… ».</dd></dl></li>
+    <li><h3>Des images sans description et trop lourdes</h3><dl>
+      <dt>Aujourd'hui</dt><dd>17 images sur 28 sans texte alternatif à l'accueil. Photos produits en 1100×1422 px de 400 à 615 Ko chacune ; <code>lann-ael.png</code> pèse 1,24 Mo.</dd>
+      <dt>Dans la maquette</dt><dd>Chaque image a un texte alternatif, les vignettes utilisent le format adapté (≈ 60 Ko) et ne se chargent qu'au défilement.</dd>
+      <dt>Bénéfice</dt><dd class="gain">Accessibilité, visibilité dans Google Images, pages plus rapides.</dd></dl></li>
+    <li><h3>Un Journal olfactif qui ne mène nulle part</h3><dl>
+      <dt>Aujourd'hui</dt><dd>10 articles de qualité sur les matières (mandarine, camomille, ylang-ylang, verveine, orange, citron, vétiver, bergamote, lavande, rose de Damas), sans date et sans lien vers les parfums qui les contiennent.</dd>
+      <dt>Dans la maquette</dt><dd>Un « Herbier de l'apothicaire » qui relie chaque matière aux parfums concernés (d'après vos pyramides), avec un emplacement de date par article.</dd>
+      <dt>Bénéfice</dt><dd class="gain">Le contenu travaille enfin pour la vente : maillage interne, fraîcheur visible pour Google, lecteurs dirigés vers les fiches.</dd></dl></li>
+    <li><h3>45 avis clients enfermés sur une page</h3><dl>
+      <dt>Aujourd'hui</dt><dd>La page « Avis clients » rassemble 45 témoignages datés de 2020 au 30/09/2026, recopiés à la main, mais aucune fiche parfum n'affiche d'avis. Le nom breton de chaque parfum (« Atao signifie toujours »…) n'apparaît qu'au milieu des descriptions.</dd>
+      <dt>Dans la maquette</dt><dd>Un emplacement d'avis vérifiés sur chaque fiche (volontairement vide ici : aucun avis n'est inventé) et la traduction bretonne mise en avant comme signature de la maison.</dd>
+      <dt>Bénéfice</dt><dd class="gain">Avis rattachés aux produits = étoiles dans Google et réassurance au moment d'acheter. Les noms bretons deviennent un élément de mémorisation.</dd></dl></li>
+  </ol>
+  <p class="meth">Méthode : relevé navigateur (performance.getEntriesByType, en-têtes HTTP, DOM) sur l'accueil, la catégorie, les 10 fiches et les pages La Marque, Boutiks, Avis, Blog, Contact, Presse. Prix, notes, adresses et textes de la maquette sont repris du site actuel. La future boutique en ligne gardera vos prix et votre catalogue.</p>
+</aside>
+
+<script>
+(function(){
+"use strict";
+var CDN="https://www.lostmarch.bzh/";
+function u(p){return CDN+p;}
+
+/* ---------- Catalogue réel relevé sur lostmarch.bzh ---------- */
+var P=[
+ {h:"leau-de-l-hermine",n:"L'eau de l'Hermine",mean:"L'hermine, emblème de la Bretagne : pureté et tendresse",type:"Eau de parfum",pour:"Mixte",vol:"100 ml",price:89,fam:"Aromatique hespéridée",amb:["lande","zestes"],
+  tag:"Une eau de parfum subtile, originale et réconfortante. L'alliance de la douceur et de la pureté.",
+  desc:"L'hermine est un des emblèmes de la Bretagne. Elle signifie pureté mais évoque aussi la tendresse ; c'est la mascotte de la maison. Pour créer l'Eau de l'Hermine, nous nous sommes inspirés de la noblesse d'un jardin dessiné par Le Nôtre, mêlée au charme hybride du jardin du manoir. La lavande est là pour sa fraîcheur, son innocence et son pouvoir évocateur, mais elle se révèle sophistiquée et originale. Elle est soutenue par le rare musc blanc et adoucie par le néroli et la pivoine. Les effluves d'amande poudrée de l'héliotrope sont rafraîchis par le pamplemousse et la bergamote.",
+  t:"bergamote, citron, pamplemousse",c:"lavande, néroli, pivoine",f:"cèdre, mousse, musc",
+  img:["183-large_default/leau-de-l-hermine.jpg","183-thickbox_default/leau-de-l-hermine.jpg","182-thickbox_default/leau-de-l-hermine.jpg"],life:"img/cms/hermine-carre.jpg",scene:"img/cms/hermine-pivoines.jpg",sceneAlt:"Pivoines et renoncules blanches",
+  inci:"alcohol denat, parfum (fragrance), aqua (water), limonene, tetramethyl acetyloctahydronaphthalenes, citrus aurantium bergamia peel oil, citrus aurantium peel oil, linalyl acetate, linalool, citrus limon peel oil, pinene, lavandula oil/extract, terpineol, citral, farnesol, geranyl acetate, beta-caryophyllene, terpinolene, geraniol, alpha-terpinene, carvone, camphor, citronellol."},
+ {h:"atao",n:"Atao",br:"toujours",type:"Eau de toilette",pour:"Homme",vol:"100 ml",price:79,fam:"Fougère hespéridée",amb:["zestes","bois"],
+  tag:"Élégante et mesurée. Une fraîcheur incontournable, un sillage olfactif captivant.",
+  desc:"Élégante et mesurée, cette eau de toilette aux effluves intemporels a le charme d'un classique revisité. Son nom souligne qu'elle est l'odeur fétiche et emblématique de la collection Lostmarc'h. Les notes fraîches des zestes d'agrumes — bergamote, citron vert, mandarine et petit grain — allègent le fond boisé, mousse et résine, que le vétiver vient subtilement épicer. Un équilibre parfait entre fraîcheur incontournable et sillage captivant.",
+  t:"citron vert, mandarine, bergamote",c:"petit grain, néroli, patchouli, vétiver",f:"mousse, baume de sapin, benjoin, musc",
+  img:["168-large_default/atao.jpg","168-thickbox_default/atao.jpg","170-thickbox_default/atao.jpg"],life:"img/cms/ATAO-carre.jpg",scene:"img/cms/ATAO-carre.jpg",sceneAlt:"Flacon Atao posé sur un pont de bateau, cordages",
+  inci:"alcohol denat, parfum (fragrance), aqua (water), limonene, linalyl acetate, citrus limon peel oil, citrus aurantium peel oil, linalool, pinene, pogostemon cablin oil, citral, evernia prunastri extract, terpineol, benzyl benzoate, geranyl acetate, vanillin, geraniol, beta-caryophyllene, eugenol, terpinolene, farnesol, alpha-terpinene, isoeugenol, carvone, citronellol, camphor."},
+ {h:"ael-mat",n:"Ael-Mat",br:"ange gardien",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Floral",amb:["rivage","lande"],
+  tag:"Une ode à l'océan mêlant force et douceur. Les petits chemins de la lande parsemés d'ajoncs et de bruyère.",
+  desc:"Une balade dans les chemins bordés d'ajoncs. La force de l'océan alliée à la richesse de la terre bretonne mêlent leurs odeurs dans cette eau de toilette rêveuse. Elle ose allier la douceur végétale de la camomille à la fraîcheur verte du fruit à peine mûr, juste cueilli sur l'arbre. Elle enchaîne sur les senteurs des jardins voluptueux — jasmin, fleur d'oranger, héliotrope — renforcées par la présence têtue du musc doux et du cèdre poivré.",
+  t:"camomille, vert, fruité",c:"héliotrope, jasmin, rose, fleur d'oranger",f:"cèdre, musc",
+  img:["165-large_default/ael-mat.jpg","165-thickbox_default/ael-mat.jpg","166-thickbox_default/ael-mat.jpg"],life:"img/cms/ael-mat-carre.jpg",scene:"img/cms/ael-mat_1.jpg",sceneAlt:"Ajoncs en fleurs et rochers de granit au bord de la mer",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), linalyl acetate, pinene."},
+ {h:"din-dan",n:"Din Dan",br:"en-dessous",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Floral hespéridé",amb:["lande","zestes"],
+  tag:"Une senteur vivifiante qui évoque le goût enfantin et frais d'un bonbon acidulé.",
+  desc:"Une senteur vivifiante qui évoque le goût innocent et frais d'un bonbon acidulé. Une balade au verger pour y cueillir un bouquet de verveine odorante, juste imprégné de la rosée du matin. Sa verdeur est confrontée à la menthe et au citron, tandis que le duo floral inusité — pêche et pivoine — adoucit ce vigoureux mélange. Bois et mousse tapissent le fond de cette eau de toilette dont on ne peut se passer.",
+  t:"citron, orange, menthe, verveine",c:"pêche, pivoine",f:"boisé, mousse, musc",
+  img:["180-large_default/din-dan.jpg","180-thickbox_default/din-dan.jpg","179-thickbox_default/din-dan.jpg"],life:"img/cms/DINDAN-carre.jpg",scene:"img/cms/DINDAN-carre.jpg",sceneAlt:"Flacon Din Dan dans les herbes hautes",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), limonene, benzyl benzoate, hexyl cinnamal, citral, linalool, amyl cinnamal."},
+ {h:"eau-du-dimanche",n:"L'eau du Dimanche",mean:"Un dimanche matin d'été, volets mi-clos",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Chyprée hespéridée",amb:["zestes"],
+  tag:"Une eau qui donne envie de se réveiller frais et joyeux, un dimanche matin d'été.",
+  desc:"Un irrésistible bouquet d'odeurs fraîches et gourmandes, que l'on veut retrouver tous les jours de la semaine. À l'abri de la chaleur, derrière les volets à demi entrouverts d'une maison de famille : petit déjeuner aux agrumes, mandarine et citron frais. Jolis bouquets de fleurs odorantes et bienfaisantes : blanche bergamote, verveine attendrissante, galbanum ombrifère, petit grain anti-stress, patchouli.",
+  t:"mandarine, citron, basilic, bergamote",c:"petit grain, verveine, galbanum",f:"patchouli, musc, mousse",
+  img:["175-large_default/eau-du-dimanche1.jpg","175-thickbox_default/eau-du-dimanche1.jpg","177-thickbox_default/eau-du-dimanche1.jpg"],life:"img/cms/DIMANCHE_CARRE.jpg",scene:"img/cms/DIMANCHE_CARRE.jpg",sceneAlt:"Flacon et étui de L'eau du Dimanche devant des hortensias",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), alpha-isomethyl ionone, limonene, hexyl cinnamal, coumarin, linalool, geraniol, citronellol, citral, amyl cinnamal."},
+ {h:"l-eau-du-marin",n:"L'eau du Marin",mean:"Une grande vague rafraîchissante",type:"Eau de Cologne",pour:"Mixte",vol:"100 ml",price:69,fam:"Floral hespéridé",amb:["rivage","zestes"],
+  tag:"Une grande vague rafraîchissante. Des senteurs vivifiantes qui évoquent les voyages au long cours.",
+  desc:"Une eau récréative qui évoque les voyages au long cours et les travaux sur l'océan. Il ouvre son flacon et une grande vague rafraîchissante déferle sur le « rude » amateur de senteurs vivifiantes. Il ne pourra plus s'en passer… et a toutes les chances de se la faire voler par les « douces » personnes qu'il côtoie. Si les agrumes dominent, le freesia délicat les adoucit et le cèdre amène une touche franche. Une odeur « no gender » pour une eau de Cologne dont toute la famille va s'asperger sans modération.",
+  t:"orange amère, citron, mandarine",c:"freesia, floral, frais",f:"cèdre, mousse, musc",
+  img:["163-large_default/l-eau-du-marin1.jpg","163-thickbox_default/l-eau-du-marin1.jpg","162-thickbox_default/l-eau-du-marin1.jpg"],life:"img/cms/MARIN_CARRE.jpg",scene:"img/cms/EAU_DU_MARIN.jpg",sceneAlt:"Voilier au près, grand-voile et mer au soleil couchant",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), tetramethyl acetyloctahydronaphthalenes, linalyl acetate, limonene, citrus limon peel oil, citrus aurantium bergamia peel oil, benzyl salicylate, linalool, pinene, terpineol, alpha-isomethyl ionone, citral, geranyl acetate, terpinolene, beta-caryophyllene, mentha piperita oil, alpha-terpinene, geraniol, menthol."},
+ {h:"iroaz",n:"Iroaz",br:"rose",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Floral musqué",amb:["rivage","lande","bois"],
+  tag:"Une rose des rivages, cueillie sur le sable. Du vent marin émane sa fraîcheur iodée.",
+  desc:"Rose ancienne, rose des jardins et rose sauvage prêtent leurs nuances suaves et poivrées à Iroaz. Rose des rivages, cueillie sur la plage : du vent marin émane sa fraîcheur iodée. Très féminine et poétique, elle séduit aussi les hommes ; une odeur un peu mystérieuse et sophistiquée s'en dégage. La rose est rafraîchie par le citron et la verveine, puis se couche sur un lit d'ylang-ylang. Vétiver et patchouli boisés soutiennent cet équilibre voluptueux et addictif.",
+  t:"citron, verveine, vert, baie rose",c:"rose, ylang-ylang",f:"patchouli, vétiver, musc",
+  img:["186-large_default/iroaz.jpg","186-thickbox_default/iroaz.jpg","185-thickbox_default/iroaz.jpg"],life:"img/cms/IROAZ-CARRE.jpg",scene:"img/cms/slide-IROAZ%20copie.jpg",sceneAlt:"Rose ancienne rose pâle en gros plan",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), benzyl salicylate, hydroxycitronellal, geraniol, citronellol, citrus limon peel oil, alpha-isomethyl ionone, limonene, cinnamyl alcohol, pogostemon cablin oil, rose flower oil/extract, pinene, acetyl cedrene, pelargonium graveolens flower oil, citral, rose ketones, geranyl acetate, cananga odorata oil/extract, beta-caryophyllene, linalool, lippia citriodora absolute, trimethylcyclopentenyl methylisopentenol, benzyl benzoate, benzyl alcohol."},
+ {h:"lann-ael",n:"Lann-Ael",br:"lande des anges",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Fruité gourmand",amb:["douceur"],
+  tag:"Les goûters de l'enfance et l'odeur addictive du gâteau qui lève dans le four.",
+  desc:"Les senteurs gourmandes et réconfortantes des goûters de notre enfance se retrouvent dans ce parfum à l'odeur addictive du gâteau qui lève dans le four. Céréales et lait vanillé ajoutent au côté « madeleine de Proust », tandis que clémentine rafraîchissante, bois vert et bergamote acidulée allègent l'ensemble de leur fraîcheur énergique.",
+  t:"bergamote, clémentine, céréales, fruité",c:"floral, lait, boisé",f:"vanille",
+  img:["172-large_default/lann-ael.jpg","172-thickbox_default/lann-ael.jpg","171-thickbox_default/lann-ael.jpg"],life:"img/cms/LANN_AEL_CARRE.jpg",scene:"img/cms/LANN_AEL_CARRE.jpg",sceneAlt:"Flacon Lann-Ael près d'une brioche dorée",
+  inci:"alcohol denat, aqua (water), parfum (fragrance), limonene, vanillin, citrus aurantium bergamia peel oil, citrus limon peel oil, tetramethyl acetyloctahydronaphthalenes, linalyl acetate, pinene, benzyl benzoate, linalool, hexyl cinnamal, citral, amyl cinnamal, terpinolene, terpineol, geranyl acetate, beta-caryophyllene, alpha-terpinene, carvone."},
+ {h:"aod",n:"Aôd",br:"rivage",type:"Eau de toilette",pour:"Mixte",vol:"100 ml",price:79,fam:"Ambre floral",amb:["rivage","douceur"],
+  tag:"Un parfum d'évasion. Une journée de vacances à la plage.",
+  desc:"Un parfum d'évasion, évocateur d'une journée d'été à la plage. Les odeurs de sable et de mer nous transportent au cœur des vacances, passées ou à venir, proches ou lointaines, réelles ou imaginaires. Un parfum d'exotisme où le gardénia parle de nuit embaumée, la coco de rivages lointains, le lotus de délicatesse envoûtante. Les effluves marins se développent lentement pour continuer de séduire ; ambre et santal oniriques sont adoucis par la vanille.",
+  t:"pamplemousse, lotus",c:"gardénia, solaire, lait de coco, marin",f:"ambre, santal, vanille, musc",
+  img:["213-large_default/aod.jpg","213-thickbox_default/aod.jpg","188-thickbox_default/aod.jpg"],life:"img/cms/AOD.jpg",scene:"img/cms/plage.jpg",sceneAlt:"Coquillage sur le sable au soleil couchant",
+  inci:"alcohol denat, parfum (fragrance), aqua (water), tetramethyl acetyloctahydronaphthalenes, benzyl salicylate, hydroxycitronellal, vanillin, citral, trimethylcyclopentenyl methylisopentenol, limonene."}
+];
+var KEVAN={h:"coffret-decouverte-kevan",n:"Coffret Découverte Kevan",price:30,img:"214-large_default/coffret-decouverte-kevan.jpg",type:"9 × 2 ml"};
+var HOME=[
+ {h:"brume-bae",n:"Brume Bae",br:"baie",type:"Brume parfumée pour la maison",vol:"100 ml",price:29,img:"195-large_default/brume-parfumee-bae.jpg",d:"La puissance de l'océan et la fraîcheur vivifiante de la Bretagne. Dès la première pulvérisation, la mer envahit doucement la pièce."},
+ {h:"bougie-bae",n:"Bougie Bae",br:"baie",type:"Bougie parfumée",vol:"180 g · 40 h",price:49,img:"212-large_default/bae.jpg",d:"Posez-la dans votre intérieur. Ne prenez pas la peine de l'allumer : la mer envahit doucement la pièce.",oos:true},
+ {h:"brume-gwidor",n:"Brume Gwidor",br:"le petit dernier",type:"Brume parfumée",vol:"100 ml",price:29,img:"196-large_default/brume-gwidor.jpg",d:"Une fragrance chaleureuse : châtaigne, brioche et cannelle, le goûter de notre enfance."},
+ {h:"bougie-gwidor",n:"Bougie Gwidor",br:"le petit dernier",type:"Bougie parfumée",vol:"180 g · 40 h",price:49,img:"215-large_default/bougie-gwidor.jpg",d:"Véritable réconfort qui vous enveloppe : châtaigne, brioche et cannelle."}
+];
+var AMB={
+ rivage:{n:"Rivage iodé",d:"Sable, galets, vent marin"},
+ lande:{n:"Lande & jardins",d:"Ajoncs, bruyère, fleurs du manoir"},
+ zestes:{n:"Zestes du matin",d:"Agrumes, verveine, rosée"},
+ bois:{n:"Bois & mousse",d:"Vétiver, cèdre, sous-bois"},
+ douceur:{n:"Douceur gourmande",d:"Vanille, lait, brioche"}
+};
+var HERB=[
+ {m:"La mandarine",d:"Huile essentielle lumineuse, zestée et pétillante.",p:["atao","eau-du-dimanche","l-eau-du-marin"]},
+ {m:"La camomille",d:"La douceur végétale qui ouvre Ael-Mat.",p:["ael-mat"]},
+ {m:"L'ylang-ylang",d:"Le lit floral sur lequel se couche la rose d'Iroaz.",p:["iroaz"]},
+ {m:"La verveine",d:"Verdeur du verger, rosée du matin.",p:["din-dan","eau-du-dimanche","iroaz"]},
+ {m:"L'orange",d:"Orange douce ou amère, l'éclat des eaux fraîches.",p:["din-dan","l-eau-du-marin"]},
+ {m:"Le citron",d:"La note de tête la plus présente de la collection.",p:["leau-de-l-hermine","atao","din-dan","eau-du-dimanche","l-eau-du-marin","iroaz"]},
+ {m:"Le vétiver",d:"Racine boisée qui épice et ancre le fond.",p:["atao","iroaz"]},
+ {m:"La bergamote",d:"Agrume acidulé, fil conducteur de la maison.",p:["leau-de-l-hermine","atao","eau-du-dimanche","lann-ael"]},
+ {m:"La lavande",d:"Fraîcheur et innocence, version sophistiquée.",p:["leau-de-l-hermine"]},
+ {m:"La rose de Damas",d:"La reine des fleurs, ici cueillie sur le rivage.",p:["iroaz","ael-mat"]}
+];
+/* 32 points de vente relevés sur la page « Boutiks » (adresses et positions du site actuel) */
+var S=[
+ ["Parfumerie L'Apothicaire","8 rue Sainte-Marguerite","35400","Saint-Malo",48.6501,-2.0239],
+ ["Ornement","4, place Saint-Germain","35000","Rennes",48.112,-1.676],
+ ["La Fonderie – Concept Store O Capitaine","10 quai Armez","22000","Saint-Brieuc",48.5225,-2.7506],
+ ["La Fonderie – Paimpol","11 rue de l'Église","22500","Paimpol",48.7791,-3.0469],
+ ["La Galerie de Ker Iliz","4 rue du Maréchal Leclerc","22700","Perros-Guirec",48.8148,-3.4442],
+ ["Ty Coz – La Boutique","19 rue des Fontaines","56100","Lorient",47.7362,-3.3836],
+ ["Heuliad Quiberon","24 rue de Port Maria","56170","Quiberon",47.4789,-3.1244],
+ ["Atelier Couleur Tiphaine","5 rue des Korrigans","56340","Carnac",47.5855,-3.0789],
+ ["Chez Jean-Paul","Route du Fort","56170","Hoëdic",47.3399,-2.8775],
+ ["Domaine de Suscinio","Route du duc Jean V","56370","Sarzeau",47.5134,-2.7276],
+ ["Hôtel Spa Marin de la Baie des Anges","350 route des Anges","29870","Landéda",48.5976,-4.5683],
+ ["Comptoir de la Mer – Loctudy","Quai de la Coopérative","29750","Loctudy",47.8341,-4.1716],
+ ["Comptoir de la Mer – Saint-Guénolé","Place du Maréchal Davout","29760","Penmarc'h",47.7985,-4.3718],
+ ["Armor Lux Factory","21/23, rue Louison Bobet","29000","Quimper",47.9791,-4.0361],
+ ["Comptoir de la Mer – Douarnenez","5 rue Jacques Thézac, terre-plein du Port","29100","Douarnenez",48.1037,-4.3297],
+ ["Chez Tante Gaby","43 rue Louis Pasteur","29200","Brest",48.3883,-4.4898],
+ ["C au Carré","Place de la République","29680","Roscoff",48.7234,-3.982],
+ ["Domaine de Trévarez","Domaine de Trévarez","29520","Saint-Goazec",48.1531,-3.8067],
+ ["Comptoir de la Mer – Concarneau","4 rue des Chalutiers","29900","Concarneau",47.8774,-3.9105],
+ ["Château de Kerjean","Château de Kerjean","29440","Saint-Vougay",48.5808,-4.1475],
+ ["JOA Kemper","3 rue de la Halle","29000","Quimper",47.9959,-4.1049],
+ ["Breizh Odyssée","1 place de la Mairie","29560","Landévennec",48.2924,-4.2674],
+ ["Kalod","17, rue Albert Louppe","29660","Carantec",48.667,-3.914],
+ ["Unik Designer","2 rue du Four","44420","La Turballe",47.3471,-2.5101],
+ ["Comptoir de la Mer – Saint-Nazaire","4 bd René Coty","44600","Saint-Nazaire",47.2735,-2.2047],
+ ["Bohemians Paris","22, rue Charles Baudelaire","75012","Paris",48.8501,2.3772],
+ ["Parfums d'essai","Piazza Erbe, 23/a","46100","Mantoue (Italie)",45.1583,10.7942],
+ ["Percorsi Store","Corso Nizza, 7","12100","Cuneo (Italie)",44.3877,7.544],
+ ["Belé Boutique","Via Castelfidardo 2","20121","Milan (Italie)",45.4781,9.1885],
+ ["Ruiz de Ocenda","Heros Kalea, 18","48009","Bilbao (Espagne)",43.2654,-2.9326],
+ ["The Different Scent","Krausnickstraße 12","10115","Berlin (Allemagne)",52.5253,13.3986],
+ ["Savon.Ro","Strada Doctor Dumitru Râureanu 4","050048","Bucarest (Roumanie)",44.4311,26.0961]
+].map(function(r,i){
+  var abroad=/\(/.test(r[3]);var dep=abroad?"eu":r[2].slice(0,2);
+  return {i:i,n:r[0],a:r[1],cp:r[2],v:r[3],lat:r[4],lng:r[5],z:dep};
+});
+var ZONES=[["all","Toutes"],["29","Finistère"],["56","Morbihan"],["22","Côtes-d'Armor"],["35","Ille-et-Vilaine"],["44","Loire-Atlantique"],["75","Paris"],["eu","Europe"]];
+
+var byH={};P.forEach(function(p){byH[p.h]=p;});
+function eur(n){return n.toFixed(2).replace(".",",")+" €";}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function fold(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();}
+function meaning(p){return p.br?"« "+p.br+" » en breton":p.mean;}
+function $(s,c){return (c||document).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
+
+/* ---------- Composants ---------- */
+function card(p){
+  return '<a class="lex-card" href="#parfum/'+p.h+'">'+
+   '<figure><img src="'+u(p.img[0])+'" alt="Flacon '+esc(p.n)+', '+p.type.toLowerCase()+' '+p.vol+'" width="381" height="492" loading="lazy" decoding="async"></figure>'+
+   '<div class="lex-body"><h3>'+esc(p.n)+'</h3><p class="lex-mean">'+esc(meaning(p))+'</p>'+
+   '<div class="lex-meta"><span>'+p.type+' · '+p.pour.toLowerCase()+'</span><b>'+eur(p.price)+'</b></div>'+
+   '<div class="amb-tags">'+p.amb.map(function(a){return '<span>'+AMB[a].n+'</span>';}).join("")+'</div></div></a>';
+}
+function homeCard(p){
+  return '<div class="lex-card" style="cursor:default">'+
+   '<figure><img src="'+u(p.img)+'" alt="'+esc(p.n)+', '+p.type.toLowerCase()+'" width="381" height="492" loading="lazy" decoding="async"></figure>'+
+   '<div class="lex-body"><h3>'+esc(p.n)+'</h3><p class="lex-mean">« '+p.br+' » en breton</p><p style="font-size:.88rem;color:var(--ink-2);margin:0 0 10px">'+esc(p.d)+'</p>'+
+   '<div class="lex-meta"><span>'+p.type+' · '+p.vol+'</span><b>'+eur(p.price)+'</b></div>'+
+   (p.oos?'<p class="oos" style="margin:10px 0 0">Rupture de stock · M\'alerter (maquette)</p>':'<button class="btn btn-abysse" style="width:100%;margin-top:12px;justify-content:center" data-add="'+p.h+'">Ajouter</button>')+
+   '</div></div>';
+}
+var WAVE='<svg class="divider" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C150 6 300 46 450 26 S750 6 900 24 S1100 40 1200 20 V46 H0Z" fill="#0c2229"/></svg>';
+var WAVE_UP='<svg class="divider" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 30 C150 6 300 46 450 26 S750 6 900 24 S1100 40 1200 20 V46 H0Z" fill="#0c2229"/></svg>';
+
+/* ---------- Carte SVG légère ---------- */
+var COAST=[[48.64,-1.51],[48.68,-1.85],[48.65,-2.02],[48.63,-2.15],[48.68,-2.32],[48.58,-2.5],[48.52,-2.75],[48.62,-2.82],[48.78,-3.05],[48.85,-3.2],[48.82,-3.45],[48.75,-3.55],[48.7,-3.65],[48.68,-3.85],[48.73,-3.98],[48.68,-4.2],[48.67,-4.33],[48.6,-4.57],[48.53,-4.77],[48.43,-4.78],[48.36,-4.78],[48.33,-4.77],[48.35,-4.62],[48.37,-4.5],[48.38,-4.48],[48.36,-4.38],[48.3,-4.2],[48.28,-4.26],[48.31,-4.4],[48.34,-4.55],[48.3,-4.62],[48.25,-4.63],[48.24,-4.55],[48.22,-4.5],[48.2,-4.32],[48.1,-4.33],[48.07,-4.55],[48.04,-4.74],[48.01,-4.55],[47.93,-4.4],[47.8,-4.37],[47.83,-4.17],[47.87,-4.11],[47.87,-3.92],[47.8,-3.75],[47.76,-3.55],[47.72,-3.37],[47.66,-3.2],[47.6,-3.13],[47.48,-3.11],[47.55,-3.07],[47.57,-3],[47.55,-2.9],[47.5,-2.75],[47.48,-2.48],[47.3,-2.52],[47.27,-2.35],[47.27,-2.2],[47.2,-2.1],[47.2,-1.6],[47.15,-.9],[48.95,-.9],[48.95,-1.6]];
+var LON0=-5.2,LAT1=48.95,KX=66.9,KY=100;
+function px(lat,lng){return [((lng-LON0)*KX).toFixed(1),((LAT1-lat)*KY).toFixed(1)];}
+function mapSVG(interactive){
+  var d="M"+COAST.map(function(c){return px(c[0],c[1]).join(" ");}).join(" L")+"Z";
+  var g="";for(var i=1;i<5;i++){g+='<line class="map-grid" x1="0" x2="288" y1="'+(i*36)+'" y2="'+(i*36)+'"/>';}
+  for(i=1;i<8;i++){g+='<line class="map-grid" y1="0" y2="180" x1="'+(i*36)+'" x2="'+(i*36)+'"/>';}
+  var isles=[[48.46,-5.08,4,2.2],[47.64,-3.46,3,1.4],[47.33,-3.18,7,2.6],[47.34,-2.87,1.6,.9],[47.39,-2.96,1.6,.9],[48.75,-4.02,1.6,.7]].map(function(s){var p=px(s[0],s[1]);return '<ellipse class="map-isle" cx="'+p[0]+'" cy="'+p[1]+'" rx="'+s[2]+'" ry="'+s[3]+'"/>';}).join("");
+  var mk=S.filter(function(s){return s.lng<-.9&&s.lat>47.1;}).map(function(s){var p=px(s.lat,s.lng);
+    return '<g class="mk" data-i="'+s.i+'"'+(interactive?' tabindex="0" role="button" aria-label="'+esc(s.n)+', '+esc(s.v)+'"':'')+'><circle cx="'+p[0]+'" cy="'+p[1]+'" r="3"/></g>';}).join("");
+  var cz=px(48.24,-4.55);
+  return '<svg viewBox="0 0 288 180" role="img" aria-label="Carte de Bretagne des points de vente Lostmarc\'h">'+g+
+   '<path class="map-land" d="'+d+'"/>'+isles+
+   '<g aria-hidden="true"><circle cx="'+cz[0]+'" cy="'+cz[1]+'" r="6" fill="none" stroke="#d9a62a" stroke-width=".6" stroke-dasharray="1.5 1.5"/><text x="'+(+cz[0]-8)+'" y="'+(+cz[1]+14)+'" text-anchor="end" font-size="4.2" fill="#f4f1ea" stroke="#0c2229" stroke-width="1.2" paint-order="stroke" font-family="Karla,sans-serif" letter-spacing=".5"><tspan x="'+(+cz[0]-8)+'">PLAGE DE</tspan><tspan x="'+(+cz[0]-8)+'" dy="5">LOSTMARC\'H</tspan></text></g>'+
+   mk+'</svg>';
+}
+
+/* ---------- Pages ---------- */
+function homeView(){
+  var spray="";for(var i=0;i<14;i++){spray+='<i style="left:'+(5+i*6.6)+'%;animation-duration:'+(7+(i%5)*1.7)+'s;animation-delay:'+(-i*1.3)+'s"></i>';}
+  return ''+
+  '<section class="hero" aria-labelledby="h1">'+
+   '<picture><source media="(max-width:700px)" srcset="'+u("img/cms/bae-bcrozon-bae-mobile.jpg")+'">'+
+   '<img src="'+u("img/cms/bae-bcrozon-bae.jpg")+'" alt="Plage de sable et eau turquoise au pied des falaises de la presqu\'île de Crozon" width="1270" height="714" fetchpriority="high"></picture>'+
+   '<div class="spray" aria-hidden="true">'+spray+'</div>'+
+   '<p class="coords" aria-hidden="true">Presqu\'île de Crozon<br>Finistère · Bretagne</p>'+
+   '<div class="wrap hero-in on-dark" style="background:none">'+
+    '<p class="kicker l">L\'Apothicaire des Océans · depuis 2006</p>'+
+    '<h1 id="h1" tabindex="-1">Parfums de Bretagne nés sur la plage de Lostmarc\'h</h1>'+
+    '<p class="lead">À l\'extrémité de la presqu\'île de Crozon, une langue de sable et de galets où l\'océan se mêle à une nature sauvage. De ce lieu est née une collection de parfums frais ou gourmands, fleuris et iodés.</p>'+
+    '<div class="cta"><a class="btn btn-ajonc" href="#decouverte">Trouver mon parfum</a><a class="btn btn-ghost-l" href="#collection">Les 9 eaux précieuses</a></div>'+
+   '</div>'+
+   '<div class="waves" aria-hidden="true">'+
+    '<svg class="w1" viewBox="0 0 2400 90" preserveAspectRatio="none"><path d="M0 50 Q150 20 300 50 T600 50 T900 50 T1200 50 T1500 50 T1800 50 T2100 50 T2400 50 V90 H0Z" fill="#f4f1ea"/></svg>'+
+    '<svg class="w2" viewBox="0 0 2400 90" preserveAspectRatio="none"><path d="M0 62 Q200 40 400 62 T800 62 T1200 62 T1600 62 T2000 62 T2400 62 V90 H0Z" fill="#f4f1ea"/></svg>'+
+    '<svg class="w3" viewBox="0 0 2400 90" preserveAspectRatio="none"><path d="M0 76 Q300 64 600 76 T1200 76 T1800 76 T2400 76 V90 H0Z" fill="#f4f1ea"/></svg>'+
+   '</div>'+
+  '</section>'+
+
+  '<section aria-labelledby="lexT" style="padding-top:56px"><div class="wrap">'+
+   '<div class="sec-head"><div><p class="kicker">Lexique des embruns</p><h2 id="lexT">Neuf eaux précieuses,<br><span class="it">neuf mots de Bretagne</span></h2></div>'+
+   '<p>Atao, Aôd, Iroaz… Chaque nom raconte un paysage. Faites défiler la collection, tous les parfums sont mixtes sauf Atao, pensé pour homme.</p></div>'+
+   '<div class="lex" role="list">'+P.map(function(p){return '<div role="listitem" style="display:flex">'+card(p)+'</div>';}).join("")+'</div>'+
+  '</div></section>'+
+
+  WAVE+
+  '<section class="on-dark" aria-labelledby="kevT" style="padding-top:40px"><div class="wrap kevan">'+
+   '<div class="kevan-img"><img src="'+u(KEVAN.img)+'" alt="Coffret Découverte Kevan : neuf échantillons de 2 ml et leur boîte" width="381" height="492" loading="lazy"></div>'+
+   '<div><p class="kicker">Essayer avant de choisir</p><h2 id="kevT">Le Coffret Découverte Kevan</h2>'+
+   '<p>9 échantillons de 2 ml pour parcourir toute la collection, chez vous, à votre rythme. Un premier voyage olfactif à travers les effluves de Bretagne.</p>'+
+   '<ul class="vials" aria-label="Contenu du coffret">'+P.map(function(p){return '<li>'+esc(p.n)+'</li>';}).join("")+'</ul>'+
+   '<p class="promise"><span>Vos <b>30 €</b> vous reviennent : avec le coffret, vous recevez un bon d\'achat du même montant pour votre parfum 100 ml préféré (valable 90 jours).</span></p>'+
+   '<button class="btn btn-ajonc" data-add="kevan">Ajouter le coffret · 30,00 €</button></div>'+
+  '</div></section>'+
+  WAVE_UP+
+
+  '<section aria-labelledby="landT"><div class="wrap">'+
+   '<div class="sec-head"><div><p class="kicker">Choisir par paysage</p><h2 id="landT">Où vous emmène votre parfum ?</h2></div><p>Quatre entrées tirées de vos descriptions : on choisit une ambiance avant une note.</p></div>'+
+   '<div class="lands">'+
+    land("rivage","img/cms/plage.jpg","Coquillage sur le sable au coucher du soleil")+
+    land("lande","img/cms/ael-mat_1.jpg","Ajoncs en fleurs sur la côte de granit")+
+    land("zestes","img/cms/DIMANCHE_CARRE.jpg","L'eau du Dimanche devant des hortensias")+
+    land("douceur","img/cms/LANN_AEL_CARRE.jpg","Lann-Ael près d'une brioche")+
+   '</div></div></section>'+
+
+  '<section aria-labelledby="maisT" style="background:#fff"><div class="wrap split">'+
+   '<div><img class="hermine" src="'+u("img/cms/Hermine%20home.jpg")+'" alt="L\'hermine ailée, emblème dessiné de la maison Lostmarc\'h" width="500" height="240" loading="lazy">'+
+   '<blockquote class="press">« L\'apothicaire des océans joue à fond la notion de terroir. »<cite>Florent Paudauleux · revue de presse Lostmarc\'h, automne-hiver 2022</cite></blockquote></div>'+
+   '<div><p class="kicker">La Maison</p><h2 id="maisT" style="font-size:clamp(1.7rem,3.4vw,2.4rem)">Une parfumerie de territoire, indépendante depuis 2006</h2>'+
+   '<p>Les parfums Lostmarc\'h évoquent la Bretagne, ses valeurs, son histoire, ses paysages. L\'océan est le jardin de l\'apothicaire.</p>'+
+   '<ul class="pillars">'+
+    '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4 5-6 8-6 11a6 6 0 0012 0c0-3-2-6-6-11z"/></svg><span>Formules épurées : sans stabilisant, sans filtre UV, sans colorant.</span></li>'+
+    '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c8 0 14-6 16-16C10 6 4 12 4 20zM4 20l8-8"/></svg><span>Ingrédients naturels sélectionnés avec Robertet, sourcing durable et traçable.</span></li>'+
+    '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4z M4 8l8 4 8-4 M12 12v8"/></svg><span>Étuis et emballages 100 % carton, flacons en verre recyclable.</span></li>'+
+   '</ul><p style="margin-top:24px"><a class="btn btn-abysse" href="#maison">Découvrir la maison</a></p></div>'+
+  '</div></section>'+
+
+  '<section aria-labelledby="bkT"><div class="wrap split">'+
+   '<div><p class="kicker">Boutiks</p><h2 id="bkT" style="font-size:clamp(1.7rem,3.4vw,2.4rem)">32 adresses pour sentir avant de choisir</h2>'+
+   '<p>De Roscoff à Hoëdic, de Saint-Malo à Berlin : des partenaires indépendants, comme la maison, où toucher, sentir et voir les créations.</p>'+
+   '<p><a class="btn btn-abysse" href="#boutiks">Trouver une Boutik</a></p></div>'+
+   '<div class="map-box">'+mapSVG(false)+'<p class="map-far">+ <b>7 adresses</b> à Paris, en Italie, en Espagne, en Allemagne et en Roumanie</p></div>'+
+  '</div></section>'+
+
+  WAVE+
+  '<section class="on-dark" aria-labelledby="herbT" style="padding-top:40px"><div class="wrap">'+
+   '<div class="sec-head"><div><p class="kicker">Journal olfactif</p><h2 id="herbT">L\'herbier de l\'apothicaire</h2></div><p>Vos dix articles matières, reliés aux parfums qui les contiennent.</p></div>'+
+   herbGrid()+
+  '</div></section>'+
+  WAVE_UP+
+  '<div class="wrap">'+reass()+'</div>';
+}
+function land(a,img,alt){
+  var n=P.filter(function(p){return p.amb.indexOf(a)>-1;}).length;
+  return '<a class="land" href="#collection/'+a+'"><img src="'+u(img)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async"><span><b>'+AMB[a].n+'</b><small>'+AMB[a].d+' · '+n+' parfum'+(n>1?'s':'')+'</small></span></a>';
+}
+function herbGrid(){
+  return '<div class="herb">'+HERB.map(function(x){
+    return '<article class="herb-it"><span class="date-todo">Date à afficher</span><h3>'+x.m+'</h3><p>'+x.d+'</p>'+
+    x.p.map(function(h){return '<a href="#parfum/'+h+'">'+esc(byH[h].n)+'</a>';}).join("")+'</article>';
+  }).join("")+'</div>';
+}
+function reass(){
+  return '<div class="reass">'+
+   '<div><b>Livraison offerte</b>en France métropolitaine dès 69 €</div>'+
+   '<div><b>2 échantillons + tote bag</b>offerts pour tout parfum 100 ml</div>'+
+   '<div><b>Expédition sous 48 h</b>paquets confectionnés avec soin</div>'+
+   '<div><b>Paiement sécurisé 3DS</b>CB, Visa, Mastercard, PayPal, Apple Pay, Google Pay</div></div>';
+}
+
+var state={amb:"all",conc:"all",pour:"all"};
+function collectionView(arg){
+  if(arg&&AMB[arg])state.amb=arg;
+  function chips(key,list){return list.map(function(o){return '<button class="chip" data-f="'+key+'" data-v="'+o[0]+'" aria-pressed="'+(state[key]===o[0])+'">'+o[1]+'</button>';}).join("");}
+  return '<div class="page-hero"><div class="wrap"><p class="crumb"><a href="#accueil">Accueil</a> / Eaux précieuses</p>'+
+   '<h1 tabindex="-1">Eaux précieuses, parfums de Bretagne</h1>'+
+   '<p>Véritables parfums des territoires, fragrances des océans : inspirés de la beauté de la nature et de la force des éléments, créés comme des facettes olfactives de la Bretagne.</p></div></div>'+
+   '<div class="filters"><div class="wrap" style="display:grid;gap:12px">'+
+    '<div class="row" role="group" aria-label="Filtrer par ambiance"><span class="lab">Ambiance</span>'+chips("amb",[["all","Toutes"]].concat(Object.keys(AMB).map(function(k){return [k,AMB[k].n];})))+'</div>'+
+    '<div class="row" role="group" aria-label="Filtrer par concentration"><span class="lab">Concentration</span>'+chips("conc",[["all","Toutes"],["Eau de parfum","Eau de parfum"],["Eau de toilette","Eau de toilette"],["Eau de Cologne","Eau de Cologne"]])+'</div>'+
+    '<div class="row" role="group" aria-label="Filtrer par public"><span class="lab">Pour</span>'+chips("pour",[["all","Tous"],["Mixte","Mixte"],["Homme","Homme"]])+'</div>'+
+   '</div></div>'+
+   '<div class="wrap"><p class="count" id="resCount" aria-live="polite" style="margin-top:18px"></p><div class="grid" id="grid"></div></div>'+
+   '<section style="background:#fff" aria-labelledby="kevT2"><div class="wrap kevan">'+
+    '<div class="kevan-img" style="background:var(--ecume)"><img src="'+u(KEVAN.img)+'" alt="Coffret Découverte Kevan" width="381" height="492" loading="lazy"></div>'+
+    '<div><p class="kicker">Hésitation permise</p><h2 id="kevT2">Coffret Découverte Kevan · 9 × 2 ml</h2><p>Toute la collection en échantillons de 2 ml. Les 30 € vous sont rendus en bon d\'achat pour votre 100 ml (valable 90 jours, un par compte client).</p><button class="btn btn-abysse" data-add="kevan">Ajouter · 30,00 €</button></div>'+
+   '</div></section>'+
+   '<section id="chez-soi" aria-labelledby="csT"><div class="wrap"><div class="sec-head"><div><p class="kicker">Lostmarc\'h chez soi</p><h2 id="csT">Bougies &amp; brumes parfumées</h2></div><p>Bae, la baie et l\'océan ; Gwidor, le goûter réconfortant. Une bougie et une brume pour chaque heure de la journée.</p></div>'+
+   '<div class="grid" style="padding-top:0">'+HOME.map(homeCard).join("")+'</div></div></section>';
+}
+function renderGrid(){
+  var g=$("#grid");if(!g)return;
+  var list=P.filter(function(p){return (state.amb==="all"||p.amb.indexOf(state.amb)>-1)&&(state.conc==="all"||p.type===state.conc)&&(state.pour==="all"||p.pour===state.pour);});
+  g.innerHTML=list.length?list.map(card).join(""):'<p class="empty">Aucun parfum ne correspond à cette combinaison. <button class="chip" data-reset="1">Réinitialiser les filtres</button></p>';
+  $("#resCount").textContent=list.length+" parfum"+(list.length>1?"s":"")+(state.amb!=="all"?" · "+AMB[state.amb].n:"");
+  $$(".chip[data-f]").forEach(function(c){c.setAttribute("aria-pressed",String(state[c.dataset.f]===c.dataset.v));});
+}
+
+function pdpView(h){
+  var p=byH[h];if(!p)return null;
+  var rel=P.filter(function(q){return q.h!==p.h&&q.amb.some(function(a){return p.amb.indexOf(a)>-1;});}).slice(0,4);
+  if(rel.length<4)P.forEach(function(q){if(rel.length<4&&q.h!==p.h&&rel.indexOf(q)<0)rel.push(q);});
+  var imgs=[[p.img[1],"Flacon "+p.n+" sur fond blanc",0],[p.img[2],p.n+" avec son étui",0],[p.life,p.n+" en situation",1]];
+  return '<div class="wrap"><p class="crumb" style="margin-top:22px"><a href="#accueil">Accueil</a> / <a href="#collection">Eaux précieuses</a> / '+esc(p.n)+'</p>'+
+  '<div class="pdp">'+
+   '<div class="gal"><div class="gal-main" id="galMain"><img src="'+u(imgs[0][0])+'" alt="'+esc(imgs[0][1])+'" width="1100" height="1422"></div>'+
+   '<div class="thumbs" role="group" aria-label="Photos">'+imgs.map(function(im,i){return '<button data-img="'+u(im[0])+'" data-alt="'+esc(im[1])+'" data-cover="'+im[2]+'" aria-current="'+(i===0)+'" aria-label="Voir : '+esc(im[1])+'"><img src="'+u(i===2?im[0]:p.img[0])+'" alt="" loading="lazy"></button>';}).join("")+'</div></div>'+
+   '<div><p class="kicker">'+p.type+' '+p.pour.toLowerCase()+' · '+p.vol+'</p><h1 tabindex="-1">'+esc(p.n)+'</h1><p class="mean">'+esc(meaning(p))+'</p>'+
+   '<p style="font-size:1.08rem">'+esc(p.tag)+'</p>'+
+   '<div class="meta"><span>Famille : <b>'+p.fam+'</b></span><span>Expédition sous 48 h</span></div>'+
+   '<p class="price">'+eur(p.price)+' <small>TTC</small></p>'+
+   '<div class="buy"><button class="btn btn-abysse" style="justify-content:center" data-add="'+p.h+'">Ajouter au panier · '+p.vol+'</button>'+
+   '<div class="trybox"><img src="'+u(KEVAN.img)+'" alt="" loading="lazy"><div><p><b>Pas encore sûr·e ?</b> Sentez '+esc(p.n)+' et les 8 autres avec le Coffret Kevan (9 × 2 ml, 30 €), remboursé en bon d\'achat sur votre 100 ml.</p><button data-add="kevan">Ajouter le coffret</button></div></div></div>'+
+   '<ul class="gifts"><li>2 échantillons et un tote bag offerts avec ce 100 ml</li><li>Livraison offerte dès 69 € en France métropolitaine</li><li><a href="#boutiks">Le sentir dans l\'une des 32 Boutiks</a></li></ul>'+
+   '<div class="column" aria-label="Pyramide olfactive">'+
+    '<div class="stratum s1"><span class="lvl">Tête<i>l\'écume</i></span><p>'+p.t+'</p></div>'+
+    '<div class="stratum s2"><span class="lvl">Cœur<i>entre deux eaux</i></span><p>'+p.c+'</p></div>'+
+    '<div class="stratum s3"><span class="lvl">Fond<i>le fond marin</i></span><p>'+p.f+'</p></div>'+
+   '</div>'+
+   '<div class="acc"><details><summary>Ingrédients (INCI)</summary><div class="in">'+p.inci+'</div></details>'+
+   '<details><summary>Livraison &amp; retours</summary><div class="in">Expédition sous 48 h, emballage 100 % carton. Livraison offerte en France métropolitaine à partir de 69 €.</div></details></div>'+
+   '</div></div></div>'+
+  '<section style="background:#fff;padding:0"><div class="wrap story"><img src="'+u(p.scene)+'" alt="'+esc(p.sceneAlt)+'" loading="lazy" decoding="async"><div><p class="kicker">L\'histoire</p><h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">'+esc(p.n)+(p.br?', <span class="it">'+p.br+'</span>':'')+'</h2><p>'+esc(p.desc)+'</p></div></div></section>'+
+  '<section aria-labelledby="relT"><div class="wrap"><div class="sec-head"><h2 id="relT">Sur le même rivage</h2><a href="#collection">Toute la collection</a></div><div class="grid" style="padding:0">'+rel.map(card).join("")+'</div></div></section>'+
+  '<section style="padding-top:0" aria-labelledby="revT"><div class="wrap"><div class="reviews"><span class="tag">Gabarit · module à brancher</span><h2 id="revT">Avis clients sur '+esc(p.n)+'</h2><p>Emplacement réservé aux avis vérifiés collectés après achat (avec étoiles et données structurées pour Google).<br><b>Aucun avis n\'est affiché dans cette maquette.</b></p></div></div></section>';
+}
+
+function maisonView(arg){
+  return '<div class="page-hero"><div class="wrap"><p class="crumb"><a href="#accueil">Accueil</a> / La Maison</p><p class="kicker">Parfumeur indépendant inspiré par la Bretagne</p><h1 tabindex="-1">La maison Lostmarc\'h, l\'Apothicaire des Océans</h1></div></div>'+
+  '<section><div class="wrap split"><div><p class="manifest">« Là où la terre, le ciel et la mer dialoguent inlassablement. »</p></div>'+
+  '<div><p>La marque de parfums Lostmarc\'h puise ses racines à l\'extrémité de la presqu\'île de Crozon. Ce lieu a inspiré une gamme de fragrances fraîches, gourmandes, fleuries ou iodées qui évoquent les facettes olfactives de la Bretagne.</p>'+
+  '<p>Uniques, intemporels et dotés d\'une identité forte, les parfums Lostmarc\'h sont façonnés avec passion et indépendance depuis 2006. Ils perpétuent une parfumerie de qualité et identitaire : véritables parfums des territoires et des mers.</p></div></div></section>'+
+  '<section style="background:#fff"><div class="wrap"><div class="sec-head"><div><p class="kicker">Nos engagements</p><h2>Ce qui fait un parfum Lostmarc\'h</h2></div></div><div class="values">'+
+   '<div class="val"><h3>Notre conviction</h3><p>Respecter les particularités locales et régionales, en réalisant des parfums de qualité, proches de nous et inspirés par ce qui nous entoure. C\'est la différence qui fait la richesse.</p></div>'+
+   '<div class="val"><h3>Des partenaires d\'excellence</h3><p>Des artisans et industriels basés en France, du concentré au jus, du flacon à l\'étui : le sur-mesure de l\'artisan et l\'exigence de l\'industriel.</p></div>'+
+   '<div class="val"><h3>Une marque éco-responsable</h3><p>Formules épurées, sans stabilisant, sans filtre UV et sans colorant. Ingrédients naturels sélectionnés avec Robertet. Emballages 100 % carton, flacons en verre ; partenaires certifiés FSC® ou labellisés Imprim\'vert.</p></div>'+
+   '<div class="val"><h3>Une distribution sélective</h3><p>Ce site est le principal canal de la maison, en circuit court. Pour toucher, sentir et voir, des partenaires indépendants accueillent les deux collections : Lostmarc\'h pour Soi et Lostmarc\'h chez Soi.</p></div>'+
+  '</div></div></section>'+
+  '<section><div class="wrap split"><div><p class="kicker">Repères</p><h2>Une maison qui revient de loin</h2>'+
+   '<ol class="timeline"><li><b>2006</b><br>Naissance des parfums Lostmarc\'h, inspirés par la plage du même nom.</li><li><b>Relance</b><br>« Relancée récemment par un passionné, la marque reprend sa belle histoire » — revue de presse, décembre 2022.</li><li><b>Aujourd\'hui</b><br>9 eaux précieuses, 2 collections pour la maison, 32 Boutiks partenaires.</li></ol>'+
+   '<p style="font-size:.85rem;color:var(--ink-2)">À compléter avec la maison : année de relance, portrait du ou de la fondateur·rice et du nez.</p></div>'+
+   '<div><img src="'+u("img/cms/bae-bcrozon-bae.jpg")+'" alt="Plage de la presqu\'île de Crozon vue d\'en haut" loading="lazy" style="border-radius:3px"></div></div></section>'+
+  WAVE+'<section class="on-dark" id="herbier" style="padding-top:40px"><div class="wrap"><div class="sec-head"><div><p class="kicker">Journal olfactif</p><h2>L\'herbier de l\'apothicaire</h2></div><p>Chaque article matière mène désormais vers les parfums qui la contiennent.</p></div>'+herbGrid()+'</div></section>'+WAVE_UP+
+  '<section style="padding-top:30px"><div class="wrap"><h2 style="font-size:1.6rem">Nous écrire</h2><address class="addr">Finistérienne de Parfums · 6 rue de Porstrein · 29200 Brest<br><a href="mailto:contact@lostmarch.bzh">contact@lostmarch.bzh</a></address></div></section>';
+}
+
+/* Guide olfactif */
+var Q=[
+ {q:"Quel paysage vous appelle ?",o:[
+  ["Le rivage, les galets, l'iode","Vent marin, sable chaud",{rivage:3}],
+  ["La lande en fleurs, les jardins","Ajoncs, bruyère, roses",{lande:3}],
+  ["Le verger au petit matin","Agrumes, verveine, rosée",{zestes:3}],
+  ["La cuisine à l'heure du goûter","Brioche, lait, vanille",{douceur:3}]]},
+ {q:"Quand le porterez-vous le plus ?",o:[
+  ["Chaque matin, pour se réveiller","Un coup de frais",{"eau-du-dimanche":2,"l-eau-du-marin":2,"din-dan":1}],
+  ["Toute la journée, avec élégance","Présent sans s'imposer",{"atao":2,"leau-de-l-hermine":2}],
+  ["Le soir, pour être enveloppé·e","Plus sensuel",{"iroaz":2,"aod":2,"lann-ael":1}],
+  ["En vacances, les pieds dans le sable","Évasion",{"aod":2,"l-eau-du-marin":1,"ael-mat":1}]]},
+ {q:"Vous l'aimez plutôt…",o:[
+  ["Léger et éclatant","Comme une vague",{"l-eau-du-marin":2,"eau-du-dimanche":1,"din-dan":2}],
+  ["Avec du caractère","Bois, mousse, vétiver",{bois:2,"atao":1}],
+  ["Doux et réconfortant","Un pull en laine",{douceur:2,"leau-de-l-hermine":1}],
+  ["Floral et poétique","Une rose cueillie sur la plage",{"iroaz":2,"ael-mat":2}]]},
+ {q:"La note qui vous fait craquer ?",o:[
+  ["Les agrumes","Citron, bergamote, mandarine",{zestes:2}],
+  ["Les fleurs","Rose, jasmin, pivoine",{"iroaz":1,"ael-mat":1,"leau-de-l-hermine":1,"din-dan":1}],
+  ["La lavande et les herbes","Fraîcheur aromatique",{"leau-de-l-hermine":2,"din-dan":1}],
+  ["La vanille et la coco","Gourmandise solaire",{"lann-ael":2,"aod":2}]]}
+];
+var ans=[];var step=0;
+function guideView(){
+  return '<section class="on-dark" style="min-height:70vh;padding-top:56px"><div class="wrap">'+
+   '<div class="guide"><p class="kicker">Guide olfactif · 4 questions</p><h1 tabindex="-1" style="font-size:clamp(2rem,5vw,3.2rem)">Trouver mon parfum Lostmarc\'h</h1>'+
+   '<p style="color:var(--brume);margin-bottom:30px">Quatre questions, une recommandation parmi les 9 eaux précieuses. Pour trancher, le Coffret Kevan vous les fait toutes sentir.</p>'+
+   '<div id="quiz"></div></div></div></section>'+
+   '<section aria-labelledby="kevT3"><div class="wrap kevan"><div class="kevan-img"><img src="'+u(KEVAN.img)+'" alt="Coffret Découverte Kevan" width="381" height="492" loading="lazy"></div>'+
+   '<div><p class="kicker">Découverte</p><h2 id="kevT3">Le Coffret Kevan, pour sentir avant de choisir</h2><p>9 échantillons de 2 ml : Atao, Ael-Mat, Aôd, Din Dan, Iroaz, Lann-Ael, L\'eau de l\'Hermine, L\'eau du Dimanche, L\'eau du Marin. Bon d\'achat du même montant offert pour votre 100 ml (90 jours).</p><button class="btn btn-abysse" data-add="kevan">Ajouter · 30,00 €</button></div></div></section>';
+}
+function renderQuiz(){
+  var box=$("#quiz");if(!box)return;
+  var bars='<div class="steps" aria-hidden="true">'+Q.map(function(_,i){return '<span class="'+(i<=step?"on":"")+'"></span>';}).join("")+'</div>';
+  if(step>=Q.length){
+    var sc={};P.forEach(function(p){sc[p.h]=0;});
+    ans.forEach(function(a,qi){var w=Q[qi].o[a][2];Object.keys(w).forEach(function(k){
+      if(AMB[k])P.forEach(function(p){if(p.amb.indexOf(k)>-1)sc[p.h]+=w[k];});else sc[k]+=w[k];});});
+    var rk=P.slice().sort(function(a,b){return sc[b.h]-sc[a.h]||a.price-b.price;});
+    var top=rk[0];
+    box.innerHTML='<div class="result" tabindex="-1" id="res"><div class="bottle"><img src="'+u(top.img[0])+'" alt="Flacon '+esc(top.n)+'" width="381" height="492"></div><div>'+
+     '<p class="kicker">Votre parfum</p><h2>'+esc(top.n)+'</h2><p class="it" style="color:var(--verre);font-size:1.15rem;margin:0 0 10px">'+esc(meaning(top))+'</p>'+
+     '<p>'+esc(top.tag)+'</p><p style="color:var(--brume);font-size:.92rem">Tête : '+top.t+' · Cœur : '+top.c+' · Fond : '+top.f+'</p>'+
+     '<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px"><a class="btn btn-ajonc" href="#parfum/'+top.h+'">Voir '+esc(top.n)+' · '+eur(top.price)+'</a><button class="btn btn-ghost-l" data-add="kevan">Sentir d\'abord : coffret 30 €</button></div>'+
+     '<p style="margin:20px 0 6px;font-size:.85rem;color:var(--brume)">Vous pourriez aussi aimer</p><div class="alts">'+rk.slice(1,3).map(function(p){return '<a href="#parfum/'+p.h+'"><img src="'+u(p.img[0])+'" alt="">'+esc(p.n)+'</a>';}).join("")+'</div>'+
+     '<p style="margin-top:20px"><button class="chip" id="redo" style="background:transparent;color:var(--ecume)">Recommencer</button></p></div></div>';
+    $("#res").focus();return;
+  }
+  var q=Q[step];
+  box.innerHTML=bars+'<form class="q" id="qf"><fieldset><legend>'+(step+1)+'/'+Q.length+' · '+q.q+'</legend><div class="opts">'+
+   q.o.map(function(o,i){var id="q"+step+"o"+i;return '<div class="opt"><input type="radio" name="o" id="'+id+'" value="'+i+'"'+(ans[step]===i?" checked":"")+'><label for="'+id+'">'+o[0]+'<small>'+o[1]+'</small></label></div>';}).join("")+
+   '</div></fieldset><div class="q-nav"><button type="button" class="btn btn-ghost-l" id="qPrev"'+(step===0?" disabled":"")+'>Retour</button><button type="submit" class="btn btn-ajonc" id="qNext"'+(ans[step]==null?" disabled":"")+'>'+(step===Q.length-1?"Voir mon parfum":"Suivant")+'</button></div></form>';
+}
+
+function boutiksView(){
+  var counts={};S.forEach(function(s){counts[s.z]=(counts[s.z]||0)+1;});
+  var cities=S.map(function(s){return s.v;}).filter(function(v,i,a){return a.indexOf(v)===i;}).sort(function(a,b){return a.localeCompare(b,"fr");});
+  return '<div class="page-hero"><div class="wrap"><p class="crumb"><a href="#accueil">Accueil</a> / Boutiks</p><h1 tabindex="-1">Boutiks : où sentir les parfums Lostmarc\'h</h1><p>Toucher, sentir et voir les parfums avant de choisir votre nouvelle empreinte, chez 32 partenaires indépendants, comme la maison.</p></div></div>'+
+  '<section style="padding-top:30px"><div class="wrap map-shell">'+
+   '<div><div class="map-box" id="mapBox">'+mapSVG(true)+'<p class="map-legend">Carte stylisée · positions issues de votre page Boutiks</p><p class="map-far" id="far"></p></div></div>'+
+   '<div><div class="store-tools">'+
+    '<div class="field"><label for="q">Ville, code postal ou boutique</label><input id="q" type="search" placeholder="Ex. Quimper, 29, Comptoir…" autocomplete="off"></div>'+
+    '<div class="field"><label for="city">Ou choisir une ville</label><select id="city"><option value="">Toutes les villes ('+cities.length+')</option>'+cities.map(function(c){return '<option>'+esc(c)+'</option>';}).join("")+'</select></div>'+
+    '<div class="chips" role="group" aria-label="Filtrer par zone">'+ZONES.map(function(z){return '<button class="chip" data-z="'+z[0]+'" aria-pressed="'+(z[0]==="all")+'">'+z[1]+'<span class="n">'+(z[0]==="all"?S.length:(counts[z[0]]||0))+'</span></button>';}).join("")+'</div>'+
+   '</div><p class="count" id="sCount" aria-live="polite"></p><ul class="stores" id="stores"></ul></div>'+
+  '</div></section>';
+}
+var sf={z:"all",q:"",city:""};
+function renderStores(){
+  var ul=$("#stores");if(!ul)return;
+  var q=fold(sf.q.trim());
+  var list=S.filter(function(s){return (sf.z==="all"||s.z===sf.z)&&(!sf.city||s.v===sf.city)&&(!q||fold(s.n+" "+s.v+" "+s.cp+" "+s.a).indexOf(q)>-1);});
+  ul.innerHTML=list.map(function(s){
+    var maps="https://www.google.com/maps/search/"+encodeURIComponent(s.n+", "+s.a+", "+s.cp+" "+s.v.replace(/\s*\(.*\)/,""));
+    return '<li><button class="store" data-i="'+s.i+'"><b>'+esc(s.n)+'</b><span>'+esc(s.a)+' · '+s.cp+' '+esc(s.v)+'</span><em>'+(s.z==="eu"?"Europe":s.z)+'</em></button><a class="store-go" href="'+maps+'" target="_blank" rel="noopener">Itinéraire ↗<span class="sr"> vers '+esc(s.n)+'</span></a></li>';
+  }).join("")||'<li style="padding:16px 4px;color:var(--ink-2)">Aucune Boutik ne correspond. Essayez un département ou <button class="chip" data-z="all">voir toutes les adresses</button>.</li>';
+  var ids=list.map(function(s){return s.i;});
+  $$(".mk").forEach(function(m){m.classList.toggle("dim",ids.indexOf(+m.dataset.i)<0);m.classList.remove("on");});
+  $("#sCount").textContent=list.length+" Boutik"+(list.length>1?"s":"")+(sf.city?" à "+sf.city:"");
+  var far=list.filter(function(s){return s.z==="eu"||s.z==="75";});
+  $("#far").innerHTML=far.length?'Hors carte : <b>'+far.length+'</b> · '+far.map(function(s){return esc(s.v.replace(/\s*\(.*\)/,""));}).join(", "):"";
+  $("#far").hidden=!far.length;
+  $$(".chip[data-z]").forEach(function(c){c.setAttribute("aria-pressed",String(c.dataset.z===sf.z));});
+}
+function pickStore(i,scroll){
+  $$(".mk").forEach(function(m){m.classList.toggle("on",+m.dataset.i===i);});
+  $$(".store").forEach(function(b){b.classList.toggle("on",+b.dataset.i===i);});
+  var b=$('.store[data-i="'+i+'"]');if(b&&scroll){b.scrollIntoView({block:"nearest"});}
+}
+
+/* ---------- Routeur ---------- */
+var META={
+ accueil:["Lostmarc'h — Parfums de Bretagne nés à Crozon · L'Apothicaire des Océans"],
+ collection:["Eaux précieuses — parfums bretons mixtes et iodés | Lostmarc'h"],
+ maison:["La Maison — parfumeur indépendant breton depuis 2006 | Lostmarc'h"],
+ decouverte:["Trouver mon parfum — guide olfactif et coffret découverte | Lostmarc'h"],
+ boutiks:["Boutiks — où sentir les parfums Lostmarc'h en Bretagne | Lostmarc'h"]
+};
+var app=$("#app");
+function route(){
+  var hsh=decodeURIComponent(location.hash.replace(/^#/,""))||"accueil";
+  var parts=hsh.split("/");var r=parts[0],arg=parts[1];
+  var html,title;
+  if(r==="parfum"&&byH[arg]){html=pdpView(arg);var p=byH[arg];title=p.n+" — "+p.type+" "+p.pour.toLowerCase()+" bretonne | Lostmarc'h";}
+  else if(r==="collection"){html=collectionView(arg);title=META.collection[0];}
+  else if(r==="maison"){html=maisonView(arg);title=META.maison[0];}
+  else if(r==="decouverte"){ans=[];step=0;html=guideView();title=META.decouverte[0];}
+  else if(r==="boutiks"){sf={z:"all",q:"",city:""};html=boutiksView();title=META.boutiks[0];}
+  else {html=homeView();title=META.accueil[0];r="accueil";}
+  app.innerHTML=html;document.title=title;
+  $$(".nav a").forEach(function(a){if(a.dataset.nav===r)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  closeNav();
+  if(r==="collection"){renderGrid();if(arg==="chez-soi"){var cs=$("#chez-soi");if(cs){cs.scrollIntoView();return;}}}
+  if(r==="decouverte")renderQuiz();
+  if(r==="boutiks")renderStores();
+  if(r==="maison"&&arg==="herbier"){var hb=$("#herbier");if(hb){hb.scrollIntoView();return;}}
+  window.scrollTo(0,0);
+  var h1=$("h1",app);if(h1&&location.hash)h1.focus({preventScroll:true});
+}
+window.addEventListener("hashchange",route);
+
+/* ---------- Événements délégués ---------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-add],[data-f],[data-reset],[data-z],.thumbs button,.store,.mk,#qPrev,#redo");
+  if(!t)return;
+  if(t.dataset.add){add(t.dataset.add);return;}
+  if(t.dataset.f){state[t.dataset.f]=t.dataset.v;renderGrid();return;}
+  if(t.dataset.reset){state={amb:"all",conc:"all",pour:"all"};renderGrid();return;}
+  if(t.dataset.z){sf.z=t.dataset.z;sf.city="";var c=$("#city");if(c)c.value="";renderStores();return;}
+  if(t.matches(".thumbs button")){var m=$("#galMain");m.classList.toggle("cover",t.dataset.cover==="1");var im=$("img",m);im.src=t.dataset.img;im.alt=t.dataset.alt;$$(".thumbs button").forEach(function(b){b.setAttribute("aria-current",String(b===t));});return;}
+  if(t.matches(".store")){pickStore(+t.dataset.i,false);return;}
+  if(t.matches(".mk")){pickStore(+t.dataset.i,true);return;}
+  if(t.id==="qPrev"){if(step>0){step--;renderQuiz();}return;}
+  if(t.id==="redo"){ans=[];step=0;renderQuiz();$("#qf legend")&&$("#quiz").scrollIntoView();return;}
+});
+document.addEventListener("keydown",function(e){
+  if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches(".mk")){e.preventDefault();pickStore(+e.target.dataset.i,true);}
+  if(e.key==="Escape"){closeCart();closeNotes();closeNav();}
+});
+document.addEventListener("change",function(e){
+  if(e.target.name==="o"){ans[step]=+e.target.value;$("#qNext").disabled=false;}
+  if(e.target.id==="city"){sf.city=e.target.value;sf.z="all";renderStores();}
+});
+document.addEventListener("input",function(e){if(e.target.id==="q"){sf.q=e.target.value;renderStores();}});
+document.addEventListener("submit",function(e){if(e.target.id==="qf"){e.preventDefault();if(ans[step]==null)return;step++;renderQuiz();var r=$("#qf legend");if(r)r.parentNode.parentNode.querySelector("input").focus();}});
+
+/* ---------- Panier simulé ---------- */
+var cart=[];
+function item(h){if(h==="kevan")return {h:"kevan",n:KEVAN.n,price:KEVAN.price,img:KEVAN.img,sub:KEVAN.type};var p=byH[h];if(p)return {h:h,n:p.n,price:p.price,img:p.img[0],sub:p.type+" · "+p.vol,big:true};var x=HOME.filter(function(z){return z.h===h;})[0];return x?{h:h,n:x.n,price:x.price,img:x.img,sub:x.type+" · "+x.vol}:null;}
+function add(h){var it=item(h);if(!it)return;var l=cart.filter(function(c){return c.h===h;})[0];if(l)l.q++;else cart.push({h:h,q:1,it:it});renderCart();toast(it.n+" ajouté au panier");openCart();}
+function renderCart(){
+  var n=cart.reduce(function(a,c){return a+c.q;},0),tot=cart.reduce(function(a,c){return a+c.q*c.it.price;},0);
+  var b=$("#cartCount");b.hidden=!n;b.textContent=n;$("#cartBtn").setAttribute("aria-label","Ouvrir le panier, "+n+" article"+(n>1?"s":""));
+  var left=Math.max(0,69-tot),pct=Math.min(100,tot/69*100);
+  $("#tide").innerHTML=(left>0?'Plus que <b>'+eur(left)+'</b> pour la livraison offerte':'<b>Livraison offerte</b> en France métropolitaine')+'<div class="tide-bar" role="progressbar" aria-label="Progression vers la livraison offerte" aria-valuemin="0" aria-valuemax="69" aria-valuenow="'+Math.min(69,tot).toFixed(0)+'"><i style="width:'+pct+'%"></i></div>';
+  $("#lines").innerHTML=cart.length?cart.map(function(c){return '<li class="line"><img src="'+u(c.it.img)+'" alt=""><div><b>'+esc(c.it.n)+'</b><small>'+c.it.sub+'</small><div class="qty"><button data-q="-1" data-h="'+c.h+'" aria-label="Retirer un '+esc(c.it.n)+'">−</button><span>'+c.q+'</span><button data-q="1" data-h="'+c.h+'" aria-label="Ajouter un '+esc(c.it.n)+'">+</button></div></div><b>'+eur(c.q*c.it.price)+'</b></li>';}).join(""):'<li style="padding:30px 0;color:var(--ink-2)">Votre panier est vide. <a href="#decouverte">Trouver mon parfum</a></li>';
+  var hasBig=cart.some(function(c){return c.it.big;}),hasK=cart.some(function(c){return c.h==="kevan";});
+  $("#cartFoot").innerHTML=(hasBig?'<p class="upsell">Offert avec votre 100 ml : 2 échantillons et un tote bag.</p>':'')+
+   (!hasK&&!hasBig?'<p class="upsell">Vous hésitez ? <button data-add="kevan">Ajoutez le Coffret Kevan (30 €)</button>, remboursé en bon d\'achat.</p>':'')+
+   '<div class="sum"><span>Sous-total</span><span>'+eur(tot)+'</span></div><button class="btn btn-abysse" style="justify-content:center" disabled>Paiement · désactivé dans la maquette</button>';
+}
+document.addEventListener("click",function(e){var q=e.target.closest("[data-q]");if(!q)return;var l=cart.filter(function(c){return c.h===q.dataset.h;})[0];if(!l)return;l.q+=+q.dataset.q;if(l.q<=0)cart.splice(cart.indexOf(l),1);renderCart();});
+var lastFocus=null;
+function openCart(){lastFocus=document.activeElement;$("#drawer").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#scrim").classList.add("on");$("#cartBtn").setAttribute("aria-expanded","true");setTimeout(function(){$("#closeCart").focus();},50);}
+function closeCart(){if(!$("#drawer").classList.contains("on"))return;$("#drawer").classList.remove("on");$("#drawer").setAttribute("aria-hidden","true");$("#scrim").classList.remove("on");$("#cartBtn").setAttribute("aria-expanded","false");if(lastFocus)lastFocus.focus();}
+function openNotes(){lastFocus=document.activeElement;$("#notes").classList.add("on");$("#notes").setAttribute("aria-hidden","false");$("#scrim").classList.add("on");$("#notesBtn").setAttribute("aria-expanded","true");setTimeout(function(){$("#closeNotes").focus();},50);}
+function closeNotes(){if(!$("#notes").classList.contains("on"))return;$("#notes").classList.remove("on");$("#notes").setAttribute("aria-hidden","true");$("#scrim").classList.remove("on");$("#notesBtn").setAttribute("aria-expanded","false");if(lastFocus)lastFocus.focus();}
+function closeNav(){var n=$("#nav");if(n.classList.contains("open")){n.classList.remove("open");$("#burger").setAttribute("aria-expanded","false");}}
+$("#cartBtn").addEventListener("click",openCart);
+$("#closeCart").addEventListener("click",closeCart);
+$("#notesBtn").addEventListener("click",openNotes);
+$("#closeNotes").addEventListener("click",closeNotes);
+$("#scrim").addEventListener("click",function(){closeCart();closeNotes();});
+$("#burger").addEventListener("click",function(){$("#nav").classList.add("open");$("#burger").setAttribute("aria-expanded","true");$("#closeNav").focus();});
+$("#closeNav").addEventListener("click",function(){closeNav();$("#burger").focus();});
+var tt;function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on");},2200);}
+
+renderCart();route();
+})();
+</script>
+</body>
+</html>
