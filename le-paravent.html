@@ -302,6 +302,8 @@ pre.json{font-family:var(--f-mono);font-size:11.5px;background:var(--panel);bord
 
 /* photos produits (démo personnalisée) */
 .pimg{width:100%;height:100%;object-fit:cover;display:block}
+.vis .pimg,.mini .pimg{position:absolute;inset:0}
+.reco .vis,.line .mini{overflow:hidden;position:relative}
 .vis:has(.pimg),.mini:has(.pimg){padding:0!important;place-items:stretch!important}
 .hero-art:has(.pimg){align-items:stretch;min-height:0}
 .hero-art .pimg{width:31%;aspect-ratio:3/4;height:auto;flex:0 0 auto}
