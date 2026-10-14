@@ -296,6 +296,16 @@ pre.json{font-family:var(--f-mono);font-size:11.5px;background:var(--panel);bord
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
+
+/* photos produits (démo personnalisée) */
+.pimg{width:100%;height:100%;object-fit:cover;display:block}
+.vis:has(.pimg),.mini:has(.pimg){padding:0!important;place-items:stretch!important}
+.hero-art:has(.pimg){align-items:stretch;min-height:0}
+.hero-art .pimg{width:31%;aspect-ratio:3/4;height:auto;flex:0 0 auto}
+.sh-head .logo img{height:44px;width:auto;display:block;margin:0 auto}
+.insight{border-left:3px solid var(--accent)}
+.store .mk{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--s-muted);margin-top:6px}
+.card .mk+h3{margin-top:0}
 /* ===== Parcours guidé ===== */
 .steps{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
 .steps button{border:0;background:transparent;padding:6px 14px 6px 6px;border-radius:999px;cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
@@ -451,13 +461,30 @@ const Q=[
 ];
 
 let S={view:'boutique',pf:'shopify',ch:'marbre',step:0,a:{},screen:'q',res:null,email:null,prenom:null,cart:[],sort:'feat',events:[],started:false,drawer:false};
-try{const saved=JSON.parse(localStorage.getItem('mh-diag')||'null');if(saved&&saved.a){S.a=saved.a;S.step=Math.min(saved.step||0,Q.length-1);}}catch(e){}
-function save(){try{localStorage.setItem('mh-diag',JSON.stringify({a:S.a,step:S.step}))}catch(e){}}
+/* ---------- démo personnalisée (window.DEMO) ---------- */
+const D=window.DEMO||null;
+const LSKEY='mh-diag'+(D?'-'+D.slug:'');
+if(D){
+  P.length=0;D.products.forEach(x=>P.push(Object.assign({c:'#ddd'},x,{vec:V(x.vec)})));
+  if(D.notes){Object.keys(NOTEFAM).forEach(k=>delete NOTEFAM[k]);Object.assign(NOTEFAM,D.notes);Q.find(q=>q.id==='aime').o=Object.keys(NOTEFAM).map(k=>({id:k,l:k}));}
+  if(D.avoid)Object.assign(AVOIDMAP,D.avoid);
+  if(D.budget)Q.find(q=>q.id==='budget').o=D.budget;
+  STORES.client={name:D.name,dom:D.domain};S.ch='client';S.pf=D.platform||'shopify';
+  const c=D.charte,st=document.createElement('style');
+  st.textContent=`.store[data-charte="client"]{--s-bg:${c.bg};--s-ink:${c.ink};--s-muted:${c.muted};--s-line:${c.line};--s-accent:${c.accent};--s-card:${c.card};--s-btn:${c.btn};--s-btn-ink:${c.btnInk};--s-display:${c.display};--s-body:${c.body};--s-radius:${c.radius};--s-track:${c.track};color-scheme:light}
+  .store[data-charte="client"] h1,.store[data-charte="client"] h2,.store[data-charte="client"] h3{font-weight:${c.headWeight||400}}
+  .store[data-charte="client"] .s-btn{text-transform:${c.btnCase||'uppercase'}}`;
+  document.head.appendChild(st);
+  if(c.fontHref){const l=document.createElement('link');l.rel='stylesheet';l.href=c.fontHref;document.head.appendChild(l);}
+  document.title='Diagnostic olfactif · Démo pour '+D.name;
+}
+try{const saved=JSON.parse(localStorage.getItem(LSKEY)||'null');if(saved&&saved.a){S.a=saved.a;S.step=Math.min(saved.step||0,Q.length-1);}}catch(e){}
+function save(){try{localStorage.setItem(LSKEY,JSON.stringify({a:S.a,step:S.step}))}catch(e){}}
 const $=(s,r=document)=>r.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const eur=n=>n.toLocaleString('fr-FR',{minimumFractionDigits:0})+' €';
 function track(name,params){S.events.push({t:new Date(),name,params:params||{}});if(S.view==='data')renderData();}
-function bottle(p,label=true){return `<div class="bottle" style="--juice:${p.c}"><div class="cap"></div><div class="neck"></div><div class="glass"></div>${label?`<div class="lab">${esc(p.n)}</div>`:''}</div>`}
+function bottle(p,label=true){if(p.img)return `<img class="pimg" src="${esc(p.img)}" alt="${esc(p.n||'')}" loading="lazy">`;return `<div class="bottle" style="--juice:${p.c}"><div class="cap"></div><div class="neck"></div><div class="glass"></div>${label?`<div class="lab">${esc(p.n)}</div>`:''}</div>`}
 const icon={
  menu:'<svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>',
  search:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>',
@@ -498,7 +525,7 @@ function cardHTML(p){
   const m=S.res&&S.res.map[p.id];const rank=S.res?S.res.scored.findIndex(s=>s.p.id===p.id):-1;
   const badge=m?`<span class="match ${rank<3?'top':''}">${m.pct} % pour vous</span>`:'';
   const btn=S.pf==='woo'?`<button class="s-btn small card-act" data-add="${p.id}" data-src="grille">Ajouter au panier</button>`:`<button class="s-btn ghost small card-act" data-add="${p.id}" data-src="grille">Ajout rapide</button>`;
-  return `<div class="card"><div class="vis">${badge}${bottle(p)}</div><h3>${esc(p.n)}</h3><div class="fam">${FAMNAME[p.f]} · ${p.notes.slice(0,2).join(', ')}</div><div class="price">${eur(p.price)}</div>${btn}</div>`;
+  return `<div class="card"><div class="vis">${badge}${bottle(p)}</div>${p.b?`<div class="mk">${esc(p.b)}</div>`:''}<h3>${esc(p.n)}</h3><div class="fam">${FAMNAME[p.f]} · ${p.notes.slice(0,2).join(', ')}</div><div class="price">${eur(p.price)}</div>${btn}</div>`;
 }
 function gridHTML(){
   let list=P.slice();
@@ -593,7 +620,7 @@ function quizHTML(){
       <div class="tags">${liked.map(n=>`<span class="tag">Aime : ${esc(n)}</span>`).join('')}${avoid.map(n=>`<span class="tag">Évite : ${esc(n)}</span>`).join('')}<span class="tag">Sillage ${['','discret','présent','remarqué'][+S.a.sillage||2]}</span></div></div></div>
       <div class="recos">${top3.map((s,i)=>{const why=[];if(s.lk.length)why.push(`contient <b>${s.lk.join(', ')}</b> que vous aimez`);why.push(`famille <b>${FAMNAME[s.p.f].toLowerCase()}</b>`);if(s.p.int===r.intPref)why.push('le sillage que vous cherchez');
         return `<div class="reco ${i===0?'first':''}"><div class="vis">${i===0?'<span class="match top">Meilleur accord</span>':''}${bottle(s.p)}</div>
-        <div class="reco-row"><h3>${esc(s.p.n)}</h3><span>${eur(s.p.price)}</span></div>
+        ${s.p.b?`<div class="mk">${esc(s.p.b)}</div>`:''}<div class="reco-row"><h3>${esc(s.p.n)}</h3><span>${eur(s.p.price)}</span></div>
         <div class="reco-row"><span style="font-size:12px;color:var(--s-muted)">Compatibilité</span><b>${s.pct} %</b></div><div class="meter"><i style="width:${s.pct}%"></i></div>
         <p class="why">Pourquoi : ${why.join(', ')}.</p><p class="why">${s.p.notes.join(' · ')}</p>
         <button class="s-btn ${i===0?'':'ghost'} small" data-add="${s.p.id}" data-src="resultat">Ajouter au panier</button></div>`}).join('')}</div>
@@ -710,6 +737,17 @@ function renderData(){
 }
 function hb(label,n,max,suffix=''){return `<div class="hb"><span>${esc(label)}</span><span class="t"><i style="width:${Math.round(n/max*100)}%"></i></span><span class="n">${n}${suffix}</span></div>`}
 
+const _rd=renderData;
+renderData=function(){
+  _rd();const v=$('#v-data');
+  if(D){const n=[...v.querySelectorAll('.box .note')].find(x=>x.textContent.startsWith('Exemple : 27'));if(n)n.textContent='Exemple : si 27 % de vos clients aiment le boisé, vous savez quelles maisons mettre en avant et lesquelles référencer ensuite.';}
+  if(D&&D.insight){const secs=v.querySelectorAll('.sec, .guide');const first=secs[0];
+    first.insertAdjacentHTML('afterend',`<div class="sec"><div class="box insight"><h3>${esc(D.insight.title)}</h3><p style="margin:0">${esc(D.insight.text)}</p></div></div>`);}
+  if(!document.getElementById('tab-offre')){
+    const who=D?D.name:'';
+    v.insertAdjacentHTML('beforeend',`<div class="sec"><div class="cta-end"><div><h2>On en parle 15 minutes ?</h2><p>${D?'Je vous montre comment le brancher sur '+esc(D.domain)+', avec l\'ensemble de votre catalogue.':'Je vous montre comment l\'adapter à votre boutique et à vos parfums.'} Répondez simplement au message qui vous a envoyé ce lien.</p></div>${CONTACT?`<a class="g-btn" href="${esc(CONTACT)}">Prendre contact</a>`:''}</div></div>`);
+  }
+};
 /* ---------- vue OFFRE (simplifiée) ---------- */
 function renderOffer(){
   $('#v-offre').innerHTML=`
@@ -753,6 +791,10 @@ renderStore=function(){
   if(S.res&&!S.autoSorted){S.autoSorted=true;S.sort='match';}
   _rs();
   const st=$('#store');
+  if(D){const l=st.querySelector('.sh-head .logo');if(l&&D.logo)l.innerHTML=`<img src="${esc(D.logo)}" alt="${esc(D.name)}">`;
+    const a=st.querySelector('.sh-annonce');if(a&&D.annonce)a.textContent=D.annonce;
+    const n=st.querySelector('.sh-nav');if(n&&D.nav)n.innerHTML=D.nav.map(x=>x==='Diagnostic olfactif'?`<b>${esc(x)}</b>`:`<span>${esc(x)}</span>`).join('');
+    const f=st.querySelector('.s-foot span:last-child');if(f)f.textContent='Démo préparée par Monsieur.H';}
   if(S.view==='boutique'&&!S.quiz&&!S.drawer&&!S.res&&!S.intro){
     const l=$('#launcher');if(l)l.classList.add('pulse');
     st.insertAdjacentHTML('beforeend','<div class="coach">Cliquez ici pour lancer le diagnostic</div>');
@@ -768,10 +810,15 @@ quizHTML=function(){
   if(S.screen==='res')h=h.replace(/<\/div><\/div><div class="qz-foot">/,'<div class="next-step"><p><b>Vous venez de vivre l\'expérience de votre client.</b> Voyons maintenant ce que la boutique récupère.</p><button class="g-btn" data-view="data">Étape 2 : vos données →</button></div></div></div><div class="qz-foot">');
   return h;
 };
-function introHTML(){return `<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t"><div class="intro-card">
+function introHTML(){if(D)return introD();return `<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t"><div class="intro-card">
   <span class="ey">Démo · 2 minutes</span><h1 id="intro-t">Mettez-vous à la place de votre client.</h1>
   <p>Voici une parfumerie en ligne fictive équipée du diagnostic olfactif. Faites le test comme un visiteur.</p>
   <ol><li><i>1</i>Vous répondez à 8 questions et recevez vos 3 parfums</li><li><i>2</i>Vous voyez ce que la boutique récupère</li><li><i>3</i>Vous découvrez l'offre</li></ol>
+  <div class="acts"><button class="g-btn" id="intro-start">Commencer le test</button><button class="g-link" id="intro-skip">Voir la boutique d'abord</button></div></div></div>`}
+function introD(){return `<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t"><div class="intro-card">
+  <span class="ey">Démo préparée pour ${esc(D.name)}</span><h1 id="intro-t">Votre boutique, avec le diagnostic olfactif.</h1>
+  <p>Voici ${esc(D.domain)} avec le module installé, à votre charte. Faites le test comme l'un de vos clients : les recommandations viennent de ${P.length} parfums de votre catalogue.</p>
+  <ol><li><i>1</i>Vous répondez à 8 questions et recevez 3 de vos parfums</li><li><i>2</i>Vous voyez ce que vous récupérez sur chaque client</li></ol>
   <div class="acts"><button class="g-btn" id="intro-start">Commencer le test</button><button class="g-link" id="intro-skip">Voir la boutique d'abord</button></div></div></div>`}
 function closeIntro(){S.intro=false;const i=$('#intro');if(i)i.remove();}
 document.addEventListener('click',e=>{
@@ -786,6 +833,9 @@ try{const u=new URLSearchParams(location.search);
   const pf=u.get('pf');if(pf==='woo'||pf==='wordpress'||pf==='woocommerce')S.pf='woo';if(pf==='shopify')S.pf='shopify';
   const ch=u.get('ch');if(STORES[ch])S.ch=ch;
   const vu=u.get('vue');if(vu==='donnees')S.view='data';if(vu==='offre')S.view='offre';
+  if(D){const br=document.querySelector('.brand');br.innerHTML=`<b>Diagnostic olfactif · ${esc(D.name)}</b><span>Démo préparée par Monsieur.H</span>`;
+    const ch=document.querySelector('.chartes');if(ch)ch.innerHTML=`Démo réalisée avec ${P.length} parfums de votre catalogue, à votre charte. Le module se branche sur l'ensemble de vos fiches produits.`;
+    if(D.offre===false)u.set('offre','0');}
   if(u.get('offre')==='0'){const b=document.getElementById('tab-offre');if(b)b.remove();if(S.view==='offre')S.view='boutique';}
   if(u.get('quiz')==='1'||S.view!=='boutique'||u.get('intro')==='0')S.intro=false;
   renderAll();if(u.get('quiz')==='1'&&S.view==='boutique')openQuiz();
