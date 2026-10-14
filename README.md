@@ -1,26 +1,22 @@
 # Diagnostic olfactif — démo
 
-Module de quiz parfum à greffer sur une boutique **Shopify** (section Liquid, thème Dawn) ou **WordPress / WooCommerce** (shortcode, bloc Gutenberg ou Elementor).
+Module de quiz parfum à greffer sur une boutique **Shopify** ou **WordPress / WooCommerce**.
 
-Démo interactive : boutique fictive, quiz en 8 questions, profil olfactif, 3 recommandations, capture e-mail RGPD, badges de compatibilité sur la collection, données envoyées au CRM.
+## Les deux liens
 
-## Liens prêts à envoyer
+- **Lien prospect** (parcours guidé en 3 étapes) : `https://monsieurh84.github.io/diagnostic-olfactif/`
+- **Version complète** (pour les rendez-vous : tous les réglages, données détaillées, intégration technique) : `https://monsieurh84.github.io/diagnostic-olfactif/complet.html`
 
-Ajoutez des paramètres à l'URL de la démo pour l'adapter au prospect :
+## Adapter le lien prospect
 
 | Paramètre | Valeurs | Effet |
 |---|---|---|
-| `pf` | `shopify` · `woo` | Plateforme affichée |
-| `ch` | `marbre` · `nuit` · `atelier` | Charte de la boutique fictive |
-| `vue` | `donnees` · `offre` | Ouvre directement un onglet |
-| `quiz` | `1` | Ouvre le diagnostic au chargement |
-| `offre` | `0` | Masque l'onglet des tarifs |
+| `pf` | `shopify` · `woo` | Boutique Shopify ou WooCommerce |
+| `ch` | `marbre` · `nuit` · `atelier` | Ambiance claire, sombre ou naturelle |
+| `offre` | `0` | Masque l'étape 3 (tarifs) |
+| `quiz` | `1` | Lance le diagnostic directement, sans écran d'accueil |
 
-Exemples :
-
-- Prospect Shopify, ambiance sombre : `?pf=shopify&ch=nuit`
-- Prospect WooCommerce, sans les prix : `?pf=woo&ch=atelier&offre=0`
-- Montrer la donnée collectée : `?vue=donnees`
+Exemples : `?pf=woo&ch=nuit` · `?ch=atelier&offre=0`
 
 ---
 Développé par Monsieur.H — Les Monsieurs by Monsieur.H

@@ -295,21 +295,70 @@ pre.json{font-family:var(--f-mono);font-size:11.5px;background:var(--panel);bord
   .hb{grid-template-columns:86px minmax(0,1fr) 40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ===== Parcours guidé ===== */
+.steps{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
+.steps button{border:0;background:transparent;padding:6px 14px 6px 6px;border-radius:999px;cursor:pointer;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.steps button i{font-style:normal;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:11.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.steps button em{font-style:normal}
+.steps button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.steps button[aria-pressed="true"] i{border-color:transparent;background:var(--accent-ink);color:var(--accent)}
+.steps button.done i{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.chartes{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+.chartes button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:3px 11px;font-size:12px;cursor:pointer}
+.chartes button[aria-pressed="true"]{border-color:var(--accent);color:var(--fg)}
+#guide:empty{display:none}
+.guide{display:flex;justify-content:space-between;align-items:center;gap:12px 18px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--accent);border-radius:12px;padding:14px 16px;margin:14px 0}
+.guide p{margin:0;max-width:62ch}
+.guide p b{font-weight:600}
+.g-btn{display:inline-flex;align-items:center;gap:8px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:10px 18px;font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap}
+.g-btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.g-link{border:0;background:none;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:13px;padding:6px}
+.coach{position:fixed;z-index:31;right:max(16px,calc((100vw - 1180px)/2 + 16px));bottom:calc(84px + env(safe-area-inset-bottom,0px));background:var(--fg);color:var(--bg);font-family:var(--f-ui);font-size:13px;padding:9px 14px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.2);animation:bob 1.6s ease-in-out infinite}
+.coach::after{content:"";position:absolute;right:34px;bottom:-6px;width:12px;height:12px;background:var(--fg);transform:rotate(45deg)}
+@keyframes bob{50%{transform:translateY(-5px)}}
+.launcher.pulse{animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 8px 28px rgba(0,0,0,.22),0 0 0 0 var(--s-accent)}70%{box-shadow:0 8px 28px rgba(0,0,0,.22),0 0 0 14px transparent}100%{box-shadow:0 8px 28px rgba(0,0,0,.22),0 0 0 0 transparent}}
+.demo-hint{font-family:var(--f-ui);font-size:12px;background:var(--soft);color:var(--fg);border-radius:8px;padding:8px 10px}
+.next-step{font-family:var(--f-ui);background:var(--panel);color:var(--fg);border:1px solid var(--accent);border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px}
+.next-step p{margin:0;max-width:52ch;font-size:14px}
+.intro{position:fixed;inset:0;z-index:80;background:rgba(17,19,21,.55);backdrop-filter:blur(3px);display:grid;place-items:center;padding:16px}
+.intro-card{background:var(--panel);color:var(--fg);border-radius:16px;max-width:520px;width:100%;padding:28px 26px;box-shadow:0 20px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;gap:14px;max-height:calc(100dvh - 32px);overflow:auto}
+.intro-card .ey{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:600}
+.intro-card h1{font-size:28px;line-height:1.15;margin:0;text-wrap:balance;font-weight:600;letter-spacing:-.01em}
+.intro-card p{margin:0;color:var(--muted)}
+.intro-card ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.intro-card li{display:flex;gap:10px;align-items:center;font-size:14px}
+.intro-card li i{font-style:normal;flex:0 0 24px;height:24px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;font-size:12px;font-weight:600}
+.intro-card .acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:4px}
+.fiche{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fiche div{background:var(--panel);padding:10px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fiche span{font-size:11.5px;color:var(--muted)}
+.fiche b{font-weight:500;overflow-wrap:anywhere}
+.big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.big .kpi .v{font-size:30px}
+.cta-end{background:var(--panel);border:2px solid var(--accent);border-radius:14px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.cta-end h2{margin:0 0 4px;font-size:20px}
+.cta-end p{margin:0;color:var(--muted);max-width:60ch}
+.nav-next{display:flex;justify-content:flex-end;margin-top:26px}
+@media (max-width:900px){.fiche{grid-template-columns:repeat(2,minmax(0,1fr))}.big{grid-template-columns:1fr}}
+@media (max-width:640px){.steps button em{display:none}.steps button{padding:5px 10px 5px 5px;font-size:12.5px}.bar{justify-content:center}.brand{align-items:center;text-align:center;width:100%}}
+@media (prefers-reduced-motion:reduce){.coach,.launcher.pulse{animation:none}}
 </style>
 
 <div class="wrap">
   <div class="bar">
-    <div class="brand"><b>Diagnostic olfactif</b><span>Module à greffer · Shopify &amp; WordPress · par Monsieur.H</span></div>
-    <div class="tabs" role="group" aria-label="Vue">
-      <button id="tab-boutique" data-view="boutique" aria-pressed="true">Démo boutique</button>
-      <button id="tab-data" data-view="data" aria-pressed="false">Données récoltées</button>
-      <button id="tab-offre" data-view="offre" aria-pressed="false">L'offre</button>
-    </div>
+    <div class="brand"><b>Diagnostic olfactif</b><span>Démo interactive · par Monsieur.H</span></div>
+    <nav class="steps" aria-label="Étapes de la démo">
+      <button id="tab-boutique" data-view="boutique" aria-pressed="true"><i>1</i><span>Testez<em> le diagnostic</em></span></button>
+      <button id="tab-data" data-view="data" aria-pressed="false"><i>2</i><span>Vos données<em> récoltées</em></span></button>
+      <button id="tab-offre" data-view="offre" aria-pressed="false"><i>3</i><span>L'offre</span></button>
+    </nav>
   </div>
 
   <!-- VUE BOUTIQUE -->
   <section id="v-boutique" class="view">
-    <div class="controls">
+    <div class="controls" hidden>
       <div class="ctl"><label>Plateforme</label>
         <div class="seg" id="seg-platform">
           <button id="pf-shopify" data-pf="shopify" aria-pressed="true">Shopify</button>
@@ -323,11 +372,13 @@ pre.json{font-family:var(--f-mono);font-size:11.5px;background:var(--panel);bord
         </div></div>
       <div class="integ" id="integ"></div>
     </div>
+    <div id="guide"></div>
     <div class="frame">
       <div class="frame-top"><i></i><i></i><i></i><span id="url"></span></div>
       <div class="store" id="store" data-charte="marbre"></div>
     </div>
-    <p class="ex-note">Boutique fictive pour la démonstration. Changez de charte : le module reprend les couleurs, typographies et boutons du site où il est greffé.</p>
+    <p class="ex-note chartes">Boutique fictive. Sur votre site, le module prend vos couleurs, vos typographies et vos boutons. Essayez une autre ambiance :
+      <button data-ch="marbre" aria-pressed="true">Claire</button><button data-ch="nuit" aria-pressed="false">Sombre</button><button data-ch="atelier" aria-pressed="false">Naturelle</button></p>
   </section>
 
   <!-- VUE DATA -->
@@ -621,7 +672,7 @@ document.addEventListener('click',e=>{
   if(t.dataset.add){addToCart(t.dataset.add,t.dataset.src);return;}
   if(t.hasAttribute('data-coffret')){addToCart('coffret');return;}
   if(t.id==='see-store'){S.quiz=false;S.sort='match';track('view_sorted_catalog',{profil:S.res.top});renderStore();$('#grid')&&$('#grid').scrollIntoView({behavior:'smooth',block:'start'});return;}
-  if(t.id==='restart'){S.a={};S.step=0;S.res=null;S.screen='q';S.sort='feat';S.started=false;save();openQuiz();return;}
+  if(t.id==='restart'){S.a={};S.step=0;S.res=null;S.screen='q';S.sort='feat';S.autoSorted=false;S.started=false;save();openQuiz();return;}
   if(t.id==='share'){const txt=`Mon profil olfactif chez ${STORES[S.ch].name} : ${FAMNAME[S.res.top]}, accent ${ADJ[S.res.second]}. Mes 3 parfums : ${S.res.scored.slice(0,3).map(s=>s.p.n).join(', ')}.`;
     track('profile_shared',{profil:S.res.top});try{navigator.clipboard.writeText(txt).then(()=>toast('Profil copié'),()=>toast(txt));}catch(err){toast(txt)}return;}
   if(t.id==='cart-btn'){S.drawer=true;renderStore();return;}
@@ -630,107 +681,59 @@ document.addEventListener('click',e=>{
 document.addEventListener('change',e=>{if(e.target.id==='sort'){S.sort=e.target.value;renderStore();}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(S.drawer){S.drawer=false;renderStore();}else if(S.quiz){S.quiz=false;renderStore();}}});
 
-/* ---------- vue DATA ---------- */
-function hb(label,n,max,suffix='',neg=false){return `<div class="hb"><span>${esc(label)}</span><span class="t"><i class="${neg?'neg':''}" style="width:${Math.round(n/max*100)}%"></i></span><span class="n">${n}${suffix}</span></div>`}
+/* ---------- vue DATA (simplifiée) ---------- */
 function renderData(){
-  const funnel=[100,97,93,90,87,85,82,74,69];const flabels=['Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8','Résultat'];
+  const r=S.res;const crm=S.pf==='shopify'?'Shopify et Klaviyo':'WooCommerce et Brevo';
   const fam=[['Boisé',27],['Ambré',22],['Frais',18],['Gourmand',15],['Floral',11],['Musqué',7]];
-  const liked=[['Santal',412],['Vanille',376],['Oud',301],['Bergamote',264],['Iris',198],['Rose',187]];
-  const rejected=[['Patchouli',338],['Fleurs blanches',241],['Oud',119],['Encens',96]];
-  const r=S.res;
-  const you=r?{email:S.email||'(non communiqué)',prenom:S.prenom||'—',profil:FAMNAME[r.top],accent:ADJ[r.second],aime:(S.a.aime||[]).join(', ')||'—',evite:(S.a.evite||[]).filter(x=>x!=='none').join(', ')||'—',sillage:['','discret','présent','remarqué'][+S.a.sillage||2],budget:(Q[7].o.find(o=>o.id===S.a.budget)||{}).l||'—',pour:S.a.pourqui==='offrir'?'cadeau':'soi',actuel:S.a.actuel?((Q[6].o.find(o=>o.id===S.a.actuel.style)||{}).l||'')+(S.a.actuel.nom?' · '+S.a.actuel.nom:''):'—',reco:r.scored[0].p.n}:null;
-  const rows=[
-    {email:'c.m•••@gmail.com',prenom:'Camille',profil:'Boisé',accent:'ambré',aime:'Santal, Oud',evite:'Patchouli',sillage:'présent',budget:'150 à 250 €',pour:'soi',actuel:'Un oriental intense',reco:'Santal Brume'},
-    {email:'y.b•••@outlook.fr',prenom:'Yanis',profil:'Frais',accent:'boisé',aime:'Bergamote, Vétiver',evite:'Vanille',sillage:'discret',budget:'80 à 150 €',pour:'soi',actuel:'Un frais et léger',reco:'Vétiver Pluie'},
-    {email:'s.l•••@icloud.com',prenom:'Sarah',profil:'Gourmand',accent:'ambré',aime:'Vanille, Café',evite:'Fleurs blanches',sillage:'remarqué',budget:'Sans limite',pour:'cadeau',actuel:"Je n'en porte pas",reco:'Vanille Sauvage'}];
-  const cols=['email','prenom','profil','accent','aime','evite','sillage','budget','pour','actuel','reco'];
-  const heads=['E-mail','Prénom','Famille','Accent','Notes aimées','Notes évitées','Sillage','Budget','Pour','Porte actuellement','Reco n°1'];
-  const ev=S.events.slice().reverse();
-  const payload=r?{
-    profile:{email:S.email||null,first_name:S.prenom||null,properties:{diag_famille:r.top,diag_accent:r.second,diag_notes_aimees:S.a.aime||[],diag_notes_evitees:(S.a.evite||[]).filter(x=>x!=='none'),diag_sillage:+S.a.sillage||null,diag_budget_max:S.a.budget||null,diag_occasion:S.a.moment||null,diag_pour_offrir:S.a.pourqui==='offrir',diag_parfum_actuel:S.a.actuel||null,diag_reco:r.scored.slice(0,3).map(s=>({produit:s.p.n,compatibilite:s.pct}))},consentement_marketing:!!S.email},
-    destination:S.pf==='shopify'?'Shopify Customer (metafields) + Klaviyo':'WooCommerce (user_meta) + Brevo'}:null;
-  $('#v-data').innerHTML=`
-  <div class="sec" style="margin-top:6px"><h2>Ce que la marque récupère <span class="pill ex">Chiffres d'exemple · 30 jours</span></h2>
-  <p class="lead">Simulation pour une boutique d'environ 8 000 visiteurs par mois. Chaque diagnostic produit un profil client complet, rangé dans le CRM de la marque, pas chez un prestataire.</p>
-  <div class="kpis"><div class="kpi"><span class="k">Diagnostics terminés</span><span class="v">1 964</span><span class="d">69 % des 2 840 lancés</span></div>
-  <div class="kpi"><span class="k">E-mails qualifiés captés</span><span class="v">1 312</span><span class="d">67 % des diagnostics terminés</span></div>
-  <div class="kpi"><span class="k">Conversion après diagnostic</span><span class="v">7,8 %</span><span class="d">contre 1,9 % sur le reste du site</span></div>
-  <div class="kpi"><span class="k">Panier moyen via diagnostic</span><span class="v">142 €</span><span class="d">+18 % avec le coffret découverte</span></div></div></div>
-
-  <div class="sec"><div class="cols">
-   <div class="box"><h3>Où les visiteurs s'arrêtent</h3><div class="funnel">${funnel.map((n,i)=>`<div><small>${n}%</small><span class="b ${i===7?'drop':''}" style="height:${n*1.1}px"></span><small>${flabels[i]}</small></div>`).join('')}</div>
-   <p class="note">La question du budget fait perdre 8 points. Action : la rendre facultative ou la poser plus tôt.</p></div>
-   <div class="box"><h3>Familles olfactives de la clientèle</h3>${fam.map(([l,n])=>hb(l,n,30,' %')).join('')}
-   <p class="note">27 % de profils boisés mais seulement 3 parfums boisés au catalogue : piste pour la prochaine création.</p></div>
-   <div class="box"><h3>Notes les plus demandées</h3>${liked.map(([l,n])=>hb(l,n,420)).join('')}</div>
-   <div class="box"><h3>Notes rejetées</h3>${rejected.map(([l,n])=>hb(l,n,420,'',true)).join('')}
-   <p class="note">Le patchouli est rejeté par 1 client sur 6 : à mentionner clairement sur la fiche de Café Noir.</p></div>
-  </div></div>
-
-  <div class="sec"><h2>Fiches clients envoyées au CRM</h2><p class="lead">Chaque ligne devient un profil exploitable dans ${S.pf==='shopify'?'Shopify et Klaviyo':'WooCommerce et Brevo'}. ${r?'Votre propre diagnostic apparaît en premier.':'Faites le diagnostic dans la démo boutique pour voir votre ligne apparaître ici.'}</p>
-  <div class="tbl-wrap"><table><thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>
-  ${you?`<tr class="you">${cols.map(c=>`<td>${esc(you[c])}</td>`).join('')}</tr>`:''}${rows.map(row=>`<tr>${cols.map(c=>`<td>${esc(row[c])}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>
-
-  <div class="sec"><h2>Ce que la marque en fait</h2><p class="lead">Les scénarios e-mail se branchent directement sur le profil.</p>
-  <div class="flows"><div class="flow"><b>Relance à J+2</b><span>Pas d'achat après le diagnostic : e-mail avec ses 3 parfums et son code de bienvenue.</span></div>
-  <div class="flow"><b>Lancement ciblé</b><span>Une nouveauté boisée part uniquement aux profils boisés et ambrés. Moins de désinscriptions, plus de clics.</span></div>
-  <div class="flow"><b>Fin de flacon</b><span>Rappel 90 jours après l'achat, avec le parfum suivant le plus compatible.</span></div></div></div>
-
-  <div class="sec"><h2>Événements suivis en direct <span class="pill live">Votre session</span></h2><p class="lead">Envoyés à GA4 et au CRM à chaque étape. Utilisez la démo boutique, la liste se remplit.</p>
-  <div class="log">${ev.length?ev.map(x=>`<div class="e"><span>${x.t.toLocaleTimeString('fr-FR')}</span><b>${esc(x.name)}</b><span>${esc(JSON.stringify(x.params))}</span></div>`).join(''):'<div class="empty">Aucun événement pour l\'instant. Ouvrez le diagnostic dans la démo boutique.</div>'}</div></div>
-  ${payload?`<div class="sec"><h2>Profil transmis au CRM</h2><pre class="json">${esc(JSON.stringify(payload,null,2))}</pre></div>`:''}`;
+  let fiche;
+  if(r){
+    const f=[['Prénom',S.prenom||'—'],['E-mail',S.email||'non communiqué'],['Famille olfactive',FAMNAME[r.top]+', accent '+ADJ[r.second]],
+      ['Notes aimées',(S.a.aime||[]).join(', ')||'—'],['Notes évitées',(S.a.evite||[]).filter(x=>x!=='none').join(', ')||'aucune'],['Sillage',['','discret','présent','remarqué'][+S.a.sillage||2]],
+      ['Budget',(Q[7].o.find(o=>o.id===S.a.budget)||{}).l||'—'],['Pour',S.a.pourqui==='offrir'?'offrir':'soi'],['Porte actuellement',S.a.actuel?(((Q[6].o.find(o=>o.id===S.a.actuel.style)||{}).l||'')+(S.a.actuel.nom?' · '+S.a.actuel.nom:'')):'—']];
+    fiche=`<div class="sec" style="margin-top:6px"><h2>La fiche client que vous venez de créer</h2><p class="lead">C'est exactement ce que la boutique reçoit quand un visiteur fait le diagnostic. Elle arrive toute seule dans ${crm}.</p>
+    <div class="fiche">${f.map(([k,v])=>`<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div></div>`;
+  } else {
+    fiche=`<div class="guide" style="margin-top:6px"><p><b>Vous n'avez pas encore fait le test.</b> Faites-le en 2 minutes : votre propre fiche client apparaîtra ici.</p><button class="g-btn" data-view="boutique" data-openafter>Faire le diagnostic</button></div>`;
+  }
+  $('#v-data').innerHTML=`${fiche}
+  <div class="sec"><h2>Sur un mois <span class="pill ex">Estimation</span></h2><p class="lead">Pour une boutique d'environ 8 000 visiteurs par mois.</p>
+  <div class="big"><div class="kpi"><span class="k">E-mails qualifiés récoltés</span><span class="v">1 312</span><span class="d">avec les goûts de chaque client</span></div>
+  <div class="kpi"><span class="k">Taux d'achat après le diagnostic</span><span class="v">7,8 %</span><span class="d">contre 1,9 % sur le reste du site</span></div>
+  <div class="kpi"><span class="k">Panier moyen</span><span class="v">142 €</span><span class="d">+18 % grâce au coffret découverte</span></div></div></div>
+  <div class="sec"><h2>Ce que vous en faites</h2><p class="lead">Des e-mails envoyés au bon client, avec le bon parfum.</p>
+  <div class="flows"><div class="flow"><b>Il n'a pas acheté ?</b><span>Deux jours après, il reçoit ses 3 parfums et son code de bienvenue.</span></div>
+  <div class="flow"><b>Vous sortez un boisé ?</b><span>Vous l'annoncez seulement aux amateurs de boisé. Plus de clics, moins de désinscriptions.</span></div>
+  <div class="flow"><b>Son flacon se termine ?</b><span>Trois mois après l'achat, on lui propose le parfum suivant qui lui correspond.</span></div></div></div>
+  <div class="sec"><div class="box"><h3>Vous connaissez enfin les goûts de votre clientèle</h3>${fam.map(([l,n])=>hb(l,n,30,' %')).join('')}
+  <p class="note">Exemple : 27 % de vos clients aiment le boisé, mais vous n'avez que 3 boisés au catalogue. Vous savez quoi développer ensuite.</p></div></div>
+  ${document.getElementById('tab-offre')?'<div class="nav-next"><button class="g-btn" data-view="offre">Étape 3 : l\'offre →</button></div>':''}`;
 }
+function hb(label,n,max,suffix=''){return `<div class="hb"><span>${esc(label)}</span><span class="t"><i style="width:${Math.round(n/max*100)}%"></i></span><span class="n">${n}${suffix}</span></div>`}
 
-/* ---------- vue OFFRE ---------- */
+/* ---------- vue OFFRE (simplifiée) ---------- */
 function renderOffer(){
   $('#v-offre').innerHTML=`
-  <div class="sec" style="margin-top:6px"><h2>Trois bénéfices pour la boutique</h2><p class="lead">Le module se greffe sur un site existant, sans refonte, en reprenant sa charte.</p>
+  <div class="sec" style="margin-top:6px"><h2>Le diagnostic sur votre boutique</h2><p class="lead">Ajouté à votre site actuel, sans refonte, à vos couleurs. Shopify ou WordPress.</p>
   <div class="adv">
-   <div class="box"><div class="tagline">Conversion</div><h3>Le visiteur sait quoi acheter</h3><ul>
-    <li>3 recommandations expliquées, avec ajout au panier direct</li><li>Badges de compatibilité sur toute la boutique après le diagnostic</li><li>Tri « Recommandé pour vous » sur la collection</li><li>Coffret découverte des 3 parfums pour lever l'hésitation</li><li>Suggestion du parfum suivant dans le panier</li></ul></div>
-   <div class="box"><div class="tagline">Données</div><h3>Un vrai profil par client</h3><ul>
-    <li>Famille, notes aimées et rejetées, sillage, budget, occasion, cadeau ou non</li><li>Parfum porté actuellement : la concurrence vue par vos clients</li><li>Envoi automatique vers Klaviyo, Brevo ou les fiches clients Shopify / WooCommerce</li><li>Suivi GA4 de chaque étape et des abandons</li><li>Consentement RGPD intégré, données chez la marque</li></ul></div>
-   <div class="box"><div class="tagline">Expérience</div><h3>Le conseil d'une boutique, en ligne</h3><ul>
-    <li>Questions visuelles, adaptées si c'est pour offrir</li><li>Progression sauvegardée, reprise là où on s'est arrêté</li><li>Profil olfactif illustré, partageable</li><li>Résultat consultable sans e-mail : on ne force pas</li><li>Rapide sur mobile, sans script tiers lourd</li></ul></div>
+   <div class="box"><div class="tagline">Plus de ventes</div><h3>Le visiteur sait quoi acheter</h3><ul><li>3 parfums recommandés, expliqués</li><li>Un % de compatibilité sur toute la boutique</li><li>Un coffret découverte pour ceux qui hésitent</li></ul></div>
+   <div class="box"><div class="tagline">Vos données</div><h3>Un vrai profil par client</h3><ul><li>Goûts, budget, occasion, cadeau ou non</li><li>Envoyé dans votre outil d'e-mailing</li><li>Conforme RGPD, les données restent chez vous</li></ul></div>
+   <div class="box"><div class="tagline">Expérience</div><h3>Le conseil d'une boutique, en ligne</h3><ul><li>2 minutes, pensé pour le mobile</li><li>Un parcours adapté si c'est pour offrir</li><li>Aucune obligation de laisser son e-mail</li></ul></div>
   </div></div>
-
-  <div class="sec"><h2>Face aux applications de quiz</h2>
-  <div class="tbl-wrap"><table class="cmp"><thead><tr><th></th><th>Module Monsieur.H</th><th>Application de quiz classique</th></tr></thead><tbody>
-   <tr><td>Paiement</td><td><span class="yes">Une fois</span>, la marque en est propriétaire</td><td>Abonnement mensuel, souvent indexé sur le trafic</td></tr>
-   <tr><td>Design</td><td><span class="yes">Charte du site</span> : typos, couleurs, boutons</td><td>Gabarit à personnaliser dans ses limites</td></tr>
-   <tr><td>Logique</td><td><span class="yes">Pensée pour le parfum</span> : familles, notes, sillage</td><td>Questions et règles génériques à configurer</td></tr>
-   <tr><td>Boutique entière</td><td><span class="yes">Badges et tri</span> sur toutes les fiches</td><td>Souvent limité à la page de résultat</td></tr>
-   <tr><td>Plateformes</td><td><span class="yes">Shopify et WordPress</span></td><td>Généralement une seule</td></tr>
-   <tr><td>Vitesse</td><td>Code natif dans le thème</td><td>Script externe chargé sur le site</td></tr>
-   <tr><td>Données</td><td>Dans le CRM de la marque</td><td>Chez l'éditeur, puis synchronisées</td></tr>
-  </tbody></table></div></div>
-
-  <div class="sec"><h2>Formules</h2><p class="lead">Prix hors TVA (TVA non applicable). Installation, habillage à la charte et réglage sur le catalogue compris.</p>
+  <div class="sec"><h2>Formules</h2><p class="lead">Paiement unique, le module vous appartient. Prix hors TVA (TVA non applicable). Installation et réglage sur vos parfums compris.</p>
   <div class="tiers">
-   <div class="tier"><span class="nm">Essentiel</span><span class="pr">890 €</span><p class="for">Pour tester le diagnostic sur un petit catalogue.</p><ul>
-    <li>8 questions, habillage à la charte</li><li>Jusqu'à 40 parfums réglés</li><li>3 recommandations + ajout au panier</li><li>Capture e-mail avec consentement</li><li>Suivi GA4</li></ul></div>
-   <div class="tier reco"><span class="nm">Signature · recommandée</span><span class="pr">1 790 €</span><p class="for">Tout ce qui est montré dans cette démo.</p><ul>
-    <li>Tout l'Essentiel, jusqu'à 120 parfums</li><li>Profil olfactif illustré et partageable</li><li>Badges et tri sur toute la boutique</li><li>Coffret découverte et suggestion panier</li><li>Profil complet vers Klaviyo ou Brevo</li><li>Parcours cadeau</li></ul></div>
-   <div class="tier"><span class="nm">Sur mesure</span><span class="pr">2 900 € <small>et plus</small></span><p class="for">Pour les maisons avec boutique physique ou plusieurs langues.</p><ul>
-    <li>Tout Signature, catalogue illimité</li><li>Multilingue</li><li>Mode tablette en boutique</li><li>Tableau de bord des profils</li><li>3 scénarios e-mail rédigés et branchés</li></ul></div>
-  </div>
-  <p class="ex-note">Suivi optionnel : 39 € par mois (nouveaux parfums réglés, mises à jour du thème, rapport mensuel des profils).</p></div>
-
-  <div class="sec"><h2>Intégration</h2><div class="snip">
-   <div><h3>Shopify</h3><pre class="json">{% section 'diagnostic-olfactif' %}
-
-# metafields produit
-custom.famille        = "boise"
-custom.notes          = ["Santal","Iris"]
-custom.sillage        = 2</pre></div>
-   <div><h3>WordPress · WooCommerce</h3><pre class="json">[monsieurh_diagnostic]
-
-# attributs produit
-pa_famille   : boisé
-pa_notes     : santal, iris
-pa_sillage   : présent</pre></div></div></div>`;
+   <div class="tier"><span class="nm">Essentiel</span><span class="pr">890 €</span><p class="for">Pour démarrer avec un petit catalogue.</p><ul><li>Diagnostic en 8 questions, à vos couleurs</li><li>Jusqu'à 40 parfums</li><li>3 recommandations + ajout au panier</li><li>Récolte des e-mails</li></ul></div>
+   <div class="tier reco"><span class="nm">Signature · recommandée</span><span class="pr">1 790 €</span><p class="for">Tout ce que vous avez vu dans cette démo.</p><ul><li>Jusqu'à 120 parfums</li><li>Profil olfactif illustré</li><li>% de compatibilité sur toute la boutique</li><li>Coffret découverte et suggestion au panier</li><li>Profils envoyés vers Klaviyo ou Brevo</li><li>Parcours cadeau</li></ul></div>
+   <div class="tier"><span class="nm">Sur mesure</span><span class="pr">2 900 € <small>et plus</small></span><p class="for">Boutique physique ou site en plusieurs langues.</p><ul><li>Tout Signature, sans limite de parfums</li><li>Multilingue</li><li>Mode tablette en boutique</li><li>3 e-mails automatiques rédigés et branchés</li></ul></div>
+  </div><p class="ex-note">Suivi optionnel : 39 € par mois (nouveaux parfums ajoutés, mises à jour, rapport mensuel).</p></div>
+  <div class="sec"><h2>Pourquoi pas une application de quiz ?</h2>
+  <div class="tbl-wrap"><table class="cmp" style="min-width:0"><thead><tr><th></th><th>Ce module</th><th>Application de quiz</th></tr></thead><tbody>
+   <tr><td>Prix</td><td><span class="yes">Payé une fois</span></td><td>Abonnement mensuel</td></tr>
+   <tr><td>Design</td><td><span class="yes">À vos couleurs</span></td><td>Gabarit standard</td></tr>
+   <tr><td>Logique</td><td><span class="yes">Pensée pour le parfum</span></td><td>Questions génériques</td></tr>
+   <tr><td>Vitesse du site</td><td><span class="yes">Code intégré</span></td><td>Script externe</td></tr>
+  </tbody></table></div></div>
+  <div class="sec"><div class="cta-end"><div><h2>Envie de le voir sur votre boutique ?</h2><p>Répondez simplement au message qui vous a envoyé ce lien : on regarde ensemble comment l'adapter à votre site et à vos parfums.</p></div>${CONTACT?`<a class="g-btn" href="${esc(CONTACT)}">Prendre contact</a>`:''}</div></div>`;
 }
-
 function renderAll(){
   document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===S.view));
   document.querySelectorAll('[data-pf]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.pf===S.pf));
@@ -742,14 +745,52 @@ function renderAll(){
   if(S.view==='offre')renderOffer();
   if(location.hash==='#donnees'&&S.view==='boutique'){}
 }
+/* ---------- couche guidage ---------- */
+const CONTACT='';
+S.intro=true;
+const _rs=renderStore;
+renderStore=function(){
+  if(S.res&&!S.autoSorted){S.autoSorted=true;S.sort='match';}
+  _rs();
+  const st=$('#store');
+  if(S.view==='boutique'&&!S.quiz&&!S.drawer&&!S.res&&!S.intro){
+    const l=$('#launcher');if(l)l.classList.add('pulse');
+    st.insertAdjacentHTML('beforeend','<div class="coach">Cliquez ici pour lancer le diagnostic</div>');
+  }
+  const g=$('#guide');
+  if(g)g.innerHTML=(S.res&&!S.quiz)?`<div class="guide"><p><b>Diagnostic terminé.</b> Regardez la boutique : chaque parfum affiche maintenant votre % de compatibilité, et la collection est triée pour vous.</p><button class="g-btn" data-view="data">Étape 2 : vos données →</button></div>`:'';
+  const tb=$('#tab-boutique');if(tb)tb.classList.toggle('done',!!S.res&&S.view!=='boutique');
+};
+const _qh=quizHTML;
+quizHTML=function(){
+  let h=_qh();
+  if(S.screen==='gate')h=h.replace('<div class="err" id="g-err"></div>','<div class="demo-hint">Démo : saisissez n\'importe quelle adresse, aucun e-mail n\'est envoyé.</div><div class="err" id="g-err"></div>');
+  if(S.screen==='res')h=h.replace(/<\/div><\/div><div class="qz-foot">/,'<div class="next-step"><p><b>Vous venez de vivre l\'expérience de votre client.</b> Voyons maintenant ce que la boutique récupère.</p><button class="g-btn" data-view="data">Étape 2 : vos données →</button></div></div></div><div class="qz-foot">');
+  return h;
+};
+function introHTML(){return `<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-t"><div class="intro-card">
+  <span class="ey">Démo · 2 minutes</span><h1 id="intro-t">Mettez-vous à la place de votre client.</h1>
+  <p>Voici une parfumerie en ligne fictive équipée du diagnostic olfactif. Faites le test comme un visiteur.</p>
+  <ol><li><i>1</i>Vous répondez à 8 questions et recevez vos 3 parfums</li><li><i>2</i>Vous voyez ce que la boutique récupère</li><li><i>3</i>Vous découvrez l'offre</li></ol>
+  <div class="acts"><button class="g-btn" id="intro-start">Commencer le test</button><button class="g-link" id="intro-skip">Voir la boutique d'abord</button></div></div></div>`}
+function closeIntro(){S.intro=false;const i=$('#intro');if(i)i.remove();}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('button');if(!t)return;
+  if(t.id==='intro-start'){closeIntro();openQuiz();return;}
+  if(t.id==='intro-skip'){closeIntro();renderStore();return;}
+  if(t.dataset.view){window.scrollTo({top:0,behavior:'smooth'});if(t.hasAttribute('data-openafter'))openQuiz();}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&S.intro){closeIntro();renderStore();}});
 const h=location.hash.replace('#','');if(h==='donnees')S.view='data';if(h==='offre')S.view='offre';
 try{const u=new URLSearchParams(location.search);
   const pf=u.get('pf');if(pf==='woo'||pf==='wordpress'||pf==='woocommerce')S.pf='woo';if(pf==='shopify')S.pf='shopify';
   const ch=u.get('ch');if(STORES[ch])S.ch=ch;
   const vu=u.get('vue');if(vu==='donnees')S.view='data';if(vu==='offre')S.view='offre';
   if(u.get('offre')==='0'){const b=document.getElementById('tab-offre');if(b)b.remove();if(S.view==='offre')S.view='boutique';}
+  if(u.get('quiz')==='1'||S.view!=='boutique'||u.get('intro')==='0')S.intro=false;
   renderAll();if(u.get('quiz')==='1'&&S.view==='boutique')openQuiz();
-}catch(e){renderAll();}
+  if(S.intro)document.body.insertAdjacentHTML('beforeend',introHTML());
+}catch(e){S.intro=false;renderAll();}
 })();
 </script>
 
