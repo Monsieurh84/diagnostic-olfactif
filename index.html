@@ -839,6 +839,9 @@ try{const u=new URLSearchParams(location.search);
     if(D.offre===false)u.set('offre','0');}
   if(u.get('offre')==='0'){const b=document.getElementById('tab-offre');if(b)b.remove();if(S.view==='offre')S.view='boutique';}
   if(u.get('quiz')==='1'||S.view!=='boutique'||u.get('intro')==='0')S.intro=false;
+  if(u.get('apercu')){S.intro=false;const nf=Object.keys(NOTEFAM);const pick=nf.filter(k=>['boise','ambre'].includes(NOTEFAM[k])).slice(0,2);
+    const bo=Q.find(q=>q.id==='budget').o;S.a={pourqui:'moi',moment:'soir',ambiance:'biblio',aime:pick,evite:['none'],sillage:'2',actuel:{style:'boise',nom:''},budget:bo[bo.length-1].id};
+    S.res=compute();S.started=true;if(u.get('apercu')==='resultat'){S.quiz=true;S.screen='res';}}
   renderAll();if(u.get('quiz')==='1'&&S.view==='boutique')openQuiz();
   if(S.intro)document.body.insertAdjacentHTML('beforeend',introHTML());
 }catch(e){S.intro=false;renderAll();}

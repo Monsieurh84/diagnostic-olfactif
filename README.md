@@ -27,3 +27,4 @@ Une démo à la charte et avec les parfums d'un prospect : `prospects/<slug>.jso
 
 - Sens Unique : `https://monsieurh84.github.io/diagnostic-olfactif/sens-unique.html`
 - Le Paravent : `https://monsieurh84.github.io/diagnostic-olfactif/le-paravent.html`
+- Passage 31 : `https://monsieurh84.github.io/diagnostic-olfactif/passage-31.html`
