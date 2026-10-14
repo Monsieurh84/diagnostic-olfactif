@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Majda Bekkali — Parfums Clair &amp; Obscur, Paris</title>
+<meta name="description" content="Maison de parfums parisienne fondée par Majda Bekkali. Ses créations se lisent en deux lumières : Clair et Obscur. Extraits concentrés à 20–30 %, signés par huit parfumeurs.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Majda Bekkali — Un parfum, deux lumières">
+<meta property="og:description" content="Maquette de refonte préparée par Monsieur.H : le concept Clair / Obscur rendu lisible, du premier écran au panier.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivoire:#F4EFE7; --pierre:#E6DED1; --sable:#D9CFBF;
+  --nuit:#11141F; --nuit-2:#1B2031; --nuit-3:#262C42;
+  --laiton:#C29A5E; --laiton-fonce:#7B5A2A;
+  --encre:#1E1B18; --gris:#5B544C;
+  --bg:var(--ivoire); --fg:var(--encre); --mute:var(--gris); --line:rgba(30,27,24,.16);
+  --accent:var(--laiton-fonce); --card:#FBF8F3;
+  --serif:"Marcellus", "Times New Roman", serif;
+  --poem:"Newsreader", Georgia, serif;
+  --sans:"Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:2px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+[data-lum="obscur"]{
+  --bg:var(--nuit); --fg:#EEE8DE; --mute:#B9B2A6; --line:rgba(238,232,222,.18);
+  --accent:var(--laiton); --card:var(--nuit-2);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--sans);transition:background .6s var(--ease),color .6s var(--ease);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.coffret,.pied__grid,.portrait,.coffrets,.metiss,.maison-hero,.fiche__grid,.blocs,.resultat,.dipt,.seul,.deux{grid-template-columns:minmax(0,1fr)}
+.lettre .btn{padding:.7em 1em;letter-spacing:.08em}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:.04em;line-height:1.15;margin:0}
+.eyebrow{font:500 .72rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.poem{font-family:var(--poem);font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:46px;padding:.7em 1.4em;border:1px solid currentColor;background:transparent;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;border-radius:var(--r);transition:background .3s,color .3s}
+.btn--plein{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn--plein:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:not(.btn--plein):hover{background:var(--fg);color:var(--bg)}
+.lien{background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+
+/* Bandeau maquette */
+.proto{background:#000;color:#d9d2c5;font-size:.72rem;letter-spacing:.06em;text-align:center;padding:6px 16px}
+
+/* En-tête */
+.hd{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);transition:background .6s}
+.hd__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:64px}
+.hd__logo{justify-self:center;display:block}
+.hd__logo img{height:38px;width:auto}
+[data-lum="obscur"] .logo-img{filter:invert(1) brightness(.95)}
+.hd__nav{display:none;gap:26px}
+.hd__nav a{text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent}
+.hd__nav a[aria-current="page"]{border-color:var(--accent)}
+.hd__act{justify-self:end;display:flex;gap:6px;align-items:center}
+.ico{width:44px;height:44px;display:grid;place-items:center;background:none;border:0;position:relative}
+.ico svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.4}
+.badge{position:absolute;top:6px;right:4px;min-width:18px;height:18px;border-radius:9px;background:var(--accent);color:#fff;font-size:.66rem;display:grid;place-items:center;padding:0 4px}
+.badge[hidden]{display:none}
+.menu{position:fixed;inset:0;z-index:60;background:var(--bg);padding:24px 16px;display:flex;flex-direction:column;gap:6px;transform:translateX(-100%);transition:transform .45s var(--ease);visibility:hidden}
+.menu.open{transform:none;visibility:visible}
+.menu a{font-family:var(--serif);font-size:1.7rem;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line)}
+@media (min-width:900px){.hd__nav{display:flex}.burger{display:none!important}.hd__logo img{height:44px}}
+
+/* Pages */
+.page{display:none}
+.page.on{display:block;animation:fade .7s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:64px 0}
+@media (min-width:900px){section{padding:104px 0}}
+
+/* Scène produit : packshot sur fond clair (multiply) ou « sous le projecteur » en Obscur */
+.scene{position:relative;aspect-ratio:1;background:var(--pierre);overflow:hidden;display:grid;place-items:center}
+.scene img{width:86%;height:86%;object-fit:contain;mix-blend-mode:multiply;transition:transform .8s var(--ease)}
+.scene--obscur{background:radial-gradient(circle at 50% 52%,#ECE6DC 0,#cfc7ba 30%,#3a3f52 58%,var(--nuit) 74%)}
+.scene--obscur img{width:62%;height:62%}
+
+/* ===== ACCUEIL ===== */
+.hero{position:relative;min-height:calc(100svh - 96px);display:grid;overflow:hidden;color:var(--encre)}
+.hero__layer{grid-area:1/1;display:grid;grid-template-rows:1fr auto;padding:28px 16px 120px}
+.hero__layer--clair{background:linear-gradient(160deg,#F6F1E9,#E4D8C6)}
+.hero__layer--obscur{background:radial-gradient(ellipse at 50% 46%,#DAD2C4 0,#9da0ab 18%,#2a3149 42%,var(--nuit) 70%);color:#EEE8DE;clip-path:inset(0 0 0 var(--cut,50%));transition:clip-path .08s linear}
+.hero__bottle{align-self:center;justify-self:center;width:min(78vw,430px);aspect-ratio:1;display:grid;place-items:center}
+.hero__bottle img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.hero__layer--obscur .hero__bottle img{width:72%;height:72%}
+.hero__tag{position:absolute;top:22px;font:500 .7rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.hero__layer--clair .hero__tag{left:16px}
+.hero__layer--obscur .hero__tag{right:16px;color:var(--laiton)}
+.hero__txt{position:absolute;left:0;right:0;bottom:0;padding:0 16px 22px;z-index:3;pointer-events:none;text-align:center;color:#fff;mix-blend-mode:difference}
+.hero__txt h1{font-size:clamp(2.1rem,8.5vw,5.2rem)}
+.hero__txt p{margin:.4em auto 0;max-width:34ch;font-size:.95rem}
+.hero__range{position:absolute;inset:0;z-index:4;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.hero__handle{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:1px;background:var(--laiton);z-index:2;pointer-events:none}
+.hero__handle span{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--laiton);color:var(--nuit);display:grid;place-items:center;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.hero__range:focus-visible + .hero__handle span{outline:2px solid #fff;outline-offset:3px}
+.hero__hint{position:absolute;z-index:3;top:56px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;mix-blend-mode:difference;pointer-events:none;white-space:nowrap}
+
+.manifeste{text-align:center}
+.manifeste blockquote{margin:0 auto;max-width:28ch;font:italic 400 clamp(1.5rem,4.6vw,2.5rem)/1.3 var(--poem)}
+.manifeste cite{display:block;margin-top:1em;font:500 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--mute)}
+
+.deux{display:grid;gap:0;border:1px solid var(--line)}
+.deux > div{padding:32px 22px}
+.deux__c{background:var(--ivoire);color:var(--encre)}
+.deux__o{background:var(--nuit);color:#EEE8DE}
+.deux h3{font-size:1.9rem;margin:.3em 0 .5em}
+.deux ul{margin:0;padding:0;list-style:none}
+.deux li{padding:10px 0;border-top:1px solid rgba(127,120,110,.3);font-size:.95rem}
+.deux li b{font-weight:500;display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.deux__o .eyebrow{color:var(--laiton)}
+.deux__c .eyebrow{color:var(--laiton-fonce)}
+@media (min-width:760px){.deux{grid-template-columns:1fr 1fr}.deux > div{padding:48px 44px}}
+.fil{margin:22px 0 0;text-align:center;color:var(--mute);font-size:.92rem}
+
+.sect-hd{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;margin-bottom:32px}
+.sect-hd h2{font-size:clamp(1.8rem,5vw,3rem)}
+
+/* Diptyques */
+.dipt{display:grid;gap:44px}
+.dip{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--card)}
+.dip__half{display:block;text-decoration:none;position:relative}
+.dip__half .scene{aspect-ratio:4/5}
+.dip__lab{position:absolute;top:10px;left:10px;font:500 .64rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:6px 8px;background:var(--ivoire);color:var(--encre)}
+.dip__half--o .dip__lab{background:var(--nuit);color:var(--laiton)}
+.dip__info{grid-column:1/-1;padding:18px 18px 22px;display:grid;gap:6px}
+.dip__info h3{font-size:1.5rem}
+.dip__info p{margin:0;color:var(--mute);font-size:.92rem}
+.dip__noses{font-size:.8rem;color:var(--mute)}
+.dip__half:hover img{transform:scale(1.04)}
+@media (min-width:900px){.dipt{grid-template-columns:1fr 1fr}}
+
+.seul{display:grid;gap:22px;align-items:center;margin-top:44px;border:1px solid var(--line);background:var(--nuit);color:#EEE8DE}
+.seul .scene{aspect-ratio:1}
+.seul__t{padding:8px 22px 28px}
+.seul__t .eyebrow{color:var(--laiton)}
+@media (min-width:760px){.seul{grid-template-columns:1fr 1.2fr}.seul__t{padding:32px}}
+
+.bande{position:relative;color:#fff;min-height:320px;display:grid;align-items:end;background:#2b2520}
+.bande img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.bande .wrap{position:relative;padding:48px 0}
+.bande h2{font-size:clamp(1.8rem,5vw,3rem);max-width:18ch}
+.bande p{max-width:52ch}
+.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.chiffres div{background:var(--bg);padding:22px 16px}
+.chiffres b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;color:var(--accent)}
+.chiffres span{font-size:.85rem;color:var(--mute)}
+@media (min-width:760px){.chiffres{grid-template-columns:repeat(4,1fr)}}
+
+.portrait{display:grid;gap:28px;align-items:center}
+.portrait img{width:100%;aspect-ratio:8/7;object-fit:cover;background:var(--pierre)}
+.portrait p{color:var(--mute)}
+@media (min-width:900px){.portrait{grid-template-columns:1.1fr 1fr;gap:64px}}
+
+.cta-guide{background:var(--nuit);color:#EEE8DE;text-align:center}
+.cta-guide .eyebrow{color:var(--laiton)}
+.cta-guide h2{font-size:clamp(1.9rem,5.5vw,3.2rem);margin:.4em 0}
+.cta-guide p{max-width:46ch;margin:0 auto 26px;color:#c9c1b4}
+.cta-guide .btn{color:#EEE8DE}
+
+/* ===== COLLECTION ===== */
+.col-hd{padding:48px 0 12px}
+.col-hd h1{font-size:clamp(2.2rem,7vw,4rem)}
+.col-hd p{max-width:60ch;color:var(--mute)}
+.filtres{position:sticky;top:64px;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
+.filtres__row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.filtres__row::-webkit-scrollbar{display:none}
+.filtres fieldset{border:0;margin:0;padding:0;display:contents}
+.chip{flex:none;min-height:40px;padding:0 14px;border:1px solid var(--line);background:transparent;border-radius:20px;font-size:.8rem;letter-spacing:.04em;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip--sep{border:0;padding:0 2px;color:var(--mute);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center}
+.res{margin:18px 0;color:var(--mute);font-size:.85rem}
+.grille{display:grid;grid-template-columns:1fr 1fr;gap:28px 14px;padding-bottom:64px}
+@media (min-width:760px){.grille{grid-template-columns:repeat(3,1fr);gap:44px 24px}}
+@media (min-width:1100px){.grille{grid-template-columns:repeat(4,1fr)}}
+.carte{text-decoration:none;display:grid;gap:10px}
+.carte .scene{aspect-ratio:4/5}
+.carte__lum{display:inline-flex;align-items:center;gap:6px;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.pastille{width:10px;height:10px;border-radius:50%;border:1px solid var(--fg)}
+.pastille--c{background:var(--ivoire)}
+.pastille--o{background:var(--nuit)}
+.carte h3{font-size:1.12rem}
+.carte__meta{font-size:.82rem;color:var(--mute)}
+.carte__prix{font-size:.88rem}
+.carte:hover img{transform:scale(1.05)}
+
+/* ===== FICHE ===== */
+.fiche{padding-top:24px}
+.fil-ariane{font-size:.78rem;color:var(--mute);margin-bottom:18px}
+.fil-ariane a{color:inherit}
+.fiche__grid{display:grid;gap:28px}
+@media (min-width:900px){.fiche__grid{grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}.fiche__media{position:sticky;top:90px}}
+.fiche__media .scene{aspect-ratio:1}
+.vignettes{display:flex;gap:8px;margin-top:8px}
+.vignettes button{width:68px;height:68px;padding:0;border:1px solid var(--line);background:var(--pierre);overflow:hidden}
+.vignettes button[aria-pressed="true"]{border-color:var(--accent)}
+.vignettes img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
+.bascule{display:inline-grid;grid-template-columns:1fr 1fr;border:1px solid var(--fg);border-radius:30px;padding:3px;margin:10px 0 6px;position:relative}
+.bascule button{min-height:42px;min-width:108px;border:0;border-radius:26px;background:transparent;letter-spacing:.16em;text-transform:uppercase;font-size:.74rem;position:relative;z-index:1;transition:color .4s}
+.bascule button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.bascule-aide{font-size:.82rem;color:var(--mute);margin:0 0 14px}
+.fiche h1{font-size:clamp(2rem,6vw,3.2rem)}
+.fiche__acc{font-family:var(--poem);font-style:italic;font-size:1.15rem;margin:.6em 0;color:var(--fg)}
+.fiche__desc{color:var(--mute)}
+.formats{display:flex;gap:8px;flex-wrap:wrap;border:0;padding:0;margin:18px 0}
+.formats legend{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px;color:var(--mute)}
+.formats label{position:relative}
+.formats input{position:absolute;opacity:0;inset:0}
+.formats span{display:grid;place-items:center;min-width:86px;min-height:52px;padding:6px 12px;border:1px solid var(--line);font-size:.86rem;line-height:1.25;text-align:center}
+.formats small{display:block;color:var(--mute);font-size:.74rem}
+.formats input:checked + span{border-color:var(--fg);box-shadow:inset 0 0 0 1px var(--fg)}
+.formats input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+.achat{display:grid;gap:10px}
+.achat .btn{width:100%}
+.essai{margin-top:16px;padding:16px;border:1px dashed var(--line);display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center}
+.essai img{width:64px;height:64px;object-fit:cover;background:var(--pierre)}
+.essai p{margin:0;font-size:.88rem}
+.essai .lien{font-size:.82rem;margin-top:4px}
+.faits{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:22px 0}
+.faits div{background:var(--bg);padding:12px 14px;font-size:.86rem}
+.faits b{display:block;font-weight:500;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+
+.pyr{display:grid;gap:0;border-top:1px solid var(--line)}
+.pyr__row{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pyr__row h3{font-size:.95rem;letter-spacing:.14em;text-transform:uppercase}
+.notes{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.notes li{font-size:.84rem;padding:4px 10px;border:1px solid var(--line);border-radius:14px}
+.notes li.commun{border-color:var(--accent);color:var(--accent)}
+.legende{font-size:.8rem;color:var(--mute);margin-top:10px}
+.legende i{display:inline-block;width:14px;height:10px;border:1px solid var(--accent);border-radius:6px;vertical-align:middle;margin-right:4px}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.compare > div{padding:20px 16px}
+.compare .c{background:var(--ivoire);color:var(--encre)}
+.compare .o{background:var(--nuit);color:#EEE8DE}
+.compare h3{font-size:1.25rem;margin:.3em 0}
+.compare p{font-size:.88rem;margin:.4em 0}
+.compare .o .eyebrow{color:var(--laiton)}
+.compare .c .eyebrow{color:var(--laiton-fonce)}
+.compare .btn{margin-top:10px;min-height:40px;font-size:.7rem}
+.compare__commun{grid-column:1/-1;padding:16px;text-align:center;font-size:.9rem;border-top:1px solid var(--line);background:var(--card)}
+.mots{border-left:2px solid var(--accent);padding:6px 0 6px 18px;margin:0}
+.mots p{font-family:var(--poem);font-style:italic;font-size:1.2rem;line-height:1.5;margin:0 0 .6em}
+.mots footer{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.avis{border:1px dashed var(--line);padding:26px 18px;text-align:center;color:var(--mute)}
+.avis b{display:block;color:var(--fg);font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:6px}
+.blocs{display:grid;gap:56px;padding:56px 0 80px}
+.blocs h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:18px}
+.assoc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (min-width:760px){.assoc{grid-template-columns:repeat(4,1fr)}}
+
+/* ===== MAISON ===== */
+.maison-hero{display:grid;gap:28px;padding:48px 0 0}
+.maison-hero h1{font-size:clamp(2.2rem,7vw,4.2rem)}
+.maison-hero .poem{font-size:1.25rem}
+.texte{max-width:64ch}
+.texte p{color:var(--mute)}
+.nez{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.nez div{background:var(--bg);padding:16px}
+.nez b{font-family:var(--serif);font-weight:400;font-size:1.15rem;display:block}
+.nez span{font-size:.85rem;color:var(--mute)}
+@media (min-width:640px){.nez{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.nez{grid-template-columns:repeat(4,1fr)}}
+.cedre{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding:0;list-style:none}
+.cedre li{font-size:.8rem;padding:4px 10px;border:1px solid var(--accent);color:var(--accent);border-radius:14px}
+.metiss{display:grid;gap:24px;align-items:center}
+.metiss img{width:160px;height:160px;object-fit:contain}
+@media (min-width:760px){.metiss{grid-template-columns:180px 1fr}}
+.journal{display:grid;gap:14px}
+.journal article{border-top:1px solid var(--line);padding-top:14px}
+.journal time{font-size:.78rem;color:var(--mute)}
+.journal h3{font-size:1.2rem;margin-top:4px}
+@media (min-width:760px){.journal{grid-template-columns:1fr 1fr;gap:28px}}
+
+/* ===== DÉCOUVERTE ===== */
+.disc-hd{padding:48px 0 8px;text-align:center}
+.disc-hd h1{font-size:clamp(2.2rem,7vw,4rem)}
+.disc-hd p{max-width:54ch;margin:12px auto 0;color:var(--mute)}
+.coffrets{display:grid;gap:18px;margin-top:36px}
+@media (min-width:760px){.coffrets{grid-template-columns:1fr 1fr}}
+.coffret{border:1px solid var(--line);display:grid}
+.coffret img{width:100%;aspect-ratio:1;object-fit:cover;background:var(--pierre)}
+.coffret__t{padding:20px}
+.coffret--o{background:var(--nuit);color:#EEE8DE}
+.coffret--c{background:var(--ivoire);color:var(--encre)}
+.coffret--o .eyebrow{color:var(--laiton)}
+.coffret h2{font-size:1.7rem;margin:.3em 0}
+.coffret ol{padding-left:1.2em;margin:.6em 0 1em;font-size:.9rem}
+.coffret .btn{width:100%}
+.duo{margin-top:18px;text-align:center;padding:20px;border:1px solid var(--line);font-size:.92rem}
+.guide{margin:72px auto 0;max-width:720px;border:1px solid var(--line);background:var(--card);padding:26px 18px}
+@media (min-width:760px){.guide{padding:44px}}
+.guide__prog{height:2px;background:var(--line);margin-bottom:22px}
+.guide__prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .5s var(--ease)}
+.guide h2{font-size:clamp(1.4rem,4vw,2rem);margin:.3em 0 18px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;min-height:56px;padding:12px 16px;border:1px solid var(--line);background:transparent;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.opt:hover{border-color:var(--fg)}
+.opt small{color:var(--mute);display:block;font-size:.8rem}
+.guide__nav{display:flex;justify-content:space-between;margin-top:18px;font-size:.85rem}
+.resultat{display:grid;gap:18px}
+.resultat__top{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center}
+.resultat__top .scene{aspect-ratio:1}
+.resultat h3{font-size:1.6rem}
+.pourquoi{font-size:.86rem;color:var(--mute);margin:0}
+
+/* Pied */
+.pied{border-top:1px solid var(--line);padding:56px 0 110px;font-size:.88rem}
+.pied__grid{display:grid;gap:30px}
+@media (min-width:760px){.pied__grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.pied h3{font-family:var(--sans);font-weight:500;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px;color:var(--mute)}
+.pied ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pied a{text-decoration:none}
+.pied a:hover{text-decoration:underline}
+.lettre{display:flex;gap:8px;margin-top:12px}
+.lettre input{flex:1;min-width:0;min-height:46px;padding:0 12px;border:1px solid var(--line);background:transparent;color:inherit;font:inherit}
+.lettre-note{font-size:.76rem;color:var(--mute);margin-top:6px}
+.legal{margin-top:36px;font-size:.76rem;color:var(--mute)}
+
+/* Tiroir panier */
+.voile{position:fixed;inset:0;background:rgba(10,10,14,.45);z-index:70;opacity:0;visibility:hidden;transition:.35s}
+.voile.on{opacity:1;visibility:visible}
+.tiroir{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);z-index:80;background:var(--ivoire);color:var(--encre);transform:translateX(100%);transition:transform .45s var(--ease);display:flex;flex-direction:column;visibility:hidden}
+.tiroir.on{transform:none;visibility:visible}
+.tiroir__hd{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid rgba(30,27,24,.15)}
+.tiroir__hd h2{font-size:1.4rem}
+.tiroir__body{flex:1;overflow:auto;padding:8px 16px}
+.ligne{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid rgba(30,27,24,.12);align-items:center}
+.ligne img{width:72px;height:72px;object-fit:contain;background:var(--pierre);mix-blend-mode:multiply}
+.ligne h3{font-size:1rem}
+.ligne small{color:var(--gris)}
+.qte{display:flex;align-items:center;gap:4px;margin-top:6px}
+.qte button{width:32px;height:32px;border:1px solid rgba(30,27,24,.25);background:transparent}
+.tiroir__ft{padding:16px;border-top:1px solid rgba(30,27,24,.15);display:grid;gap:10px}
+.tiroir__ft .btn{width:100%}
+.tot{display:flex;justify-content:space-between;font-size:1.05rem}
+.offert{font-size:.84rem;display:grid;gap:6px}
+.offert select{min-height:42px;border:1px solid rgba(30,27,24,.25);background:#fff;font:inherit;padding:0 8px}
+.vide{padding:40px 0;text-align:center;color:var(--gris)}
+.toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,20px);background:var(--encre);color:#fff;padding:10px 16px;font-size:.84rem;opacity:0;transition:.35s;z-index:90;pointer-events:none;max-width:calc(100% - 32px)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* Notes de refonte */
+.notes-btn{position:fixed;left:16px;bottom:16px;z-index:65;min-height:44px;padding:0 16px;border:1px solid var(--laiton);background:var(--nuit);color:#EEE8DE;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;border-radius:24px;box-shadow:0 6px 22px rgba(0,0,0,.25)}
+.panneau{position:fixed;left:0;top:0;bottom:0;width:min(520px,100%);z-index:85;background:#0d0f17;color:#E9E3D8;transform:translateX(-100%);transition:transform .45s var(--ease);overflow:auto;visibility:hidden}
+.panneau.on{transform:none;visibility:visible}
+.panneau__in{padding:22px 18px 40px}
+.panneau h2{font-size:1.6rem;margin:6px 0 4px}
+.panneau .eyebrow{color:var(--laiton)}
+.panneau ol{counter-reset:n;list-style:none;padding:0;margin:20px 0 0;display:grid;gap:18px}
+.panneau li{border-top:1px solid rgba(233,227,216,.16);padding-top:14px}
+.panneau h3{font-family:var(--sans);font-weight:500;font-size:.98rem;letter-spacing:0;margin-bottom:8px}
+.panneau h3::before{counter-increment:n;content:counter(n,decimal-leading-zero) " ";color:var(--laiton);margin-right:4px}
+.panneau dl{margin:0;display:grid;gap:6px;font-size:.86rem}
+.panneau dt{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:#a49c8f}
+.panneau dd{margin:0 0 4px}
+.panneau .x{position:absolute;top:10px;right:10px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body data-lum="clair">
+<div class="proto" role="note">Maquette préparée pour Majda Bekkali par Monsieur.H · non contractuelle</div>
+
+<header class="hd">
+  <div class="wrap hd__in">
+    <div style="display:flex;align-items:center">
+      <button class="ico burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+      <nav class="hd__nav" aria-label="Navigation principale">
+        <a href="#collection">Parfums</a>
+        <a href="#decouverte">Découvrir</a>
+        <a href="#maison">La Maison</a>
+      </nav>
+    </div>
+    <a class="hd__logo" href="#accueil" aria-label="Majda Bekkali — accueil">
+      <img class="logo-img" src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/MB_LOGO_NOIR_RVB-01.png?width=240" alt="Majda Bekkali" width="54" height="38">
+    </a>
+    <div class="hd__act">
+      <a class="ico" href="#decouverte" aria-label="Trouver mon parfum">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      </a>
+      <button class="ico" id="ouvrirPanier" aria-label="Ouvrir le panier" aria-controls="tiroir">
+        <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="badge" id="badge" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu mobile">
+  <button class="ico" id="fermerMenu" aria-label="Fermer le menu" style="align-self:flex-end"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <a href="#accueil">Accueil</a>
+  <a href="#collection">Les parfums</a>
+  <a href="#collection/clair">Les Clairs</a>
+  <a href="#collection/obscur">Les Obscurs</a>
+  <a href="#decouverte">Coffrets &amp; guide</a>
+  <a href="#maison">La Maison</a>
+</nav>
+
+<main id="main">
+
+<!-- ================= ACCUEIL ================= -->
+<div class="page" id="p-accueil" data-route="accueil">
+  <div class="hero" id="hero" style="--cut:50%">
+    <div class="hero__layer hero__layer--clair" aria-hidden="true">
+      <span class="hero__tag">Clair</span>
+      <div class="hero__bottle"><img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/Mudejar50ml_800x_3c68de13-fda9-435d-8913-d3af6429a817.png?width=900" alt="" width="430" height="430"></div>
+    </div>
+    <div class="hero__layer hero__layer--obscur" aria-hidden="true">
+      <span class="hero__tag">Obscur</span>
+      <div class="hero__bottle"><img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/MudejarObscur50ml.png?width=900" alt="" width="430" height="430"></div>
+    </div>
+    <span class="hero__hint">← glissez la lumière →</span>
+    <input class="hero__range" id="heroRange" type="range" min="4" max="96" value="50" aria-label="Faire glisser la frontière entre Mudéjar Clair et Mudéjar Obscur">
+    <div class="hero__handle" aria-hidden="true"><span>Mudéjar</span></div>
+    <div class="hero__txt">
+      <h1>Un parfum, deux lumières</h1>
+      <p>Cinq créations de Majda Bekkali existent en Clair et en Obscur. Même inspiration, deux lectures.</p>
+    </div>
+  </div>
+
+  <section class="manifeste">
+    <div class="wrap">
+      <blockquote class="poem">« Dentelle minérale, forteresse ajourée, caressée par des siècles de lumière. Jalouse de l’ombre qu’elle abrite, elle ne laisse filtrer qu’un rayon audacieux. »</blockquote>
+      <cite>Majda Bekkali — à propos de Mudéjar</cite>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sect-hd"><div><p class="eyebrow">Le concept, en clair</p><h2>Clair ou Obscur&nbsp;?</h2></div></div>
+      <div class="deux">
+        <div class="deux__c">
+          <p class="eyebrow">Version Clair</p>
+          <h3>La lumière du jour</h3>
+          <ul>
+            <li><b>Le caractère</b>Transparence, fleurs blanches, agrumes, gourmandises lumineuses — « enveloppante et transparente telle un rêve ».</li>
+            <li><b>Le flacon</b>Verre teinté, translucide : ambre, rose poudré, turquoise.</li>
+            <li><b>Pour qui</b>Celles et ceux qui aiment un sillage qui accompagne, de jour comme en douceur.</li>
+          </ul>
+        </div>
+        <div class="deux__o">
+          <p class="eyebrow">Version Obscur</p>
+          <h3>La part de nuit</h3>
+          <ul>
+            <li><b>Le caractère</b>Ambres, encens, résines, épices et cuirs — « une note nocturne », « une promenade nocturne ».</li>
+            <li><b>Le flacon</b>Verre sombre, presque noir, galet de bois gravé.</li>
+            <li><b>Pour qui</b>Celles et ceux qui veulent un parfum de caractère, au sillage qu’on remarque.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fil">Le fil commun : le même nom, le même texte de Majda, et le <strong>cèdre de l’Atlas</strong>, présent dans chacune des 11 créations.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sect-hd">
+        <div><p class="eyebrow">5 diptyques &amp; un rouge</p><h2>Les créations</h2></div>
+        <a class="lien" href="#collection">Voir les 11 parfums</a>
+      </div>
+      <div class="dipt" id="diptyques"></div>
+      <div class="seul" id="rouge"></div>
+    </div>
+  </section>
+
+  <div class="bande">
+    <img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/Capture_d_ecran_2025-09-15_a_11.35.31.png?width=1400" alt="Mains d’artisan façonnant un galet de bois, comme ceux qui coiffent les flacons" loading="lazy">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#e4c896">Savoir-faire artisanal</p>
+      <h2>Chaque flacon caresse la paume</h2>
+      <p>Chez Majda Bekkali, l’art, les matières nobles et le geste humain se fondent en créations uniques, sensuelles et intemporelles.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="portrait">
+        <img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/DSC4150.png?width=1000" alt="Majda Bekkali sentant une mouillette près d’une fenêtre" loading="lazy" width="800" height="700">
+        <div>
+          <p class="eyebrow">Fès — Paris</p>
+          <h2 style="font-size:clamp(1.8rem,5vw,2.8rem);margin:.3em 0">Majda Bekkali, conteuse de parfums</h2>
+          <p>Née à Fès dans une lignée de la noblesse marocaine, Majda Bekkali a grandi entre arts, parfums et récits ancestraux. À Paris, elle étudie l’histoire de l’art, puis fonde sa maison en 2009.</p>
+          <p>Elle ne suit aucune tendance et ne lance pas des dizaines de parfums : chaque création est chargée de sens, concentrée à 20–30 %, et confiée à un parfumeur choisi pour elle.</p>
+          <a class="btn" href="#maison">La Maison</a>
+        </div>
+      </div>
+      <div class="chiffres">
+        <div><b>2009</b><span>Fondation de la maison</span></div>
+        <div><b>20–30 %</b><span>Concentration des jus</span></div>
+        <div><b>8</b><span>Parfumeurs signataires</span></div>
+        <div><b>11</b><span>Créations, en Clair &amp; Obscur</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-guide">
+    <div class="wrap">
+      <p class="eyebrow">Trouver mon parfum</p>
+      <h2>Êtes-vous plutôt Clair ou Obscur&nbsp;?</h2>
+      <p>Quatre questions, une recommandation parmi les 11 créations — et le coffret d’échantillons qui vous permet de la vérifier sur peau.</p>
+      <a class="btn" href="#decouverte/guide">Commencer le guide</a>
+    </div>
+  </section>
+</div>
+
+<!-- ================= COLLECTION ================= -->
+<div class="page" id="p-collection" data-route="collection">
+  <div class="wrap col-hd">
+    <p class="eyebrow">Parfums — extraits concentrés</p>
+    <h1>Les parfums</h1>
+    <p>Onze créations réparties en deux collections, Sculptures olfactives et Andalus. Chacune se lit en Clair ou en Obscur : filtrez par lumière, par famille ou par collection.</p>
+  </div>
+  <div class="filtres">
+    <div class="wrap">
+      <div class="filtres__row" role="toolbar" aria-label="Filtrer par lumière et collection">
+        <span class="chip chip--sep">Lumière</span>
+        <button class="chip" data-f="lum" data-v="" aria-pressed="true">Toutes</button>
+        <button class="chip" data-f="lum" data-v="clair" aria-pressed="false"><span class="pastille pastille--c" style="display:inline-block;vertical-align:-1px;margin-right:6px"></span>Clair</button>
+        <button class="chip" data-f="lum" data-v="obscur" aria-pressed="false"><span class="pastille pastille--o" style="display:inline-block;vertical-align:-1px;margin-right:6px"></span>Obscur</button>
+        <span class="chip chip--sep">Collection</span>
+        <button class="chip" data-f="col" data-v="" aria-pressed="true">Toutes</button>
+        <button class="chip" data-f="col" data-v="sculptures" aria-pressed="false">Sculptures olfactives</button>
+        <button class="chip" data-f="col" data-v="andalus" aria-pressed="false">Andalus</button>
+      </div>
+      <div class="filtres__row" role="toolbar" aria-label="Filtrer par famille" id="famRow" style="margin-top:8px"></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="res" id="res" aria-live="polite"></p>
+    <div class="grille" id="grille"></div>
+  </div>
+</div>
+
+<!-- ================= FICHE ================= -->
+<div class="page" id="p-parfum" data-route="parfum">
+  <div class="wrap fiche" id="fiche"></div>
+</div>
+
+<!-- ================= MAISON ================= -->
+<div class="page" id="p-maison" data-route="maison">
+  <div class="wrap maison-hero">
+    <p class="eyebrow">La Maison</p>
+    <h1>Mémoire, héritage<br>et matières rares</h1>
+    <p class="poem">« Nous créons pour les connaisseurs exigeants et les novices curieux. »</p>
+  </div>
+  <section style="padding-top:40px">
+    <div class="wrap portrait">
+      <img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/DSC4150.png?width=1000" alt="Portrait de Majda Bekkali, fondatrice de la maison" loading="lazy" width="800" height="700">
+      <div class="texte">
+        <h2 style="font-size:1.9rem;margin-bottom:.5em">Une histoire singulière</h2>
+        <p>Issue d’une lignée noble de Fès, Majda grandit entourée de récits ancestraux et de trésors artistiques. Fascinée par les histoires de ses ancêtres — conquérants, guérisseurs ou voyageurs — elle développe très tôt une passion pour la beauté et la création.</p>
+        <p>À dix-huit ans, elle s’installe à Paris pour étudier l’histoire de l’art. Après un parcours dans la création de parfums pour de grandes maisons, elle fonde en 2009 sa propre maison, guidée par son amour des matières premières rares, des compositions sophistiquées et des jus intensément concentrés.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sect-hd"><div><p class="eyebrow">Nos valeurs</p><h2>L’art au cœur de chaque fragrance</h2></div></div>
+      <div class="texte">
+        <p>Nous ne suivons aucune tendance, nous ne lançons pas des dizaines de parfums. Chaque création est chargée de sens et unique : par la qualité des jus, leur concentration élevée (20 % à 30 %), et un réel message transmis à travers chacune d’elles.</p>
+        <p>Le cèdre de l’Atlas relie toutes les fragrances aux origines de Majda. Il figure dans la pyramide des onze créations :</p>
+      </div>
+      <ul class="cedre" id="cedre"></ul>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sect-hd"><div><p class="eyebrow">Les signatures</p><h2>Huit parfumeurs, une seule vision</h2></div></div>
+      <div class="nez" id="nez"></div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap metiss">
+      <img src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/Plan_de_travail_2.png?width=400" alt="Logo de l’association Métissages" loading="lazy" width="160" height="160">
+      <div class="texte">
+        <p class="eyebrow">Le changement commence avec vous</p>
+        <h2 style="font-size:1.9rem;margin:.3em 0">Métissages</h2>
+        <p>Créée par Majda Bekkali en 2021, l’association Métissages vient en aide à des femmes en situation de précarité. Elle relie tradition et culture en offrant aux femmes rurales amazighes, dont le tissage est le langage, les moyens de créer, de vivre dignement et de préserver leur patrimoine.</p>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sect-hd"><div><p class="eyebrow">Journal</p><h2>Les derniers récits</h2></div></div>
+      <div class="journal">
+        <article><time datetime="2026-10-14">14 octobre 2026</time><h3>Le cèdre de l’Atlas : l’arbre qui relie le parfum au Maroc</h3></article>
+        <article><time datetime="2026-09-04">4 septembre 2026</time><h3>Les Métamorphoses</h3></article>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= DÉCOUVERTE ================= -->
+<div class="page" id="p-decouverte" data-route="decouverte">
+  <div class="wrap disc-hd">
+    <p class="eyebrow">Découvrir avant de choisir</p>
+    <h1>Commencez par la lumière</h1>
+    <p>Deux coffrets de 5 échantillons de 2 ml : l’un réunit les Clairs, l’autre les Obscurs. Ensemble, ils couvrent 10 des 11 créations — et le guide vous dit par lequel commencer.</p>
+  </div>
+  <div class="wrap">
+    <div class="coffrets" id="coffrets"></div>
+    <p class="duo" style="margin-bottom:0">Tendre est la Nuit — Obscur ne figure dans aucun coffret : choisissez-le comme échantillon offert dans le panier.</p>
+    <p class="duo">Vous hésitez entre les deux lumières&nbsp;? Les deux coffrets réunis = 10 échantillons, soit 80&nbsp;€. <button class="lien" id="ajouterDuo">Ajouter les deux</button></p>
+
+    <div class="guide" id="guide" aria-live="polite"></div>
+  </div>
+  <div style="height:80px"></div>
+</div>
+
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied__grid">
+      <div>
+        <img class="logo-img" src="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/MB_LOGO_NOIR_RVB-01.png?width=240" alt="Majda Bekkali" width="72" height="51" loading="lazy">
+        <p style="color:var(--mute);max-width:36ch">Maison de parfums parisienne. Des créations en deux lumières, Clair et Obscur.</p>
+        <form class="lettre" onsubmit="event.preventDefault();toast('Maquette : inscription non envoyée.')">
+          <label class="sr" for="mail">Votre e-mail</label>
+          <input id="mail" type="email" placeholder="Votre e-mail" autocomplete="email">
+          <button class="btn btn--plein" type="submit">S’inscrire</button>
+        </form>
+        <p class="lettre-note">La lettre de la maison : nouveautés en avant-première et contenu exclusif.</p>
+      </div>
+      <div>
+        <h3>Parfums</h3>
+        <ul><li><a href="#collection/clair">Les Clairs</a></li><li><a href="#collection/obscur">Les Obscurs</a></li><li><a href="#decouverte">Coffrets découverte</a></li><li><a href="#decouverte/guide">Trouver mon parfum</a></li></ul>
+      </div>
+      <div>
+        <h3>Où sentir nos parfums</h3>
+        <ul><li>Jovoy Paris</li><li>Sens Unique</li><li>Parfumaria</li><li>Aus Liebe zum Duft</li><li>Crème de la Crème</li><li>Fragrancetale</li></ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul><li><a href="mailto:contact@majdabekkaliparis.com">contact@majdabekkaliparis.com</a></li><li><a href="https://www.instagram.com/majdabekkali_parfums/" rel="noopener" target="_blank">Instagram</a></li><li>Paris 6<sup>e</sup></li></ul>
+      </div>
+    </div>
+    <p class="legal">© Majda Bekkali — Paressence SAS. Maquette de démonstration, prix et contenus issus du site actuel.</p>
+  </div>
+</footer>
+
+<!-- Panier -->
+<div class="voile" id="voile"></div>
+<aside class="tiroir" id="tiroir" aria-label="Panier" aria-hidden="true">
+  <div class="tiroir__hd"><h2>Votre panier</h2><button class="ico" id="fermerPanier" aria-label="Fermer le panier"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button></div>
+  <div class="tiroir__body" id="lignes"></div>
+  <div class="tiroir__ft" id="pied-panier"></div>
+</aside>
+
+<!-- Notes de refonte -->
+<button class="notes-btn" id="ouvrirNotes" aria-controls="panneau">Notes de refonte</button>
+<aside class="panneau" id="panneau" aria-label="Notes de refonte" aria-hidden="true">
+  <div class="panneau__in">
+    <button class="ico x" id="fermerNotes" aria-label="Fermer les notes"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+    <p class="eyebrow">Monsieur.H — argumentaire</p>
+    <h2>Ce que la refonte change</h2>
+    <p style="font-size:.86rem;color:#b8b0a3">Relevé effectué sur majdabekkali.com le 14 octobre 2026. Chaque constat est mesuré sur le site actuel.</p>
+    <ol>
+      <li><h3>Le concept Clair / Obscur n’est expliqué nulle part</h3><dl>
+        <dt>Aujourd’hui</dt><dd>Sur 15 pages relevées (accueil, collections, fiches, Histoire, Nos valeurs…), aucune phrase n’explique la différence. Les fiches jumelles affichent le <em>même</em> texte « Les mots de Majda » (Fusion Sacrée, Mudéjar, Tulaytulah, J’ai fait un rêve) et aucune ne renvoie vers sa version sœur. Nommage incohérent : « Fusion Sacrée - CLAIR » mais « Tulaytulah » et « Mudéjar » sans mention Clair ; « Mon Nom Est Rouge » sans mention, mais rangé dans le coffret Obscurs.</dd>
+        <dt>Dans la maquette</dt><dd>Un héros interactif (on fait glisser la lumière sur Mudéjar), un bloc « Clair ou Obscur ? » en trois lignes, et une bascule Clair | Obscur sur chaque fiche qui fait passer toute la page du jour à la nuit, avec les notes partagées surlignées.</dd>
+        <dt>Bénéfice</dt><dd>Le concept devient la raison d’acheter, plus une source de doute. Et il ouvre une vente naturelle du second flacon : « j’ai le Clair, je veux l’Obscur ».</dd></dl></li>
+      <li><h3>Des fiches jumelles qui se cannibalisent en SEO</h3><dl>
+        <dt>Aujourd’hui</dt><dd>Même bloc éditorial sur les deux URL de chaque paire. Bloc « Vous pourriez aussi adorer » identique partout (les 4 Andalus), y compris sur une fiche Andalus. Faute « Betrand Duchaufour » sur les deux Fusion Sacrée. Sur J’ai fait un rêve - Clair, l’onglet « Ingrédients et allergènes » contient une famille olfactive au lieu de la liste INCI.</dd>
+        <dt>Dans la maquette</dt><dd>Chaque fiche a son accroche, son nez, sa pyramide, un comparatif avec sa jumelle et des suggestions calculées (même famille, même collection). Title et meta description mis à jour par fiche.</dd>
+        <dt>Bénéfice</dt><dd>Deux pages vraiment distinctes qui peuvent toutes les deux se positionner, et plus de pages vues par visite.</dd></dl></li>
+      <li><h3>Des coffrets découverte cachés en bout de liste</h3><dl>
+        <dt>Aujourd’hui</dt><dd>« Les Clairs » et « Les Obscurs » (5 × 2 ml, 40 € chacun) sont rangés comme deux produits parmi les parfums, sans guide pour choisir. Ils ne sont proposés sur aucune fiche, qui démarre à 150 € (52 € en 10 ml pour seulement 4 des 11 parfums). Slugs hérités : <code>les-obscurs-coffret-decouverte-copie</code>, <code>les-clairs-discovery-set</code>. « Tendre est la Nuit - Obscur » n’est dans aucun des deux coffrets. Un produit « Ziryab - Echantillon » existe sans parfum correspondant.</dd>
+        <dt>Dans la maquette</dt><dd>Les coffrets deviennent la porte d’entrée : sur chaque fiche (« essayer d’abord »), dans le guide, et en duo (2 × 40 €) pour celles et ceux qui hésitent entre les deux lumières.</dd>
+        <dt>Bénéfice</dt><dd>Un premier achat à 40 € au lieu de 150 € pour un parfum inconnu acheté à l’aveugle, puis une conversion vers le flacon.</dd></dl></li>
+      <li><h3>Une pop-up -20 % qui contredit la maison</h3><dl>
+        <dt>Aujourd’hui</dt><dd>La pop-up affiche « SURPRISE ! Inscris-toi à notre newsletter et profite d’une réduction de 20 % » (tutoiement, alors que tout le site vouvoie ; faute « cordoonnées »). Le pied de page promet, lui, « -5 % lors de votre première commande ». Deux offres contradictoires pour un même geste.</dd>
+        <dt>Dans la maquette</dt><dd>Aucune pop-up qui interrompt. La lettre est proposée en pied de page avec la promesse de la maison (avant-premières, contenu exclusif) ; l’offre de bienvenue, s’il y en a une, est unique et décidée par vous.</dd>
+        <dt>Bénéfice</dt><dd>Une image de maison de niche, pas de site de déstockage, et de la marge préservée.</dd></dl></li>
+      <li><h3>Une page d’accueil lourde, qui interroge le panier en boucle</h3><dl>
+        <dt>Aujourd’hui</dt><dd>Mesuré sur l’accueil : un script d’échantillon offert appelle <code>/cart.js</code> environ 3 fois par seconde (316 appels en 107 s sans aucune action). 38 scripts, environ 12 domaines tiers (jQuery, Swiper, ScrollReveal via unpkg, Font Awesome Pro, Typekit, Google Fonts…), trois familles de polices, 1,86 Mo transférés, chargement complet à 4,3 s sur une connexion fibre de bureau. Un fondu « fader » retarde en plus chaque clic.</dd>
+        <dt>Dans la maquette</dt><dd>Un seul fichier, aucune librairie, deux polices au plus côté thème, images servies à la bonne taille par le CDN Shopify, navigation immédiate.</dd>
+        <dt>Bénéfice</dt><dd>Meilleurs Core Web Vitals (critère de classement Google), moins de rebond sur mobile, moins de charge sur la boutique.</dd></dl></li>
+      <li><h3>Un référencement qui ignore ses meilleurs atouts</h3><dl>
+        <dt>Aujourd’hui</dt><dd>H1 vide sur l’accueil, title réduit à « Majda Bekkali ». Aucune meta description sur les collections, Histoire, Nos valeurs, Association, Journal. Pas de H1 sur Histoire, Nos valeurs, Association. URL <code>/pages/hisoire</code> (faute). 14 images sur 40 sans texte alternatif sur l’accueil, dont les 3 bannières. Collections sans aucun texte. Huit parfumeurs reconnus (Bertrand Duchaufour, Cécile Zarokian, Delphine Thierry…) cités uniquement dans un accordéon.</dd>
+        <dt>Dans la maquette</dt><dd>Un H1 par page, des textes de collection, une page Maison qui met en avant les nez et le cèdre de l’Atlas, des alt descriptifs, des titles dynamiques. À prévoir à l’intégration : redirections 301 propres et données structurées Product.</dd>
+        <dt>Bénéfice</dt><dd>Positionnement sur des recherches à forte intention : « parfum Bertrand Duchaufour », « parfum Andalousie », « parfum de niche Paris ».</dd></dl></li>
+      <li><h3>Des détails qui fragilisent la confiance</h3><dl>
+        <dt>Aujourd’hui</dt><dd>La politique de confidentialité indique « adressecontact@majdabekkaliparis.com ». Les prix s’affichent tantôt « 52.00€ », tantôt « €52,00 ». « Trouver une boutique » mène à une carte Google sans aucune liste lisible des revendeurs (Jovoy Paris, Sens Unique…). La page Histoire affirme « Recommandé par des centaines de personnes » sans source.</dd>
+        <dt>Dans la maquette</dt><dd>Prix au format français partout, revendeurs listés en clair, adresse de contact unique, aucune affirmation non sourcée ; l’emplacement des avis est prévu mais vide tant qu’aucun avis vérifié n’existe.</dd>
+        <dt>Bénéfice</dt><dd>Un client qui paie 150 à 230 € un flacon ne doit croiser aucun signe de négligence.</dd></dl></li>
+    </ol>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var CDN="https://cdn.shopify.com/s/files/1/0928/7204/9013/files/";
+function im(f,w){return CDN+f+"?width="+(w||700);}
+function eur(n){return n.toLocaleString("fr-FR",{minimumFractionDigits:0,maximumFractionDigits:2})+" €";}
+
+/* ---- Catalogue relevé sur /products.json (prix, formats, notes, nez : site actuel) ---- */
+var P=[
+ {h:"mon-nom-est-rouge",n:"Mon Nom Est Rouge",lum:"obscur",col:"sculptures",fam:"Épicé & cuir",nose:"Cécile Zarokian",
+  v:[["10 ml",52],["50 ml",150],["120 ml",230]],img:["MonNomestRouge50ml.png","MonNomestRouge120ml.png","MonNomEstRouge10ml_whitebackground.png"],
+  acc:"Une allégorie rouge, rose turque et épices chaudes.",
+  d:"Une allégorie rouge qui explore les facettes émotionnelles de cette couleur symbolique. Une ronde d’épices chaudes tourbillonne autour d’une majestueuse rose turque. L’ambre, poussé vers son extrême, confère un sillage renversant.",
+  mots:"Je suis sur les pétales de roses et sur les blessures de guerre. Mon nom est rouge.",
+  t:["Baies roses","Géranium","Encens","Bois de rose","Élémi","Poivre rose"],c:["Rose turque","Cardamome","Cannelle","Gingembre","Cumin"],f:["Cèdre de l’Atlas","Bois blanc","Gaïac","Papyrus","Musc","Encens","Cuir","Labdanum","Castoréum"],
+  tags:["obscur","epice","cuir","rose","sculptures","affirme"]},
+ {h:"fusion-sacree",n:"Fusion Sacrée",lum:"clair",twin:"fusion-sacree-obscur",col:"sculptures",fam:"Floral",nose:"Bertrand Duchaufour",
+  v:[["50 ml",150],["120 ml",230]],img:["FusionSacree-clair50ml.png","FusionSacree-clair120ml.png","FusionSacree.png"],
+  acc:"Tubéreuse éclatante et profondeur du café.",
+  d:"Une fragrance sulfureuse et addictive. Rencontre audacieuse d’une éclatante tubéreuse avec la profondeur du café. Un parfum qui attire, pour mieux faire goûter au vertige de son accord de fond où se déploient le fir balsam, le benjoin, le musc et l’ambre gris.",
+  mots:"Un tracé délicat se délie, une ligne fragile s’avance vers l’imminence d’un dévoilement. Fusion promise.",
+  t:["Café","Absolue de cassis","Bergamote","Clémentine","Néroli"],c:["Tubéreuse","Gardénia","Jasmin","Lait de figue","Note de pain toasté"],f:["Cèdre de l’Atlas","Fir balsam","Tolu","Benjoin","Musc","Vanille","Héliotrope","Ambre gris","Patchouli"],
+  tags:["clair","floral","gourmand","sculptures"]},
+ {h:"fusion-sacree-obscur",n:"Fusion Sacrée",lum:"obscur",twin:"fusion-sacree",col:"sculptures",fam:"Ambré",nose:"Bertrand Duchaufour",
+  v:[["10 ml",52],["50 ml",150],["120 ml",230]],img:["FusionSacree-obscur50ml_7d9947a8-d9b1-45a6-8708-96f50fe9999e.png","FusionSacree-obscur120ml.png","FusionSacree-obscur10ml_whitebackground.png"],
+  acc:"Rhum, fleur d’oranger et fond résineux.",
+  d:"La lutte des contraires est toujours à la source de tout. Une note contrastée qui offre d’abord sa facette gustative avec le rhum et le céleri. Le cœur abrite de l’eau de fleur d’oranger et une larme de tubéreuse. Les notes de fond sont brunes, boisées et résineuses.",
+  mots:"Un tracé délicat se délie, une ligne fragile s’avance vers l’imminence d’un dévoilement. Fusion promise.",
+  t:["Rhum","Lavande","Géranium","Cédrat","Orange douce","Céleri"],c:["Fleur d’oranger","Néroli","Clou de girofle","Cardamome","Œillet"],f:["Benjoin","Tolu","Réglisse","Cèdre de l’Atlas","Bois de santal","Vanille","Ambre gris","Opoponax","Caramel","Musc"],
+  tags:["obscur","ambre","gourmand","floral","sculptures","affirme"]},
+ {h:"j_ai-fait-un-reve-clair",n:"J’ai fait un rêve",lum:"clair",twin:"jai-fait-un-reve-obscur",col:"sculptures",fam:"Floral",nose:"Dorothée Piot",
+  v:[["50 ml",150],["120 ml",230]],img:["J_aiFaitunReve-clair50ml.png","J_aiFaitunReve-clair120ml.png","J_aiFaitunReve-clair120ml_2.png"],
+  acc:"Jasmin, fleur d’oranger et blancheur des muscs.",
+  d:"Enveloppante et transparente telle un rêve, la fragrance fuse et s’enroule autour de la blancheur du jasmin et de la fleur d’oranger. Son lit de bois précieux se pare de la chaleur balsamique du labdanum, tandis que la sensualité du cuir s’éclaire d’une fulgurance blanche de muscs.",
+  mots:"J’ai rêvé d’un monde où les différences s’épousent pour donner naissance à l’exceptionnel.",
+  t:["Petit-grain","Feuilles de cassis","Élémi","Cumin"],c:["Néroli","Jasmin","Ylang-ylang"],f:["Cèdre de l’Atlas","Bois blanc","Gaïac","Papyrus","Musc","Encens","Cuir","Labdanum","Castoréum"],
+  tags:["clair","floral","cuir","sculptures","enveloppant"]},
+ {h:"jai-fait-un-reve-obscur",n:"J’ai fait un rêve",lum:"obscur",twin:"j_ai-fait-un-reve-clair",col:"sculptures",fam:"Boisé",nose:"Marina Jung-Allegret",
+  v:[["50 ml",150],["120 ml",230]],img:["J_aiFaitunReve-obscur50ml.png","J_aiFaitunReve-obscur120ml.png","J_aiFaitunReve-obscur120ml_2.png"],
+  acc:"Poivre rose, jasmin d’Égypte et safran.",
+  d:"Une composition précise et singulière. Puissante et éclectique, elle s’ouvre piquante de poivre rose et se découvre surprenante d’un absolu jasmin d’Égypte. Un parfum de caractère au sillage envoûtant où s’allie la profondeur des bois et la gaieté du safran.",
+  mots:"J’ai rêvé d’un monde où les différences s’épousent pour donner naissance à l’exceptionnel.",
+  t:["Bergamote","Poivre rose"],c:["Jasmin d’Égypte","Vanille"],f:["Cèdre de l’Atlas","Safran","Bois de cachemire","Oud"],
+  tags:["obscur","floral","epice","bois","sculptures","affirme"]},
+ {h:"tendre-est-la-nuit-clair",n:"Tendre est la Nuit",lum:"clair",twin:"tendre-est-la-nuit-obscur",col:"sculptures",fam:"Ambré",nose:"Delphine Thierry",
+  v:[["50 ml",150],["120 ml",230]],img:["TendreestlaNuit-clair50ml.png","TendreestlaNuit-clair50ml_1_258e7be3-a5eb-49b0-b2be-f7fae8bec8a6.png","TendreestlaNuit-clair50ml_2_d8824090-4508-426b-9159-6b3d2e94ad58.png"],
+  acc:"Santal et ambre pour attendrir les crépuscules.",
+  d:"Un accord santal et ambre pour attendrir les crépuscules. Une pointe de patchouli et de vanille pour s’y fondre et s’y blottir.",
+  mots:"La nuit s’avance et dans son sillage gonfle l’attrait de l’ombre et de la douce léthargie.",
+  t:["Hibiscus","Clou de girofle"],c:["Ambre","Patchouli","Bois de santal","Vétiver"],f:["Cèdre de l’Atlas","Ambre","Mousse de chêne","Vanille"],
+  tags:["clair","ambre","bois","sculptures","enveloppant"]},
+ {h:"tendre-est-la-nuit-obscur",n:"Tendre est la Nuit",lum:"obscur",twin:"tendre-est-la-nuit-clair",col:"sculptures",fam:"Chypré",nose:"Delphine Thierry",
+  v:[["50 ml",150],["120 ml",230]],img:["TendreestlaNuit-obscur50ml_7f5da639-41bb-4250-8c15-79b0023ec909.png","TendreestlaNuit-obscur120ml_4938d76b-3c65-42fc-b871-4f51196a54b5.png","TendreestlaNuit-obscur120ml_2.png"],
+  acc:"Immortelle et davana, une grammaire des années 20.",
+  d:"Sophistiquée et affirmée, cette note nocturne et chyprée adopte une grammaire olfactive des années 20. Les facettes racées et élégantes de l’immortelle se mêlent délicatement aux notes aromatiques du davana.",
+  mots:"La nuit s’avance et dans son sillage gonfle l’attrait de l’ombre et de la douce léthargie.",
+  t:["Immortelle corse","Ambrette","Cabreuva","Carotte"],c:["Davana","Poivre du Sichuan","Benjoin"],f:["Cuir","Cèdre de l’Atlas","Labdanum","Mousse de chêne","Encens","Patchouli","Castoréum","Civette"],
+  tags:["obscur","cuir","chypre","epice","sculptures","affirme"]},
+ {h:"tulaytulah",n:"Tulaytulah",lum:"clair",twin:"tulaytulah-obscur",col:"andalus",fam:"Gourmand",nose:"Delphine Thierry",
+  v:[["10 ml",52],["50 ml",150],["120 ml",230]],img:["Tulaytulah50ml_871385c1-afa8-4cc1-bfec-b188e7ccd6dd.png","Tulaytulah120ml.png","Tulaytulah10ml-whitebackground.png"],
+  acc:"Amande et fleur de cerisier, un printemps à Tolède.",
+  d:"Une fragrance printanière et gourmande autour de notes d’amande et de fleur de cerisier. Une touche de sensualité est apportée par un accord de cuir blond souple et velouté.",
+  mots:"Tolède est un emblème d’harmonie, d’équilibre, de prospérité et de douceur de vivre. Tulaytulah est mon message de paix pour le monde.",
+  t:["Fleur de cerisier","Cyprès","Anis étoilé"],c:["Amande amère","Pâte d’amande","Malt"],f:["Cuir","Cèdre de l’Atlas","Daim blond","Fève tonka","Vanille"],
+  tags:["clair","gourmand","cuir","andalus","enveloppant"]},
+ {h:"tulaytulah-obscur",n:"Tulaytulah",lum:"obscur",twin:"tulaytulah",col:"andalus",fam:"Gourmand",nose:"Camille Chemardin",
+  v:[["10 ml",52],["50 ml",150]],img:["Tulaytulahobscur50ml-nobackground.png","Tulaytulahobscur10ml-whitebackground_75bfa256-e613-4d60-9edf-bc0a2c13e5f8.png"],
+  acc:"Cerise confite, liquoreuse et ambrée.",
+  d:"Un parfum ambré autour d’une cerise confite et liquoreuse. Des notes balsamiques, suaves et florales apportent une texture crémeuse et voluptueuse à la composition.",
+  mots:"Tolède est un emblème d’harmonie, d’équilibre, de prospérité et de douceur de vivre. Tulaytulah est mon message de paix pour le monde.",
+  t:["Fleur de cerisier","Cumin","Cannelle"],c:["Cassis","Amande","Héliotrope","Labdanum","Davana"],f:["Vanille","Benjoin","Cèdre de l’Atlas","Bois précieux"],
+  tags:["obscur","gourmand","ambre","andalus","enveloppant"]},
+ {h:"mudejar",n:"Mudéjar",lum:"clair",twin:"mudejar-obscur",col:"andalus",fam:"Hespéridé",nose:"Richard Ibanez",
+  v:[["50 ml",150],["120 ml",230]],img:["Mudejar50ml_800x_3c68de13-fda9-435d-8913-d3af6429a817.png","Mudejar120ml.png","Mudejar120ml_2.png"],
+  acc:"Un jardin d’hespérides au pied de la Mosquée-Cathédrale.",
+  d:"Un accord riche et contrasté qui chante un jardin d’hespérides en Andalousie, au pied d’une Mosquée-Cathédrale. Les notes de pamplemousse et de bergamote rencontrent la minéralité de la pierre d’or. Les notes d’encens tamisent la composition sur la peau.",
+  mots:"Dentelle minérale, forteresse ajourée, caressée par des siècles de lumière. Jalouse de l’ombre qu’elle abrite, elle ne laisse filtrer qu’un rayon audacieux.",
+  t:["Pamplemousse","Poivre noir"],c:["Cassis","Cèdre de l’Atlas"],f:["Mousse de chêne","Encens","Santal","Cuir"],
+  tags:["clair","hesperide","encens","andalus"]},
+ {h:"mudejar-obscur",n:"Mudéjar",lum:"obscur",twin:"mudejar",col:"andalus",fam:"Encens",nose:"Marie Schnirer",
+  v:[["50 ml",150],["120 ml",230]],img:["MudejarObscur50ml.png","MudejarObscur120ml.png","MudejarObscur120ml_2.png"],
+  acc:"Une promenade nocturne dans une bâtisse sacrée.",
+  d:"Cet accord est une promenade nocturne dans une bâtisse sacrée andalouse. L’encens et la rose sont au cœur. Et la richesse de l’ambre se mêle à l’élégance du bois de cèdre.",
+  mots:"Dentelle minérale, forteresse ajourée, caressée par des siècles de lumière. Jalouse de l’ombre qu’elle abrite, elle ne laisse filtrer qu’un rayon audacieux.",
+  t:["Cassis","Baies roses"],c:["Encens","Rose"],f:["Patchouli","Cèdre de l’Atlas","Cashmeran","Ambroxan","Ambre"],
+  tags:["obscur","encens","rose","ambre","andalus","affirme"]}
+];
+var COF={
+ clair:{h:"les-clairs-discovery-set",n:"Les Clairs",prix:40,img:"DiscoverysetMB-LESCLAIRS1.jpg",items:["J’ai fait un rêve — Clair","Fusion Sacrée — Clair","Tendre est la Nuit — Clair","Tulaytulah","Mudéjar"],hs:["j_ai-fait-un-reve-clair","fusion-sacree","tendre-est-la-nuit-clair","tulaytulah","mudejar"]},
+ obscur:{h:"les-obscurs-coffret-decouverte",n:"Les Obscurs",prix:40,img:"DiscoverysetMB-LESOBSCURS1.jpg",items:["J’ai fait un rêve — Obscur","Fusion Sacrée — Obscur","Mon Nom Est Rouge","Tulaytulah — Obscur","Mudéjar — Obscur"],hs:["jai-fait-un-reve-obscur","fusion-sacree-obscur","mon-nom-est-rouge","tulaytulah-obscur","mudejar-obscur"]}
+};
+var ECH=["Fusion Sacrée — Clair","Fusion Sacrée — Obscur","J’ai fait un rêve — Clair","J’ai fait un rêve — Obscur","Tendre est la Nuit — Clair","Tendre est la Nuit — Obscur","Tulaytulah","Tulaytulah — Obscur","Mudéjar","Mudéjar — Obscur","Mon Nom Est Rouge"];
+function inCof(p){return COF[p.lum].hs.indexOf(p.h)>=0;}
+var BY={};P.forEach(function(p){BY[p.h]=p;});
+var COLN={sculptures:"Sculptures olfactives",andalus:"Andalus"};
+function lumLabel(p){return p.lum==="clair"?"Clair":"Obscur";}
+function fullName(p){return p.twin||p.lum==="obscur"&&p.h!=="mon-nom-est-rouge"?p.n+" — "+lumLabel(p):p.n;}
+function minPrice(p){return Math.min.apply(null,p.v.map(function(x){return x[1];}));}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function scene(p,f,w,lazy){return '<div class="scene'+(p.lum==="obscur"?" scene--obscur":"")+'"><img src="'+im(f||p.img[0],w||700)+'" alt="Flacon '+esc(fullName(p))+'"'+(lazy===false?"":' loading="lazy"')+' width="600" height="600"></div>';}
+function norm(s){return s.toLowerCase().replace(/^(absolue? de |résinoïde de )/,"").replace(/ (de madagascar|absolue|résinoïde)$/,"").trim();}
+function commun(a,b){var B={};b.t.concat(b.c,b.f).forEach(function(x){B[norm(x)]=1;});var o=[],seen={};a.t.concat(a.c,a.f).forEach(function(x){var k=norm(x);if(B[k]&&!seen[k]){seen[k]=1;o.push(x);}});return o;}
+
+/* ---- Accueil ---- */
+var pairs=P.filter(function(p){return p.lum==="clair";});
+document.getElementById("diptyques").innerHTML=pairs.map(function(c){var o=BY[c.twin];var noses=c.nose===o.nose?"Signé "+c.nose:"Clair par "+c.nose+" · Obscur par "+o.nose;
+ return '<article class="dip"><a class="dip__half dip__half--c" href="#parfum/'+c.h+'" aria-label="'+esc(fullName(c))+'">'+scene(c,null,600)+'<span class="dip__lab">Clair</span></a>'+
+ '<a class="dip__half dip__half--o" href="#parfum/'+o.h+'" aria-label="'+esc(fullName(o))+'">'+scene(o,null,600)+'<span class="dip__lab">Obscur</span></a>'+
+ '<div class="dip__info"><p class="eyebrow">'+COLN[c.col]+'</p><h3>'+c.n+'</h3><p><strong>Clair</strong> — '+c.acc+'<br><strong>Obscur</strong> — '+o.acc+'</p><span class="dip__noses">'+noses+' · dès '+eur(Math.min(minPrice(c),minPrice(o)))+'</span></div></article>';}).join("");
+var r=BY["mon-nom-est-rouge"];
+document.getElementById("rouge").innerHTML=scene(r,null,700)+'<div class="seul__t"><p class="eyebrow">Obscur, sans jumeau</p><h3 style="font-size:2rem;margin:.3em 0">Mon Nom Est Rouge</h3><p class="poem" style="font-size:1.15rem">« '+r.mots+' »</p><p style="color:#c9c1b4">'+r.acc+' Signé '+r.nose+'. Il fait partie du coffret Les Obscurs.</p><a class="btn" href="#parfum/'+r.h+'" style="color:#EEE8DE">Découvrir · dès '+eur(52)+'</a></div>';
+
+var hero=document.getElementById("hero"),hr=document.getElementById("heroRange");
+hr.addEventListener("input",function(){hero.style.setProperty("--cut",hr.value+"%");});
+
+/* ---- Collection ---- */
+var FIL={lum:"",col:"",fam:""};
+var fams=[];P.forEach(function(p){if(fams.indexOf(p.fam)<0)fams.push(p.fam);});
+document.getElementById("famRow").innerHTML='<span class="chip chip--sep">Famille</span><button class="chip" data-f="fam" data-v="" aria-pressed="true">Toutes</button>'+fams.map(function(f){return '<button class="chip" data-f="fam" data-v="'+f+'" aria-pressed="false">'+f+'</button>';}).join("");
+document.querySelectorAll("#p-collection .chip[data-f]").forEach(function(b){b.addEventListener("click",function(){FIL[b.dataset.f]=b.dataset.v;syncChips();renderGrille();});});
+function syncChips(){document.querySelectorAll("#p-collection .chip[data-f]").forEach(function(b){b.setAttribute("aria-pressed",String(FIL[b.dataset.f]===b.dataset.v));});}
+function carte(p){return '<a class="carte" href="#parfum/'+p.h+'">'+scene(p)+'<span class="carte__lum"><span class="pastille pastille--'+(p.lum==="clair"?"c":"o")+'"></span>'+lumLabel(p)+' · '+COLN[p.col]+'</span><h3>'+fullName(p)+'</h3><span class="carte__meta">'+p.fam+' · '+p.nose+'</span><span class="carte__prix">dès '+eur(minPrice(p))+'</span></a>';}
+function renderGrille(){var l=P.filter(function(p){return(!FIL.lum||p.lum===FIL.lum)&&(!FIL.col||p.col===FIL.col)&&(!FIL.fam||p.fam===FIL.fam);});
+ document.getElementById("res").textContent=l.length+" parfum"+(l.length>1?"s":"");
+ document.getElementById("grille").innerHTML=l.length?l.map(carte).join(""):'<p>Aucun parfum ne correspond. <button class="lien" id="raz">Réinitialiser</button></p>';
+ var z=document.getElementById("raz");if(z)z.onclick=function(){FIL={lum:"",col:"",fam:""};syncChips();renderGrille();};}
+
+/* ---- Fiche ---- */
+function renderFiche(h){var p=BY[h];if(!p){location.hash="#collection";return;}
+ var tw=p.twin?BY[p.twin]:null;var com=tw?commun(p,tw):[];var ck={};com.forEach(function(x){ck[norm(x)]=1;});
+ document.body.dataset.lum=p.lum;
+ function notes(a){return '<ul class="notes">'+a.map(function(n){return '<li'+(ck[norm(n)]?' class="commun" title="Aussi dans la version '+(p.lum==="clair"?"Obscur":"Clair")+'"':'')+'>'+n+'</li>';}).join("")+'</ul>';}
+ var cof=COF[p.lum];
+ var sim=P.filter(function(x){return x.h!==p.h&&x.h!==p.twin&&(x.fam===p.fam||x.col===p.col&&x.lum===p.lum);}).slice(0,3);
+ var assoc=(tw?[tw]:[]).concat(sim).slice(0,4);
+ var html='<nav class="fil-ariane" aria-label="Fil d’Ariane"><a href="#accueil">Accueil</a> / <a href="#collection">Parfums</a> / '+fullName(p)+'</nav>'+
+ '<div class="fiche__grid"><div class="fiche__media"><div id="grand">'+scene(p,p.img[0],1000,false)+'</div><div class="vignettes">'+p.img.map(function(f,i){return '<button aria-label="Voir la photo '+(i+1)+'" aria-pressed="'+(i===0)+'" data-img="'+f+'"><img src="'+im(f,160)+'" alt="" loading="lazy"></button>';}).join("")+'</div></div>'+
+ '<div><p class="eyebrow">'+COLN[p.col]+' · Extrait</p><h1>'+p.n+'</h1>'+
+ (tw?'<div class="bascule" role="group" aria-label="Choisir la lumière"><button data-go="'+(p.lum==="clair"?p.h:tw.h)+'" aria-pressed="'+(p.lum==="clair")+'">Clair</button><button data-go="'+(p.lum==="obscur"?p.h:tw.h)+'" aria-pressed="'+(p.lum==="obscur")+'">Obscur</button></div><p class="bascule-aide">'+(p.lum==="clair"?"Vous lisez la version lumineuse. Basculez pour découvrir sa part de nuit.":"Vous lisez la version nocturne. Basculez pour revenir à la lumière.")+'</p>'
+   :'<p class="bascule-aide" style="margin-top:10px"><span class="pastille pastille--o" style="display:inline-block;vertical-align:-1px;margin-right:6px"></span>Création Obscur, sans version Clair — incluse dans le coffret Les Obscurs.</p>')+
+ '<p class="fiche__acc">'+p.acc+'</p><p class="fiche__desc">'+p.d+'</p>'+
+ '<div class="faits"><div><b>Famille</b>'+p.fam+'</div><div><b>Parfumeur</b>'+p.nose+'</div><div><b>Concentration</b>Extrait, 20–30 %</div><div><b>Lumière</b>'+lumLabel(p)+'</div></div>'+
+ '<fieldset class="formats"><legend>Format</legend>'+p.v.map(function(v,i){return '<label><input type="radio" name="fmt" value="'+i+'"'+(i===(p.v.length>2?1:0)?" checked":"")+'><span>'+v[0]+'<small>'+eur(v[1])+'</small></span></label>';}).join("")+'</fieldset>'+
+ '<div class="achat"><button class="btn btn--plein" id="ajout">Ajouter au panier — <span id="prixSel"></span></button></div>'+
+ '<div class="essai"><img src="'+im(cof.img,160)+'" alt="Coffret découverte '+cof.n+'" loading="lazy"><div>'+(inCof(p)?'<p><strong>Essayer d’abord&nbsp;?</strong> '+fullName(p)+' fait partie du coffret <em>'+cof.n+'</em> : 5 × 2 ml, '+eur(cof.prix)+'.</p>':'<p><strong>Essayer d’abord&nbsp;?</strong> '+fullName(p)+' n’est pas dans un coffret : choisissez-le comme échantillon 2 ml offert dans le panier, ou explorez les autres '+cof.n+' (5 × 2 ml, '+eur(cof.prix)+').</p>')+'<button class="lien" data-cof="'+p.lum+'">Ajouter le coffret '+cof.n+'</button></div></div>'+
+ '</div></div>'+
+ '<div class="blocs">'+
+ '<div><h2>La pyramide</h2><div class="pyr"><div class="pyr__row"><h3>Tête</h3>'+notes(p.t)+'</div><div class="pyr__row"><h3>Cœur</h3>'+notes(p.c)+'</div><div class="pyr__row"><h3>Fond</h3>'+notes(p.f)+'</div></div>'+(tw?'<p class="legende"><i></i>Notes partagées avec la version '+(p.lum==="clair"?"Obscur":"Clair")+'</p>':'')+'</div>'+
+ (tw?'<div><h2>Le diptyque, côte à côte</h2><div class="compare">'+[p.lum==="clair"?p:tw,p.lum==="clair"?tw:p].map(function(x){return '<div class="'+(x.lum==="clair"?"c":"o")+'"><p class="eyebrow">'+lumLabel(x)+'</p><h3>'+x.n+'</h3><p>'+x.acc+'</p><p>Famille : '+x.fam+'<br>Nez : '+x.nose+'<br>Dès '+eur(minPrice(x))+'</p>'+(x.h===p.h?'<p><em>Vous êtes ici</em></p>':'<a class="btn" href="#parfum/'+x.h+'">Voir la version '+lumLabel(x)+'</a>')+'</div>';}).join("")+
+   '<div class="compare__commun">Le fil commun : <strong>'+com.length+' note'+(com.length>1?"s":"")+'</strong> — '+com.join(", ")+'.</div></div></div>':'')+
+ '<div><h2>Les mots de Majda</h2><blockquote class="mots"><p>« '+p.mots+' »</p><footer>Majda Bekkali</footer></blockquote></div>'+
+ '<div><h2>Avis clients</h2><div class="avis"><b>Emplacement réservé aux avis vérifiés</b>Module à connecter à l’intégration (ex. avis après achat). Aucun avis n’est affiché dans cette maquette : rien ne sera publié tant qu’aucun client n’en aura déposé.</div></div>'+
+ '<div><h2>À sentir aussi</h2><div class="assoc">'+assoc.map(carte).join("")+'</div></div>'+
+ '</div>';
+ var el=document.getElementById("fiche");el.innerHTML=html;
+ function maj(){var i=+el.querySelector("input[name=fmt]:checked").value;document.getElementById("prixSel").textContent=p.v[i][0]+" · "+eur(p.v[i][1]);}
+ el.querySelectorAll("input[name=fmt]").forEach(function(r){r.addEventListener("change",maj);});maj();
+ document.getElementById("ajout").onclick=function(){var i=+el.querySelector("input[name=fmt]:checked").value;addCart(p.h+"|"+i,fullName(p),p.v[i][0],p.v[i][1],p.img[0]);};
+ el.querySelectorAll("[data-go]").forEach(function(b){b.onclick=function(){if(b.dataset.go!==p.h)location.hash="#parfum/"+b.dataset.go;};});
+ el.querySelectorAll(".vignettes button").forEach(function(b){b.onclick=function(){document.getElementById("grand").innerHTML=scene(p,b.dataset.img,1000,false);el.querySelectorAll(".vignettes button").forEach(function(x){x.setAttribute("aria-pressed",String(x===b));});};});
+ el.querySelectorAll("[data-cof]").forEach(function(b){b.onclick=function(){addCof(b.dataset.cof);};});
+ setMeta(fullName(p)+" — Extrait de parfum "+lumLabel(p)+" | Majda Bekkali",p.acc+" "+p.fam+", signé "+p.nose+". Dès "+eur(minPrice(p))+".");
+}
+
+/* ---- Maison ---- */
+document.getElementById("cedre").innerHTML=P.filter(function(p){return p.t.concat(p.c,p.f).some(function(n){return norm(n)==="cèdre de l’atlas";});}).map(function(p){return '<li>'+fullName(p)+'</li>';}).join("");
+var NZ={};P.forEach(function(p){(NZ[p.nose]=NZ[p.nose]||[]).push(p);});
+document.getElementById("nez").innerHTML=Object.keys(NZ).map(function(k){return '<div><b>'+k+'</b><span>'+NZ[k].map(function(p){return '<a href="#parfum/'+p.h+'">'+fullName(p)+'</a>';}).join(", ")+'</span></div>';}).join("");
+
+/* ---- Découverte : coffrets + guide ---- */
+document.getElementById("coffrets").innerHTML=["clair","obscur"].map(function(k){var c=COF[k];return '<article class="coffret coffret--'+(k==="clair"?"c":"o")+'"><img src="'+im(c.img,900)+'" alt="Coffret découverte '+c.n+', cinq échantillons de 2 ml" loading="lazy" width="600" height="600"><div class="coffret__t"><p class="eyebrow">Coffret découverte</p><h2>'+c.n+'</h2><p>5 échantillons de 2 ml · '+eur(c.prix)+'</p><ol>'+c.items.map(function(i){return '<li>'+i+'</li>';}).join("")+'</ol><button class="btn '+(k==="clair"?"btn--plein":"")+'" data-cof="'+k+'" style="'+(k==="obscur"?"color:#EEE8DE":"")+'">Ajouter — '+eur(c.prix)+'</button></div></article>';}).join("");
+document.querySelectorAll("#coffrets [data-cof]").forEach(function(b){b.onclick=function(){addCof(b.dataset.cof);};});
+document.getElementById("ajouterDuo").onclick=function(){addCof("clair",true);addCof("obscur");};
+
+var Q=[
+ {q:"À quelle heure portez-vous votre parfum ?",o:[["Le jour, en pleine lumière","",{clair:2}],["Le soir, quand la nuit tombe","",{obscur:2}],["À toute heure","Je veux un parfum qui me suive",{}]]},
+ {q:"Quelle matière vous attire d’abord ?",o:[["Les fleurs blanches","jasmin, tubéreuse, fleur d’oranger",{floral:2}],["La gourmandise","amande, café, cerise, rhum",{gourmand:2}],["Les résines et l’encens","ambre, benjoin, encens",{encens:2,ambre:2}],["Les épices et le cuir","safran, cannelle, poivre, cuir",{epice:2,cuir:2}],["Les agrumes","pamplemousse, bergamote",{hesperide:3}]]},
+ {q:"Quel paysage vous ressemble ?",o:[["Les jardins et palais d’Andalousie","Tolède, l’art mudéjar",{andalus:2}],["Un poème, une couleur, un rêve","les Sculptures olfactives",{sculptures:2}],["Peu importe le décor","",{}]]},
+ {q:"Et votre sillage ?",o:[["Enveloppant, proche de la peau","",{enveloppant:2,clair:1}],["Affirmé, qu’on remarque","",{affirme:2,obscur:1}]]}
+];
+var step=0,score={};
+function renderGuide(){var g=document.getElementById("guide");
+ if(step<Q.length){var q=Q[step];g.innerHTML='<div class="guide__prog"><i style="width:'+(step/Q.length*100)+'%"></i></div><p class="eyebrow">Trouver mon parfum · '+(step+1)+'/'+Q.length+'</p><h2>'+q.q+'</h2><div class="opts">'+q.o.map(function(o,i){return '<button class="opt" data-i="'+i+'"><span>'+o[0]+(o[1]?'<small>'+o[1]+'</small>':'')+'</span><span aria-hidden="true">→</span></button>';}).join("")+'</div><div class="guide__nav">'+(step?'<button class="lien" id="prec">← Précédent</button>':'<span></span>')+'<span style="color:var(--mute)">Basé sur les notes publiées par la maison</span></div>';
+  g.querySelectorAll(".opt").forEach(function(b){b.onclick=function(){var w=q.o[+b.dataset.i][2];hist.push(w);for(var k in w)score[k]=(score[k]||0)+w[k];step++;renderGuide();var f=g.querySelector("button");if(f)f.focus();};});
+  var pr=document.getElementById("prec");if(pr)pr.onclick=function(){var w=hist.pop();for(var k in w)score[k]-=w[k];step--;renderGuide();};
+  return;}
+ var ranked=P.map(function(p){var s=0;p.tags.forEach(function(t){s+=score[t]||0;});s+=(score[p.lum]||0);return[s,p];}).sort(function(a,b){return b[0]-a[0];});
+ var best=ranked[0][1],tw=best.twin?BY[best.twin]:null,alt=ranked.filter(function(x){return x[1].h!==best.h&&x[1].h!==best.twin;})[0][1];
+ var why=best.tags.filter(function(t){return score[t]>0;}).map(function(t){return{clair:"la lumière du jour",obscur:"la part de nuit",floral:"les fleurs blanches",gourmand:"la gourmandise",encens:"l’encens",ambre:"l’ambre",epice:"les épices",cuir:"le cuir",hesperide:"les agrumes",andalus:"l’Andalousie",sculptures:"les Sculptures olfactives",enveloppant:"un sillage enveloppant",affirme:"un sillage affirmé",rose:"la rose",bois:"les bois",chypre:"le chypre"}[t];}).filter(Boolean);
+ g.innerHTML='<div class="guide__prog"><i style="width:100%"></i></div><p class="eyebrow">Votre recommandation</p><div class="resultat"><div class="resultat__top">'+scene(best,null,300)+'<div><h3>'+fullName(best)+'</h3><p class="pourquoi">'+best.acc+'</p></div></div>'+
+ '<p class="pourquoi">Pourquoi : vous avez choisi '+(why.length?why.join(", "):"une approche ouverte")+'. Parfumeur : '+best.nose+'.</p>'+
+ (tw?'<p class="pourquoi">Sa jumelle '+lumLabel(tw)+' — <a href="#parfum/'+tw.h+'">'+fullName(tw)+'</a> — partage '+commun(best,tw).length+' notes avec elle.</p>':'')+
+ '<p class="pourquoi">À sentir aussi : <a href="#parfum/'+alt.h+'">'+fullName(alt)+'</a>.</p>'+
+ '<div style="display:grid;gap:10px"><a class="btn btn--plein" href="#parfum/'+best.h+'">Voir '+fullName(best)+'</a><button class="btn" data-cof="'+best.lum+'">'+(inCof(best)?'L’essayer avec le coffret '+COF[best.lum].n:'Explorer le coffret '+COF[best.lum].n)+' — '+eur(40)+'</button>'+(inCof(best)?'':'<p class="pourquoi">'+fullName(best)+' n’est dans aucun coffret : choisissez-le en échantillon offert au panier.</p>')+'<button class="lien" id="refaire">Refaire le guide</button></div></div>';
+ g.querySelector("[data-cof]").onclick=function(){addCof(best.lum);};
+ document.getElementById("refaire").onclick=function(){step=0;score={};hist=[];renderGuide();};
+}
+var hist=[];renderGuide();
+
+/* ---- Panier simulé ---- */
+var cart=[];var offert="";
+function addCart(id,n,f,prix,img){var l=cart.filter(function(x){return x.id===id;})[0];if(l)l.q++;else cart.push({id:id,n:n,f:f,p:prix,img:img,q:1});renderCart();openCart();}
+function addCof(k,silent){var c=COF[k];var id="cof-"+k,l=cart.filter(function(x){return x.id===id;})[0];if(l)l.q++;else cart.push({id:id,n:"Coffret "+c.n,f:"5 × 2 ml",p:c.prix,img:c.img,q:1});renderCart();if(!silent)openCart();}
+function renderCart(){var n=cart.reduce(function(a,x){return a+x.q;},0),tot=cart.reduce(function(a,x){return a+x.q*x.p;},0);
+ var b=document.getElementById("badge");b.textContent=n;b.hidden=!n;
+ document.getElementById("lignes").innerHTML=cart.length?cart.map(function(x,i){return '<div class="ligne"><img src="'+im(x.img,160)+'" alt=""><div><h3>'+x.n+'</h3><small>'+x.f+' · '+eur(x.p)+'</small><div class="qte"><button data-q="-1" data-i="'+i+'" aria-label="Retirer un '+esc(x.n)+'">−</button><span aria-live="polite">'+x.q+'</span><button data-q="1" data-i="'+i+'" aria-label="Ajouter un '+esc(x.n)+'">+</button></div></div><strong>'+eur(x.p*x.q)+'</strong></div>';}).join(""):'<p class="vide">Votre panier est vide.<br><a href="#decouverte" class="lien">Commencer par un coffret découverte</a></p>';
+ document.getElementById("pied-panier").innerHTML=cart.length?'<label class="offert">Votre échantillon 2 ml offert<select id="offert"><option value="">Choisir un échantillon</option>'+ECH.map(function(e){return '<option'+(e===offert?" selected":"")+'>'+e+'</option>';}).join("")+'</select></label><div class="tot"><span>Sous-total</span><strong>'+eur(tot)+'</strong></div><button class="btn btn--plein" id="commander">Commander</button><small style="color:var(--gris)">Livraison et taxes calculées au paiement Shopify.</small>':"";
+ document.querySelectorAll("#lignes [data-q]").forEach(function(bt){bt.onclick=function(){var x=cart[+bt.dataset.i];x.q+=+bt.dataset.q;if(x.q<1)cart.splice(+bt.dataset.i,1);renderCart();};});
+ var s=document.getElementById("offert");if(s)s.onchange=function(){offert=s.value;};
+ var c=document.getElementById("commander");if(c)c.onclick=function(){toast("Maquette : ici, le paiement Shopify prend le relais.");};
+}
+var tiroir=document.getElementById("tiroir"),voile=document.getElementById("voile"),panneau=document.getElementById("panneau"),menu=document.getElementById("menu"),lastFocus=null;
+function openCart(){lastFocus=document.activeElement;tiroir.classList.add("on");tiroir.setAttribute("aria-hidden","false");voile.classList.add("on");document.getElementById("fermerPanier").focus();}
+function closeAll(){tiroir.classList.remove("on");tiroir.setAttribute("aria-hidden","true");panneau.classList.remove("on");panneau.setAttribute("aria-hidden","true");voile.classList.remove("on");menu.classList.remove("on");menu.classList.remove("open");document.getElementById("burger").setAttribute("aria-expanded","false");if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+document.getElementById("ouvrirPanier").onclick=openCart;
+document.getElementById("fermerPanier").onclick=closeAll;
+voile.onclick=closeAll;
+document.getElementById("ouvrirNotes").onclick=function(){lastFocus=document.activeElement;panneau.classList.add("on");panneau.setAttribute("aria-hidden","false");voile.classList.add("on");document.getElementById("fermerNotes").focus();};
+document.getElementById("fermerNotes").onclick=closeAll;
+document.getElementById("burger").onclick=function(){lastFocus=this;menu.classList.add("open");this.setAttribute("aria-expanded","true");document.getElementById("fermerMenu").focus();};
+document.getElementById("fermerMenu").onclick=closeAll;
+menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){lastFocus=null;closeAll();});});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll();});
+var tt;window.toast=function(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on");},2600);};
+renderCart();
+
+/* ---- Routeur ---- */
+var DEF={t:document.title,d:document.querySelector('meta[name="description"]').content};
+function setMeta(t,d){document.title=t;document.querySelector('meta[name="description"]').setAttribute("content",d);}
+function route(){var h=(location.hash||"#accueil").slice(1).split("/");var r=h[0]||"accueil";
+ if(["accueil","collection","parfum","maison","decouverte"].indexOf(r)<0)r="accueil";
+ document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("on",p.dataset.route===r);});
+ document.querySelectorAll(".hd__nav a").forEach(function(a){var on=a.getAttribute("href")==="#"+r;if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+ document.body.dataset.lum="clair";
+ if(r==="accueil")setMeta(DEF.t,DEF.d);
+ if(r==="collection"){FIL.lum=(h[1]==="clair"||h[1]==="obscur")?h[1]:"";FIL.col="";FIL.fam="";syncChips();renderGrille();setMeta("Parfums de niche Clair & Obscur — Sculptures olfactives & Andalus | Majda Bekkali","Onze extraits de parfum concentrés à 20–30 %, en version Clair ou Obscur, signés Bertrand Duchaufour, Cécile Zarokian, Delphine Thierry…");}
+ if(r==="parfum")renderFiche(h[1]);
+ if(r==="maison")setMeta("La Maison Majda Bekkali — Fès, Paris, et huit parfumeurs","Née à Fès, installée à Paris, Majda Bekkali fonde sa maison en 2009 : des parfums chargés de sens, concentrés à 20–30 %, et l’association Métissages.");
+ if(r==="decouverte"){setMeta("Coffrets découverte Les Clairs & Les Obscurs — guide olfactif | Majda Bekkali","Deux coffrets de 5 échantillons de 2 ml (40 €) et un guide en 4 questions pour trouver votre parfum Majda Bekkali.");if(h[1]==="guide"){setTimeout(function(){document.getElementById("guide").scrollIntoView({behavior:"smooth",block:"start"});},60);}}
+ if(!(r==="decouverte"&&h[1]==="guide"))window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);route();
+})();
+</script>
+</body>
+</html>

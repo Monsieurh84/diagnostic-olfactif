@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ORMAIE — Haute Parfumerie, Paris · Maquette de refonte</title>
+<meta name="description" content="Maquette de refonte du site ORMAIE préparée par Monsieur.H : guide olfactif, une fiche par parfum, La Collection mise en avant.">
+<meta property="og:title" content="ORMAIE — Maquette de refonte par Monsieur.H">
+<meta property="og:description" content="Une proposition de refonte pour ORMAIE : trouver son parfum en quatre questions, une fiche par parfum, La Collection 10 × 2 ml au cœur du parcours.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0516/6769/7826/files/Homepage-Facettes-2500x2500px-1_1400x.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,400..600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141312; --paper:#f3f1ec; --stone:#e5e4e0; --line:#cfccc5; --mute:#5b5853;
+  --accent:#7b2128; --accent-ink:#fff; --inverse:#141312; --on-inverse:#f3f1ec;
+  --display:"Archivo",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; --serif:"Newsreader",Georgia,serif;
+  --gut:16px; --max:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 14px/1.65 var(--mono);overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+@media(min-width:768px){:root{--gut:32px}}
+.d{font-family:var(--display);font-stretch:125%;text-transform:uppercase;letter-spacing:.02em;font-weight:500;line-height:1.05}
+.kick{font:500 11px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.mem{font:italic 300 clamp(20px,3.2vw,30px)/1.35 var(--serif);letter-spacing:-.005em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.btn.block{width:100%}
+.lnk{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+
+/* banner + header */
+.mock{background:var(--accent);color:#fff;text-align:center;font:500 10.5px/1.4 var(--mono);letter-spacing:.08em;padding:6px var(--gut)}
+.hdr{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;height:60px}
+.logo img{height:26px;width:auto}
+.nav{display:none;gap:22px}
+.nav a{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
+.nav a[aria-current=page],.nav a:hover{border-color:var(--ink)}
+.burger{background:none;border:0;padding:8px;justify-self:start;width:40px;height:40px}
+.burger span{display:block;width:20px;height:1px;background:var(--ink);margin:5px 0}
+.hright{justify-self:end;display:flex;align-items:center;gap:6px}
+.cartbtn{background:none;border:0;display:flex;align-items:center;gap:8px;padding:8px;font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.cartbtn b{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:10px;background:var(--ink);color:var(--paper);font-weight:500;font-size:10px}
+@media(min-width:960px){.nav{display:flex}.burger{display:none}}
+.mnav{position:fixed;inset:0;z-index:50;background:var(--paper);padding:24px var(--gut);display:none;flex-direction:column;gap:18px}
+.mnav.open{display:flex}
+.mnav a{font-family:var(--display);font-stretch:125%;text-transform:uppercase;font-size:26px;text-decoration:none}
+.mnav .x{align-self:flex-end;background:none;border:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:10px}
+
+/* home */
+.hero,.set,.finder,.house,.pdp,.story,.res,.sets,.facettes,.mhero,.pillars,.ftr .wrap,.memstrip .wrap{grid-template-columns:minmax(0,1fr)}
+.hero{display:grid;border-bottom:1px solid var(--line)}
+.hero-img{aspect-ratio:1/1;background:var(--stone);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-txt{padding:36px var(--gut) 44px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.hero h1{font-size:clamp(30px,5.2vw,58px);margin:0}
+.hero p{max-width:44ch;margin:0;color:var(--mute)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+@media(min-width:900px){.hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:calc(100vh - 90px)}.hero-img{aspect-ratio:auto}.hero-txt{padding:48px 56px}}
+
+.memstrip{background:var(--inverse);color:var(--on-inverse);padding:56px 0}
+.memstrip .wrap{display:grid;gap:20px}
+.memstrip .kick{color:#b9b5ad}
+.typed{min-height:3.2em}
+.typed .caret{display:inline-block;width:.5ch;border-right:2px solid currentColor;animation:blink 1s steps(1) infinite;margin-left:2px;height:1em;vertical-align:-.12em}
+@keyframes blink{50%{opacity:0}}
+.typed-by{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#d8d4cc;text-decoration:none;border-bottom:1px solid #6b675f;padding-bottom:3px;justify-self:start}
+@media(prefers-reduced-motion:reduce){.typed .caret{animation:none}}
+
+.sec{padding:64px 0;border-bottom:1px solid var(--line)}
+.sec-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;margin-bottom:28px}
+.sec-h h2{margin:0;font-size:clamp(24px,3.6vw,38px)}
+
+.facettes{display:grid;gap:16px}
+@media(min-width:720px){.facettes{grid-template-columns:repeat(3,1fr)}}
+.fac{text-decoration:none;display:block}
+.fac .ph{aspect-ratio:4/5;overflow:hidden;background:var(--stone)}
+.fac img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.fac:hover img{transform:scale(1.03)}
+.fac h3{margin:14px 0 4px;font-size:17px}
+.fac p{margin:0;color:var(--mute)}
+
+.finder{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.finder{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.finder ol{list-style:none;margin:0;padding:0;counter-reset:q;border-top:1px solid var(--line)}
+.finder li{counter-increment:q;padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:16px}
+.finder li::before{content:"0" counter(q);color:var(--accent);font-weight:500}
+
+.index{border-top:1px solid var(--ink)}
+.irow{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.irow .n{color:var(--mute);font-size:12px}
+.irow h3{margin:0;font-size:clamp(15px,2.2vw,22px)}
+.irow .l{display:none;color:var(--mute);font:italic 300 17px/1.3 var(--serif)}
+.irow .p{font-size:12px;white-space:nowrap}
+.irow:hover h3{color:var(--accent)}
+@media(min-width:900px){.irow{grid-template-columns:56px minmax(220px,1fr) 1.3fr auto}.irow .l{display:block}}
+
+.set{display:grid;gap:24px;background:var(--stone);padding:24px}
+@media(min-width:860px){.set{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);padding:40px;align-items:center}}
+.set h3{margin:0 0 10px;font-size:clamp(22px,3vw,32px)}
+.price{font:500 15px/1 var(--mono)}
+.pill{display:inline-block;border:1px solid var(--accent);color:var(--accent);padding:6px 10px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+
+.house{display:grid;gap:24px}
+@media(min-width:860px){.house{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}}
+.house blockquote{margin:0}
+.house cite{display:block;margin-top:12px;font:normal 500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* collection */
+.ph-top{padding:40px 0 20px}
+.ph-top h1{margin:6px 0 10px;font-size:clamp(28px,5vw,52px)}
+.ph-top p{margin:0;max-width:62ch;color:var(--mute)}
+.filters{display:grid;gap:10px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:20px 0 26px}
+.fgroup{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fgroup .kick{min-width:84px}
+.chip{border:1px solid var(--line);background:transparent;padding:8px 12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;min-height:36px}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{font-size:12px;color:var(--mute);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 20px}}
+.card{text-decoration:none;display:block}
+.card .ph{position:relative;aspect-ratio:1/1;background:var(--stone);overflow:hidden}
+.card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+.card .ph img+img{opacity:0}
+.card:hover .ph img+img,.card:focus-visible .ph img+img{opacity:1}
+.card .tag{position:absolute;left:8px;top:8px;background:var(--paper);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 7px}
+.card h3{margin:12px 0 3px;font-size:13px}
+.card p{margin:0;color:var(--mute);font-size:12px;line-height:1.5}
+.card .pr{margin-top:6px;font-size:12px}
+.empty{padding:40px 0;color:var(--mute)}
+
+/* product */
+.crumb{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:18px 0}
+.crumb a{text-decoration:none}
+.pdp{display:grid;gap:28px;padding-bottom:56px}
+@media(min-width:960px){.pdp{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px}}
+.gal{display:grid;gap:8px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.gal img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--stone)}
+.gal img:first-child{grid-column:1/-1}
+@media(min-width:960px){.buy{position:sticky;top:84px;align-self:start}}
+.buy h1{margin:6px 0 8px;font-size:clamp(28px,4.4vw,44px)}
+.buy .tl{margin:0 0 18px;color:var(--mute)}
+.fmt{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin:18px 0}
+.fmt label{position:relative;display:block;border:1px solid var(--line);padding:12px;cursor:pointer;min-height:58px}
+.fmt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.fmt label:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.fmt label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.fmt b{display:block;font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.fmt span{font-size:12px;color:var(--mute)}
+.perks{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:14px 0;font-size:12px}
+.perks div{border-top:1px solid var(--line);padding-top:10px}
+.trybox{margin-top:18px;padding:16px;border:1px dashed var(--accent);display:grid;gap:8px}
+.trybox p{margin:0}
+.pyr{margin:28px 0 0;border-top:1px solid var(--ink)}
+.tier{display:grid;grid-template-columns:72px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tier dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.tier dd{margin:0}
+.tier .bar{height:4px;background:var(--ink);margin-top:8px}
+.story{display:grid;gap:22px;padding:56px 0;border-top:1px solid var(--line)}
+@media(min-width:900px){.story{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.story p{margin:0 0 12px}
+.reviews{border:1px dashed var(--line);padding:22px;color:var(--mute)}
+.reviews strong{color:var(--ink)}
+.rel{padding:48px 0;border-top:1px solid var(--line)}
+.twin{display:flex;gap:14px;align-items:center;margin-top:16px;padding:12px;background:var(--stone);text-decoration:none}
+.twin img{width:56px;height:56px;object-fit:cover}
+
+/* quiz */
+.quiz{background:var(--inverse);color:var(--on-inverse);padding:40px 0 56px}
+.quiz .kick{color:#b9b5ad}
+.qbar{display:flex;gap:6px;margin:16px 0 28px}
+.qbar i{flex:1;height:2px;background:#45423d}
+.qbar i.on{background:var(--on-inverse)}
+.quiz h2{font-size:clamp(22px,4vw,40px);margin:0 0 22px}
+.opts{display:grid;gap:10px}
+@media(min-width:720px){.opts{grid-template-columns:repeat(2,1fr)}}
+.opt{text-align:left;background:transparent;border:1px solid #5a5650;padding:16px 18px;min-height:64px;color:var(--on-inverse);transition:border-color .2s,background .2s}
+.opt:hover{border-color:var(--on-inverse)}
+.opt b{display:block;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+.opt span{color:#c9c5bd;font-size:12.5px}
+.qnav{display:flex;justify-content:space-between;margin-top:18px}
+.qnav button{background:none;border:0;color:#c9c5bd;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:8px 0}
+.res{display:grid;gap:14px}
+@media(min-width:860px){.res{grid-template-columns:repeat(3,1fr)}}
+.rcard{background:var(--paper);color:var(--ink);text-decoration:none;display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px;align-items:center}
+.rcard img{width:96px;height:96px;object-fit:cover;background:var(--stone)}
+.rcard h3{margin:0 0 4px;font-size:13px}
+.rcard p{margin:0;font-size:12px;color:var(--mute)}
+.rcard .why{color:var(--accent);font-size:11px;margin-top:6px}
+.sets{display:grid;gap:16px}
+@media(min-width:860px){.sets{grid-template-columns:repeat(3,1fr)}}
+.setc{border:1px solid var(--line);display:flex;flex-direction:column}
+.setc img{aspect-ratio:1/1;object-fit:cover;background:var(--stone);width:100%}
+.setc div{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.setc h3{margin:0;font-size:15px}
+.setc p{margin:0;color:var(--mute);font-size:12.5px;flex:1}
+
+/* maison */
+.mhero{display:grid;gap:24px;padding:40px 0}
+@media(min-width:900px){.mhero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}}
+.pillars{display:grid;gap:0;border-top:1px solid var(--ink)}
+@media(min-width:900px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pillars article{padding:24px 0;border-bottom:1px solid var(--line)}
+@media(min-width:900px){.pillars article{padding:28px 24px 28px 0;border-bottom:0}}
+.pillars h3{font-size:15px;margin:0 0 10px}
+.portraits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.portraits img{aspect-ratio:1/1;object-fit:cover;background:var(--stone);width:100%}
+
+/* footer */
+.ftr{background:var(--inverse);color:var(--on-inverse);padding:48px 0 90px;font-size:12.5px}
+.ftr .wrap{display:grid;gap:28px}
+@media(min-width:860px){.ftr .wrap{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr)}}
+.ftr img{height:22px;width:auto;filter:invert(1)}
+.ftr a{text-decoration:none;color:#d8d4cc}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr .kick{color:#b9b5ad;margin-bottom:12px}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(20,19,18,.45);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:70;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px var(--gut);border-bottom:1px solid var(--line)}
+.dh h2{margin:0;font-size:15px}
+.xbtn{background:none;border:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px}
+.dbody{flex:1;overflow:auto;padding:8px var(--gut)}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.li img{width:64px;height:64px;object-fit:cover;background:var(--stone)}
+.li h3{margin:0;font-size:12px}
+.li p{margin:2px 0 0;font-size:12px;color:var(--mute)}
+.qty{display:flex;align-items:center;gap:4px;margin-top:6px}
+.qty button{width:28px;height:28px;border:1px solid var(--line);background:none}
+.dfoot{padding:16px var(--gut);border-top:1px solid var(--line);display:grid;gap:10px}
+.dfoot .row{display:flex;justify-content:space-between}
+.note{font-size:11.5px;color:var(--mute)}
+.gift{font-size:12px;padding:10px;background:var(--stone)}
+
+/* notes de refonte */
+.nbtn{position:fixed;left:12px;bottom:12px;z-index:40;background:var(--paper);border:1px solid var(--ink);padding:10px 14px;font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.npanel{position:fixed;left:0;top:0;bottom:0;width:min(560px,100%);background:#fff;color:#141312;z-index:80;transform:translateX(-102%);transition:transform .3s;overflow:auto;padding:24px var(--gut) 40px;font-size:13px;line-height:1.6}
+.npanel.on{transform:none}
+.npanel h2{font-size:20px;margin:6px 0 8px}
+.npanel ol{padding:0;margin:20px 0 0;list-style:none;counter-reset:n}
+.npanel li{counter-increment:n;border-top:1px solid #ddd;padding:16px 0}
+.npanel li h3{font:600 14px/1.3 var(--mono);margin:0 0 8px}
+.npanel li h3::before{content:counter(n) ". ";color:var(--accent)}
+.npanel dl{margin:0;display:grid;gap:6px}
+.npanel dt{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.npanel dd{margin:0 0 4px}
+.toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120px);background:var(--ink);color:var(--paper);padding:12px 16px;font-size:12px;z-index:90;transition:transform .3s;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Aller au contenu</a>
+<div class="mock" role="note">Maquette préparée pour Ormaie par Monsieur.H · non contractuelle</div>
+<header class="hdr">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:20px">
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" id="burger"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#collection" data-r="collection">Parfums</a>
+        <a href="#decouverte" data-r="decouverte">Trouvez votre parfum</a>
+        <a href="#maison" data-r="maison">La Maison</a>
+      </nav>
+    </div>
+    <a class="logo" href="#accueil" aria-label="ORMAIE Paris — accueil"><img src="https://cdn.shopify.com/s/files/1/0516/6769/7826/files/Logo_ORMAIE_04ad7769-37e4-4783-b24c-4abac4e62d1b.svg" alt="ORMAIE Paris" width="88" height="26"></a>
+    <div class="hright">
+      <button class="cartbtn" id="cartOpen" aria-label="Ouvrir le panier"><span aria-hidden="true">Panier</span><b id="cartCount">0</b></button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="x" id="mclose">Fermer</button>
+  <a href="#accueil">Accueil</a><a href="#collection">Parfums</a><a href="#decouverte">Trouvez votre parfum</a><a href="#maison">La Maison</a>
+</div>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div>
+      <img src="https://cdn.shopify.com/s/files/1/0516/6769/7826/files/Logo_ORMAIE_04ad7769-37e4-4783-b24c-4abac4e62d1b.svg" alt="ORMAIE" width="75" height="22">
+      <p style="max-width:40ch;color:#d8d4cc;margin-top:16px">Une Maison de création et de savoir-faire. Une Maison familiale.</p>
+    </div>
+    <div><p class="kick">Explorer</p><ul><li><a href="#collection">Tous les parfums</a></li><li><a href="#decouverte">Trouvez votre parfum</a></li><li><a href="#decouverte">Coffrets découverte</a></li><li><a href="#maison">La Maison</a></li></ul></div>
+    <div><p class="kick">Contact</p><ul><li><a href="mailto:contact@ormaie.paris">contact@ormaie.paris</a></li><li><a href="https://ormaie.paris/pages/trouver-un-magasin" rel="noopener">Points de vente</a></li><li style="color:#b9b5ad">Région : Europe · EUR <span aria-hidden="true">·</span> <a href="https://ormaie.com/">North America</a></li></ul></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Panier" aria-hidden="true">
+  <div class="dh"><h2 class="d">Votre panier</h2><button class="xbtn" id="cartClose">Fermer</button></div>
+  <div class="dbody" id="cartBody"></div>
+  <div class="dfoot" id="cartFoot"></div>
+</aside>
+
+<button class="nbtn" id="notesOpen" aria-expanded="false" aria-controls="notes">Notes de refonte</button>
+<aside class="npanel" id="notes" aria-label="Notes de refonte" aria-hidden="true">
+  <div style="display:flex;justify-content:space-between;align-items:center"><p class="kick" style="margin:0">Monsieur.H · relevé du 14/10/2026 sur ormaie.paris</p><button class="xbtn" id="notesClose">Fermer</button></div>
+  <h2 class="d">Ce que la refonte change</h2>
+  <p>Chaque point part d'un constat mesuré sur le site actuel (ormaie.paris, version Europe).</p>
+  <ol>
+    <li><h3>« Trouvez votre parfum » ne conseille pas</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Dans le menu Parfums, « Trouvez votre parfum » mène à /collections/les-coffrets-decouverte : trois coffrets (La Collection, Les 5 échantillons, Les Extraits), sans question, sans recommandation et sans H1. Celui qui hésite entre 17 parfums doit choisir seul.</dd>
+      <dt>Dans la maquette</dt><dd>Un guide olfactif en 4 questions (moment, matière, sillage, pour qui) qui recommande 3 parfums ORMAIE réels, explique pourquoi, puis propose le bon coffret.</dd>
+      <dt>Bénéfice</dt><dd>À 215–390 € le flacon, l'hésitation est le premier frein : le guide la transforme en achat, de coffret ou de flacon, et nourrit la newsletter avec un profil olfactif.</dd></dl></li>
+    <li><h3>Un parfum = jusqu'à cinq pages produit</h3><dl>
+      <dt>Aujourd'hui</dt><dd>/products.json compte 89 produits pour 17 parfums. Yvonne existe en 5 fiches : 20 ml, 50 ml, 100 ml, ampoule-recharge, flacon personnalisable. Les fiches 20, 50 et 100 ml ont le même title (« Yvonne »), le même H1, la même meta description et chacune sa propre canonique. Le bloc « Découvrez également » d'Yvonne 50 ml propose… Yvonne 100 ml, 20 ml et recharge, plus Yvonne Extrait.</dd>
+      <dt>Dans la maquette</dt><dd>Une seule fiche par parfum, avec un sélecteur de format (variantes Shopify), un lien vers la version Extrait quand elle existe, et de vrais autres parfums en suggestion.</dd>
+      <dt>Bénéfice</dt><dd>SEO : une page forte au lieu de 3 à 5 pages qui se concurrencent. Ventes : la suggestion fait découvrir un deuxième parfum au lieu de répéter le premier.</dd></dl></li>
+    <li><h3>La Collection et son avoir de 35 € sont absents des fiches</h3><dl>
+      <dt>Aujourd'hui</dt><dd>La Collection (10 × 2 ml, 70 €, avec un avoir de 35 € valable un mois sur un 100 ml) est la meilleure porte d'entrée de la Maison. Sur la fiche Yvonne 50 ml, aucune mention de coffret ni de La Collection : seulement « 2 échantillons offerts ».</dd>
+      <dt>Dans la maquette</dt><dd>Un encadré « Pas encore sûr·e ? » sur chaque fiche, La Collection sur l'accueil, et le coffret adapté en conclusion du guide.</dd>
+      <dt>Bénéfice</dt><dd>Plus de premières commandes, qui reviennent vers un 100 ml grâce à l'avoir.</dd></dl></li>
+    <li><h3>4 parfums sur 17 hors des familles olfactives</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Les collections Floraux / Boisés / Chyprés / Gourmands oublient Les Brumes, Le Passant, Marque-Page et Musc Miroir. « Chyprés » ne contient qu'Yvonne et Yvonne Extrait.</dd>
+      <dt>Dans la maquette</dt><dd>Une collection unique, filtrable par type (Eaux, Extraits, Les Facettes) et par ambiance, où chaque parfum est classé à partir de ses notes publiées.</dd>
+      <dt>Bénéfice</dt><dd>Tout le catalogue devient trouvable, et chaque ambiance peut devenir une page qui se positionne sur « parfum vanille », « parfum tubéreuse », etc.</dd></dl></li>
+    <li><h3>Un accueil lourd : 340 requêtes</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Mesuré sur l'accueil (performance API, desktop) : 340 ressources, 97 scripts, environ 7,0 Mo décodés dont 2,6 Mo de JavaScript, appelés sur 22 domaines en plus d'ormaie.paris (Klaviyo, apps swatch et wishlist, GTM, Google Ads, Meta…). Le load arrive à 2,3 s, avec le cache déjà chaud.</dd>
+      <dt>Dans la maquette</dt><dd>Un thème sur mesure sans dépendances, des images servies à la bonne taille par le CDN Shopify, chargées en différé, et des apps réduites à l'essentiel.</dd>
+      <dt>Bénéfice</dt><dd>De meilleurs Core Web Vitals, donc du SEO mobile et de la conversion en plus.</dd></dl></li>
+    <li><h3>Des bases SEO à reprendre</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Le title de l'accueil est « ORMAIE » seul, celui des fiches le nom du parfum seul (« Yvonne »). Pas de H1 sur /collections/les-fragrances-ormaie, /collections/parfums, /collections/les-coffrets-decouverte ni /pages/contact. Le bouton « En savoir plus » de l'accueil (bloc « Une Maison familiale ») mène à /pages/le-savoir-faire, qui renvoie une 404 : c'est le seul lien mort sur les 36 liens internes testés.</dd>
+      <dt>Dans la maquette</dt><dd>Un H1 par page, des titles éditoriaux (« Yvonne — Eau de Parfum rose & fruits rouges | ORMAIE Paris »), les notes olfactives en texte indexable, et des liens internes vérifiés.</dd>
+      <dt>Bénéfice</dt><dd>Des résultats Google qui donnent envie de cliquer, sur les noms des parfums comme sur leurs notes.</dd></dl></li>
+    <li><h3>Point secondaire : le site North America</h3><dl>
+      <dt>Aujourd'hui</dt><dd>Sur ormaie.com, « Find a perfume » pointe vers /collections/les-coffrets-decouverte, qui y renvoie une 404. Une pop-up « You are currently on the ORMAIE North America website » recouvre aussi chaque page à l'arrivée. Je n'ai pas vu de pop-up équivalente sur ormaie.paris.</dd>
+      <dt>Dans la maquette</dt><dd>La région se choisit discrètement dans le pied de page. Les mêmes gabarits, guide compris, se déclinent par marché avec Shopify Markets.</dd>
+      <dt>Bénéfice</dt><dd>Un seul thème à maintenir, et le même parcours de conseil en Europe et aux États-Unis.</dd></dl></li>
+  </ol>
+  <p class="note" style="margin-top:20px">Les textes, les prix (EUR, ormaie.paris), les notes et les visuels proviennent du site actuel d'ORMAIE. Le classement par ambiance est éditorial, établi à partir des notes publiées. Aucun avis client n'est simulé.</p>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(()=>{
+const CDN='https://cdn.shopify.com/s/files/1/0516/6769/7826/files/';
+const im=(f,w)=>CDN+f.replace(/\.(webp|jpg|png)$/,'_'+(w||800)+'x.$1');
+const STD=[['20 ml',115],['50 ml',215],['100 ml',280],['Ampoule-recharge',85]];
+const AMB={fresh:'Frais & hespéridé',white:'Fleurs blanches & soleil',rose:'Rose',woods:'Bois, encens & cuir',vanilla:'Vanille & gourmand',musk:'Musc & peau'};
+const TYPES={edp:'Eau de Parfum',ext:'Extrait de Parfum',fac:'Les Facettes · Extrait de Parfum'};
+const TSHORT={edp:'Eaux de Parfum',ext:'Extraits',fac:'Les Facettes'};
+/* Textes, notes et prix : ormaie.paris (oct. 2026). amb/mo = classement éditorial d'après les notes publiées. */
+const P=[
+{h:'papier-carbone',n:'Papier Carbone',t:'edp',tl:'Souvenir d’enfance réglissé',line:'J’aimais la réglisse. Le papier des romans sur la bibliothèque en bois.',insp:'Papier Carbone est un travail de mémoire. Le papier de l’école, le bois de la bibliothèque et la réglisse que l’on aimait enfant. Une odeur indélébile et rassurante.',top:'Bergamote, café, badiane, cardamome',heart:'Sauge sclarée, lavandin, coriandre, muscade',base:'Patchouli, vétiver d’Haïti, ambrette, gaïac',nat:'100 %',f:STD,img:['PapierCarbone-50ml-Packshot-Gris-Square.webp','ORMAIE_PAPIERCARBONE_LIFESTYLE_SQUARE_02_copie.webp','ORMAIE_PAPIERCARBONE_LIFESTYLE_SQUARE_03_copie.webp'],amb:['woods','vanilla'],mo:['day','evening'],int:1},
+{h:'28',n:'28°',t:'edp',tl:'Sillage solaire de fleurs blanches',line:'Il fait très chaud. Je flâne. Les fleurs blanches, le soleil.',insp:'28° est une note solaire. Fleurs blanches, monoï et karité, comme une vague de chaleur, une odeur de vacances.',top:'Citron, bergamote, mandarine, schinus molle',heart:'Rose, jasmin sambac, tubéreuse, fleur d’oranger',base:'Santal, vanille, immortelle',nat:'100 %',f:STD,img:['28-50ml-Packshot-Gris-Square.webp','ORMAIE_28_LIFESTYLE_SQUARE_17_copie.webp','ORMAIE_28_LIFESTYLE_SQUARE_11_copie.webp'],amb:['white'],mo:['day'],int:1},
+{h:'les-brumes',n:'Les Brumes',t:'edp',tl:'La fraîcheur du matin, entre citrus et bois',line:'Le matin sur l’orangeraie. La rosée sur les agrumes et les bois.',insp:'Les Brumes réveillent le souvenir d’une matinée entre orangers et citronniers. On y devine la rosée du matin sur les citrus et les bois.',top:'Citron, mandarine, bergamote, gingembre',heart:'Cardamome, sauge, jasmin, tubéreuse',base:'Cèdre, santal, vétiver, maté',nat:'100 %',f:STD,img:['LesBrumes-50ml-Packshot-Gris-Square.webp','ORMAIE_LESBRUMES_LIFESTYLE_SQUARE_07copie.webp','ORMAIE_LESBRUMES_LIFESTYLE_SQUARE_02copie.webp'],amb:['fresh'],mo:['dawn'],int:0},
+{h:'18-12',n:'18-12',t:'edp',tl:'Rose souriante, cerise amandée',line:'Une rose souriante qui dévoile des cerises amandées.',insp:'18-12, se lit 18 décembre. 18-12 est une fragrance élégante et joyeuse. Une rose en tête vient être sublimée par la cerise et les amandes.',top:'Rose fraîche, litchi, bergamote, mandarine',heart:'Rose, cerise, amande, violette, héliotrope',base:'Sauge, sucre, santal, vanille',nat:'95 %',f:[['20 ml',130],['100 ml',320]],img:['1812-100ml-Packshot-Gris-Square.webp','ORMAIE_1812_LIFESTYLE_SQUARE_06.webp','ORMAIE_1812_LIFESTYLE_SQUARE_03.webp'],amb:['rose','vanilla'],mo:['day'],int:1},
+{h:'livree-bleue',n:'L’Ivrée Bleue',t:'edp',tl:'Folie narcotique de rhum et vanille',line:'Exotisme sombre. Jungle de vanille et de rhum. Folie d’iris et de violette.',insp:'L’Ivrée Bleue est une note narcotique. Elle évoque une nature exotique au cœur d’une jungle luxuriante. La vanille noire et le rhum se mêlent dans une sensualité obscure.',top:'Rhum, mandarine, lys',heart:'Violette, iris',base:'Vanille, patchouli, benjoin, cacao',nat:'100 %',f:STD,img:['IvreeBleue-50ml-Packshot-Gris-Square.webp','ORMAIE_IVREEBLEUE_LIFESTYLE_SQUARE_06_copie.webp'],amb:['vanilla'],mo:['night'],int:2},
+{h:'tableau-parisien',n:'Tableau Parisien',t:'edp',tl:'Tubéreuse sensuelle piquée d’épices et de tabac',line:'Le jour se couche. Les terrasses se remplissent. Elle porte une tubéreuse piquée de rose, d’épices et de tabac.',insp:'Tableau Parisien est une fleur blanche unique, sensuelle et épicée. Une fragrance qui évoque une certaine élégance parisienne bercée par une pointe de nonchalance.',top:'Petit-grain, gingembre frais, basilic, mandarine',heart:'Tubéreuse, rose, mélange d’épices, héliotrope',base:'Tabac, fève tonka, benjoin, vanille',nat:'100 %',f:[['20 ml',130],['100 ml',320],['Ampoule-recharge',105]],img:['TableauParisien-100ml-Packshot-Gris-Square.webp','ORMAIE_TP_LIFESTYLE_SQUARE_BEIGE_03.webp','ORMAIE_TP_LIFESTYLE_SQUARE_BEIGE_05.webp'],amb:['white'],mo:['evening'],int:2},
+{h:'marque-page',n:'Marque-Page',t:'edp',tl:'Ambré moderne, cuir, oud et épices',line:'La lumière joue avec les ombres de la terre cuite.',insp:'Marque-Page s’inspire de la lumière qui joue avec les ombres de la terre cuite. Un vent chaud venu du désert. Un ambré moderne qui voyage entre épices, cuir, encens et fleurs blanches.',top:'Encens, davana, armoise',heart:'Cuir, géranium, jasmin, fleur d’oranger, iris',base:'Oud, nagarmotha, santal, ambre, vétiver, patchouli, cèdre',nat:'100 %',f:[['20 ml',160],['50 ml',280],['100 ml',390],['Ampoule-recharge',125]],img:['MarquePage-50ml-Packshot-Gris-Square.webp','ORMAIE_MARQUEPAGE_SQUARE_05_copie.webp'],amb:['woods'],mo:['evening'],int:2},
+{h:'toi-toi-toi',n:'Toï Toï Toï',t:'edp',tl:'Composition boisée, encens mystique',line:'Elle cire ses chaussons. L’encens mystique. Le parquet de la scène.',insp:'Toï Toï Toï se prononce « toy toy toy » : c’est une expression allemande pour souhaiter « bonne chance » aux danseurs. Il évoque le parquet de l’Opéra et cet instant mystique avant la représentation.',top:'Encens, poivre noir',heart:'Cèdre, santal, patchouli',base:'Vétiver, vanille, nagarmotha',nat:'100 %',f:STD,img:['ToiToiToi-50ml-Packshot-Gris-Square.webp','ORMAIE_TTT_LIFESTYLE_SQUARE_03copie.webp'],amb:['woods'],mo:['evening','day'],int:1,twin:'toi-toi-toi-extrait'},
+{h:'le-passant',n:'Le Passant',t:'edp',tl:'Douce élégance, lavande charismatique',line:'Il apparaît une seconde, puis s’évanouit. Son parfum reste. Une lavande. De l’ambrette.',insp:'Le Passant est un hommage aux parfums d’homme. Une masculinité douce. Une lavande charismatique.',top:'Bergamote, lavande, tagète',heart:'Lavandin',base:'Fève tonka, amyris, vanille',nat:'100 %',f:STD,img:['LePassant-50ml-Packshot-Gris-Square.webp','ORMAIE_LEPASSANT_SQUARE_LIFESTYLE_01copie.webp'],amb:['fresh','musk'],mo:['dawn','day'],int:0},
+{h:'yvonne',n:'Yvonne',t:'edp',tl:'Féminité bercée de rose et de fruits rouges',line:'Elle portait de grands féminins. Tendre rose mordue par les fruits rouges.',insp:'Yvonne a été pensée comme une grande fragrance féminine. Un hommage aux grands classiques de la parfumerie. Un accord chypré, rose et patchouli, modernisé par les fruits rouges. Une fragrance élégante et intemporelle.',top:'Pamplemousse, bergamote, tagète, cassis, schinus molle',heart:'Rose, jasmin, pêche',base:'Vanille, benjoin, fève tonka, santal, patchouli',nat:'100 %',f:STD,img:['Yvonne-50ml-Packshot-Gris-Square.webp','ORMAIE_YVONNE_LIFESTYLE_SQUARE_02copie.webp','ORMAIE_YVONNE_LIFESTYLE_SQUARE_01_copie.webp'],amb:['rose'],mo:['evening','day'],int:1,twin:'yvonne-extrait'},
+{h:'toi-toi-toi-extrait',n:'Toï Toï Toï Extrait',t:'ext',tl:'L’équilibre gourmand du vétiver et du bois de framboisier',line:'Ce soir, l’Opéra, tout vibrant, est un rêve. Une représentation boisée et épicée.',insp:'Toï Toï Toï Extrait dévoile une approche gourmande du mélange boisé originel. Une note de tête fraîche de gingembre, un bois de santal crémeux, une note torréfiée de vétiver et le fruité du bois de framboisier.',top:'Orange bigarade, gingembre frais, encens de Somalie',heart:'Bois de framboisier, osmanthus, cuir, davana',base:'Bois de santal, vétiver haïtien, cèdre de l’Atlas, ambre',nat:'95 %',f:[['50 ml',265]],img:['ToiToiToi-Extrait-50ml-Packshot-Gris-Square.webp','EXTRAIT-TTT-Squarecopie.webp','EXTRAIT-TTT-BEIGE_SQUARE-TTT-STELEcopie.webp'],amb:['woods'],mo:['evening','night'],int:2,twin:'toi-toi-toi'},
+{h:'livree-nuit-extrait',n:'L’Ivrée Nuit Extrait',t:'ext',tl:'L’éveil d’une vanille gorgée de fruits exotiques',line:'Jungle de vanille.',insp:'L’Ivrée Nuit réveille une vanille profonde. Une touche de mangue ajoute une facette exotique. Un sillage lacté et enveloppant, comme une nuit sur les plages équatoriales entre rêve et réalité.',top:'Lait de vanille, nectarine, encens, mangue, passion',heart:'Vanille, bois de cachemire',base:'Boisé ambré, muscs, accord gousses de vanille absolue',nat:'95 %',f:[['50 ml',265]],img:['IvreeNuit-50ml-Packshot-Gris-Square.webp','EXTRAIT_IVREE-NUIT_Square_01_copie.webp','EXTRAIT_IVREE-NUIT_Square_02_copie.webp'],amb:['vanilla','musk'],mo:['night'],int:2},
+{h:'yvonne-extrait',n:'Yvonne Extrait',t:'ext',tl:'Patchouli opulent contrasté par une prune liquoreuse',line:'Prune liquoreuse. Féminité et obscurité s’entremêlent.',insp:'Yvonne Extrait se concentre sur la signature chyprée d’Yvonne, rehaussée par une prune de Damas liquoreuse. Elle contraste avec l’overdose de patchouli et donne à la fragrance un caractère profond et opulent.',top:'Bergamote, néroli, prune de Damas, rose turque',heart:'Jasmin sambac indien, fleur d’oranger, pêche',base:'Patchouli indonésien, ambre, fève tonka, musc',nat:'95 %',f:[['50 ml',265]],img:['Yvonne-Extrait-50ml-Packshot-Gris-Square.webp','EXTRAIT-YVONNE_Square_05copie.webp','EXTRAIT-YVONNE_BEIGE_SQUARE-YVONNE-STELE_V2copie.webp'],amb:['rose','vanilla'],mo:['night','evening'],int:2,twin:'yvonne'},
+{h:'32-extrait',n:'32° Extrait',t:'ext',tl:'Une tubéreuse musquée, baignée de soleil',line:'Le sable et les fleurs blanches.',insp:'Lancinante chaleur estivale qui laisse sur la peau la marque d’un été sans fin. Un accord de fleurs blanches, de muscs et de fruits.',top:'Poire, freesia, néroli',heart:'Tubéreuse, bois de cachemire, accord solaire (coco, chèvrefeuille, ylang-ylang)',base:'Daim, palo santo, muscs blancs',nat:'95 %',f:[['50 ml',265]],img:['32-50ml-Packshot-Gris-Square.webp','EXTRAIT_32_Square_05copie.webp','EXTRAIT_32_Square_01copie.webp'],amb:['white','musk'],mo:['day'],int:2},
+{h:'rose-mosaique',n:'Rose Mosaïque',t:'fac',tl:'Rose mystérieuse, facettée d’épices et de cuir',line:'Construire une rose comme une mosaïque. Une rose cuirée et boisée.',insp:'Rose Mosaïque est un art de précision. Chaque note est une tesselle, une pièce d’un grand tableau, venant composer une mosaïque florale pour lui apporter fraîcheur et opulence. Une rose du Maroc qui trouve son équilibre dans une structure cuirée et boisée. Une élégance moderne, brute et sophistiquée.',top:'Cassis, cannelle, prune',heart:'Rose absolue, rose essence, osmanthus, encens',base:'Patchouli, cuir, violette',nat:null,f:[['Extrait de Parfum',255]],img:['Rose-Mosaique-50ml-Packshot-Gris-Square.webp','ORMAIE_ROSE-MOSAIQUE_SQUARE.webp','ORMAIE_ROSE-MOSAIQUE_INGREDIENTS_SQUARE.webp'],amb:['rose','woods'],mo:['evening'],int:2},
+{h:'bois-ocean',n:'Bois Océan',t:'fac',tl:'Les bois traversés par le sel et le soleil',line:'Quand le jour laisse place à la nuit au bord de l’eau.',insp:'Un soir à Capri, le sel sur la peau. Bois Océan évoque l’instant où le jour laisse place à la nuit au bord de l’eau. Les notes marines et la fraîcheur des agrumes sculptent un accord de bois flotté, enveloppé de musc, de santal et de vétiver. Une grande fraîcheur masculine, un sillage vibrant et profondément élégant.',top:'Citron d’Italie, bergamote, graine de coriandre, baies de genièvre',heart:'Gingembre, santal, noix de muscade, accord bois flotté, géranium',base:'Cèdre de l’Atlas, vétiver de Madagascar, musc, ambre gris',nat:null,f:[['Extrait de Parfum',255]],img:['Bois-Ocean-50ml-Packshot-Gris-Square.webp','ORMAIE_BOIS-OCEAN_SQUARE.webp','ORMAIE_BOIS-OCEAN_INGREDIENTS_SQUARE.webp'],amb:['fresh','woods'],mo:['day','evening'],int:1},
+{h:'musc-miroir',n:'Musc Miroir',t:'fac',tl:'Un musc de peau, lacté et boisé',line:'Un jeu de reflets. Des muscs se répondent pour mieux se révéler.',insp:'Musc Miroir explore un jeu de reflets. Des muscs s’y répondent pour mieux se révéler. Un musc charnel et sauvage, dans une écriture douce, presque enveloppante. Le sillage mêle la chaleur du bois sec, le velouté d’un accord lacté et une sensualité presque animale. Une signature unique et addictive.',top:'Poivre rose, accord ambre gris',heart:'Accord lacté, muscs, fève tonka, fleur d’oranger, safran',base:'Benjoin, ambroxan, labdanum, santal',nat:null,f:[['Extrait de Parfum',255]],img:['Musc-Miroir-50ml-Packshot-Gris-Square.webp','ORMAIE_MUSC-MIROIR_SQUARE.webp','ORMAIE_MUSC-MIROIR_INGREDIENTS_SQUARE.webp'],amb:['musk'],mo:['night','evening'],int:1}
+];
+const SETS=[
+{h:'la-collection',n:'La Collection',p:70,d:'10 échantillons de 2 ml des fragrances iconiques ORMAIE. Pour tout achat d’un set d’échantillons ORMAIE, vous recevrez un avoir d’un montant de 35 € valable 1 mois pour l’achat d’un parfum 100 ml ou valeur équivalente.',img:'SampleKit-EDP-Packshot-Gris-Square-2.webp'},
+{h:'les-5-echantillons',n:'Les 5 échantillons',p:39,d:'5 échantillons de 2 ml à choisir parmi les Eaux et Extraits de Parfum ORMAIE.',img:'SampleKit-EDP-Packshot-Gris-Square-5.webp'},
+{h:'les-extraits-4x8ml',n:'Les Extraits',p:180,d:'Les 4 Extraits de Parfum ORMAIE dans un coffret au format 8 ml.',img:'SampleKit-Extrait-Packshot-Gris-Square-1.webp'}
+];
+const by=h=>P.find(x=>x.h===h);
+const $=s=>document.querySelector(s);
+const money=v=>v.toFixed(2).replace('.',',')+' €';
+const from=p=>Math.min(...p.f.filter(x=>!/recharge/i.test(x[0])).map(x=>x[1]));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const main=$('#main');
+
+/* ---------- panier ---------- */
+let cart=[];
+function addToCart(id,name,variant,price,img){
+  const k=id+'|'+variant;const it=cart.find(x=>x.k===k);
+  if(it)it.q++;else cart.push({k,name,variant,price,img,q:1,set:SETS.some(s=>s.h===id)});
+  renderCart();openCart();
+}
+function renderCart(){
+  const n=cart.reduce((a,x)=>a+x.q,0);$('#cartCount').textContent=n;
+  const body=$('#cartBody'),foot=$('#cartFoot');
+  if(!n){body.innerHTML='<p class="empty">Votre panier est vide.</p><p><a class="lnk" href="#decouverte">Trouvez votre parfum</a></p>';foot.innerHTML='';return}
+  body.innerHTML=cart.map((x,i)=>`<div class="li"><img src="${im(x.img,200)}" alt="" width="64" height="64" loading="lazy"><div><h3 class="d">${esc(x.name)}</h3><p>${esc(x.variant)}</p><div class="qty"><button data-q="${i}" data-d="-1" aria-label="Retirer un ${esc(x.name)}">−</button><span aria-live="polite">${x.q}</span><button data-q="${i}" data-d="1" aria-label="Ajouter un ${esc(x.name)}">+</button></div></div><div class="price">${money(x.price*x.q)}</div></div>`).join('');
+  const sub=cart.reduce((a,x)=>a+x.price*x.q,0);
+  const hasFrag=cart.some(x=>!x.set);
+  foot.innerHTML=`${hasFrag?'<p class="gift">2 échantillons offerts pour toute commande de fragrance, à choisir au paiement.</p>':''}<div class="row"><span>Sous-total</span><span class="price">${money(sub)}</span></div><button class="btn block" id="checkout">Commander</button><p class="note">Maquette : le paiement est désactivé.</p>`;
+}
+$('#cartBody').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;const it=cart[+b.dataset.q];it.q+=+b.dataset.d;if(it.q<1)cart.splice(+b.dataset.q,1);renderCart()});
+$('#cartFoot').addEventListener('click',e=>{if(e.target.id==='checkout')toast('Maquette : en production, ce bouton ouvre le paiement Shopify.')});
+let lastFocus=null;
+function openCart(){lastFocus=document.activeElement;$('#drawer').classList.add('on');$('#drawer').setAttribute('aria-hidden','false');$('#scrim').classList.add('on');$('#cartClose').focus()}
+function closeCart(){if(!$('#drawer').classList.contains('on'))return;$('#drawer').classList.remove('on');$('#drawer').setAttribute('aria-hidden','true');$('#scrim').classList.remove('on');if(lastFocus)lastFocus.focus()}
+$('#cartOpen').onclick=openCart;$('#cartClose').onclick=closeCart;$('#scrim').onclick=()=>{closeCart();closeNotes()};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),3200)}
+
+/* ---------- notes ---------- */
+function openNotes(){$('#notes').classList.add('on');$('#notes').setAttribute('aria-hidden','false');$('#notesOpen').setAttribute('aria-expanded','true');$('#scrim').classList.add('on');$('#notesClose').focus()}
+function closeNotes(){if(!$('#notes').classList.contains('on'))return;$('#notes').classList.remove('on');$('#notes').setAttribute('aria-hidden','true');$('#notesOpen').setAttribute('aria-expanded','false');$('#scrim').classList.remove('on');$('#notesOpen').focus()}
+$('#notesOpen').onclick=openNotes;$('#notesClose').onclick=closeNotes;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeNotes();closeMenu()}});
+
+/* ---------- menu mobile ---------- */
+function closeMenu(){$('#mnav').classList.remove('open');$('#burger').setAttribute('aria-expanded','false')}
+$('#burger').onclick=()=>{$('#mnav').classList.add('open');$('#burger').setAttribute('aria-expanded','true');$('#mclose').focus()};
+$('#mclose').onclick=closeMenu;$('#mnav').addEventListener('click',e=>{if(e.target.tagName==='A')closeMenu()});
+
+/* ---------- vues ---------- */
+const card=p=>`<a class="card" href="#parfum/${p.h}"><div class="ph"><img src="${im(p.img[0],600)}" alt="Flacon ${esc(p.n)}, ${TYPES[p.t]}" width="600" height="600" loading="lazy">${p.img[1]?`<img src="${im(p.img[1],600)}" alt="" width="600" height="600" loading="lazy">`:''}${p.t!=='edp'?`<span class="tag">${p.t==='fac'?'Les Facettes':'Extrait'}</span>`:''}</div><h3 class="d">${esc(p.n)}</h3><p>${esc(p.tl)}</p><p class="pr">${p.f.length>1?'À partir de ':''}${money(from(p))}</p></a>`;
+
+function vHome(){
+  const fac=P.filter(p=>p.t==='fac');
+  const edp=P.filter(p=>p.t==='edp');
+  return `
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero-img"><img src="${im('Homepage-Facettes-2500x2500px-1.webp',1400)}" alt="Les Facettes ORMAIE sur marbre rouge, avec une rose" width="1400" height="1400" fetchpriority="high"></div>
+    <div class="hero-txt">
+      <p class="kick">Haute Parfumerie · Paris</p>
+      <h1 class="d" id="h1">Des fragrances chargées d’émotions et de souvenirs</h1>
+      <p>Une Maison dédiée à la création de fragrances d’exception, composées des matières les plus nobles.</p>
+      <div class="cta"><a class="btn" href="#decouverte">Trouvez votre parfum</a><a class="btn ghost" href="#collection">La collection</a></div>
+    </div>
+  </section>
+  <section class="memstrip" aria-label="Souvenirs des parfums">
+    <div class="wrap">
+      <p class="kick">Chaque fragrance naît d’un souvenir</p>
+      <p class="mem typed" id="typed" aria-live="off"></p>
+      <a class="typed-by" id="typedBy" href="#collection"></a>
+    </div>
+  </section>
+  <section class="sec"><div class="wrap">
+    <div class="sec-h"><div><p class="kick">Nouveauté · Extraits de Parfum</p><h2 class="d">Les Facettes</h2></div><a class="lnk" href="#collection/fac">Voir les trois</a></div>
+    <div class="facettes">${fac.map(p=>`<a class="fac" href="#parfum/${p.h}"><div class="ph"><img src="${im(p.img[1],900)}" alt="${esc(p.n)}" width="900" height="1125" loading="lazy"></div><h3 class="d">${esc(p.n)}</h3><p>${esc(p.tl)} · ${money(from(p))}</p></a>`).join('')}</div>
+  </div></section>
+  <section class="sec"><div class="wrap finder">
+    <div><p class="kick">Guide olfactif</p><h2 class="d" style="font-size:clamp(24px,3.6vw,38px);margin:8px 0 14px">Dix-sept fragrances. Quatre questions.</h2><p style="color:var(--mute);max-width:46ch">Un moment, une matière, le sillage que vous aimez : nous vous proposons trois fragrances ORMAIE, et le coffret pour les essayer chez vous.</p><a class="btn" href="#decouverte" style="margin-top:12px">Commencer le guide</a></div>
+    <ol><li>Le moment que vous aimeriez porter</li><li>La matière qui vous attire</li><li>Un murmure, ou un sillage qui reste</li><li>Pour vous, ou pour offrir</li></ol>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div class="sec-h"><div><p class="kick">Index</p><h2 class="d">Les Eaux de Parfum</h2></div><a class="lnk" href="#collection/edp">Tout voir</a></div>
+    <div class="index">${edp.map((p,i)=>`<a class="irow" href="#parfum/${p.h}"><span class="n">${String(i+1).padStart(2,'0')}</span><h3 class="d">${esc(p.n)}</h3><span class="l">${esc(p.line)}</span><span class="p">dès ${money(from(p))}</span></a>`).join('')}</div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    ${setBlock()}
+  </div></section>
+  <section class="sec"><div class="wrap house">
+    <div class="portraits"><img src="${im('ORMAIE_FOUNDERS-PORTRAIT-3.webp',700)}" alt="Portrait des fondateurs d’ORMAIE" width="700" height="700" loading="lazy"><img src="${im('Ormaie_HauteParfumerie_4_5_12.jpg',700)}" alt="ORMAIE Haute Parfumerie" width="700" height="700" loading="lazy"></div>
+    <div><p class="kick">La Maison</p><blockquote><p class="mem">« Les plus beaux livres, tableaux ou œuvres d’art sont toujours lorsque vous parlez de quelque chose de personnel. »</p><cite>Baptiste Bouygues, cofondateur</cite></blockquote><p style="color:var(--mute);margin:18px 0">Fondée par Baptiste Bouygues et Marie-Lise Jonak. Une Maison familiale.</p><a class="lnk" href="#maison">Découvrir la Maison</a></div>
+  </div></section>`;
+}
+function setBlock(){const s=SETS[0];return `<div class="set"><img src="${im(s.img,900)}" alt="La Collection, dix échantillons ORMAIE de 2 ml" width="900" height="900" loading="lazy"><div><p class="kick">Essayer avant le flacon</p><h3 class="d">${s.n}</h3><p style="margin:0 0 14px">${esc(s.d)}</p><p class="pill">10 × 2 ml · avoir de 35 € sur un 100 ml</p><p class="price" style="margin:16px 0">${money(s.p)}</p><button class="btn" data-add-set="${s.h}">Ajouter au panier</button></div></div>`}
+
+let fType='all',fAmb='all';
+function vCollection(){
+  return `<div class="wrap"><div class="ph-top"><p class="kick">ORMAIE · Paris</p><h1 class="d">Tous les parfums</h1><p>Dix Eaux de Parfum, quatre Extraits et Les Facettes. Une page par fragrance : le format se choisit sur la fiche.</p></div>
+  <div class="filters" role="group" aria-label="Filtrer les parfums">
+    <div class="fgroup"><span class="kick">Type</span>${[['all','Tous'],['edp','Eaux de Parfum'],['ext','Extraits'],['fac','Les Facettes']].map(([k,v])=>`<button class="chip" data-ft="${k}" aria-pressed="${fType===k}">${v}</button>`).join('')}</div>
+    <div class="fgroup"><span class="kick">Ambiance</span><button class="chip" data-fa="all" aria-pressed="${fAmb==='all'}">Toutes</button>${Object.entries(AMB).map(([k,v])=>`<button class="chip" data-fa="${k}" aria-pressed="${fAmb===k}">${v}</button>`).join('')}</div>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <div style="padding:56px 0">${setBlock()}</div></div>`;
+}
+function fillGrid(){
+  const list=P.filter(p=>(fType==='all'||p.t===fType)&&(fAmb==='all'||p.amb.includes(fAmb)));
+  $('#count').textContent=list.length+(list.length>1?' fragrances':' fragrance');
+  $('#grid').innerHTML=list.length?list.map(card).join(''):'<p class="empty">Aucune fragrance pour cette combinaison. <button class="lnk" style="background:none;border:0" data-fa="all">Toutes les ambiances</button></p>';
+}
+
+function vProduct(h){
+  const p=by(h);if(!p)return null;
+  const rel=P.filter(x=>x.h!==p.h&&x.h!==p.twin&&x.amb.some(a=>p.amb.includes(a))).slice(0,4);
+  const more=rel.length<4?P.filter(x=>x.h!==p.h&&!rel.includes(x)&&x.h!==p.twin).slice(0,4-rel.length):[];
+  const tw=p.twin&&by(p.twin);
+  return `<div class="wrap"><nav class="crumb" aria-label="Fil d’Ariane"><a href="#accueil">Accueil</a> / <a href="#collection/${p.t}">${TSHORT[p.t]}</a> / ${esc(p.n)}</nav>
+  <div class="pdp">
+    <div class="gal">${p.img.map((f,i)=>`<img src="${im(f,i?700:1100)}" alt="${i?esc(p.n)+', visuel ORMAIE '+i:'Flacon '+esc(p.n)+', '+TYPES[p.t]}" width="${i?700:1100}" height="${i?700:1100}" ${i?'loading="lazy"':'fetchpriority="high"'}>`).join('')}</div>
+    <div class="buy">
+      <p class="kick">${TYPES[p.t]}</p>
+      <h1 class="d">${esc(p.n)}</h1>
+      <p class="tl">${esc(p.tl)}</p>
+      <p class="mem" style="font-size:20px;margin:0">${esc(p.line)}</p>
+      <fieldset style="border:0;padding:0;margin:0"><legend class="sr">Format</legend><div class="fmt">${p.f.map((f,i)=>`<label><input type="radio" name="fmt" value="${i}" ${i===(p.f.length>2?1:0)?'checked':''}><b>${f[0]}</b><span>${money(f[1])}</span></label>`).join('')}</div></fieldset>
+      <button class="btn block" id="addP">Ajouter au panier · <span id="pPrice"></span></button>
+      <div class="perks"><div>2 échantillons offerts pour toute commande de fragrance</div><div>Emballage cadeau</div></div>
+      <div class="trybox"><p class="kick" style="color:var(--accent)">Pas encore sûr·e ?</p><p>Essayez ${esc(p.n)} chez vous avec <strong>La Collection</strong> : 10 × 2 ml pour 70 €, et un avoir de 35 € sur un 100 ml.</p><a class="lnk" href="#decouverte" style="justify-self:start">Voir les coffrets découverte</a></div>
+      ${tw?`<a class="twin" href="#parfum/${tw.h}"><img src="${im(tw.img[0],200)}" alt="" width="56" height="56"><span><span class="kick">${tw.t==='ext'?'Existe aussi en Extrait de Parfum':'Existe aussi en Eau de Parfum'}</span><br>${esc(tw.n)} · ${money(from(tw))}</span></a>`:''}
+      <dl class="pyr" aria-label="Pyramide olfactive">
+        <div class="tier"><dt>Tête</dt><dd>${esc(p.top)}<div class="bar" style="width:34%"></div></dd></div>
+        <div class="tier"><dt>Cœur</dt><dd>${esc(p.heart)}<div class="bar" style="width:62%"></div></dd></div>
+        <div class="tier"><dt>Fond</dt><dd>${esc(p.base)}<div class="bar" style="width:100%"></div></dd></div>
+      </dl>
+    </div>
+  </div>
+  <section class="story" aria-labelledby="st"><div><p class="kick">L’inspiration</p><h2 class="d" id="st" style="font-size:clamp(22px,3vw,32px);margin:8px 0 0">${esc(p.n)}</h2></div><div><p>${esc(p.insp)}</p><p style="color:var(--mute)">Les fragrances ORMAIE sont composées de matières premières d’exception.${p.nat?` ${esc(p.n)} est composé${p.h==='le-passant'?'':'e'} à ${p.nat} d’ingrédients naturels.`:''}</p><p class="kick" style="margin-top:18px">Ambiance · ${p.amb.map(a=>AMB[a]).join(' · ')}</p></div></section>
+  <section class="story" aria-labelledby="rv"><div><p class="kick">Avis</p><h2 class="d" id="rv" style="font-size:clamp(22px,3vw,32px);margin:8px 0 0">Ce qu’en disent celles et ceux qui le portent</h2></div><div class="reviews" role="note"><strong>Gabarit vide.</strong> Les avis clients vérifiés (Shopify / Judge.me) s’afficheront ici une fois collectés. Aucun avis n’est affiché dans cette maquette.</div></section>
+  <section class="rel" aria-labelledby="rl"><div class="sec-h"><h2 class="d" id="rl" style="font-size:clamp(20px,2.6vw,28px)">Vous aimerez aussi porter</h2><a class="lnk" href="#collection">Tous les parfums</a></div><div class="grid">${rel.concat(more).map(card).join('')}</div></section>
+  </div>`;
+}
+
+function vMaison(){
+  return `<div class="wrap"><div class="mhero"><div><p class="kick">Le savoir-faire</p><h1 class="d" style="font-size:clamp(30px,5.4vw,60px);margin:8px 0 18px">Une Maison de Haute Parfumerie française</h1><p class="mem">qui place la créativité, l’exigence et le temps au cœur de ses créations.</p></div><div class="portraits"><img src="${im('ORMAIE_FOUNDERS-PORTRAIT-2.webp',700)}" alt="Portrait des fondateurs d’ORMAIE" width="700" height="700"><img src="${im('ORMAIE_FOUNDERS-PORTRAIT-4.webp',700)}" alt="Portrait des fondateurs d’ORMAIE" width="700" height="700" loading="lazy"></div></div>
+  <div class="pillars">
+    <article><p class="kick">01</p><h3 class="d">L’histoire</h3><p>Fondée par Baptiste Bouygues et Marie-Lise Jonak, ORMAIE est dédiée à la création de fragrances d’exception, composées des matières les plus nobles. Une Maison de création et de savoir-faire. Une Maison familiale.</p></article>
+    <article><p class="kick">02</p><h3 class="d">La création</h3><p class="mem" style="font-size:20px">« Les plus beaux livres, tableaux ou œuvres d’art sont toujours lorsque vous parlez de quelque chose de personnel. »</p><p style="color:var(--mute)">Baptiste. Les fragrances ORMAIE sont chargées d’émotions et de souvenirs.</p></article>
+    <article><p class="kick">03</p><h3 class="d">L’exigence</h3><p>Chaque fragrance est le fruit d’un travail minutieux, mené sans compromis, avec une même ambition : donner naissance à des compositions d’exception. Toutes les matières premières ORMAIE sont sélectionnées pour leur qualité.</p></article>
+  </div>
+  <section class="sec" style="border-bottom:0"><div class="sec-h"><div><p class="kick">Des souvenirs en flacon</p><h2 class="d">D’où vient chaque fragrance</h2></div></div>
+  <div class="index">${P.filter(p=>p.t==='edp').slice(0,6).map((p,i)=>`<a class="irow" href="#parfum/${p.h}"><span class="n">${String(i+1).padStart(2,'0')}</span><h3 class="d">${esc(p.n)}</h3><span class="l">${esc(p.line)}</span><span class="p">Découvrir</span></a>`).join('')}</div>
+  <p style="margin-top:28px"><a class="btn ghost" href="https://ormaie.paris/pages/trouver-un-magasin" rel="noopener">Trouver un point de vente</a></p></section></div>`;
+}
+
+/* ---------- guide olfactif ---------- */
+const Q=[
+ {k:'mo',q:'Quel moment aimeriez-vous porter ?',o:[['dawn','Un matin dans la brume','Orangeraie, lavande, première lumière'],['day','Un après-midi de soleil','Chaleur sur la peau, fleurs blanches, un sourire'],['evening','Une soirée à Paris','Les terrasses, la scène, une bibliothèque au crépuscule'],['night','Une longue nuit','Vanille, prune, muscs qui restent près de la peau']]},
+ {k:'amb',q:'Quelle matière vous attire ?',o:[['fresh','Agrumes & lavande','Bergamote, mandarine, lavandin'],['white','Fleurs blanches','Tubéreuse, jasmin, fleur d’oranger'],['rose','Rose','Rose aux fruits rouges, à la cerise ou au cuir'],['woods','Bois & encens','Cèdre, vétiver, encens, cuir'],['vanilla','Vanille & gourmand','Vanille, rhum, cacao, amande'],['musk','Musc & peau','Accord lacté, ambrette, muscs blancs']]},
+ {k:'int',q:'Quel sillage ?',o:[['0','Un murmure','Près de la peau, pour tous les jours'],['1','Une présence','Remarqué quand on s’approche'],['2','Un sillage qui reste','Riche, enveloppant : les Extraits sont les bienvenus']]},
+ {k:'who',q:'Pour qui ?',o:[['me','Pour moi','Je cherche ma signature'],['gift','Pour offrir','Je choisis pour quelqu’un'],['both','Je ne sais pas encore','J’aimerais d’abord essayer']]}
+];
+let qi=0,ans={};
+function vDecouverte(){
+  return `<section class="quiz" aria-labelledby="qh"><div class="wrap"><p class="kick">Trouvez votre parfum · guide olfactif</p><h1 class="sr" id="qh">Trouvez votre parfum ORMAIE</h1><div id="qz"></div></div></section>
+  <div class="wrap"><section class="sec" style="border-bottom:0" aria-labelledby="ds"><div class="sec-h"><div><p class="kick">Coffrets découverte</p><h2 class="d" id="ds">Essayer chez soi</h2></div></div>
+  <div class="sets">${SETS.map(s=>`<article class="setc"><img src="${im(s.img,700)}" alt="Coffret ${esc(s.n)}" width="700" height="700" loading="lazy"><div><h3 class="d">${esc(s.n)}</h3><p>${esc(s.d)}</p><p class="price">${money(s.p)}</p><button class="btn" data-add-set="${s.h}">Ajouter au panier</button></div></article>`).join('')}</div></section></div>`;
+}
+function drawQuiz(){
+  const z=$('#qz');if(!z)return;
+  const bar=`<div class="qbar" aria-hidden="true">${Q.map((_,i)=>`<i class="${i<=qi?'on':''}"></i>`).join('')}</div>`;
+  if(qi<Q.length){
+    const s=Q[qi];
+    z.innerHTML=`${bar}<p class="kick">Question ${qi+1} sur ${Q.length}</p><h2 class="d" tabindex="-1" id="qq">${s.q}</h2><div class="opts">${s.o.map(o=>`<button class="opt" data-v="${o[0]}"><b>${o[1]}</b><span>${o[2]}</span></button>`).join('')}</div><div class="qnav">${qi?'<button id="qback">← Retour</button>':'<span></span>'}<span></span></div>`;
+  }else{
+    const sc=P.map(p=>{let s=0,why=[];
+      if(p.mo.includes(ans.mo)){s+=3;why.push(Q[0].o.find(o=>o[0]===ans.mo)[1].toLowerCase())}
+      if(p.amb.includes(ans.amb)){s+=4;why.push(AMB[ans.amb].toLowerCase())}
+      const d=Math.abs(p.int-+ans.int);s+=2-d;
+      if(+ans.int===2&&p.t!=='edp')s+=1; if(+ans.int===0&&p.t==='edp')s+=1;
+      return {p,s,why};}).sort((a,b)=>b.s-a.s).slice(0,3);
+    const set=ans.who==='gift'?SETS[0]:(+ans.int===2?SETS[2]:SETS[0]);
+    z.innerHTML=`${bar}<p class="kick">Votre sélection</p><h2 class="d" tabindex="-1" id="qq">Trois fragrances ORMAIE pour vous</h2><div class="res">${sc.map(r=>`<a class="rcard" href="#parfum/${r.p.h}"><img src="${im(r.p.img[0],300)}" alt="" width="96" height="96"><div><h3 class="d">${esc(r.p.n)}</h3><p>${esc(r.p.tl)}</p><p class="why">${r.why.length?'Pour : '+esc(r.why.join(' · ')):'Un accord voisin'}</p><p>${r.p.f.length>1?'À partir de ':''}${money(from(r.p))}</p></div></a>`).join('')}</div>
+    <div style="margin-top:22px;border:1px solid #5a5650;padding:18px;display:grid;gap:10px"><p class="kick">${ans.who==='gift'?'Le cadeau le plus sûr':'Les essayer d’abord'}</p><p style="margin:0">${esc(set.n)} : ${esc(set.d)}</p><div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><button class="btn" style="background:var(--on-inverse);color:var(--ink);border-color:var(--on-inverse)" data-add-set="${set.h}">Ajouter ${esc(set.n)} · ${money(set.p)}</button><button id="qagain" style="background:none;border:0;color:#c9c5bd;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:8px 0">Recommencer</button></div></div>`;
+  }
+  const h=$('#qq');if(h&&drawQuiz.focus)h.focus();
+}
+document.addEventListener('click',e=>{
+  const o=e.target.closest('.opt');if(o&&$('#qz')&&$('#qz').contains(o)){ans[Q[qi].k]=o.dataset.v;qi++;drawQuiz.focus=true;drawQuiz();return}
+  if(e.target.id==='qback'){qi=Math.max(0,qi-1);drawQuiz.focus=true;drawQuiz();return}
+  if(e.target.id==='qagain'){qi=0;ans={};drawQuiz.focus=true;drawQuiz();return}
+  const s=e.target.closest('[data-add-set]');if(s){const x=SETS.find(y=>y.h===s.dataset.addSet);addToCart(x.h,x.n,'Coffret découverte',x.p,x.img);return}
+  const ft=e.target.closest('[data-ft]');if(ft){fType=ft.dataset.ft;document.querySelectorAll('[data-ft]').forEach(b=>b.setAttribute('aria-pressed',b===ft));fillGrid();return}
+  const fa=e.target.closest('[data-fa]');if(fa){fAmb=fa.dataset.fa;document.querySelectorAll('.chip[data-fa]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.fa===fAmb));fillGrid();return}
+});
+
+/* ---------- souvenirs tapés ---------- */
+let typTimer=null;
+function startTyped(){
+  const el=$('#typed'),by_=$('#typedBy');if(!el)return;
+  const pool=P.filter(p=>p.line.length>30);let i=0;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const show=()=>{const p=pool[i%pool.length];by_.textContent=p.n+' →';by_.href='#parfum/'+p.h;
+    if(reduce){el.textContent=p.line;i++;typTimer=setTimeout(show,5000);return}
+    let c=0;const step=()=>{if(!document.body.contains(el))return;el.innerHTML=esc(p.line.slice(0,c))+'<span class="caret"></span>';if(c++<p.line.length)typTimer=setTimeout(step,34);else{i++;typTimer=setTimeout(show,2600)}};step();};
+  show();
+}
+
+/* ---------- routeur ---------- */
+const META={
+ accueil:['ORMAIE — Haute Parfumerie française, Paris · Eaux de Parfum & Extraits','Une Maison de Haute Parfumerie française : des fragrances chargées d’émotions et de souvenirs, composées des matières les plus nobles.'],
+ collection:['Tous les parfums — Eaux de Parfum, Extraits & Les Facettes | ORMAIE Paris','Dix Eaux de Parfum, quatre Extraits et Les Facettes. Filtrez par ambiance : frais, fleurs blanches, rose, bois, vanille, musc.'],
+ maison:['La Maison — Baptiste Bouygues & Marie-Lise Jonak | ORMAIE Paris','Une Maison familiale de Haute Parfumerie française qui place la créativité, l’exigence et le temps au cœur de ses créations.'],
+ decouverte:['Trouvez votre parfum — Guide olfactif & coffrets découverte | ORMAIE Paris','Quatre questions pour trouver votre fragrance ORMAIE, puis l’essayer chez vous avec La Collection, 10 × 2 ml.']
+};
+function setMeta(t,d){document.title=t+' · Maquette';document.querySelector('meta[name=description]').setAttribute('content',d)}
+function route(){
+  clearTimeout(typTimer);
+  const raw=(location.hash||'#accueil').slice(1);const [r,arg]=raw.split('/');
+  let html=null,key=r;
+  if(r==='collection'){fType=TYPES[arg]?arg:'all';fAmb='all';html=vCollection()}
+  else if(r==='parfum'){html=vProduct(arg);const p=by(arg);if(p)setMeta(`${p.n} — ${p.tl}, ${TYPES[p.t]} | ORMAIE Paris`,`${p.line} Notes : ${p.top} ; ${p.heart} ; ${p.base}.`)}
+  else if(r==='maison')html=vMaison();
+  else if(r==='decouverte')html=vDecouverte();
+  if(!html){html=vHome();key='accueil'}
+  main.innerHTML=html;
+  if(META[key])setMeta(...META[key]);
+  document.querySelectorAll('.nav a').forEach(a=>{if(a.dataset.r===key)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  if(key==='accueil')startTyped();
+  if(key==='collection')fillGrid();
+  if(key==='decouverte'){qi=0;ans={};drawQuiz.focus=false;drawQuiz()}
+  if(r==='parfum'&&by(arg)){
+    const p=by(arg);const upd=()=>{const i=+document.querySelector('input[name=fmt]:checked').value;$('#pPrice').textContent=money(p.f[i][1])};upd();
+    main.querySelectorAll('input[name=fmt]').forEach(x=>x.addEventListener('change',upd));
+    $('#addP').onclick=()=>{const i=+document.querySelector('input[name=fmt]:checked').value;addToCart(p.h,p.n,p.f[i][0],p.f[i][1],p.img[0])};
+  }
+  window.scrollTo(0,0);
+  if(route.ready)main.focus({preventScroll:true});route.ready=true;
+}
+addEventListener('hashchange',route);
+renderCart();route();
+})();
+</script>
+</body>
+</html>
