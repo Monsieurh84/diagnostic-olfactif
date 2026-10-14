@@ -473,7 +473,8 @@ if(D){
   STORES.client={name:D.name,dom:D.domain};S.ch='client';S.pf=D.platform||'shopify';
   const c=D.charte,st=document.createElement('style');
   st.textContent=`.store[data-charte="client"]{--s-bg:${c.bg};--s-ink:${c.ink};--s-muted:${c.muted};--s-line:${c.line};--s-accent:${c.accent};--s-card:${c.card};--s-btn:${c.btn};--s-btn-ink:${c.btnInk};--s-display:${c.display};--s-body:${c.body};--s-radius:${c.radius};--s-track:${c.track};color-scheme:light}
-  .store[data-charte="client"] h1,.store[data-charte="client"] h2,.store[data-charte="client"] h3{font-weight:${c.headWeight||400}}
+  .store[data-charte="client"] h1,.store[data-charte="client"] h2,.store[data-charte="client"] h3{font-weight:${c.headWeight||400};text-transform:${c.headCase||'none'}}
+  .store[data-charte="client"] .sh-head .logo{color:${c.logoColor||'inherit'}}
   .store[data-charte="client"] .s-btn{text-transform:${c.btnCase||'uppercase'}}`;
   document.head.appendChild(st);
   if(c.fontHref){const l=document.createElement('link');l.rel='stylesheet';l.href=c.fontHref;document.head.appendChild(l);}

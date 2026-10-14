@@ -26,3 +26,4 @@ Développé par Monsieur.H — Les Monsieurs by Monsieur.H
 Une démo à la charte et avec les parfums d'un prospect : `prospects/<slug>.json` → `python3 prospects/build.py prospects/<slug>.json` → `<slug>.html` à la racine.
 
 - Sens Unique : `https://monsieurh84.github.io/diagnostic-olfactif/sens-unique.html`
+- Le Paravent : `https://monsieurh84.github.io/diagnostic-olfactif/le-paravent.html`
