@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Santa Rosa, parfumerie alternative à Toulouse · Maquette de refonte</title>
+<meta name="description" content="Maquette de refonte de santarosa-parfumerie.com préparée par Monsieur.H : 784 parfums de niche rendus lisibles, un guide olfactif en 4 questions et les échantillons à 5 € mis au centre du parcours.">
+<meta property="og:title" content="Santa Rosa · maquette de refonte par Monsieur.H">
+<meta property="og:description" content="Tout ce qui sent bon se trouve chez Santa Rosa, 11 rue Antonin Mercié à Toulouse : une proposition de site plus rapide, plus sûre et pensée pour trouver son parfum.">
+<meta property="og:image" content="https://www.santarosa-parfumerie.com/media/cache/shop_homepage_header__default/uploads/homepage/bienvenue-santa-rosa.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.santarosa-parfumerie.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#222221; --ink2:#3a3a38; --mute:#5d5a54; --paper:#f6f2ea; --paper2:#ece6da; --card:#fffdf8; --line:#d9d1c2;
+  --sun:#ffd440; --sun-d:#f2c21c; --brick:#a2462c; --brick-l:#e9c9b9;
+  --disp:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --caps:"Josefin Sans","Bricolage Grotesque",system-ui,sans-serif;
+  --gut:16px; --max:1200px;
+  --blob:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283.46 283.46'%3E%3Cpath d='M227.08,28.09C204.21,11.73,176.19,2.09,145.92,2.09,68.8,2.09,6.28,64.61,6.28,141.73s62.52,139.64,139.64,139.64c60.36,0,111.77-38.3,131.27-91.92L227.08,28.09Z'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--disp);overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;z-index:300}
+.skip:focus{top:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+@media(min-width:768px){:root{--gut:32px}}
+h1,h2,h3{font-family:var(--disp);font-weight:800;line-height:1.02;margin:0;letter-spacing:-.025em}
+p{margin:0 0 1em}
+.caps{font:700 12px/1.3 var(--caps);letter-spacing:.14em;text-transform:uppercase}
+.dot::before{content:".";color:var(--brick);margin-right:1px}
+.mute{color:var(--mute)}
+.blob{-webkit-mask:var(--blob) center/100% 100% no-repeat;mask:var(--blob) center/100% 100% no-repeat}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:2px solid var(--ink);background:var(--ink);color:#fff;font:700 13px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:999px;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.btn.sun:hover{background:var(--sun-d);border-color:var(--sun-d)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost.on-ink{color:#fff;border-color:#fff}
+.btn.sm{min-height:40px;padding:0 16px;font-size:12px}
+.link{font:700 13px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:4px}
+.link:hover{border-color:var(--ink)}
+
+/* bandeau maquette */
+.proto{background:var(--ink);color:#f3efe6;font:500 12px/1.4 var(--disp);text-align:center;padding:7px var(--gut)}
+.proto b{color:var(--sun);font-weight:700}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:12px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.logo svg{width:52px;height:52px}
+.logo .tag{font:700 11px/1.2 var(--caps);letter-spacing:.14em;text-transform:uppercase;display:none}
+@media(min-width:900px){.logo .tag{display:block}}
+nav.main{display:none;margin-left:auto;gap:26px}
+nav.main a{font:700 13px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:2px solid transparent}
+nav.main a[aria-current="page"],nav.main a:hover{border-color:var(--sun)}
+@media(min-width:900px){nav.main{display:flex}}
+.tools{margin-left:auto;display:flex;gap:6px;align-items:center}
+@media(min-width:900px){.tools{margin-left:24px}}
+.icon-btn{width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;border-radius:50%;position:relative}
+.icon-btn:hover{background:var(--paper2)}
+.icon-btn svg{width:22px;height:22px}
+.badge{position:absolute;top:2px;right:0;min-width:20px;height:20px;padding:0 5px;background:var(--sun);color:var(--ink);font:800 11px/20px var(--disp);text-align:center;border-radius:10px}
+.menu-btn{display:grid}
+@media(min-width:900px){.menu-btn{display:none}}
+.mnav{display:none;border-top:1px solid var(--line);padding:8px 0 16px}
+.mnav.open{display:block}
+.mnav a{display:block;padding:12px 0;font:800 26px/1.1 var(--disp);text-decoration:none;letter-spacing:-.02em}
+@media(min-width:900px){.mnav{display:none!important}}
+
+/* perks */
+.perks{background:var(--sun);color:var(--ink)}
+.perks ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:28px;overflow-x:auto;scrollbar-width:none;font:700 12px/1.3 var(--caps);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.perks ul::-webkit-scrollbar{display:none}
+.perks li::before{content:"●";font-size:8px;vertical-align:2px;margin-right:8px}
+
+/* routes */
+.route{display:none}
+.route.on{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+section{padding:56px 0}
+@media(min-width:768px){section{padding:88px 0}}
+.kicker{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.kicker i{width:12px;height:12px;background:var(--brick);display:inline-block}
+.kicker i.blob{background:var(--brick)}
+.h2{font-size:clamp(32px,6vw,58px)}
+
+/* hero */
+.hero{padding:28px 0 56px;position:relative}
+.hero-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr 1fr;gap:48px}.hero{padding:56px 0 96px}}
+.hero h1{font-size:clamp(44px,9.5vw,104px);line-height:.94;letter-spacing:-.04em}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%,var(--sun) 92%,transparent 92%)}
+.hero .lede{font-size:18px;max-width:34em;margin:22px 0 28px;color:var(--ink2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-visual{position:relative;max-width:560px;margin:0 auto;width:100%}
+.hero-visual .ph{aspect-ratio:1;background:var(--ink)}
+.hero-visual .ph img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.sticker{position:absolute;width:132px;height:132px;display:grid;place-items:center;text-align:center;background:var(--sun);color:var(--ink);font:800 15px/1.05 var(--disp);padding:20px;transform:rotate(-8deg)}
+.sticker b{display:block;font-size:34px;letter-spacing:-.03em}
+.hero .sticker{left:-6px;bottom:-14px}
+@media(min-width:900px){.hero .sticker{left:-36px;bottom:10px;width:150px;height:150px}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--mute)}
+.hero-meta strong{color:var(--ink)}
+
+/* manifest */
+.manif{background:var(--ink);color:#f3efe6}
+.manif-grid{display:grid;gap:36px}
+@media(min-width:900px){.manif-grid{grid-template-columns:1fr 1fr;gap:72px}}
+.manif .big{font:700 clamp(26px,4vw,40px)/1.15 var(--disp);letter-spacing:-.02em}
+.manif .big span{color:var(--sun)}
+.manif ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.manif li{border-top:1px solid #4b4b47;padding:20px 0 20px 52px;position:relative;counter-increment:m}
+.manif li::before{content:counter(m,decimal-leading-zero);position:absolute;left:0;top:20px;font:800 22px/1 var(--disp);color:var(--sun)}
+.manif li h3{font-size:20px;margin-bottom:6px;letter-spacing:-.01em}
+.manif li p{margin:0;color:#cfcac0;font-size:15px}
+
+/* product grid */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none}
+.card .imw{position:relative}
+.card .meta{text-decoration:none;display:flex;flex-direction:column;flex:1}
+.card .meta:hover h3{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:var(--sun)}
+.card .im{display:block;position:relative;aspect-ratio:1;background:var(--card);border-radius:4px;overflow:hidden}
+.card .im::before{content:"";position:absolute;inset:14%;background:var(--paper2);-webkit-mask:var(--blob) center/100% 100% no-repeat;mask:var(--blob) center/100% 100% no-repeat;transition:background .25s}
+.card:hover .im::before{background:var(--sun)}
+.card .im img{position:relative;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;padding:8%}
+.card .fam{position:absolute;left:8px;top:8px;background:var(--paper);font:700 10px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;padding:6px 8px;border-radius:999px}
+.card .brand{margin-top:12px;font:700 11px/1.3 var(--caps);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.card h3{font-size:19px;line-height:1.1;letter-spacing:-.015em;margin:4px 0 6px;font-weight:700}
+.card .pr{font-size:15px;margin-top:auto}
+.card .pr small{color:var(--mute)}
+.qa{position:absolute;right:8px;bottom:8px;z-index:2;border:0;background:var(--ink);color:#fff;font:700 10px/1 var(--caps);letter-spacing:.1em;text-transform:uppercase;padding:9px 10px;border-radius:999px}
+.qa:hover{background:var(--brick)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:32px}
+
+/* guide teaser */
+.teaser{background:var(--sun)}
+.teaser-grid{display:grid;gap:28px;align-items:center}
+@media(min-width:900px){.teaser-grid{grid-template-columns:1.2fr 1fr}}
+.teaser .h2{max-width:12em}
+.qprev{display:grid;gap:10px}
+.qprev div{background:var(--paper);border-radius:999px;padding:14px 20px;font-weight:500;display:flex;gap:12px;align-items:center}
+.qprev div b{font:800 13px/1 var(--disp);background:var(--ink);color:var(--sun);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none}
+
+/* maisons */
+.brands{display:flex;flex-wrap:wrap;gap:8px}
+.brands button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:10px 14px;font-size:14px;font-weight:500;display:inline-flex;gap:8px;align-items:center}
+.brands button span{font:700 11px/1 var(--caps);color:var(--mute)}
+.brands button:hover{border-color:var(--ink)}
+
+/* boutique */
+.shop-grid{display:grid;gap:28px}
+@media(min-width:900px){.shop-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}}
+.shop-ph{position:relative}
+.shop-ph img{width:100%;aspect-ratio:500/353;object-fit:cover;border-radius:4px;filter:saturate(.9)}
+.shop-ph .sign{position:absolute;right:-6px;top:-22px;width:30%;max-width:120px;border:6px solid var(--paper);transform:rotate(4deg);aspect-ratio:300/375;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.facts div{background:var(--paper);padding:16px}
+.facts b{display:block;font:800 26px/1 var(--disp);letter-spacing:-.02em;margin-bottom:6px}
+.facts span{font-size:13px;color:var(--mute)}
+
+/* collection */
+.filters{display:grid;gap:14px;margin-bottom:28px;position:sticky;top:68px;z-index:20;background:var(--paper);padding:12px 0;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1.5px solid var(--ink);background:transparent;border-radius:999px;padding:9px 14px;font:700 12px/1 var(--caps);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--sun)}
+.frow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.frow>.chips{flex:1 1 100%;min-width:0}
+@media(min-width:900px){.frow>.chips{flex:1 1 auto}}
+.filters>*{min-width:0}
+.sels{display:flex;gap:8px;flex:1 1 100%;min-width:0}
+@media(min-width:900px){.sels{flex:0 1 auto}}
+.frow select{flex:1 1 0;min-width:0;border:1.5px solid var(--ink);background:var(--card);border-radius:999px;padding:9px 14px;min-height:42px;max-width:100%}
+.count{font-size:14px;color:var(--mute)}
+.empty{padding:40px 0;text-align:center;color:var(--mute)}
+
+/* fiche */
+.pdp{display:grid;gap:28px;padding-top:28px}
+@media(min-width:900px){.pdp{grid-template-columns:1fr 1fr;gap:64px;padding-top:56px}}
+.crumb{font-size:13px;color:var(--mute);margin-bottom:18px}
+.crumb a{color:var(--mute)}
+.pdp-im{position:relative;background:var(--card);aspect-ratio:1;border-radius:4px;display:grid;place-items:center;overflow:hidden}
+.pdp-im::before{content:"";position:absolute;inset:10%;background:var(--sun);-webkit-mask:var(--blob) center/100% 100% no-repeat;mask:var(--blob) center/100% 100% no-repeat}
+.pdp-im img{position:relative;width:86%;height:86%;object-fit:contain;mix-blend-mode:multiply}
+@media(min-width:900px){.pdp-media{position:sticky;top:96px;align-self:start}}
+.pdp h1{font-size:clamp(38px,6vw,64px);margin:6px 0 10px}
+.pdp .desc{font-size:18px;color:var(--ink2);max-width:36em}
+.fmts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.fmt{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 14px;text-align:left;min-width:96px}
+.fmt b{display:block;font-size:17px}
+.fmt span{font-size:13px;color:var(--mute)}
+.fmt[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.buy{display:grid;gap:10px;margin:20px 0}
+@media(min-width:520px){.buy{grid-template-columns:1fr 1fr}}
+.reassure{display:grid;gap:8px;font-size:14px;color:var(--mute);margin:16px 0 0;padding:0;list-style:none}
+.reassure li::before{content:"●";color:var(--sun);margin-right:8px;-webkit-text-stroke:1px var(--ink)}
+.pyr{margin-top:36px;border-top:2px solid var(--ink)}
+.pyr .row{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.pyr .row b{font:700 12px/1.6 var(--caps);letter-spacing:.12em;text-transform:uppercase}
+.pyr .note{font-size:13px;color:var(--mute);margin-top:10px}
+.reviews{margin-top:36px;border:2px dashed var(--line);border-radius:6px;padding:20px}
+.reviews .tag{display:inline-block;background:var(--paper2);font:700 10px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;padding:6px 8px;border-radius:999px;margin-bottom:10px}
+.reviews .stars{display:flex;gap:4px;margin:8px 0}
+.reviews .stars i{width:18px;height:18px;border:1.5px solid var(--line);border-radius:50%}
+
+/* maison */
+.m-hero{display:grid;gap:28px;align-items:end;padding-top:28px}
+@media(min-width:900px){.m-hero{grid-template-columns:1.2fr 1fr;gap:64px;padding-top:56px}}
+.m-hero h1{font-size:clamp(44px,8vw,96px);letter-spacing:-.04em;line-height:.95}
+.portrait{position:relative;max-width:360px}
+.portrait .frame{aspect-ratio:200/266;background:var(--ink)}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.portrait figcaption{font-size:13px;color:var(--mute);margin-top:10px}
+.story{display:grid;gap:28px}
+@media(min-width:900px){.story{grid-template-columns:200px 1fr;gap:56px}}
+.story .yr{font:800 64px/1 var(--disp);letter-spacing:-.04em;color:var(--brick)}
+.story p{font-size:19px;max-width:36em}
+.quote{font:700 clamp(26px,4vw,40px)/1.15 var(--disp);letter-spacing:-.02em;max-width:22em}
+.quote span{background:linear-gradient(transparent 60%,var(--sun) 60%)}
+.values{display:grid;gap:14px}
+@media(min-width:768px){.values{grid-template-columns:repeat(3,1fr)}}
+.values div{background:var(--card);border-radius:6px;padding:22px;border:1px solid var(--line)}
+.values h3{font-size:22px;margin-bottom:8px}
+.values p{font-size:15px;color:var(--ink2);margin:0}
+
+/* découverte */
+.quiz{background:var(--card);border-radius:8px;border:1px solid var(--line);padding:22px;max-width:820px}
+@media(min-width:768px){.quiz{padding:40px}}
+.qsteps{display:flex;gap:6px;margin-bottom:22px}
+.qsteps i{flex:1;height:6px;border-radius:3px;background:var(--paper2)}
+.qsteps i.on{background:var(--ink)}
+.quiz legend{font:800 clamp(26px,4.4vw,40px)/1.05 var(--disp);letter-spacing:-.025em;margin-bottom:20px;padding:0}
+.quiz fieldset{border:0;margin:0;padding:0;min-width:0}
+.opts{display:grid;gap:10px}
+@media(min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{display:flex;gap:14px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);text-align:left;width:100%}
+.opt:hover{border-color:var(--ink)}
+.opt .ico{width:40px;height:40px;flex:none;background:var(--sun)}
+.opt b{display:block;font-size:16px}
+.opt span{font-size:13px;color:var(--mute)}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.res-grid{display:grid;gap:16px;margin-top:22px}
+@media(min-width:700px){.res-grid{grid-template-columns:repeat(3,1fr)}}
+.res{background:var(--paper);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.res .im{aspect-ratio:1;background:var(--card);border-radius:4px;overflow:hidden}
+.res .im img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;padding:8%}
+.res .why{font-size:13px;color:var(--mute)}
+.kit{display:grid;gap:28px}
+@media(min-width:900px){.kit{grid-template-columns:1fr 360px;align-items:start}}
+.kit-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:700px){.kit-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.kpick{border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px;text-align:left;display:flex;gap:10px;align-items:center;min-width:0}
+.kpick>span{min-width:0}
+.kpick img{width:44px;height:44px;object-fit:contain;mix-blend-mode:multiply;flex:none}
+.kpick span{display:block;font-size:14px;font-weight:700;line-height:1.15;overflow-wrap:break-word;hyphens:auto;min-width:0}
+.kpick small{font-size:12px;color:var(--mute)}
+.kpick[aria-pressed="true"]{border-color:var(--ink);background:var(--sun)}
+.kpick:disabled{opacity:.45;cursor:not-allowed}
+.kbox{background:var(--ink);color:#f3efe6;border-radius:10px;padding:22px;order:-1}
+@media(min-width:900px){.kbox{order:0;position:sticky;top:96px}}
+.slots{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:16px 0}
+.slots i{aspect-ratio:1;background:#3b3b38;-webkit-mask:var(--blob) center/100% 100% no-repeat;mask:var(--blob) center/100% 100% no-repeat}
+.slots i.on{background:var(--sun)}
+.kbox ul{list-style:none;margin:0 0 14px;padding:0;font-size:14px;color:#d4cfc4;min-height:24px}
+.kbox li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px solid #43433f}
+.kbox .tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin-bottom:14px}
+.coffrets{display:grid;gap:16px}
+@media(min-width:700px){.coffrets{grid-template-columns:1fr 1fr}}
+.coffret{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;align-items:center}
+.coffret img{width:120px;height:120px;object-fit:contain;mix-blend-mode:multiply}
+.coffret h3{font-size:19px;margin:4px 0}
+.coffret p{font-size:14px;color:var(--ink2);margin:0 0 8px}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(34,34,33,.45);z-index:90;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:100;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;visibility:hidden}
+.drawer.on{transform:none;visibility:visible}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px var(--gut);border-bottom:1px solid var(--line)}
+.dh h2{font-size:26px}
+.db{flex:1;overflow:auto;padding:16px var(--gut)}
+.df{border-top:1px solid var(--line);padding:16px var(--gut);display:grid;gap:10px}
+.prog{font-size:13px;color:var(--ink2)}
+.prog .track{height:6px;background:var(--paper2);border-radius:3px;margin-top:6px;overflow:hidden}
+.prog .track i{display:block;height:100%;background:var(--ink);transition:width .3s}
+.line{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.line img{width:56px;height:56px;object-fit:contain;background:var(--card);mix-blend-mode:multiply;border-radius:4px}
+.line b{display:block;font-size:15px;line-height:1.2}
+.line small{color:var(--mute);font-size:12px}
+.line button{border:0;background:none;text-decoration:underline;font-size:12px;color:var(--mute);padding:4px}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:20px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-size:14px;z-index:120;transition:transform .25s;max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+
+/* notes de refonte */
+.notes-btn{position:fixed;right:14px;bottom:14px;z-index:80;display:flex;align-items:center;gap:8px;border:0;background:var(--ink);color:#fff;font:700 11px/1 var(--caps);letter-spacing:.12em;text-transform:uppercase;padding:12px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.notes-btn i{width:14px;height:14px;background:var(--sun)}
+.notes{position:fixed;inset:auto 0 0 0;max-height:88vh;background:#fffdf8;z-index:110;border-top:4px solid var(--sun);transform:translateY(100%);transition:transform .3s;overflow:auto;visibility:hidden}
+.notes.on{transform:none;visibility:visible}
+@media(min-width:900px){.notes{inset:0 0 0 auto;width:560px;max-height:none;border-top:0;border-left:4px solid var(--sun);transform:translateX(100%)}}
+.notes .in{padding:22px var(--gut) 40px}
+.notes h2{font-size:30px;margin:4px 0 10px}
+.notes .intro{font-size:15px;color:var(--ink2)}
+.notes ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.notes li{counter-increment:n;padding:18px 0;border-top:1px solid var(--line)}
+.notes li h3{font-size:19px;letter-spacing:-.01em;display:flex;gap:10px;align-items:baseline}
+.notes li h3::before{content:counter(n);font:800 13px/1 var(--disp);background:var(--sun);width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;flex:none;transform:translateY(-3px)}
+.notes dl{margin:10px 0 0;display:grid;gap:8px;font-size:14px}
+.notes dt{font:700 10px/1.4 var(--caps);letter-spacing:.14em;text-transform:uppercase;color:var(--brick)}
+.notes dd{margin:0;color:var(--ink2)}
+.notes code{font-size:12px;background:var(--paper2);padding:1px 5px;border-radius:3px;overflow-wrap:anywhere}
+
+/* footer */
+footer{background:var(--ink);color:#d4cfc4;padding:56px 0 88px;font-size:14px}
+.fgrid{display:grid;gap:28px}
+@media(min-width:800px){.fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer h2{font:700 12px/1.3 var(--caps);letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+footer a{color:#d4cfc4;text-decoration:none}
+footer a:hover{color:var(--sun)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.news{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.news input{flex:1 1 180px;min-width:0;min-height:46px;border:1.5px solid #5b5b56;background:transparent;color:#fff;border-radius:999px;padding:0 16px}
+.news input::placeholder{color:#a9a49a}
+.legal{border-top:1px solid #43433f;margin-top:36px;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:12px}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sr-logo" viewBox="0 0 283.46 283.46">
+    <path fill="currentColor" d="M227.08,28.09C204.21,11.73,176.19,2.09,145.92,2.09,68.8,2.09,6.28,64.61,6.28,141.73s62.52,139.64,139.64,139.64c60.36,0,111.77-38.3,131.27-91.92L227.08,28.09Z"/>
+    <g fill="var(--logo-letters,#fff)">
+      <path d="M60.15,125.13c.34,2.13,1.93,4.68,6.27,4.68,2.75,0,4.41-1.1,4.41-3.37,0-3.17-3.24-3.44-9.43-5.16-4.47-1.31-9.91-3.79-9.91-11.63s5.37-11.63,14.25-11.63,13.77,3.44,15.21,9.78l-9.02,2.41c-.62-2.41-2.55-3.86-5.65-3.86-2.68,0-4.27,1.1-4.27,3.03,0,2.55,2.55,3.03,8.33,4.68,4.68,1.31,11.02,3.86,11.02,12.19s-6.4,11.91-14.87,11.91c-6.75,0-14.18-2.27-15.7-10.53l9.36-2.48Z"/>
+      <path d="M94.5,130.57l-1.72,6.75h-10.4l11.7-38.55h13.63l11.7,38.55h-10.67l-1.79-6.75h-12.46ZM103.18,116.18c-1.58-6.13-2.27-9.09-2.34-9.23h-.21l-2.48,9.57-1.38,5.23h7.92l-1.51-5.58Z"/>
+      <path d="M145.86,137.32l-13.22-21.55h-.28c0,.07.07,4.2.07,8.4v13.15h-10.12v-38.55h10.74l13.15,20.72h.28v-20.72h10.12v38.55h-10.74Z"/>
+      <path d="M181.66,108.47v28.85h-10.33v-28.85h-10.88v-9.71h32.08v9.71h-10.88Z"/>
+      <path d="M201.01,130.57l-1.72,6.75h-10.4l11.7-38.55h13.63l11.7,38.55h-10.67l-1.79-6.75h-12.46ZM209.68,116.18c-1.58-6.13-2.27-9.09-2.34-9.23h-.21l-2.48,9.57-1.38,5.23h7.92l-1.51-5.58Z"/>
+      <path d="M112.93,172.1h-4.2v12.53h-10.33v-38.55h15.08c9.71,0,15.01,5.23,15.01,13.15,0,5.58-2.62,9.09-5.99,10.67l7.78,14.73h-11.08l-6.27-12.53ZM113.61,164.12c2.89,0,4.34-1.58,4.34-4.27s-1.38-4.27-4.34-4.27h-4.89v8.54h4.89Z"/>
+      <path d="M130.81,165.39c0-11.92,7.23-20.07,20.03-20.07s20.1,8.15,20.1,20.07-7.37,20.07-20.1,20.07-20.03-8.07-20.03-20.07ZM161.37,165.39c0-5.41-3.58-8.74-10.53-8.74s-10.47,3.33-10.47,8.74,3.51,8.74,10.47,8.74,10.53-3.33,10.53-8.74Z"/>
+      <path d="M181.77,172.45c.34,2.13,1.93,4.68,6.27,4.68,2.75,0,4.41-1.1,4.41-3.37,0-3.17-3.24-3.44-9.43-5.16-4.47-1.31-9.91-3.79-9.91-11.63s5.37-11.63,14.25-11.63,13.77,3.44,15.21,9.78l-9.02,2.41c-.62-2.41-2.55-3.86-5.65-3.86-2.68,0-4.27,1.1-4.27,3.03,0,2.55,2.55,3.03,8.33,4.68,4.68,1.31,11.02,3.86,11.02,12.19s-6.4,11.91-14.87,11.91c-6.75,0-14.18-2.27-15.7-10.53l9.36-2.48Z"/>
+      <path d="M216.13,177.89l-1.72,6.75h-10.4l11.7-38.55h13.63l11.7,38.55h-10.67l-1.79-6.75h-12.46ZM224.8,163.5c-1.58-6.13-2.27-9.09-2.34-9.23h-.21l-2.48,9.57-1.38,5.23h7.92l-1.52-5.58Z"/>
+      <path d="M73.15,177.27c0-4.87,2.95-8.2,8.18-8.2s8.21,3.33,8.21,8.2-3.01,8.2-8.21,8.2-8.18-3.3-8.18-8.2Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="proto" role="note">Maquette préparée pour <b>Santa Rosa</b> par Monsieur.H · non contractuelle</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#accueil" aria-label="Santa Rosa, accueil">
+      <svg style="color:var(--ink)" aria-hidden="true"><use href="#sr-logo"/></svg>
+      <span class="tag">Parfumerie alternative<br>Toulouse · depuis 2002</span>
+    </a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#collection" data-nav="collection">Parfums</a>
+      <a href="#decouverte" data-nav="decouverte">Trouver mon parfum</a>
+      <a href="#decouverte/echantillons" data-nav="echantillons">Échantillons</a>
+      <a href="#maison" data-nav="maison">La maison</a>
+    </nav>
+    <div class="tools">
+      <a class="icon-btn" href="#collection" aria-label="Rechercher un parfum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Ouvrir le panier, 0 article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </div>
+  <div class="wrap mnav" id="mnav">
+    <a href="#collection">.Parfums</a>
+    <a href="#decouverte">.Trouver mon parfum</a>
+    <a href="#decouverte/echantillons">.Échantillons à 5 €</a>
+    <a href="#maison">.La maison</a>
+  </div>
+</header>
+
+<div class="perks" aria-label="Avantages">
+  <div class="wrap"><ul>
+    <li>Échantillon 5 € · jusqu'à 5 au choix</li>
+    <li>3 échantillons offerts dès 30 €</li>
+    <li>Livraison offerte dès 50 €</li>
+    <li>Retrait au 11 rue Antonin Mercié</li>
+  </ul></div>
+</div>
+
+<main id="contenu">
+
+<!-- ============ ACCUEIL ============ -->
+<div class="route" id="r-accueil" data-title="Santa Rosa · Parfumerie alternative à Toulouse depuis 2002">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="caps dot">Parfumerie alternative · Toulouse</p>
+        <h1>Tout ce qui sent bon se trouve chez <em>Santa&nbsp;Rosa.</em></h1>
+        <p class="lede">Depuis 2002, une parfumerie de niche qui préfère les matières nobles, l'histoire des maisons et le conseil qui prend le temps. Près de 800 parfums de 48 maisons — et une façon simple de trouver le vôtre.</p>
+        <div class="ctas">
+          <a class="btn" href="#decouverte">Trouver mon parfum</a>
+          <a class="btn ghost" href="#decouverte/echantillons">Composer mes 5 échantillons</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>4,4/5</strong> · 347 avis Google</span>
+          <span><strong>4,3 k</strong> abonnés Instagram</span>
+          <span><strong>11 rue Antonin Mercié</strong>, Toulouse</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="ph blob"><img src="https://www.santarosa-parfumerie.com/media/cache/shop_homepage_header__default/uploads/homepage/bienvenue-santa-rosa.jpeg" alt="Flacons de parfums de niche alignés sur les étagères de la boutique Santa Rosa" width="1800" height="555" fetchpriority="high"></div>
+        <a class="sticker blob" href="#decouverte/echantillons"><span><b>5 €</b>l'échantillon,<br>jusqu'à 5</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="manif" aria-labelledby="manif-t">
+    <div class="wrap manif-grid">
+      <div>
+        <p class="caps" style="color:var(--sun)">Le parti pris Santa Rosa</p>
+        <h2 id="manif-t" class="big">Prendre soin de soi et sentir bon, oui — <span>mais toujours en étant soucieux de demain.</span></h2>
+        <p style="margin-top:22px;color:#cfcac0">Isabelle Gallet et son équipe sélectionnent des parfums rares et d'exception, des soins, du maquillage et des parfums d'intérieur, en regardant de près les valeurs des maisons qu'elles accueillent.</p>
+        <a class="link" href="#maison" style="color:#fff">L'histoire de la maison</a>
+      </div>
+      <ol>
+        <li><h3>Des matières premières nobles</h3><p>Une attention particulière aux matières naturelles et à l'origine des ingrédients.</p></li>
+        <li><h3>Les circuits courts</h3><p>Des marques qui privilégient les circuits courts, pour des produits plus abordables.</p></li>
+        <li><h3>Un conseil qui écoute</h3><p>Une équipe expérimentée, régulièrement formée, qui conseille « avec tact et talent ».</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="sel-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="kicker"><i class="blob"></i><span class="caps">À sentir en ce moment</span></div>
+        <h2 id="sel-t" class="h2">Huit sillages, huit caractères.</h2></div>
+        <a class="link" href="#collection">Toute la collection</a>
+      </div>
+      <div class="grid" id="homeGrid"></div>
+    </div>
+  </section>
+
+  <section class="teaser" aria-labelledby="tz-t">
+    <div class="wrap teaser-grid">
+      <div>
+        <p class="caps">Guide olfactif</p>
+        <h2 id="tz-t" class="h2">784 parfums. Quatre questions pour trouver le vôtre.</h2>
+        <p style="font-size:18px;max-width:30em;margin:18px 0 24px">Comme au comptoir de la rue Antonin Mercié : on parle d'un moment, d'une matière, d'une envie. Trois parfums vous sont proposés, à découvrir d'abord en échantillon.</p>
+        <a class="btn" href="#decouverte">Commencer le guide</a>
+      </div>
+      <div class="qprev" aria-hidden="true">
+        <div><b>1</b>Pour quel moment ?</div>
+        <div><b>2</b>Ce qui vous attire d'instinct</div>
+        <div><b>3</b>Votre goût de l'audace</div>
+        <div><b>4</b>Votre budget flacon</div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="mq-t">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="kicker"><i class="blob"></i><span class="caps">Les maisons</span></div>
+        <h2 id="mq-t" class="h2">48 maisons de parfum,<br>une seule adresse.</h2></div>
+        <p class="mute" style="max-width:28em;margin:0">Nombre de parfums en ligne par maison, relevé sur le site actuel. Un clic filtre la collection.</p>
+      </div>
+      <div class="brands" id="brandWall"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--paper2)" aria-labelledby="bt-t">
+    <div class="wrap shop-grid">
+      <div class="shop-ph">
+        <img src="https://www.santarosa-parfumerie.com/media/image/uploads/homepage/Santa%20Rosa%20Devanture%2031-01-2018franckalix-2%20retouchee%20par%20SG%20tres%20petite.png" alt="La devanture de la parfumerie Santa Rosa et l'équipe sur le trottoir" width="500" height="353" loading="lazy">
+        <img class="sign" src="https://www.santarosa-parfumerie.com/media/image/uploads/homepage/Santa%20Rosa%20102%20Petite.jpg" alt="L'enseigne suspendue Santa Rosa" width="300" height="375" loading="lazy">
+      </div>
+      <div>
+        <div class="kicker"><i class="blob"></i><span class="caps">La boutique</span></div>
+        <h2 id="bt-t" class="h2">Venez sentir.<br>On vous écoute.</h2>
+        <div class="facts">
+          <div><b>2002</b><span>fondation de la parfumerie</span></div>
+          <div><b>4,4/5</b><span>347 avis Google</span></div>
+          <div><b>5 €</b><span>l'échantillon, envoyé dans un petit sac en coton</span></div>
+          <div><b>Retrait</b><span>en boutique, sans frais</span></div>
+        </div>
+        <p>11 rue Antonin Mercié, 31000 Toulouse · <a href="tel:+33561298481">05 61 29 84 81</a></p>
+        <div class="ctas" style="display:flex;flex-wrap:wrap;gap:10px">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Rosa+11+rue+Antonin+Merci%C3%A9+Toulouse" target="_blank" rel="noopener">Itinéraire</a>
+          <a class="btn ghost" href="#maison">La maison</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ COLLECTION ============ -->
+<div class="route" id="r-collection" data-title="Parfums de niche · Santa Rosa Toulouse">
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <p class="crumb"><a href="#accueil">Accueil</a> / Parfums</p>
+      <h1 class="h2" style="font-size:clamp(40px,7vw,80px)">Les parfums</h1>
+      <p class="mute" style="max-width:40em;margin:12px 0 24px">Une sélection de 44 parfums parmi les 784 proposés en ligne, classés par famille et par ambiance pour la démonstration. Prix relevés sur le site actuel.</p>
+      <div class="filters" role="group" aria-label="Filtrer les parfums">
+        <div class="chips" id="famChips"></div>
+        <div class="frow">
+          <div class="chips" id="ambChips"></div>
+          <div class="sels">
+            <label class="sr" for="brandSel">Maison</label>
+            <select id="brandSel"></select>
+            <label class="sr" for="sortSel">Trier</label>
+            <select id="sortSel">
+              <option value="sel">Sélection</option>
+              <option value="asc">Prix croissant</option>
+              <option value="desc">Prix décroissant</option>
+              <option value="az">De A à Z</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="grid" id="colGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ FICHE ============ -->
+<div class="route" id="r-parfum" data-title="Parfum · Santa Rosa">
+  <div class="wrap" id="pdp"></div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="h2" style="font-size:clamp(28px,4vw,42px)">Dans la même veine</h2><a class="link" href="#collection">Tous les parfums</a></div>
+      <div class="grid" id="relGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ MAISON ============ -->
+<div class="route" id="r-maison" data-title="La maison · Santa Rosa, parfumerie alternative à Toulouse">
+  <section style="padding-top:0">
+    <div class="wrap m-hero">
+      <div>
+        <p class="crumb"><a href="#accueil">Accueil</a> / La maison</p>
+        <p class="caps dot">Depuis 2002 · Toulouse</p>
+        <h1>Un refuge pour les parfums de niche.</h1>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <div class="frame"><img src="https://www.santarosa-parfumerie.com/media/image/uploads/isabelle-galet.jpg" alt="Isabelle Gallet, à la tête de Santa Rosa depuis 2015" width="200" height="266" loading="lazy"></div>
+        <figcaption>Isabelle Gallet a repris Santa Rosa en 2015.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap story">
+      <div class="yr">2002</div>
+      <div><p>Depuis sa fondation en 2002, la parfumerie alternative Santa Rosa accueille les maisons de parfums de niche les plus singulières, au 11 rue Antonin Mercié.</p></div>
+      <div class="yr">2015</div>
+      <div><p>Isabelle Gallet reprend la boutique et y apporte sa touche personnelle dans le choix des marques. Elle vient d'un autre milieu professionnel, mais la passion des parfums l'accompagne depuis l'enfance.</p></div>
+    </div>
+  </section>
+  <section style="background:var(--sun)">
+    <div class="wrap">
+      <p class="quote">De la poudre de riz du bâton de rouge à lèvres de sa grand-mère au chèvrefeuille grimpant sur le vieux puits, Isabelle a <span>toujours eu « du nez ».</span></p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="kicker"><i class="blob"></i><span class="caps">Ce qui guide la sélection</span></div>
+      <h2 class="h2" style="margin-bottom:28px">Partager l'histoire d'un parfum,<br>savoir écouter.</h2>
+      <div class="values">
+        <div><h3>Les matières</h3><p>Une attention particulière aux matières premières nobles et naturelles, et à l'origine des ingrédients.</p></div>
+        <div><h3>Les maisons</h3><p>Des marques qui favorisent les circuits courts, choisies pour leur créativité, leur histoire et leurs engagements.</p></div>
+        <div><h3>Au-delà du parfum</h3><p>Soins naturels, maquillage, parfums d'intérieur, petits trésors : tout ce qui sent bon se trouve chez Santa Rosa.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="background:var(--paper2)">
+    <div class="wrap shop-grid">
+      <div class="shop-ph"><img src="https://www.santarosa-parfumerie.com/media/image/uploads/homepage/Santa%20Rosa%20Devanture%2031-01-2018franckalix-2%20retouchee%20par%20SG%20tres%20petite.png" alt="La devanture de Santa Rosa, rue Antonin Mercié" width="500" height="353" loading="lazy"></div>
+      <div>
+        <h2 class="h2">Une équipe qui conseille avec tact et talent.</h2>
+        <p style="margin-top:16px">Une équipe expérimentée et régulièrement formée vous accueille à la boutique. Créer des liens avec celles et ceux qui cherchent leur parfum idéal, évoquer l'émotion d'un souvenir olfactif : c'est le cœur du métier.</p>
+        <p>11 rue Antonin Mercié, 31000 Toulouse<br><a href="tel:+33561298481">05 61 29 84 81</a> · <a href="mailto:contact@santarosa-parfumerie.com">contact@santarosa-parfumerie.com</a></p>
+        <a class="btn" href="#decouverte">Préparer ma visite avec le guide</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ DÉCOUVERTE ============ -->
+<div class="route" id="r-decouverte" data-title="Trouver mon parfum · guide olfactif et échantillons Santa Rosa">
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <p class="crumb"><a href="#accueil">Accueil</a> / Découverte</p>
+      <h1 class="h2" style="font-size:clamp(40px,7vw,80px);max-width:12em">Trouver son parfum, sans se tromper.</h1>
+      <p class="mute" style="max-width:40em;margin:14px 0 32px">Quatre questions, trois propositions parmi les parfums de la boutique, puis des échantillons à 5 € pour essayer chez vous.</p>
+      <div class="quiz" id="quiz" aria-live="polite"></div>
+    </div>
+  </section>
+  <section id="echantillons" style="background:var(--paper2)" aria-labelledby="kit-t">
+    <div class="wrap">
+      <div class="kicker"><i class="blob"></i><span class="caps">Échantillons</span></div>
+      <h2 id="kit-t" class="h2" style="max-width:14em">Composez votre sac de 5 échantillons.</h2>
+      <p style="max-width:42em;margin:14px 0 28px">Jusqu'à 5 échantillons différents, au prix affiché sur chaque parfum (5 € le plus souvent). Ils partent sous enveloppe bulle, dans un joli petit sac Santa Rosa en coton à réutiliser. Et pour tout achat de plus de 30 €, 3 échantillons sont offerts.</p>
+      <div class="kit">
+        <div class="kit-list" id="kitList"></div>
+        <aside class="kbox" aria-label="Mon sac d'échantillons">
+          <p class="caps" style="color:var(--sun);margin:0">Mon sac d'échantillons</p>
+          <div class="slots" id="slots" aria-hidden="true"></div>
+          <ul id="kitSel"></ul>
+          <div class="tot"><span>Total</span><span id="kitTot">0 €</span></div>
+          <button class="btn sun" id="kitAdd" style="width:100%" disabled>Ajouter au panier</button>
+        </aside>
+      </div>
+      <h3 style="font-size:26px;margin:48px 0 16px">Les coffrets découverte des maisons</h3>
+      <div class="coffrets" id="coffrets"></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <svg width="64" height="64" style="color:var(--sun);--logo-letters:var(--ink)" aria-hidden="true"><use href="#sr-logo"/></svg>
+      <p style="margin-top:14px">Une fois par mois, conseils, recommandations et bons plans. Une newsletter au pouvoir antidépresseur.</p>
+      <form class="news" onsubmit="event.preventDefault();toast('Maquette : inscription simulée, rien n\'est envoyé.')">
+        <label class="sr" for="nl">Votre e-mail</label>
+        <input id="nl" type="email" placeholder="Votre e-mail" autocomplete="email">
+        <button class="btn sun sm" type="submit">S'inscrire</button>
+      </form>
+      <p style="font-size:12px;margin-top:8px;color:#a9a49a">Désinscription en un clic. Vos données ne sont jamais revendues.</p>
+    </div>
+    <div><h2>Boutique</h2><ul><li>11 rue Antonin Mercié</li><li>31000 Toulouse</li><li><a href="tel:+33561298481">05 61 29 84 81</a></li><li><a href="mailto:contact@santarosa-parfumerie.com">contact@santarosa-parfumerie.com</a></li></ul></div>
+    <div><h2>Explorer</h2><ul><li><a href="#collection">Parfums</a></li><li><a href="#decouverte">Guide olfactif</a></li><li><a href="#decouverte/echantillons">Échantillons</a></li><li><a href="#maison">La maison</a></li></ul></div>
+    <div><h2>Suivre</h2><ul><li><a href="https://www.instagram.com/parfumeriesantarosatoulouse/" target="_blank" rel="noopener">Instagram @parfumeriesantarosatoulouse</a></li><li>Livraison offerte dès 50 €</li><li>3 échantillons offerts dès 30 €</li></ul></div>
+  </div>
+  <div class="wrap legal"><span>© Santa Rosa · Mise au Parfum SAS</span><a href="#accueil">Mentions légales</a><a href="#accueil">CGV</a><a href="#accueil">Gérer mes cookies</a><span>Développé par Monsieur.H</span></div>
+</footer>
+
+<!-- panier -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dt" aria-hidden="true">
+  <div class="dh"><h2 id="dt">Panier</h2><button class="icon-btn" id="closeCart" aria-label="Fermer le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="db">
+    <div class="prog" id="prog"></div>
+    <div id="lines"></div>
+  </div>
+  <div class="df">
+    <div style="display:flex;justify-content:space-between;font-weight:700;font-size:18px"><span>Sous-total</span><span id="sub">0 €</span></div>
+    <button class="btn" onclick="toast('Maquette : le paiement n\'est pas branché.')">Commander</button>
+    <p style="font-size:12px;color:var(--mute);margin:0">Retrait gratuit en boutique ou livraison. Panier simulé, aucune commande réelle.</p>
+  </div>
+</aside>
+
+<!-- notes de refonte -->
+<button class="notes-btn" id="notesBtn" aria-expanded="false" aria-controls="notes"><i class="blob"></i>Notes de refonte</button>
+<aside class="notes" id="notes" role="dialog" aria-modal="true" aria-labelledby="nt" aria-hidden="true">
+  <div class="in">
+    <div style="display:flex;justify-content:space-between;align-items:center"><p class="caps" style="margin:0">Monsieur.H · relevé du 15/10/2026</p><button class="icon-btn" id="closeNotes" aria-label="Fermer les notes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <h2 id="nt">Ce que la refonte change</h2>
+    <p class="intro">Chaque point part d'un constat mesuré sur santarosa-parfumerie.com (Sylius, hébergé chez Emagma), puis montre ce que fait la maquette et ce que vous y gagnez.</p>
+    <ol>
+      <li><h3>Un script d'un domaine compromis, sur toutes les pages</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Chaque page (accueil, fiches, panier, connexion) appelle <code>https://cdn.polyfill.io/v2/polyfill.min.js</code>. Ce domaine a été racheté en 2024 puis utilisé pour injecter du code malveillant sur des milliers de sites. Le 15/10/2026, <code>polyfill.io</code> est toujours enregistré et actif ; seul le sous-domaine <code>cdn</code> ne répond plus. Il suffit que son propriétaire le réactive pour exécuter son code sur votre panier.</dd>
+        <dt>Dans la maquette</dt><dd>Aucun script tiers : les fonctions que ce polyfill apportait (Promise, Array.from…) sont natives dans tous les navigateurs actuels.</dd>
+        <dt>Bénéfice</dt><dd>Clients et paiements protégés, une requête bloquante de moins (≈ 0,4 s).</dd></dl></li>
+      <li><h3>Une page d'accueil de 4 Mo</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Premier chargement de l'accueil : 90 requêtes, 3,9 Mo transférés, chargement complet en 6,8 s (premier octet à 1,3 s). Une seule image PNG pèse 1,35 Mo, aucune image n'est en WebP, 63 images chargées d'emblée.</dd>
+        <dt>Dans la maquette</dt><dd>Une image de tête prioritaire, le reste en chargement différé, formats modernes recommandés, deux polices seulement.</dd>
+        <dt>Bénéfice</dt><dd>Moins d'abandons sur mobile, meilleur classement Google (Core Web Vitals).</dd></dl></li>
+      <li><h3>Cookies et pop-up dès l'arrivée</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Le bandeau annonce « En continuant à naviguer, vous nous autorisez à déposer un cookie », sans bouton « Refuser », et Google Analytics (gtag.js) se charge à 0,8 s, avant tout choix. Au même moment, une pop-up newsletter couvre la page, sans mention RGPD (bloc légal vide) ni libellé sur le champ e-mail. Le zoom est en plus bloqué sur mobile (<code>user-scalable=no</code>).</dd>
+        <dt>Dans la maquette</dt><dd>Accueil dégagé, newsletter en pied de page avec mention claire, choix des cookies « Accepter / Refuser » à poids égal (à brancher), zoom libre.</dd>
+        <dt>Bénéfice</dt><dd>Conformité CNIL, première impression premium, accessibilité.</dd></dl></li>
+      <li><h3>784 parfums, mais pas de chemin pour choisir</h3><dl>
+        <dt>Aujourd'hui</dt><dd>La catégorie Parfums s'affiche par 12, sur 66 pages. Le filtre « Famille olfactive » existe mais se cache derrière « Plus de critères », et 218 parfums sur 784 n'ont aucune famille, donc disparaissent dès qu'on filtre.</dd>
+        <dt>Dans la maquette</dt><dd>Filtres visibles par famille, ambiance et maison, tri par prix, et un guide en 4 questions qui recommande 3 parfums réels de la boutique.</dd>
+        <dt>Bénéfice</dt><dd>Le conseil de la boutique transposé en ligne : plus de paniers, moins d'hésitation.</dd></dl></li>
+      <li><h3>Les échantillons à 5 €, votre meilleur atout, sont cachés</h3><dl>
+        <dt>Aujourd'hui</dt><dd>L'offre (jusqu'à 5 échantillons à 5 €, sac en coton, 3 offerts dès 30 €) n'est expliquée que sur une page de texte, atteinte par un bouton « En savoir plus ».</dd>
+        <dt>Dans la maquette</dt><dd>Bandeau d'avantages permanent, bouton échantillon sur chaque fiche, module « sac de 5 échantillons » et jauges dans le panier (3 offerts à 30 €, livraison à 50 €).</dd>
+        <dt>Bénéfice</dt><dd>Une première commande facile pour les clients hors Toulouse, qui reviennent ensuite pour le flacon.</dd></dl></li>
+      <li><h3>Des bases SEO qui se contredisent</h3><dl>
+        <dt>Aujourd'hui</dt><dd>13 balises H1 par page catégorie ou marque (chaque produit en H1). Meta descriptions avec entités HTML affichées en clair (<code>&amp;eacute;</code>, <code>&amp;#39;</code>) sur Parfums, Cosmétiques, Mentions légales. Données produit (JSON-LD) sans prix, donc pas d'extrait enrichi Google. Titre de la page À propos de plus de 200 caractères, page Contact titrée « parfurmerie » avec la meta de l'accueil.</dd>
+        <dt>Dans la maquette</dt><dd>Un H1 par page, titres et descriptions propres par page, structure prête pour un balisage Produit complet (prix, disponibilité, avis vérifiés).</dd>
+        <dt>Bénéfice</dt><dd>Plus de visibilité sur « parfumerie de niche Toulouse » et sur les noms de parfums.</dd></dl></li>
+      <li><h3>Fiches à fiabiliser</h3><dl>
+        <dt>Aujourd'hui</dt><dd>La fiche « Milk &amp; Matcha » (Obvious) affiche le texte d'« Un Été » (adresse <code>/p/un-ete-edp-100ml</code>). « Midnight Olmen » au lieu de Midnight Omen (Trudon). Noms tantôt en capitales, tantôt en minuscules (« bal d'afrique »). Le bloc Instagram de l'accueil pointe vers une page 404 du site.</dd>
+        <dt>Dans la maquette</dt><dd>Fiches homogènes : maison, nom, formats et prix, pyramide quand la maison la publie, échantillon, parfums associés, emplacement d'avis vérifiés (vide, aucun faux avis).</dd>
+        <dt>Bénéfice</dt><dd>Confiance à l'achat, cohérence avec le soin apporté en boutique.</dd></dl></li>
+    </ol>
+    <p class="intro" style="border-top:1px solid var(--line);padding-top:16px;font-size:13px">Les 44 parfums et les 2 coffrets présentés reprennent les noms, textes et prix du site actuel (relevé du 15/10/2026). Le classement par famille et ambiance est une proposition à valider avec l'équipe. Socle conseillé : Shopify avec thème sur mesure.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var IMG="https://www.santarosa-parfumerie.com/media/cache/shop_product_square_medium/";
+/* f: hesp | flor | bois | ambr | cuir ; a: lum | env | sing ; F: formats [label, prix] ; s: prix échantillon ; P: pyramide publiée [tête, coeur, fond] ; N: notes publiées (liste) ; A: accords cités dans le texte de la maison */
+var P=[
+{h:"deux",n:"Deux",b:"Trudon",i:"85/3b/1d73907acfdf8babd40b16bd1079.jpeg",F:[["100 ml",210]],s:5,f:"bois",a:"lum",N:"Feuilles vertes, Pin, Genévrier, Ambroxan, Cashmeran",d:"Deux évoque un nouveau départ, la vie d'une forêt qui transcende les saisons, ce lien qui rapproche. Une Cologne inspirée qui reflète un univers fantastique sur la peau."},
+{h:"midnight-olmen-edp-100ml",n:"Midnight Omen",b:"Trudon",i:"17/84/7e0d7b35835f52c3cc33e5f1b53b.jpg",F:[["15 ml",50],["100 ml",250]],s:5,f:"bois",a:"env",A:"Boisé ambré",d:"Une intrigue nocturne. Un boisé ambré d'une grande complexité, pensé comme un présage : une séduisante part d'inconnu qui n'attend qu'à être déchiffrée."},
+{h:"cologne-indelebile-001",n:"Cologne Indélébile",b:"Frédéric Malle",i:"ad/cc/1952bc5fbc69074cf8ced73e0484.jpeg",F:[["10 ml",75],["30 ml",115],["50 ml",230],["100 ml",320]],s:5,f:"hesp",a:"lum",A:"Muscs, Néroli, Fleur d'oranger",d:"Une odeur de propre à la sensualité magnétique, une eau de Cologne qui diffuse pendant des heures. Dominique Ropion associe la nature ambivalente des muscs modernes aux plus belles qualités de néroli et de fleur d'oranger."},
+{h:"lipstick-rose-001",n:"Lipstick Rose",b:"Frédéric Malle",i:"9d/25/957ea167419990c2ca076a780925.jpeg",F:[["10 ml",75],["50 ml",230],["100 ml",320]],s:3,f:"flor",a:"sing",A:"Rose, accord rouge à lèvres",d:"Inspiré par l'odeur très particulière du rouge à lèvres de sa mère, Ralf Schwieger crée une vision souriante et gaie de la féminité, entre régression et glamour hollywoodien réinterprété."},
+{h:"bapteme-du-feu-eau-de-parfum-100ml",n:"Baptême du Feu",b:"Serge Lutens",i:"c3/30/de3c5d4f1e43d136bca90fb75c99.png",F:[["50 ml",170],["100 ml",252]],s:5,f:"ambr",a:"sing",N:"Écorces brûlées de mandarine, Clous de girofle, Cannelle",d:"Un parfum brûlant, essentiel et flamboyant, de la collection noire de Serge Lutens."},
+{h:"la-fille-tour-de-fer-edp",n:"La Fille Tour de Fer",b:"Serge Lutens",i:"ca/9f/0356240ae3ec8dbc3a9ab5c9fd1a.png",F:[["50 ml",170],["100 ml",252]],s:5,f:"flor",a:"sing",d:"D'une volte-face, elle balaie l'image surannée de la femme corsetée, encombrée de tour Eiffel et de tout le bazar. Haute en couleurs, haute en couture."},
+{h:"premier-figuier",n:"Premier Figuier",b:"L'Artisan Parfumeur",i:"7f/05/5c95395b4568edb4712a9e8e9264.jpg",F:[["Flacon",170]],s:5,f:"bois",a:"lum",P:["Feuille de figuier, Ase fétide","Bois de santal, Figue, Lait d'amande","Citron vert, Noix de coco, Bois de santal, Fruits secs"],d:"Créé en 1994 par Olivia Giacobetti, le premier parfum jamais construit autour de la note figue. Une sieste à l'ombre d'un figuier, dans le sud de la France."},
+{h:"tonka-blanc-edp-100ml",n:"Tonka Blanc",b:"L'Artisan Parfumeur",i:"89/78/a3438491f887c7605075af8a25a6.png",F:[["100 ml",195]],s:5,f:"ambr",a:"sing",N:"Chou-fleur, Fèves tonka, Fleur d'oranger",d:"Inspirée des desserts de chefs, Alexandra Carlin met en scène un extrait naturel de légume : le chou-fleur, rafraîchi de bergamote et de mandarine, sur la douceur de la tonka."},
+{h:"fat-electrician-100ml",n:"Fat Electrician",b:"Etat Libre d'Orange",i:"7c/1d/e8186758761e242e6a2106b02087.png",F:[["100 ml",165]],s:5,f:"bois",a:"sing",A:"Vétiver, Crème de marron",d:"Un vétiver surprenant, terreux et résineux, qui glisse en crescendo vers l'effet sucré, presque régressif, d'une crème de marron."},
+{h:"divin-enfant-edp",n:"Divin'Enfant",b:"Etat Libre d'Orange",i:"74/be/20cc3d0ff4c7471d214d16c35eba.png",F:[["50 ml",110],["100 ml",165]],s:5,f:"flor",a:"sing",P:["Bergamote, Néroli, Pêche","Rose absolue Orpur®, Fleur d'oranger, Héliotrope","Vanille, Patchouli, Muscs"],d:"Fausse innocence du démon sous l'ange : un démarrage tout en douceur, fleur d'oranger et guimauve, puis un accord inattendu de café et de cuir."},
+{h:"cuir-ottoman",n:"Cuir Ottoman",b:"Parfum d'Empire",i:"aa/cc/81547f53359513f08e94effe506e.png",F:[["Flacon",120]],s:5,f:"cuir",a:"env",A:"Iris, Ciste, Styrax, Baume de tolu, Benjoin, Encens, Jasmin",d:"Un cuir puissant et irisé, facetté par le ciste et réchauffé par le styrax brûlé, qui entraîne dans son sillage baume de tolu, benjoin et larmes d'encens."},
+{h:"madagascar-eau-de-parfum",n:"Madagascar",b:"Parfum d'Empire",i:"91/f9/554b68f98571ede80c00fe536d9d.jpg",F:[["50 ml",140],["100 ml",200]],s:5,f:"ambr",a:"env",A:"Vanille, Rhum, Épices",d:"Un baume vanille : la chair opulente d'une gousse longuement macérée dans le rhum, enrichie d'épices de la Grande Île."},
+{h:"french-bouquet-edp-100ml",n:"French Bouquet",b:"BDK",i:"a1/33/f1938e6e41e3eecbcf8eeb1317bb.png",F:[["100 ml",225]],s:5,f:"cuir",a:"sing",A:"Aldéhyde C12, Coriandre, Bergamote d'Italie (tête)",d:"Un hommage à la parfumerie française des années 1970, au chic parisien et aux nuits ardentes de la capitale : un chypre à l'ancienne signé Amélie Bourgeois."},
+{h:"oud-paradisio-absolu",n:"Oud Paradisio Absolu",b:"BDK",i:"ce/20/f48cecbc055f95336bd75b2f5cc7.jpg",F:[["50 ml",230],["100 ml",340]],s:5,f:"bois",a:"env",A:"Oud, Bergamote, Ananas glacé, Encens",d:"Puissant, envoûtant, opulent : un bois de oud sombre, bousculé en tête par la bergamote et la douceur juteuse d'un ananas glacé, relevé d'une pointe d'encens."},
+{h:"patchouli-magnetik-eau-de-parfum-50ml",n:"Patchouli Magnetik",b:"Maison Crivelli",i:"ab/43/590c44ce6c5d862aab317201413f.jpg",F:[["50 ml",200]],s:5,f:"bois",a:"env",A:"Patchouli, Bois de santal, Gardénia",d:"Une escapade à moto dans des plantations de patchouli, en pleine tempête tropicale : un patchouli boisé et sombre électrisé par un duo lacté de santal et de gardénia."},
+{h:"oud-maracuja-eau-de-parfum-50ml",n:"Oud Maracujá",b:"Maison Crivelli",i:"c6/48/59632ff01bcc5fc33f3ca6300c89.jpg",F:[["50 ml",215],["100 ml",370]],s:5,f:"bois",a:"sing",A:"Fruit de la passion, Bois de oud",d:"Une dégustation de fruits de la passion dans des forêts isolées de bois de oud : la luminosité du fruit contre la profondeur du bois."},
+{h:"vanille-supermassive-extrait-de-parfum-50ml",n:"Vanille Supermassive",b:"Les Eaux Primordiales",i:"24/cb/c8565fa5168c2ba22fafe2842b7f.png",F:[["Extrait 50 ml",245]],s:5,f:"ambr",a:"env",P:["Bergamote, Élémi","Cannelle, Fir balsam, Labdanum","Patchouli, Vanille, Caramel, Ambroxan, Muscs blancs"],d:"Un extrait de vanille intense et vaporeux qui plonge dans les mystères des abysses et de l'univers ; la force d'attraction des épices emporte patchouli et muscs blancs."},
+{h:"jardins-de-misfah-extrait-de-parfum-100ml",n:"Jardins de Misfah",b:"Une Nuit Nomade",i:"f6/2e/f5f4c79f510e845a1836d84623d9.png",F:[["Extrait 100 ml",260]],s:5,f:"ambr",a:"env",d:"Très tôt, le village de Misfah s'éveille au son de l'eau qui serpente dans des milliers de canaux d'irrigation, les falajs. Des mains effleurent les arbres, les bourgeons et les fruits naissants."},
+{h:"nothing-but-sea-and-sky-edp",n:"Nothing But Sea and Sky",b:"Une Nuit Nomade",i:"ae/46/90eedc309984318042b50602a721.jpeg",F:[["Flacon",160]],s:5,f:"hesp",a:"lum",P:["Bergamote d'Italie","Santal d'Australie","Muscs blancs"],d:"À Montauk, surnommé The End, le monde s'arrête en hiver. Un hommage aux mots de Walt Whitman : « Nothing, but sea and sky »."},
+{h:"bal-d-afrique",n:"Bal d'Afrique",b:"Byredo",i:"09/1b/a20910e95e752c1bbf650f71e02a.jpeg",F:[["à partir de",170]],s:5,f:"bois",a:"lum",P:["Souci africain, Bergamote, Buchu, Citron, Néroli","Cyclamen, Pétales de jasmin, Violette","Ambre noire, Cèdre marocain, Musc, Vétiver"],d:"Un vétiver chaleureux et romantique, inspiré par le Paris des années 1920 et ses liens avec la culture, l'art, la musique et la danse du continent africain."},
+{h:"blanche",n:"Blanche",b:"Byredo",i:"2a/bd/f5c7c1abf14e5d68412aebdf3a85.jpeg",F:[["à partir de",170]],s:5,f:"flor",a:"lum",P:["Aldéhyde, Poivre rose, Rose blanche","Néroli, Pivoine, Violette","Bois blonds, Musc, Bois de santal"],d:"Construit autour de la perception du blanc par Ben Gorham, et pensé pour une personne précise : un parfum au caractère innocent et pur."},
+{h:"acqua-di-colonia-rosa-eau-de-cologne-a-la-rose",n:"Acqua di Colonia Rosa",b:"Santa Maria Novella",i:"f2/20/976b5c51c3df6594096e96b8ed16.jpg",F:[["100 ml",135]],s:3,f:"flor",a:"lum",P:["Citron, Bergamote, Citron vert, Petitgrain","Rose centifolia, Gardénia, Lys, Muguet, Thé vert, Buchu, Origan, Poivre, Cannelle","Patchouli, Bois de santal, Cèdre, Musc"],d:"Une invitation au cœur du jardin de Santa Maria Novella au mois de mai, quand les fleurs s'épanouissent et libèrent leur parfum."},
+{h:"changing-constance",n:"Changing Constance",b:"Penhaligon's",i:"0c/b4/749c913f33c97fe7c6164a312213.jpg",F:[["75 ml",275]],s:5,f:"ambr",a:"env",P:["Piment, Cardamome","Caramel, Sel","Bois de cachemire, Tabac, Vanille"],d:"Collection Portraits. Sœur de Lady Blanche, Constance est une femme très moderne : une entrée fraîche et épicée où la cardamome croise le piment."},
+{h:"un-bois-edp-100ml",n:"Un Bois",b:"Obvious",i:"ea/10/fb44361048f9f85ee97b7d4dac86.jpg",F:[["100 ml",130]],s:5,f:"bois",a:"env",P:["Bergamote d'Italie, Poivre noir","Ambroxan, Cèdre de Virginie","Papyrus, Baume Gurjum, Vétiver d'Haïti"],d:"Un ensauvagement moderne, sec et cédré."},
+{h:"divine-vanille",n:"Divine Vanille",b:"Essential Parfums",i:"75/7f/2544340cce1a5dfe7d26a74a403f.jpeg",F:[["10 ml",24],["100 ml",94]],s:5,f:"ambr",a:"env",A:"Vanille de Madagascar, Fève tonka, Benjoin",d:"Un hommage à la vanille absolue de Madagascar, récoltée durablement : mystérieuse, suave, charnelle, rehaussée de fève tonka et de benjoin naturels."},
+{h:"wasabi-club-100ml",n:"Wasabi Club",b:"Room 1015",i:"b4/8c/c7f118f2cea26c29a9a22835a00f.jpg",F:[["100 ml",160]],s:5,f:"hesp",a:"sing",A:"Yuzu, Pamplemousse, Limette, Wasabi",d:"Un parfum de mouvement inspiré des codes de la street culture : l'éclat mordant du yuzu, du pamplemousse et de la limette, traversé par la chaleur verte du wasabi."},
+{h:"relique-d-amour-edp-100ml",n:"Relique d'Amour",b:"Oriza L. Legrand",i:"16/ed/96088adb22fd3e9d7582ed9c9810.jpeg",F:[["100 ml",180]],s:5,f:"cuir",a:"sing",A:"Encens, Myrrhe, Encaustique, Poivre",d:"La chapelle abandonnée d'une abbaye cistercienne : la pierre froide et moussue, l'encaustique des boiseries, l'encens et la myrrhe encore perceptibles. Puis un poivre piquant."},
+{h:"reve-d-ossian-edp-100ml",n:"Rêve d'Ossian",b:"Oriza L. Legrand",i:"69/0d/5a8771e1a6f0e33b4b748a959544.jpeg",F:[["100 ml",180]],s:5,f:"bois",a:"sing",d:"Un hommage à l'Ossianisme, mouvement poétique qui insuffla au XIXᵉ siècle son romantisme à toutes les formes de création."},
+{h:"petit-ange-edc-100ml",n:"Petit Ange",b:"Nicolaï",i:"b1/c9/79cf3795b416856f3608211b6d5d.jpg",F:[["100 ml",60]],s:3,f:"hesp",a:"lum",P:["Bergamote, Pamplemousse, Mandarine","Lilas, Jasmin, Rose, Ylang-ylang, Santal","Musc, Vanille, Benjoin"],d:"Une eau de Cologne pour les enfants, dès 2 ans : des agrumes au-dessus d'un bouquet de lilas blanc et mauve, un soupçon de santal et de musc blanc."},
+{h:"arancia-di-sicilia-edp-100ml",n:"Arancia di Sicilia",b:"Perris Monte Carlo",i:"81/c9/73984d959ba1e2e3ee8308d968eb.png",F:[["100 ml",180]],s:5,f:"hesp",a:"lum",A:"Orange sanguine",d:"L'huile essentielle d'orange sanguine, rarement prisée en parfumerie, révélée grâce à la maison Capua, référence italienne de l'extraction d'agrumes depuis 1880."},
+{h:"musc-invisible-edp-100ml",n:"Musc Invisible",b:"Juliette Has a Gun",i:"20/e0/38e3806728dc79c215b82e8bce25.png",F:[["100 ml",145]],s:5,f:"flor",a:"lum",A:"Muscs",d:"Aussi délicat et confortable que votre jean fétiche, aussi juste au travail qu'à un rendez-vous : une composition douce, réconfortante et intime."},
+{h:"aqua-celestia-forte-edp-70ml",n:"Aqua Celestia Forte",b:"Maison Francis Kurkdjian",i:"17/33/a7fd1c86077dbd4bcbd26636204a.png",F:[["70 ml",205]],s:5,f:"flor",a:"lum",A:"Petit grain bigaradier",d:"L'infinie plénitude : le regard posé vers l'horizon, une percée éblouissante entre les bleus du ciel et de la mer, d'où jaillit un soleil éclatant."},
+{h:"kurky-edp-70ml",n:"Kurky",b:"Maison Francis Kurkdjian",i:"30/69/c39ce34121ac563b023539e390c8.jpg",F:[["70 ml",205]],s:5,f:"ambr",a:"env",d:"Le surnom d'enfance de Francis Kurkdjian : un éclat de gourmandise et de liberté, une invitation à retrouver la joie des jours insouciants."},
+{h:"hydra-figue-edp-100ml",n:"Hydra Figue",b:"Miller Harris",i:"67/17/cfd97535229637134ff4e42a5266.png",F:[["50 ml",135],["100 ml",180]],s:3,f:"hesp",a:"lum",A:"Agrumes, Cèdre, Citron, Notes marines",d:"L'esprit sauvage et le rythme lent de l'île grecque d'Hydra : un parfum boisé, hespéridé et marin, ouvert sur le cèdre et le citron."},
+{h:"rose-silence-eau-de-parfum",n:"Rose Silence",b:"Miller Harris",i:"95/4c/43c37db62d12f73ff18318851b38.jpeg",F:[["Flacon",180]],s:3,f:"flor",a:"lum",P:["Mandarine, Cassis","Rose","Patchouli, Cashmeer, Musc"],d:"Une éclosion de pétales d'ivoire, un moment de quiétude : le Cashmeer caresse la peau, cassis et mandarine élèvent les pétales."},
+{h:"under-the-lemon-tree",n:"Under the Lemon Trees",b:"Maison Margiela",i:"13/96/3d19671fd98004b9425a5846166f.jpeg",F:[["Flacon",145]],s:5,f:"hesp",a:"lum",A:"Agrumes, Citron, Feuillage vert",d:"Une sieste à l'ombre des citronniers, dans un champ éclatant : un citronnier imaginaire aux agrumes vifs."},
+{h:"by-the-fireplace",n:"By the Fireplace",b:"Maison Margiela",i:"3d/ef/b7aa5c7d58de1c1a5e67da33cf1e.jpeg",F:[["Eau de toilette",145]],s:5,f:"bois",a:"env",A:"Châtaigne, Bois, Vanille",d:"Le crépitement d'un feu de cheminée, un beau matin d'hiver : un cœur de châtaigne, des accords boisés et la douceur de la vanille."},
+{h:"royal-water",n:"Royal Water",b:"Creed",i:"c4/5e/83558b7e81be53e71e4f8ca3f15a.png",F:[["100 ml",320]],s:5,f:"hesp",a:"lum",P:["Citron, Bergamote, Mandarine, Verveine, Clémentine, Menthe poivrée","Baies roses, Cumin, Basilic, Poivre","Musc Tonkin, Ambre gris"],d:"Créé en hommage aux enfants de la famille royale britannique : l'effervescence du citron et une fraîcheur vivifiante."},
+{h:"amour-de-cacao",n:"Amour de Cacao",b:"Comptoir Sud Pacifique",i:"0e/3d/64c051387f92453401f689fcfcc5.jpeg",F:[["100 ml",95]],s:5,f:"ambr",a:"env",P:["Zeste d'orange","Fève de cacao, Carambole","Gousse de vanille"],d:"L'odeur intense et profonde de la fève de cacao, adoucie par la carambole et la vanille, réveillée par un zeste d'orange."},
+{h:"sketch",n:"Sketch",b:"Maison Violet",i:"74/bc/693ff77a249cd7a219fcbd8c9816.jpg",F:[["Flacon",180]],s:5,f:"ambr",a:"sing",A:"Accord chypré patchouli",d:"Un mystère : baptisé à l'origine Ambre Royal, il prit vingt-quatre ans plus tard le nom de Sketch. Un oriental d'une grande richesse, sur un accord chypré patchouli."},
+{h:"orencie-100ml",n:"Orencie",b:"Chambre 52",i:"44/c2/8d84340f7932922545a5eea46eaa.png",F:[["50 ml",160]],s:5,f:"flor",a:"lum",A:"Litchi, Rose, Muscs blancs",d:"Un matin lumineux, réveil litchi : la rose, les muscs blancs, une bulle clean et souriante qui rappelle le linge propre."},
+{h:"new-leather-50ml",n:"New Leather",b:"New Notes",i:"10/02/4c52ae69c6db6d991627a5f9a2e9.jpg",F:[["50 ml",160]],s:5,f:"cuir",a:"env",A:"Notes épicées, fumées et balsamiques",d:"Le confort d'une seconde peau, douce comme le cachemire : un cuir sans retenue qui s'ouvre sur des notes épicées, fumées et balsamiques."},
+{h:"akigala-mandarino-50ml",n:"Akigala Mandarino",b:"New Notes",i:"c5/c3/4d5e3edce9c2437510a5340fca0a.jpg",F:[["50 ml",160]],s:5,f:"hesp",a:"sing",A:"Mandarine, Fruit de la passion, Framboise, Pomme, Akigalawood",d:"Les facettes épicées et boisées de l'Akigalawood fusionnent avec la fraîcheur des fruits et le zeste de mandarine : un hespéridé unisexe."},
+{h:"tilleul-d-ailleurs-edt-90ml",n:"Tilleul d'Ailleurs",b:"D'Orsay",i:"05/f3/8efef60e49dd487c48bdf238cd17.jpg",F:[["90 ml",180]],s:5,f:"flor",a:"lum",P:["Petit grain citronnier","Fleur de tilleul","Bois d'acacia, Cire d'abeille"],d:"Parfum historique édité en 1915 sous le nom de Tilleul, retravaillé en 1995 par Olivia Giacobetti : un floral vert mixte qui évoque l'amour naissant."}
+];
+var COF=[
+{n:"Coffret Découverte 10 échantillons",b:"Maison Crivelli",i:"ea/19/2b2c5b9a9ce7326f628feeedeaf9.jpg",p:39,d:"Les échantillons de 1,5 ml de l'intégralité des 10 eaux de parfum de la maison."},
+{n:"Coffret Chocs Olfactifs · 6 × 5 ml",b:"Maison Crivelli",i:"5e/f9/0a385f1f56613a9772192cd0e282.jpg",p:135,d:"Un flacon de 5 ml de chacun des six extraits : Tubéreuse Astrale, Hibiscus Mahajád, Oud Maracujá, Oud Stallion, Patchouli Magnetik, Ambre Chromatique."}
+];
+var BRANDS=[["Santa Maria Novella",42],["Creed",39],["Byredo",35],["Acqua di Parma",34],["Goutal",34],["Penhaligon's",32],["Perris Monte Carlo",32],["Maison Francis Kurkdjian",28],["Frédéric Malle",28],["L'Artisan Parfumeur",27],["Etat Libre d'Orange",27],["Comptoir Sud Pacifique",26],["BDK",25],["Memo",24],["Maison Margiela",23],["Les Eaux Primordiales",22],["Parfum d'Empire",22],["Fragonard",21],["Obvious",20],["Serge Lutens",19],["Une Nuit Nomade",18],["Essential Parfums",17],["Maison Crivelli",16],["Trudon",14],["La Manufacture",14],["Room 1015",14],["Miller Harris",13],["Juliette Has a Gun",12],["Oriza L. Legrand",10],["D'Orsay",10]];
+var FAM={hesp:"Hespéridé & frais",flor:"Floral",bois:"Boisé",ambr:"Ambré & gourmand",cuir:"Cuir & chypré"};
+var AMB={lum:"Lumineux",env:"Enveloppant",sing:"Singulier"};
+var HOME=["premier-figuier","lipstick-rose-001","cuir-ottoman","nothing-but-sea-and-sky-edp","fat-electrician-100ml","vanille-supermassive-extrait-de-parfum-50ml","tilleul-d-ailleurs-edt-90ml","relique-d-amour-edp-100ml"];
+
+var $=function(s,c){return (c||document).querySelector(s)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var eur=function(n){return (Math.round(n*100)/100).toLocaleString("fr-FR",{minimumFractionDigits:n%1?2:0})+" €"};
+var byH={};P.forEach(function(p){byH[p.h]=p;p.min=Math.min.apply(null,p.F.map(function(f){return f[1]}))});
+function priceLabel(p){var from=p.F.length>1||p.F[0][0]==="à partir de";return (from?"<small>dès </small>":"")+eur(p.min)}
+function card(p){
+  return '<div class="card"><div class="imw"><a class="im" href="#parfum/'+p.h+'" tabindex="-1" aria-hidden="true"><span class="fam">'+FAM[p.f]+'</span><img src="'+IMG+p.i+'" alt="" width="650" height="650" loading="lazy"></a>'+
+  '<button class="qa" data-sample="'+p.h+'" aria-label="Ajouter un échantillon de '+esc(p.n)+' au panier, '+eur(p.s)+'">Échantillon '+eur(p.s)+'</button></div>'+
+  '<a class="meta" href="#parfum/'+p.h+'"><span class="brand">'+esc(p.b)+'</span><h3>'+esc(p.n)+'</h3><span class="pr">'+priceLabel(p)+'</span></a></div>';
+}
+
+/* ---------- panier ---------- */
+var cart=[];
+function addCart(item){var ex=cart.filter(function(c){return c.k===item.k})[0];if(ex){ex.q++}else{item.q=1;cart.push(item)}renderCart();toast(item.n+" ajouté au panier");}
+function renderCart(){
+  var n=cart.reduce(function(a,c){return a+c.q},0),sub=cart.reduce(function(a,c){return a+c.q*c.p},0);
+  $("#cartCount").textContent=n;$("#cartBtn").setAttribute("aria-label","Ouvrir le panier, "+n+" article"+(n>1?"s":""));
+  var nonSample=cart.filter(function(c){return !c.sample}).reduce(function(a,c){return a+c.q*c.p},0);
+  var g1=Math.min(1,nonSample/30),g2=Math.min(1,sub/50);
+  $("#prog").innerHTML='<p style="margin:0">'+(nonSample>=30?"<b>3 échantillons offerts</b> avec votre commande.":"Encore <b>"+eur(30-nonSample)+"</b> (hors échantillons) pour recevoir 3 échantillons offerts.")+'</p><div class="track"><i style="width:'+g1*100+'%"></i></div>'+
+    '<p style="margin:12px 0 0">'+(sub>=50?"<b>Livraison offerte.</b>":"Encore <b>"+eur(50-sub)+"</b> pour la livraison offerte.")+'</p><div class="track"><i style="width:'+g2*100+'%"></i></div>';
+  $("#lines").innerHTML=cart.length?cart.map(function(c,i){return '<div class="line"><img src="'+IMG+c.i+'" alt="" width="56" height="56"><div><b>'+esc(c.n)+'</b><small>'+esc(c.d)+' · '+c.q+' × '+eur(c.p)+'</small></div><button data-rm="'+i+'">Retirer</button></div>'}).join(""):'<p class="mute" style="margin-top:24px">Votre panier est vide. Commencez par un échantillon à 5 €.</p>';
+  $("#sub").textContent=eur(sub);
+}
+var lastFocus=null;
+function openPanel(el,scrim){lastFocus=document.activeElement;el.classList.add("on");el.setAttribute("aria-hidden","false");if(scrim)$("#scrim").classList.add("on");var f=el.querySelector("button,a,input");if(f)setTimeout(function(){f.focus()},50)}
+function closePanel(el){el.classList.remove("on");el.setAttribute("aria-hidden","true");$("#scrim").classList.remove("on");if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+$("#cartBtn").addEventListener("click",function(){renderCart();openPanel($("#drawer"),true)});
+$("#closeCart").addEventListener("click",function(){closePanel($("#drawer"))});
+$("#scrim").addEventListener("click",function(){closePanel($("#drawer"));closePanel($("#notes"));$("#notesBtn").setAttribute("aria-expanded","false")});
+$("#lines").addEventListener("click",function(e){var b=e.target.closest("[data-rm]");if(b){cart.splice(+b.dataset.rm,1);renderCart()}});
+$("#notesBtn").addEventListener("click",function(){openPanel($("#notes"),true);this.setAttribute("aria-expanded","true")});
+$("#closeNotes").addEventListener("click",function(){closePanel($("#notes"));$("#notesBtn").setAttribute("aria-expanded","false")});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if($("#drawer").classList.contains("on"))closePanel($("#drawer"));if($("#notes").classList.contains("on")){closePanel($("#notes"));$("#notesBtn").setAttribute("aria-expanded","false")}}});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-sample]");if(b){e.preventDefault();var p=byH[b.dataset.sample];addCart({k:"s-"+p.h,n:p.n,d:"Échantillon · "+p.b,p:p.s,i:p.i,sample:true})}});
+var tt;window.toast=function(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on")},2400)};
+$("#menuBtn").addEventListener("click",function(){var o=$("#mnav").classList.toggle("open");this.setAttribute("aria-expanded",o)});
+
+/* ---------- accueil ---------- */
+$("#homeGrid").innerHTML=HOME.map(function(h){return card(byH[h])}).join("");
+$("#brandWall").innerHTML=BRANDS.map(function(b){return '<button data-brand="'+esc(b[0])+'">'+esc(b[0])+' <span>'+b[1]+'</span></button>'}).join("")+'<button data-brand="">+ 18 maisons <span>voir tout</span></button>';
+$("#brandWall").addEventListener("click",function(e){var b=e.target.closest("[data-brand]");if(!b)return;var has=P.some(function(p){return p.b===b.dataset.brand});state.brand=has?b.dataset.brand:"";state.fam="";state.amb="";location.hash="#collection";if(!has&&b.dataset.brand)toast(b.dataset.brand+" : à brancher sur le catalogue complet")});
+
+/* ---------- collection ---------- */
+var state={fam:"",amb:"",brand:"",sort:"sel"};
+function chips(el,map,key){el.innerHTML='<button class="chip" data-v="" aria-pressed="'+(!state[key])+'">Tout</button>'+Object.keys(map).map(function(k){return '<button class="chip" data-v="'+k+'" aria-pressed="'+(state[key]===k)+'">'+map[k]+'</button>'}).join("")}
+function renderCol(){
+  chips($("#famChips"),FAM,"fam");chips($("#ambChips"),AMB,"amb");
+  var bs=Array.from(new Set(P.map(function(p){return p.b}))).sort(function(a,b){return a.localeCompare(b,"fr")});
+  $("#brandSel").innerHTML='<option value="">Toutes les maisons</option>'+bs.map(function(b){return '<option'+(state.brand===b?" selected":"")+'>'+esc(b)+'</option>'}).join("");
+  $("#sortSel").value=state.sort;
+  var L=P.filter(function(p){return (!state.fam||p.f===state.fam)&&(!state.amb||p.a===state.amb)&&(!state.brand||p.b===state.brand)});
+  if(state.sort==="asc")L=L.slice().sort(function(a,b){return a.min-b.min});
+  if(state.sort==="desc")L=L.slice().sort(function(a,b){return b.min-a.min});
+  if(state.sort==="az")L=L.slice().sort(function(a,b){return a.n.localeCompare(b.n,"fr")});
+  $("#count").textContent=L.length+" parfum"+(L.length>1?"s":"");
+  $("#colGrid").innerHTML=L.length?L.map(card).join(""):'<p class="empty">Aucun parfum pour cette combinaison. <button class="link" style="background:none;border:0" id="reset">Réinitialiser</button></p>';
+}
+$("#famChips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(b){state.fam=b.dataset.v;renderCol()}});
+$("#ambChips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(b){state.amb=b.dataset.v;renderCol()}});
+$("#brandSel").addEventListener("change",function(){state.brand=this.value;renderCol()});
+$("#sortSel").addEventListener("change",function(){state.sort=this.value;renderCol()});
+$("#colGrid").addEventListener("click",function(e){if(e.target.id==="reset"){state.fam=state.amb=state.brand="";renderCol()}});
+
+/* ---------- fiche ---------- */
+function renderPdp(h){
+  var p=byH[h];if(!p){location.hash="#collection";return}
+  var fi=0;
+  function draw(){
+    var f=p.F[fi];
+    var pyr=p.P?'<div class="pyr"><div class="row"><b>Tête</b><span>'+esc(p.P[0])+'</span></div><div class="row"><b>Cœur</b><span>'+esc(p.P[1])+'</span></div><div class="row"><b>Fond</b><span>'+esc(p.P[2])+'</span></div><p class="note">Pyramide publiée par la maison.</p></div>'
+      :p.N?'<div class="pyr"><div class="row"><b>Notes</b><span>'+esc(p.N)+'</span></div><p class="note">Notes publiées par la maison (sans découpage tête, cœur, fond).</p></div>'
+      :p.A?'<div class="pyr"><div class="row"><b>Accords</b><span>'+esc(p.A)+'</span></div><p class="note">Accords cités dans le texte de la maison. Pyramide détaillée à compléter.</p></div>'
+      :'<div class="pyr"><div class="row"><b>Notes</b><span class="mute">La maison ne publie pas de pyramide pour ce parfum : à compléter par l\'équipe.</span></div></div>';
+    $("#pdp").innerHTML='<div class="pdp"><div class="pdp-media"><p class="crumb"><a href="#accueil">Accueil</a> / <a href="#collection">Parfums</a> / '+esc(p.n)+'</p><div class="pdp-im"><img src="'+IMG+p.i+'" alt="Flacon '+esc(p.n)+' de '+esc(p.b)+'" width="650" height="650"></div></div>'+
+    '<div><p class="caps dot">'+esc(p.b)+'</p><h1>'+esc(p.n)+'</h1><p class="mute" style="margin:0 0 14px">'+FAM[p.f]+' · '+AMB[p.a]+'</p><p class="desc">'+esc(p.d)+'</p>'+
+    (p.F.length>1?'<div class="fmts" role="group" aria-label="Contenance">'+p.F.map(function(x,i){return '<button class="fmt" data-f="'+i+'" aria-pressed="'+(i===fi)+'"><b>'+esc(x[0])+'</b><span>'+eur(x[1])+'</span></button>'}).join("")+'</div>':'<p style="font-size:22px;font-weight:700;margin:18px 0 0">'+(f[0]==="à partir de"?"à partir de ":"")+eur(f[1])+(f[0]!=="Flacon"&&f[0]!=="à partir de"?' <span class="mute" style="font-size:15px;font-weight:400">· '+esc(f[0])+'</span>':'')+'</p>')+
+    '<div class="buy"><button class="btn" id="addF">Ajouter le flacon · '+eur(f[1])+'</button><button class="btn sun" data-sample="'+p.h+'">Échantillon · '+eur(p.s)+'</button></div>'+
+    '<ul class="reassure"><li>Pas sûr·e ? Essayez d\'abord l\'échantillon, jusqu\'à 5 au choix.</li><li>3 échantillons offerts dès 30 € d\'achat · livraison offerte dès 50 €.</li><li>À sentir en boutique, 11 rue Antonin Mercié · <a href="tel:+33561298481">05 61 29 84 81</a></li></ul>'+
+    pyr+
+    '<div class="reviews" aria-label="Avis clients"><span class="tag">Gabarit · aucun avis affiché</span><h2 style="font-size:22px">Avis clients vérifiés</h2><div class="stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><p class="mute" style="margin:0;font-size:14px">Emplacement prévu pour les avis d\'acheteurs vérifiés, collectés après livraison. Rien n\'est inventé dans cette maquette.</p></div>'+
+    '</div></div>';
+    $("#addF").onclick=function(){addCart({k:"f-"+p.h+"-"+fi,n:p.n,d:p.b+(f[0]!=="Flacon"&&f[0]!=="à partir de"?" · "+f[0]:""),p:f[1],i:p.i})};
+    Array.prototype.forEach.call(document.querySelectorAll("#pdp .fmt"),function(b){b.onclick=function(){fi=+b.dataset.f;draw();var nb=$('#pdp .fmt[data-f="'+fi+'"]');if(nb)nb.focus()}});
+  }
+  draw();
+  var rel=P.filter(function(x){return x.h!==p.h&&x.f===p.f}).sort(function(a,b){return (b.a===p.a)-(a.a===p.a)}).slice(0,4);
+  $("#relGrid").innerHTML=rel.map(card).join("");
+  document.title=p.n+" de "+p.b+" · Santa Rosa Toulouse";
+}
+
+/* ---------- guide ---------- */
+var Q=[
+ {t:"Pour quel moment ?",o:[["matin","Un matin d'été","fenêtres ouvertes, peau fraîche",{lum:2,hesp:1}],["hiver","Une soirée d'hiver","pull épais, lumière basse",{env:2,ambr:1,bois:1}],["tous","Tous les jours","sans y penser, juste soi",{lum:1,flor:1}],["occasion","Une occasion à marquer","on doit s'en souvenir",{sing:2}]]},
+ {t:"Ce qui vous attire d'instinct",o:[["hesp","Agrumes, air marin","citron, bergamote, embruns",{hesp:3}],["flor","Des fleurs","rose, tilleul, fleur d'oranger",{flor:3}],["bois","Bois et forêt","figuier, cèdre, vétiver",{bois:3}],["ambr","Vanille, épices","douceur, chaleur, gourmandise",{ambr:3}],["cuir","Cuir, encens","résines, fumée, caractère",{cuir:3}]]},
+ {t:"Votre goût de l'audace",o:[["sur","Classique et sûr","on le porte partout",{lum:1,env:1}],["touche","Une touche inattendue","un détail qui intrigue",{sing:1}],["fou","Surprenez-moi vraiment","chou-fleur, crème de marron…",{sing:3}]]},
+ {t:"Votre budget pour un flacon",o:[["b1","Moins de 150 €","",{max:150}],["b2","De 150 à 220 €","",{max:220}],["b3","Peu importe","je veux le bon",{max:9999}]]}
+];
+var ans=[],step=0;
+function renderQuiz(){
+  var el=$("#quiz");
+  var bar='<div class="qsteps" aria-hidden="true">'+Q.map(function(_,i){return '<i class="'+(i<=step?"on":"")+'"></i>'}).join("")+'</div>';
+  if(step<Q.length){
+    var q=Q[step];
+    el.innerHTML=bar+'<fieldset><legend>'+q.t+'</legend><p class="caps mute" style="margin:-10px 0 16px">Question '+(step+1)+' sur '+Q.length+'</p><div class="opts">'+q.o.map(function(o,i){return '<button class="opt" data-o="'+i+'"><span class="ico blob" aria-hidden="true"></span><span><b>'+o[1]+'</b>'+(o[2]?'<span>'+o[2]+'</span>':'')+'</span></button>'}).join("")+'</div></fieldset>'+
+      '<div class="qnav">'+(step?'<button class="link" style="background:none;border-top:0;border-left:0;border-right:0" id="qback">Retour</button>':'<span></span>')+'<span class="mute" style="font-size:13px">Recommandations parmi les parfums de la boutique</span></div>';
+    var first=el.querySelector(".opt");if(first&&document.activeElement&&el.contains(document.activeElement))first.focus();
+  }else{
+    var w={};ans.forEach(function(a){for(var k in a)w[k]=(w[k]||0)+a[k]});
+    var max=w.max||9999;
+    var sc=P.map(function(p){var s=(w[p.f]||0)*2+(w[p.a]||0);if(p.min>max)s-=6;if(p.h==="petit-ange-edc-100ml")s-=4;return {p:p,s:s}}).sort(function(a,b){return b.s-a.s||a.p.min-b.p.min}).slice(0,3);
+    var tot=sc.reduce(function(a,x){return a+x.p.s},0);
+    el.innerHTML=bar+'<p class="caps">Votre sélection</p><h2 class="h2" style="font-size:clamp(28px,4.4vw,40px)">Trois parfums à essayer chez vous.</h2>'+
+      '<div class="res-grid">'+sc.map(function(x){var p=x.p;return '<div class="res"><a class="im" href="#parfum/'+p.h+'"><img src="'+IMG+p.i+'" alt="'+esc(p.n)+'" width="650" height="650" loading="lazy"></a><span class="caps mute" style="font-size:11px">'+esc(p.b)+'</span><b style="font-size:19px;line-height:1.1">'+esc(p.n)+'</b><span class="why">'+FAM[p.f]+' · '+AMB[p.a]+' · '+priceLabel(p)+'</span><a class="link" href="#parfum/'+p.h+'" style="align-self:start">Voir la fiche</a></div>'}).join("")+'</div>'+
+      '<div class="qnav" style="flex-wrap:wrap"><button class="btn sun" id="qkit">Recevoir ces 3 échantillons · '+eur(tot)+'</button><button class="link" style="background:none;border-top:0;border-left:0;border-right:0" id="qre">Recommencer</button></div>'+
+      '<p class="mute" style="font-size:13px;margin:14px 0 0">Ou venez les sentir au 11 rue Antonin Mercié : montrez cette sélection à l\'équipe.</p>';
+    $("#qkit").onclick=function(){sc.forEach(function(x){var p=x.p;addCart({k:"s-"+p.h,n:p.n,d:"Échantillon · "+p.b,p:p.s,i:p.i,sample:true})});renderCart();openPanel($("#drawer"),true)};
+    $("#qre").onclick=function(){ans=[];step=0;renderQuiz();var f=$("#quiz .opt");if(f)f.focus()};
+  }
+}
+$("#quiz").addEventListener("click",function(e){var o=e.target.closest(".opt");if(o){ans[step]=Q[step].o[+o.dataset.o][3];step++;renderQuiz();var f=$("#quiz .opt")||$("#qkit");if(f)f.focus();return}if(e.target.id==="qback"){step--;ans.length=step;renderQuiz();var g=$("#quiz .opt");if(g)g.focus()}});
+
+/* ---------- kit échantillons ---------- */
+var kit=[];
+function renderKit(){
+  $("#kitList").innerHTML=P.slice().sort(function(a,b){return a.n.localeCompare(b.n,"fr")}).map(function(p){var on=kit.indexOf(p.h)>-1;return '<button class="kpick" data-k="'+p.h+'" aria-pressed="'+on+'"'+(!on&&kit.length>=5?" disabled":"")+'><img src="'+IMG+p.i+'" alt="" width="44" height="44" loading="lazy"><span>'+esc(p.n)+'<small style="display:block;font-weight:400">'+esc(p.b)+' · '+eur(p.s)+'</small></span></button>'}).join("");
+  $("#slots").innerHTML=[0,1,2,3,4].map(function(i){return '<i class="'+(i<kit.length?"on":"")+'"></i>'}).join("");
+  $("#kitSel").innerHTML=kit.length?kit.map(function(h){return '<li><span>'+esc(byH[h].n)+'</span><span>'+eur(byH[h].s)+'</span></li>'}).join(""):'<li style="border:0">Choisissez jusqu\'à 5 parfums.</li>';
+  $("#kitTot").textContent=eur(kit.reduce(function(a,h){return a+byH[h].s},0));
+  $("#kitAdd").disabled=!kit.length;
+}
+$("#kitList").addEventListener("click",function(e){var b=e.target.closest(".kpick");if(!b)return;var h=b.dataset.k,i=kit.indexOf(h);if(i>-1)kit.splice(i,1);else if(kit.length<5)kit.push(h);renderKit();var nb=$('#kitList [data-k="'+h+'"]');if(nb)nb.focus()});
+$("#kitAdd").addEventListener("click",function(){kit.forEach(function(h){var p=byH[h];addCart({k:"s-"+p.h,n:p.n,d:"Échantillon · "+p.b,p:p.s,i:p.i,sample:true})});kit=[];renderKit();renderCart();openPanel($("#drawer"),true)});
+$("#coffrets").innerHTML=COF.map(function(c,i){return '<div class="coffret"><img src="'+IMG+c.i+'" alt="'+esc(c.n)+'" width="120" height="120" loading="lazy"><div><span class="caps mute" style="font-size:11px">'+esc(c.b)+'</span><h3>'+esc(c.n)+'</h3><p>'+esc(c.d)+'</p><button class="btn sm" data-cof="'+i+'">Ajouter · '+eur(c.p)+'</button></div></div>'}).join("");
+$("#coffrets").addEventListener("click",function(e){var b=e.target.closest("[data-cof]");if(b){var c=COF[+b.dataset.cof];addCart({k:"c-"+b.dataset.cof,n:c.n,d:c.b,p:c.p,i:c.i})}});
+
+/* ---------- routeur ---------- */
+function route(){
+  var h=(location.hash||"#accueil").slice(1),parts=h.split("/"),r=parts[0]||"accueil";
+  if(["accueil","collection","parfum","maison","decouverte"].indexOf(r)<0)r="accueil";
+  Array.prototype.forEach.call(document.querySelectorAll(".route"),function(el){el.classList.toggle("on",el.id==="r-"+r)});
+  Array.prototype.forEach.call(document.querySelectorAll("nav.main a"),function(a){var on=a.dataset.nav===r&&!(r==="decouverte"&&parts[1]==="echantillons")||(a.dataset.nav==="echantillons"&&parts[1]==="echantillons");if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  $("#mnav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");
+  var el=$("#r-"+r);document.title=el.dataset.title;
+  if(r==="collection")renderCol();
+  if(r==="parfum")renderPdp(parts[1]);
+  if(r==="decouverte"){renderQuiz();renderKit()}
+  if(r==="decouverte"&&parts[1]==="echantillons"){setTimeout(function(){$("#echantillons").scrollIntoView({behavior:"smooth"})},30)}else{window.scrollTo(0,0)}
+}
+window.addEventListener("hashchange",route);
+renderCart();route();
+})();
+</script>
+</body>
+</html>

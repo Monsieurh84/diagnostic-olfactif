@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanagra — Parfumerie de niche &amp; institut de beauté à Nice, depuis 1977</title>
+<meta name="description" content="Tanagra, parfumerie de niche et institut de beauté rue Alphonse Karr à Nice depuis 1977 : Marc-Antoine Barrois, Kilian, Byredo, Diptyque… Réservez en ligne, retirez en boutique, prenez rendez-vous à l'institut.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Tanagra — Parfumerie de niche & institut de beauté à Nice">
+<meta property="og:description" content="Maquette de refonte préparée pour Tanagra par Monsieur.H : réservation click & collect, fiches parfum complètes, prise de rendez-vous à l'institut.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#F3ECE3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Store","BeautySalon"],"name":"Tanagra — Parfumerie et Institut de beauté","foundingDate":"1977","address":{"@type":"PostalAddress","streetAddress":"5 bis rue Alphonse Karr","postalCode":"06000","addressLocality":"Nice","addressCountry":"FR"},"telephone":"+33 4 93 87 95 00","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/parfumerie_tanagra/"]}
+</script>
+<style>
+:root{
+  --plaster:#F3ECE3; --paper:#FBF8F3; --sand:#E9DFD2; --line:#DCCEBE;
+  --clay:#A4573A; --clay-d:#874329; --umber:#4B2B1C; --ink:#2A1A12; --muted:#6E5A4C;
+  --sage:#5F6B47; --sage-l:#E4E6D6;
+  --serif:"Marcellus", "Times New Roman", serif;
+  --ital:"Instrument Serif", Georgia, serif;
+  --sans:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r:14px; --max:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--plaster);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:4px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--umber);color:#fff;padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;margin:0;color:var(--umber);letter-spacing:.01em}
+.eyebrow{font:600 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--clay)}
+.ital{font-family:var(--ital);font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid var(--umber);background:var(--umber);color:#FBF8F3;text-decoration:none;font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.btn:hover{background:var(--clay-d);border-color:var(--clay-d)}
+.btn.ghost{background:transparent;color:var(--umber)}
+.btn.ghost:hover{background:var(--umber);color:#fff}
+.btn.light{background:#FBF8F3;color:var(--umber);border-color:#FBF8F3}
+.btn.sage{background:var(--sage);border-color:var(--sage)}
+.btn.sage:hover{background:#4b5537}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.link{color:var(--clay-d);text-underline-offset:3px}
+
+/* bandeau maquette */
+.mock{background:var(--ink);color:#E9DFD2;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.02em}
+
+/* header */
+header.site{position:sticky;top:0;z-index:40;background:rgba(251,248,243,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:16px;min-height:66px}
+.logo{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
+.logo img{height:26px;width:auto}
+.logo .word{font-family:var(--serif);font-size:25px;letter-spacing:.14em;color:var(--umber)}
+nav.main{display:none;gap:26px;margin-left:auto}
+nav.main a{text-decoration:none;font-size:14px;letter-spacing:.06em;color:var(--umber);padding:8px 0;border-bottom:1px solid transparent}
+nav.main a[aria-current="page"],nav.main a:hover{border-color:var(--clay)}
+.hd-actions{display:flex;align-items:center;gap:6px;margin-left:auto}
+.icon-btn{position:relative;width:44px;height:44px;border-radius:50%;border:0;background:transparent;display:grid;place-items:center}
+.icon-btn:hover{background:var(--sand)}
+.icon-btn svg{width:22px;height:22px;stroke:var(--umber);fill:none;stroke-width:1.5}
+.badge{position:absolute;top:4px;right:2px;min-width:18px;height:18px;border-radius:9px;background:var(--clay);color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center;padding:0 4px}
+.badge[hidden]{display:none}
+.hd .cta-rdv{display:none}
+.mnav{position:fixed;inset:0;z-index:60;background:var(--paper);padding:20px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .3s;visibility:hidden}
+.mnav.open{transform:none;visibility:visible}
+.mnav a{font-family:var(--serif);font-size:28px;color:var(--umber);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line)}
+.mnav .close{align-self:flex-end}
+@media (min-width:960px){
+  nav.main{display:flex}
+  .hd-actions{margin-left:18px}
+  .hd .menu-btn{display:none}
+  .hd .cta-rdv{display:inline-flex;min-height:40px;font-size:14px;padding:0 16px;margin-left:6px}
+  .logo img{height:30px}
+}
+
+/* arches = niches antiques */
+.arch{border-radius:999px 999px var(--r) var(--r);overflow:hidden;background:var(--sand)}
+.arch img{width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.hero{padding:28px 0 40px}
+.hero-grid{display:grid;gap:26px}
+.hero h1{font-size:clamp(44px,12vw,96px);letter-spacing:.06em}
+.hero .lead{font-family:var(--ital);font-size:clamp(22px,4.6vw,30px);line-height:1.25;color:var(--umber);margin:14px 0 22px;max-width:30ch}
+.hero p.txt{color:var(--muted);max-width:52ch;margin:0 0 24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
+.hero .ph{aspect-ratio:4/5;max-height:620px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:28px}
+.facts div{background:var(--paper);padding:14px 16px}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--umber)}
+.facts span{font-size:13px;color:var(--muted)}
+@media (min-width:860px){
+  .hero{padding:56px 0 70px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:56px}
+}
+
+section{padding:56px 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(30px,6vw,46px);margin-top:10px}
+.sec-head p{color:var(--muted);max-width:46ch;margin:0}
+
+/* deux univers */
+.duo{display:grid;gap:18px}
+.uni{position:relative;border-radius:var(--r);overflow:hidden;min-height:380px;display:flex;align-items:flex-end;color:#fff;text-decoration:none}
+.uni img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.uni::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,26,18,0) 25%,rgba(42,26,18,.82))}
+.uni.sage::after{background:linear-gradient(180deg,rgba(40,46,28,0) 25%,rgba(40,46,28,.86))}
+.uni .in{position:relative;z-index:1;padding:26px}
+.uni h3{color:#fff;font-size:34px;margin:8px 0 8px}
+.uni p{margin:0 0 16px;max-width:40ch;color:#F1E9DF}
+.uni .eyebrow{color:#F0C9B5}
+.uni.sage .eyebrow{color:#DDE3C3}
+.uni .go{display:inline-flex;gap:8px;align-items:center;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
+@media (min-width:820px){.duo{grid-template-columns:1fr 1fr}.uni{min-height:520px}}
+
+/* cartes produits */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 14px}
+@media (min-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}}
+@media (min-width:1080px){.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{display:flex;flex-direction:column;gap:10px;text-decoration:none;min-width:0}
+.card .pic{aspect-ratio:4/5;background:var(--paper);border-radius:999px 999px 10px 10px;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line);transition:border-color .2s}
+.card:hover .pic{border-color:var(--clay)}
+.card .pic img{width:78%;height:78%;object-fit:contain;mix-blend-mode:multiply;transition:transform .4s}
+.card:hover .pic img{transform:scale(1.04)}
+.card .br{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-d);font-weight:600}
+.card .nm{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--umber)}
+.card .meta{font-size:13px;color:var(--muted)}
+.card .fams{display:flex;flex-wrap:wrap;gap:4px}
+.chip{display:inline-block;font-size:11.5px;padding:3px 9px;border-radius:999px;background:var(--sand);color:var(--umber)}
+.ph-fallback{font-family:var(--serif);color:var(--muted);font-size:14px;text-align:center;padding:12px}
+
+/* constellation */
+.constel{background:var(--umber);color:#EFE5D9;border-radius:22px;padding:34px 22px;position:relative;overflow:hidden}
+.constel h2{color:#FBF8F3}
+.constel .eyebrow{color:#E6B49B}
+.constel p{color:#D9CBBC}
+.stars{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:26px}
+.star{background:rgba(251,248,243,.06);border:1px solid rgba(251,248,243,.14);border-radius:14px;padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.star:hover{background:rgba(251,248,243,.12)}
+.star .nm{font-family:var(--serif);font-size:22px;color:#FBF8F3}
+.star q{font-family:var(--ital);font-style:italic;font-size:16px;color:#E9DCCD;quotes:none}
+@media (min-width:860px){.constel{padding:56px}.stars{grid-template-columns:repeat(5,1fr)}}
+.constel svg.sky{position:absolute;right:-40px;top:-30px;width:320px;opacity:.25;pointer-events:none}
+
+/* finder banner */
+.finder{display:grid;gap:20px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px 22px;align-items:center}
+.finder h2{font-size:clamp(28px,5.5vw,40px)}
+@media (min-width:860px){.finder{grid-template-columns:1.3fr 1fr;padding:44px}}
+.finder ol{margin:0;padding-left:20px;color:var(--muted)}
+
+/* maisons */
+.brands{columns:2;column-gap:20px;font-family:var(--serif);font-size:18px;color:var(--umber);margin:0;padding:0;list-style:none}
+.brands li{padding:6px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+@media (min-width:760px){.brands{columns:4}}
+
+/* galerie */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.strip figure{margin:0;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--sand)}
+.strip img{width:100%;height:100%;object-fit:cover}
+@media (min-width:860px){.strip{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);grid-auto-columns:auto;overflow:visible}.strip figure{aspect-ratio:3/4}}
+
+/* visite */
+.visit{display:grid;gap:22px}
+.visit .box{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.visit h3{font-size:26px;margin-bottom:10px}
+.visit ul{list-style:none;padding:0;margin:0}
+.visit li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:15px}
+@media (min-width:860px){.visit{grid-template-columns:1fr 1fr 1fr}}
+
+/* collection */
+.filters{position:sticky;top:66px;z-index:20;background:var(--plaster);padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:26px}
+.frow{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.frow::-webkit-scrollbar{display:none}
+.fchip{flex:0 0 auto;min-height:40px;padding:0 15px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-size:14px}
+.fchip[aria-pressed="true"]{background:var(--umber);color:#fff;border-color:var(--umber)}
+.fline{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center}
+.fline select,.fline input{min-height:42px;border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:0 12px;font:inherit;font-size:14px;color:var(--ink);min-width:0;flex:1 1 160px}
+.count{font-size:13px;color:var(--muted)}
+.note-box{background:var(--sage-l);border-radius:12px;padding:14px 16px;font-size:14px;color:#3d4430;margin-top:30px}
+
+/* fiche */
+.crumb{font-size:13px;color:var(--muted);padding:18px 0 0}
+.crumb a{color:var(--muted)}
+.pdp{display:grid;gap:28px;padding:18px 0 40px}
+.pdp .media{background:var(--paper);border:1px solid var(--line);aspect-ratio:1/1;max-height:640px;display:grid;place-items:center}
+.pdp .media img{width:80%;height:80%;object-fit:contain;mix-blend-mode:multiply}
+.pdp h1{font-size:clamp(36px,8vw,58px);margin:6px 0 4px}
+.pdp .conc{color:var(--muted);margin:0 0 18px}
+.price-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:18px}
+.price-line b{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--umber)}
+.price-line small{color:var(--muted);font-size:13px}
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px;border:0;padding:0}
+.sizes legend{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;padding:0}
+.sizes label{position:relative}
+.sizes input{position:absolute;opacity:0;inset:0}
+.sizes span{display:inline-flex;min-height:42px;align-items:center;padding:0 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.sizes input:checked+span{border-color:var(--umber);box-shadow:inset 0 0 0 1px var(--umber)}
+.sizes input:focus-visible+span{outline:2px solid var(--clay);outline-offset:2px}
+.buy{display:grid;gap:10px}
+.perks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+.perks li{display:flex;gap:10px}
+.perks svg{flex:0 0 18px;width:18px;height:18px;stroke:var(--clay);fill:none;stroke-width:1.6;margin-top:3px}
+.notes{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0;padding:0;list-style:none}
+.notes li{padding:8px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-family:var(--serif);font-size:16px;color:var(--umber)}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:18px}
+.panel h2{font-size:24px;margin-bottom:10px}
+.panel p{margin:0 0 10px}
+.todo{border:1.5px dashed var(--clay);background:#FBF1EA;color:var(--clay-d);border-radius:12px;padding:14px 16px;font-size:14px}
+.reviews{border:1.5px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center;color:var(--muted)}
+.reviews b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--umber);margin-bottom:6px}
+@media (min-width:900px){.pdp{grid-template-columns:1.05fr .95fr;gap:56px}.pdp .media{position:sticky;top:90px}}
+
+/* institut */
+.inst-hero{background:var(--sage);color:#F2F1E6;border-radius:0 0 28px 28px;padding:40px 0 46px}
+.inst-hero h1{color:#FBF8F3;font-size:clamp(40px,9vw,70px)}
+.inst-hero .eyebrow{color:#DDE3C3}
+.inst-hero p{max-width:56ch;color:#E4E6D6}
+.menu{display:grid;gap:18px}
+@media (min-width:860px){.menu{grid-template-columns:1fr 1fr}}
+.cat{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.cat h3{font-size:24px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.cat h3 small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+.cat p{color:var(--muted);font-size:14.5px;margin:8px 0 12px}
+.svc{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 0;border-top:1px dashed var(--line)}
+.svc .n{font-weight:500}
+.svc .p{font-family:var(--serif);font-size:19px;color:var(--umber);white-space:nowrap}
+.svc button{min-height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--sage);background:transparent;color:var(--sage);font-size:13px;flex:0 0 auto}
+.svc button:hover{background:var(--sage);color:#fff}
+.svc .l{display:flex;flex-direction:column;min-width:0}
+.svc .r{display:flex;align-items:center;gap:10px}
+.booking{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:10px}
+.steps{display:flex;gap:6px;margin-bottom:18px}
+.steps span{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.steps span.on{background:var(--sage)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin:10px 0 16px}
+.slot{min-height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:14px}
+.slot[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:#fff}
+.booking select{width:100%;min-height:46px;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:#fff;font:inherit}
+.hint{font-size:12.5px;color:var(--muted)}
+
+/* maison */
+.story{display:grid;gap:30px;align-items:start}
+.story .portrait{max-width:360px;aspect-ratio:3/4}
+.story p{font-size:17px}
+.story .big{font-family:var(--ital);font-size:clamp(24px,4.8vw,34px);line-height:1.25;color:var(--umber);margin:0 0 20px}
+@media (min-width:860px){.story{grid-template-columns:.8fr 1.2fr;gap:60px}}
+.timeline{list-style:none;margin:0;padding:0;border-left:1px solid var(--clay);display:grid;gap:22px}
+.timeline li{padding-left:22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--clay)}
+.timeline b{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--umber);display:block}
+
+/* quiz */
+.quiz{max-width:760px;margin:0 auto}
+.q-prog{font-size:13px;color:var(--muted);margin-bottom:10px}
+.q h2{font-size:clamp(28px,6vw,42px);margin-bottom:22px}
+.opts{display:grid;gap:10px}
+@media (min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+.opt{text-align:left;min-height:64px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;gap:2px}
+.opt b{font-family:var(--serif);font-weight:400;font-size:20px;color:var(--umber)}
+.opt small{color:var(--muted);font-size:13.5px}
+.opt:hover{border-color:var(--clay)}
+.q-nav{display:flex;justify-content:space-between;margin-top:18px}
+.q-nav button{background:none;border:0;color:var(--muted);text-decoration:underline;min-height:44px}
+.why{font-size:13.5px;color:var(--muted)}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(42,26,18,.42);z-index:70;opacity:0;visibility:hidden;transition:opacity .25s}
+.scrim.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--paper);z-index:80;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;visibility:hidden}
+.drawer.on{transform:none;visibility:visible}
+.dr-h{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.dr-h h2{font-size:24px}
+.dr-b{flex:1;overflow:auto;padding:16px 20px}
+.dr-f{border-top:1px solid var(--line);padding:16px 20px;display:grid;gap:10px}
+.line-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.line-item .th{width:64px;height:76px;border-radius:32px 32px 8px 8px;background:#fff;border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.line-item .th img{width:80%;height:80%;object-fit:contain}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.qty button{width:34px;height:34px;border:0;background:none}
+.mode{display:grid;gap:8px;margin:14px 0}
+.mode label{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:14px}
+.mode label.dis{opacity:.55}
+.empty{color:var(--muted);text-align:center;padding:40px 10px}
+
+/* notes de refonte */
+.nr-btn{position:fixed;left:14px;bottom:14px;z-index:50;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#F3ECE3;font-size:13px;box-shadow:0 6px 20px rgba(42,26,18,.25)}
+.nr{position:fixed;left:0;top:0;bottom:0;width:min(520px,100%);background:#FFFDF9;z-index:90;transform:translateX(-100%);visibility:hidden;transition:transform .3s;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.nr.on{transform:none;visibility:visible}
+.nr .dr-b ol{padding-left:0;list-style:none;counter-reset:n;margin:0}
+.nr .dr-b li{counter-increment:n;padding:16px 0;border-bottom:1px solid var(--line)}
+.nr .dr-b li h3{font-size:19px;display:flex;gap:10px}
+.nr .dr-b li h3::before{content:counter(n);font-family:var(--sans);font-size:12px;font-weight:600;background:var(--clay);color:#fff;border-radius:50%;width:22px;height:22px;flex:0 0 22px;display:grid;place-items:center;margin-top:1px}
+.nr dl{margin:8px 0 0;font-size:14px;display:grid;gap:6px}
+.nr dt{font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-d)}
+.nr dd{margin:0 0 4px;color:var(--ink)}
+
+.toast{position:fixed;left:50%;bottom:72px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;z-index:95;opacity:0;transition:.25s;max-width:calc(100% - 32px)}
+.toast.on{opacity:1;transform:translateX(-50%)}
+
+footer.site{background:var(--umber);color:#E3D5C6;margin-top:40px;padding:46px 0 90px}
+footer.site h2{color:#FBF8F3;font-size:28px;letter-spacing:.14em}
+.fgrid{display:grid;gap:26px}
+@media (min-width:860px){.fgrid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+footer.site a{color:#F3E7DA}
+footer.site ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:14.5px}
+footer.site h3{color:#E6B49B;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.legal{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:16px;font-size:12.5px;color:#BCA996;display:flex;flex-wrap:wrap;gap:6px 18px}
+main{min-height:60vh}
+main:focus{outline:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Aller au contenu</a>
+<div class="mock" role="note">Maquette préparée pour Tanagra par Monsieur.H · non contractuelle</div>
+
+<header class="site">
+  <div class="wrap hd">
+    <a class="logo" href="#accueil" aria-label="Tanagra, retour à l'accueil">
+      <img src="https://www.tanagra-nice.com/wp-content/uploads/2016/03/Tanagra-Nice-Logo.png" alt="Tanagra" width="183" height="30" onerror="this.outerHTML='<span class=&quot;word&quot;>TANAGRA</span>'">
+    </a>
+    <nav class="main" aria-label="Navigation principale">
+      <a href="#collection" data-nav="collection">Parfums</a>
+      <a href="#institut" data-nav="institut">Institut</a>
+      <a href="#decouverte" data-nav="decouverte">Trouver mon parfum</a>
+      <a href="#maison" data-nav="maison">La Maison</a>
+    </nav>
+    <div class="hd-actions">
+      <a class="btn sage cta-rdv" href="#institut/reserver">Prendre rendez-vous</a>
+      <button class="icon-btn" id="cartBtn" aria-label="Ma sélection (0 article)" aria-controls="drawer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge" id="badge" hidden>0</span>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="icon-btn close" id="menuClose" aria-label="Fermer le menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <a href="#accueil">Accueil</a>
+  <a href="#collection">Parfums</a>
+  <a href="#institut">Institut de beauté</a>
+  <a href="#decouverte">Trouver mon parfum</a>
+  <a href="#maison">La Maison</a>
+  <a href="#institut/reserver" class="btn sage" style="margin-top:18px;font-family:var(--sans);font-size:16px;color:#fff;border:0">Prendre rendez-vous</a>
+</div>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h2>TANAGRA</h2>
+        <p style="margin:10px 0 0;max-width:36ch">Parfumerie de niche et institut de beauté, rue Alphonse Karr à Nice, depuis 1977.</p>
+      </div>
+      <div><h3>Boutique &amp; institut</h3><ul><li>5 bis rue Alphonse Karr<br>06000 Nice</li><li>Mardi – samedi · 10 h – 19 h<br>sans interruption</li><li><a href="tel:+33493879500">04 93 87 95 00</a></li></ul></div>
+      <div><h3>Explorer</h3><ul><li><a href="#collection">Les parfums</a></li><li><a href="#institut">L'institut &amp; la carte des soins</a></li><li><a href="#decouverte">Trouver mon parfum</a></li><li><a href="#maison">La Maison Tanagra</a></li></ul></div>
+      <div><h3>Suivre</h3><ul><li><a href="https://www.instagram.com/parfumerie_tanagra/" rel="noopener" target="_blank">Instagram · @parfumerie_tanagra</a></li></ul></div>
+    </div>
+    <div class="legal"><span>Mentions légales</span><span>CGV &amp; click &amp; collect</span><span>Confidentialité</span><span>SIREN 309 397 438</span><span>Maquette · Développé par Monsieur.H</span></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drTitle">
+  <div class="dr-h"><h2 id="drTitle">Ma sélection</h2><button class="icon-btn" data-close aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dr-b" id="drBody" aria-live="polite"></div>
+  <div class="dr-f" id="drFoot"></div>
+</aside>
+
+<button class="nr-btn" id="nrBtn" aria-controls="nr">Notes de refonte</button>
+<aside class="nr" id="nr" role="dialog" aria-modal="true" aria-labelledby="nrTitle">
+  <div class="dr-h"><h2 id="nrTitle" style="font-size:22px">Notes de refonte</h2><button class="icon-btn" data-close aria-label="Fermer les notes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dr-b">
+    <p style="margin:0 0 6px;font-size:14px;color:var(--muted)">Relevé effectué le 15 octobre 2026 sur tanagra-nice.com. Chaque point : le constat (preuve) → ce que fait la maquette → ce que Tanagra y gagne.</p>
+    <ol>
+      <li><h3>La boutique en ligne existe… mais ne vend rien</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Les 59 fiches parfum publiées ont toutes un prix à 0 et aucune n'est achetable (API WooCommerce : 0/59). Pas de prix, pas de bouton panier, alors que le menu affiche un panier « 0 » et que /panier, /commander, /mon-compte et /boutique sont en ligne.</dd>
+        <dt>Dans la maquette</dt><dd>Un parcours « Réserver et retirer rue Alphonse Karr » utilisable tout de suite, même sans prix publiés (« Prix en boutique »). Il se transforme en vraie vente en ligne (paiement, livraison) dès que Tanagra publie ses prix.</dd>
+        <dt>Bénéfice</dt><dd>On garde les envies d'achat nées la nuit, le dimanche et le lundi (boutique fermée), au lieu de les perdre au profit des grandes enseignes en ligne.</dd></dl></li>
+      <li><h3>Des fiches parfum vides</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Seules 5 fiches sur 59 ont un texte (Marc-Antoine Barrois uniquement), 27 indiquent des notes et 18 n'ont aucune information. Aucune n'a de meta description ni de données Product. « Françis Kurkdjian » est mal orthographié et une note de 3/5 s'affiche sous Baccarat Rouge 540 en page d'accueil.</dd>
+        <dt>Dans la maquette</dt><dd>Une fiche structurée : maison, concentration, notes, contenances, texte de conseil, parfums associés, emplacement des avis et encadrés « à compléter » bien visibles là où il manque des informations.</dd>
+        <dt>Bénéfice</dt><dd>Être trouvé sur « Baccarat Rouge 540 Nice » ou « Marc-Antoine Barrois Nice » : c'est la recherche locale qui amène les clients en boutique.</dd></dl></li>
+      <li><h3>L'institut n'a pas de réservation en ligne</h3><dl>
+        <dt>Aujourd'hui</dt><dd>La carte des soins est publiée avec ses prix (soins visage de 150 à 175 €, massages, beauté des mains et des pieds), mais on ne peut réserver que par téléphone. Les épilations n'ont pas de tarif.</dd>
+        <dt>Dans la maquette</dt><dd>Une carte claire avec un bouton « Réserver » sur chaque soin et une prise de rendez-vous en 3 étapes (soin, jour, créneau), branchable sur l'agenda de l'institut (Planity ou équivalent).</dd>
+        <dt>Bénéfice</dt><dd>Des rendez-vous pris hors des heures d'ouverture, moins d'appels qui interrompent le conseil en boutique, et un panier moyen plus élevé (soin + parfum).</dd></dl></li>
+      <li><h3>Une histoire forte, mais cachée et datée</h3><dl>
+        <dt>Aujourd'hui</dt><dd>L'accueil dit « depuis 45 ans » (page modifiée pour la dernière fois en avril 2022) alors que Tanagra est née en 1977, ce qui fait 49 ans aujourd'hui. Madame Abellan, la formation chez Guerlain et le choix de la parfumerie de niche se trouvent sur une page sans meta description.</dd>
+        <dt>Dans la maquette</dt><dd>« Depuis 1977 » (une date ne vieillit pas), le récit dès l'accueil et une page Maison avec frise, « Tanagrettes » et liste des maisons. Les 50 ans en 2027 sont un moment idéal pour lancer le nouveau site.</dd>
+        <dt>Bénéfice</dt><dd>Une institution niçoise doit le faire sentir dès l'écran d'accueil : c'est ce qui justifie le prix et la fidélité face au e-commerce de masse.</dd></dl></li>
+      <li><h3>SEO : coquille, doublons et pages fantômes</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Le title de l'accueil (repris par Facebook et WhatsApp via og:title) contient « Intitut de Beauté ». Les pages marque n'ont ni H1 ni meta description. Boutique et catégories ont deux H1. Le sitemap déclare 264 pages de pièces jointes (images) à Google. Mentions légales, CGV et confidentialité renvoient une erreur 404.</dd>
+        <dt>Dans la maquette</dt><dd>Un H1 par page, un title et une meta description propres à chaque page, un balisage LocalBusiness (adresse, horaires, téléphone), des pages légales et des CGV click &amp; collect prévues.</dd>
+        <dt>Bénéfice</dt><dd>Un meilleur classement sur « parfumerie de niche Nice » et « institut de beauté Nice », et la conformité nécessaire pour vendre en ligne.</dd></dl></li>
+      <li><h3>Performance et accessibilité</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Environ 112 requêtes pour l'accueil, dont 47 scripts et 34 feuilles de style, environ 1,4 Mo transférés, chargement complet en environ 4,9 s (mesure unique). La balise viewport bloque le zoom (maximum-scale=1), ce qui gêne la lecture sur mobile.</dd>
+        <dt>Dans la maquette</dt><dd>Un seul fichier léger, des images chargées à la demande, le zoom autorisé, des contrastes et des focus clavier visibles, des boutons de 44 px minimum.</dd>
+        <dt>Bénéfice</dt><dd>Moins d'abandons sur mobile, là où arrivent les visiteurs d'Instagram et de Google Maps.</dd></dl></li>
+      <li><h3>Une adresse e-mail qui ne fait pas « maison de luxe »</h3><dl>
+        <dt>Aujourd'hui</dt><dd>Le contact public est une adresse Gmail (parfumerie.tanagra06@…), et le site ne montre ni Instagram actif ni avis Google.</dd>
+        <dt>Dans la maquette</dt><dd>Une adresse sur le domaine (à créer), la note Google mise en avant et un lien Instagram. Toutes les confirmations de réservation partent au nom de Tanagra.</dd>
+        <dt>Bénéfice</dt><dd>Plus de confiance au moment de réserver, et des e-mails de confirmation qui arrivent moins souvent en spam.</dd></dl></li>
+    </ol>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:16px">Les prix des parfums ne sont pas publiés aujourd'hui sur le site : la maquette n'en invente aucun et affiche « Prix en boutique ». La vraie boutique affichera les prix de Tanagra. Les tarifs de l'institut sont ceux publiés sur tanagra-nice.com.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var U="https://www.tanagra-nice.com/wp-content/uploads/";
+var CONC={X:"Extrait de parfum",P:"Eau de parfum",T:"Eau de toilette","":""};
+var FAM={frais:"Frais & vert",floral:"Floral",cuir:"Cuir & daim",bois:"Boisé & oud",ambre:"Ambré & épicé"};
+/* [slug, nom, maison, concentration, image, notes, contenances, familles, intensité 1-3] — données relevées sur tanagra-nice.com */
+var RAW=[
+["ganymedeextrait-marc-antoine-barrois","Ganymede Extrait","Marc-Antoine Barrois","X","2025/05/2302_BARROIS.Ganymede_Extrait-1-500x500.jpg","","","ambre,cuir",3],
+["aldebaran-marc-antoine-barrois","Aldebaran","Marc-Antoine Barrois","P","2025/05/2401-BARROIS_ALDEBARAN_100ml-1_42a3bc2e-79db-4328-b793-e68639919299.jpg-500x500.webp","","","floral",2],
+["encelade-marc-antoine-barrois","Encelade","Marc-Antoine Barrois","P","2025/05/2203_Marc-Antoine-Barrois.Encelade_100ml-2v3_O-scaled.jpg-500x500.webp","","","cuir,bois",3],
+["tilia-marc-antoine-barrois","Tilia","Marc-Antoine Barrois","P","2025/05/24-01-BARROIS_TILIA_100ml-1.jpg-500x500.webp","","","floral",1],
+["petite-cherie-goutal","Petite Chérie","Goutal","P","2023/04/Goutal-petite_cherie-Flacon-100ml-500x500.jpg","Pêche|Poire|Herbes coupées","30 ml|50 ml|100 ml","frais",1],
+["tenue-de-soiree-goutal","Tenue de soirée","Goutal","","2023/04/Goutal-Tenue_de_soiree-100ml-500x500.jpg","","","",0],
+["nuit-et-confidences-goutal","Nuit et Confidences","Goutal","","2023/04/Goutal-Nuit_et_confidences-EDP-100ml-500x500.jpg","","","",0],
+["folie-dun-soir-goutal","Folie d’un soir","Goutal","","2023/04/Goutal_Folie_dun_soir-EDP-100ml-500x500.jpg","","","",0],
+["goutal-etoile-d-une-nuit","Étoile d’une nuit","Goutal","","2023/04/Goutal-Etoile_dune_nuitEDP100ml-500x500.jpg","","","",0],
+["good-girl-gone-bad-kilian","Good Girl Gone Bad","Kilian","","2021/01/kilian-good_girl_gone_bad-500x500.jpg","","","",0],
+["angelsshare-kilian","Angels’ Share","Kilian","","2021/01/kilian-angels_share-500x500.jpg","","","",0],
+["voulez-vous-coucher-avec-moi-kilian","Voulez-vous coucher avec moi","Kilian","","2021/01/kilian-voulez_vous_coucher_avec_moi-500x500.jpg","","","",0],
+["ninfeo-mio-goutal","Ninfeo Mio","Goutal","","2021/01/Goutal-NinfeoMio-Flacon-100ml-500x500.jpg","","","",0],
+["baccarat-rouge-540-francis-kurkdjian","Baccarat Rouge 540","Francis Kurkdjian","","2021/01/francis_kurkdjian-baccarat_rouge_540-500x500.jpg","","","",0],
+["oud-francis-kurkdjian","Oud","Francis Kurkdjian","","2021/01/francis_kurkdjian-oud-500x500.jpg","","","",0],
+["woman-in-gold-kilian","Woman in Gold","Kilian","","2021/01/kilian-woman_in_gold-500x500.jpg","","","",0],
+["chat-perche-goutal","Chat perché","Goutal","","2021/01/Goutal-chat_perche-Flacon-100ml-500x500.jpg","","","",0],
+["eau-dhadrien-goutal","Eau d’Hadrien","Goutal","","2021/01/Goutal-eau_d_hadrien-Flacon-100ml-500x500.jpg","","","",0],
+["le-temps-des-reves-goutal","Le Temps des Rêves","Goutal","","2021/01/Goutal-le_temps_des_reves-500x500.jpg","","","",0],
+["escentric-02-escentric-molecules","Escentric 02","Escentric Molecules","","2021/01/escentricmolecule-escentric2-500x500.jpg","","","",0],
+["escentric-05-escentric-molecules","Escentric 05","Escentric Molecules","","2021/01/escentricmolecule-escentric5-500x500.jpg","","","",0],
+["escentric-04-escentric-molecules","Escentric 04","Escentric Molecules","","2021/01/escentricmolecule-escentric4-500x500.jpg","","","",0],
+["escentric-01-escentric-molecule","Escentric 01","Escentric Molecules","","2021/01/escentricmolecule-escentric1-500x500.jpg","","","",0],
+["lil-fleur-byredo","Lil Fleur","Byredo","P","2021/01/Byredo-lil_fleur-100ml-500x500.jpg","Cassis|Cuir|Pétale de rose|Safran","50 ml|100 ml","floral,cuir",2],
+["incense-jaisalmer-comme-des-garcons","Incense Jaisalmer","Comme des Garçons","P","2021/01/comme_des_garcons-incense_jaisalmer-500x500.jpg","","50 ml","",0],
+["incense-kyoto-comme-des-garcons","Incense Kyoto","Comme des Garçons","P","2021/01/comme_des_garcons-incense_kyoto-500x500.jpg","","50 ml","",0],
+["incense-ouarzazat-comme-des-garcons","Incense Ouarzazate","Comme des Garçons","P","2021/01/comme_des_garcons-incense_quarzazate-500x500.jpg","","50 ml","",0],
+["incense-avignon-comme-des-garcons","Incense Avignon","Comme des Garçons","P","2021/01/comme_des_garcons-incense_avignon-500x500.jpg","","50 ml","",0],
+["beach-walk-replica-maison-margiela","Replica Beach Walk","Maison Margiela","P","2021/01/maison_magiela-beach_walk-500x500.jpg","","100 ml","",0],
+["coffee-break-replica-maison-margiela","Replica Coffee Break","Maison Margiela","P","2021/01/maison_magiela-coffee_break-500x500.jpg","","100 ml","",0],
+["music-festival-replica-maison-margiela","Replica Music Festival","Maison Margiela","P","2021/01/maison_magiela-music_festival-500x500.jpg","Accord de cannabis|Cèdre|Cuir|Patchouli|Tabac|Violette","100 ml","cuir,bois",3],
+["untitle-maison-margiela","(untitled)","Maison Margiela","P","2021/01/maison_magiela-untitled-500x500.jpg","Bigarade|Encens|Galbanum|Jasmin|Musc","","frais",2],
+["sedley-parfum-de-marly","Sedley","Parfums de Marly","P","2021/01/parfum_de_marly-sedley-500x500.jpg","Bergamote|Bois de santal|Géranium|Lavande|Menthe","75 ml|125 ml","frais",2],
+["delina-parfum-de-marly","Delina","Parfums de Marly","P","2021/01/parfum_de_marly-delina-500x500.jpg","Litchi|Musc|Pivoine|Rhubarbe|Rose","75 ml","floral",2],
+["herod-parfum-de-marly","Herod","Parfums de Marly","P","2021/01/parfum_de_marly-herod-500x500.jpg","Cannelle|Feuille de tabac|Fève tonka|Vanille","75 ml|125 ml","ambre",3],
+["kalan-parfum-de-marly","Kalan","Parfums de Marly","P","2021/01/parfum_de_marly-kalan-500x500.jpg","Fleur d'oranger|Mousse de chêne|Orange sanguine|Poivre","75 ml|125 ml","frais",2],
+["terryfic-oud-by-terry","Terryfic Oud","By Terry","P","2021/01/byterry-terryficoud-500x500.jpg","Oud","100 ml","bois",3],
+["flagrant-delice-by-terry","Flagrant Délice","By Terry","P","2021/01/byterry-flagrantdelice-500x500.jpg","Figue","100 ml","frais",1],
+["delectation-splendide-by-terry","Délectation Splendide","By Terry","P","2021/01/byterry-delectationsplendide-500x500.jpg","Patchouli","100 ml","bois",3],
+["be-mine-by-terry","Be Mine","By Terry","P","2021/01/byterry-bemine-500x500.jpg","Cuir|Rose","100 ml","floral,cuir",2],
+["bois-sikar-atelier-des-ors","Bois Sikar","Atelier des Ors","P","2021/01/atelierdesors-boissikar-500x500.jpg","Tabac","100 ml","ambre",3],
+["rouge-saray-atelier-des-ors","Rouge Saray","Atelier des Ors","P","2021/01/atelierdesors-rougesaray-500x500.jpg","Datte|Safran","100 ml","ambre",3],
+["rose-omeyyade-atelier-des-ors","Rose Omeyyade","Atelier des Ors","P","2021/01/atelierdesors-roseomeyyade-500x500.jpg","Oud|Rose","100 ml","floral,bois",3],
+["blanc-polychrome-atelier-des-ors","Blanc Polychrome","Atelier des Ors","P","2021/01/atelierdesors-blancpolychrome-500x500.jpg","Agrumes","100 ml","frais",1],
+["ambre-eaux-primordiales","Ambre","Les Eaux Primordiales","P","2020/11/Eaux_Primordiales-Ambre-Superfluide-100ml-500x500.jpg","","100 ml","",0],
+["couleur-primaire-les-eaux-primordiales","Couleur Primaire","Les Eaux Primordiales","P","2020/11/Eaux_Primordiales-Couleur_primaire-100ml-500x500.jpg","","100 ml","",0],
+["encens-les-eaux-primordiales","Encens","Les Eaux Primordiales","P","2020/11/Eaux_Primordiales-Encens-Superfluide-100ml-500x500.jpg","","100 ml","",0],
+["mecanique-intuitive-les-eaux-primordiales","Mécanique Intuitive","Les Eaux Primordiales","P","2020/11/Eaux_Primordiales-Mecanique_Intuitive-500x500.jpg","","100 ml","",0],
+["oud-for-greatness-initio","Oud for Greatness","Initio","P","2020/11/Initio-oud_for_greatness-500x500.jpg","Huile de bois d'agar|Noix de muscade|Oud|Patchouli|Safran","90 ml","bois,ambre",3],
+["side-effect-initio","Side Effect","Initio","P","2020/11/Initio-side_effect-500x500.jpg","Accord tabac|Cannelle|Musc|Rhum|Vanille","90 ml","ambre",3],
+["ganymede-marc-antoine-barrois","Ganymede","Marc-Antoine Barrois","P","2020/11/2203_Marc-Antoine-Barrois.Ganymede_100ml_O-scaled.jpg-1-500x500.webp","Cuir|Daim|Fleur d'immortelle|Mandarine|Violette","100 ml","cuir",2],
+["sellier-byredo","Sellier","Byredo","X","2020/11/Byredo-sellier-50ml-500x500.jpg","Accord cuir|Bouleau|Feuilles de tabac|Thé noir","50 ml","cuir",2],
+["black-saffron-byredo","Black Saffron","Byredo","P","2020/11/Byredo-blacksaffron-100ml-500x500.jpg","Accord cuir|Baies de genévrier|Safran|Vétiver|Violette","50 ml|100 ml","cuir,ambre",3],
+["bal-dafrique-byredo","Bal d’Afrique","Byredo","P","2020/11/Byredo-baldafrique-100ml-500x500.jpg","Ambre noir|Jasmin|Néroli|Vétiver|Violette","50 ml|100 ml","floral,bois",2],
+["philosykos-diptyque","Philosykos","Diptyque","P","2020/11/Diptyque-philosykos-75ml-500x500.jpg","Cèdre|Feuille de figuier|Figue|Notes vertes","75 ml|100 ml","frais",1],
+["fleur-de-peau-diptyque","Fleur de Peau","Diptyque","P","2020/11/Diptyque-fleur_de_peau-75ml-500x500.jpg","Graine d'ambrette|Iris|Musc","75 ml","floral",1],
+["eau-des-sens-diptyque","Eau des Sens","Diptyque","T","2020/11/Diptyque-eau_des_sens-100ml-500x500.jpg","Baies de genévrier|Fleur d'oranger|Patchouli","100 ml","frais,floral",1],
+["eau-de-minthe-diptyque","Eau de Minthe","Diptyque","P","2020/11/Diptyque-eau_de_minthe-100ml-500x500.jpg","Accord fougère|Géranium|Menthe|Patchouli","75 ml","frais",1],
+["b683-marc-antoine-barrois","B683","Marc-Antoine Barrois","P","2020/11/2203_Marc-AntoineBarrois.B683_100ml_O.jpg-500x500.webp","Ambre|Bois|Cuir|Épices|Noix de muscade|Safran","100 ml","cuir,ambre",3]
+];
+/* textes publiés par Tanagra (fiches Marc-Antoine Barrois) */
+var DESC={
+"ganymedeextrait-marc-antoine-barrois":"S’ouvrant avec une overdose d’immortelle, cet extrait de parfum est le plus addictif, le plus épicé. La richesse de la myrrhe et de l’encens lui donne des facettes presque liquoreuses avant que son sillage n’explose des accords minéraux, de l’akigalawood et de la mandarine qui avaient fait la signature de Ganymede.",
+"aldebaran-marc-antoine-barrois":"C’est une lumière blanche dans l’obscurité. Une clarté mystérieuse irradiant une clairière nocturne. La caresse de la lune sur un champ de tubéreuses, pétales immaculés reflétant la lueur de l’astre comme un miroir. C’est une étoile, Aldebaran, l’une des plus lumineuses du ciel ; la deuxième étoile de la constellation florale imaginée par le créateur Marc-Antoine Barrois et son complice, le parfumeur Quentin Bisch.",
+"encelade-marc-antoine-barrois":"Signature olfactive unique, puissante et sensuelle, Encelade mêle le parfum frais inattendu de la rhubarbe à un cuir fumé, sensuel et puissant que vient compléter l’élégance boisée du vétiver des sables et du santal.",
+"tilia-marc-antoine-barrois":"Simple. Solaire. Souriante. C’est la senteur d’un été qui dure toujours. Des vacances qui se prolongent. Inflexions abricotées miellées du genêt. Tendresse poudrée de l’héliotrope. Un bouquet bucolique qu’enrichit un brin velouté de jasmin sambac. Et que souligne, comme un trait d’ombre exalte l’éblouissement d’un après-midi au soleil, le terreux fumé du vétiver… Première d’une constellation de parfums floraux, Tilia est aussi le nom d’une étoile imaginaire. Celle qui veille sur les jours heureux.",
+"ganymede-marc-antoine-barrois":"Ganymede est un chef-d’œuvre créé en osmose par Marc-Antoine Barrois et Quentin Bisch, lauréat dans la catégorie « parfum extraordinaire » des Fragrance Foundation Awards 2020. Pour homme et pour femme. Son accord cuir-daim, déjà révélé chez son grand frère B683, incarne l’élégance. Il s’adoucit au contact de la violette tandis que la mandarine réveille sa vivacité ; l’immortelle, pilier de la fragrance, apporte un accord tantôt minéral, tantôt salé. N’hésitez pas, pour nous c’est une valeur sûre."
+};
+var QUOTE={"tilia-marc-antoine-barrois":"Simple. Solaire. Souriante.","aldebaran-marc-antoine-barrois":"Une lumière blanche dans l’obscurité.","ganymede-marc-antoine-barrois":"Pour nous, c’est une valeur sûre.","encelade-marc-antoine-barrois":"Rhubarbe fraîche, cuir fumé.","ganymedeextrait-marc-antoine-barrois":"Le plus addictif, le plus épicé.","b683-marc-antoine-barrois":"Le grand frère de Ganymede."};
+var P=RAW.map(function(r){return{s:r[0],n:r[1],b:r[2],c:CONC[r[3]],i:U+r[4],notes:r[5]?r[5].split("|"):[],sizes:r[6]?r[6].split("|"):[],fam:r[7]?r[7].split(","):[],int:r[8],d:DESC[r[0]]||""}});
+var BY={};P.forEach(function(p){BY[p.s]=p});
+var BRANDS=Array.from(new Set(P.map(function(p){return p.b}))).sort(function(a,b){return a.localeCompare(b,"fr")});
+var HOUSES=["Aesop","L’Artisan Parfumeur","Atelier des Ors","BDK Parfums","By Terry","Byredo","Comme des Garçons","Creed","Diptyque","Escentric Molecules","Ex Nihilo","Essential Parfums","Francis Kurkdjian","Frédéric Malle","Giardini di Toscana","Goutal","Initio","Jardins d’Écrivains","Jean-Louis Scherrer","Kilian","Lalique","Le Labo","Les Eaux Primordiales","Lubin","L’Entropiste","Maison Houbigant","Maison Margiela","Marc-Antoine Barrois","Matière Première","Memo","Nasomatto","Orto Parisi","Parfums de Marly","Penhaligon’s","Perris","Roos & Roos","Réminiscence","Serge Lutens","Thomas de Monaco","Une Nuit Nomade","Voyages Imaginaires","Xerjoff"];
+var COSM=["Aesop","Annayaké","Augustinus Bader","Bioeffect","By Terry","Codage","Manucurist","Menard","Monika Heiligmann","My Blend","Perris Swiss Laboratory","Shiseido","Susanne Kaufmann","The Grey"];
+var G="https://www.tanagra-nice.com/wp-content/plugins/widgetkit/cache/gallery/706/tanagra-parfumerie-hoem-slider-";
+var GAL=[G+"_0000_1-98b362944d.jpg",G+"_0001_2-e4ac36817b.jpg",G+"_0002_3-6cab659efb.jpg",G+"_0003_4-5053c4cf35.jpg",G+"_0005_6-055967ce75.jpg"];
+var FACADE=U+"2020/11/fullscreen_harbor.jpg";
+var PORTRAIT=U+"2016/05/mme-tanagra-small.jpg";
+/* carte de l'institut — tarifs publiés sur tanagra-nice.com/institut-de-beaute */
+var SOINS=[
+ {cat:"Soins du visage",dur:"1 h 30",txt:"Tous les soins incluent un nettoyage de peau, un modelage personnalisé, la pose d’un masque et une remise en beauté.",items:[["Soin Annayaké","150 €"],["Soin Shiseido","150 €"],["Soin Perris","170 €"],["Soin Millet","170 €"],["Soin My Blend","175 €"]]},
+ {cat:"Soins du corps",dur:"",txt:"Sublimez votre corps avec un gommage ou un enveloppement, ou offrez-vous un moment de détente avec un massage traditionnel ou à la bougie.",items:[["Massage · 1 h","110 €"],["Massage à la bougie · 1 h","120 €"],["Soin du corps · 1 h 30","140 €"],["Soin du dos · 1 h","120 €"]]},
+ {cat:"Beauté des mains",dur:"45 min",txt:"Produits Manucurist : ingrédients bio-sourcés, d’origine naturelle, le plus clean possible pour votre santé et celle de vos ongles.",items:[["Manucure traditionnelle","40 €"],["Manucure French","42 €"]]},
+ {cat:"Beauté des pieds",dur:"1 h",txt:"Les mêmes soins Manucurist, pour des pieds aussi soignés que vos mains.",items:[["Beauté des pieds traditionnelle","50 €"],["Beauté des pieds French","52 €"]]},
+ {cat:"Épilations",dur:"",txt:"Cire vierge ou miel, suivie d’un produit apaisant, pour une douceur de peau incomparable et un résultat durable.",items:[["Épilations (toutes zones)","Tarifs à l’institut"]]},
+ {cat:"Teinture",dur:"",txt:"",items:[["Teinture cils","40 €"],["Teinture cils et sourcils","60 €"]]}
+];
+
+var app=document.getElementById("app");
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function img(src,alt,cls,eager){return '<img src="'+src+'" alt="'+esc(alt)+'"'+(cls?' class="'+cls+'"':'')+(eager?'':' loading="lazy"')+' decoding="async" onerror="this.style.visibility=\'hidden\'">'}
+function card(p){
+  var meta=[p.c,p.sizes.join(" · ")].filter(Boolean).join(" — ")||"Prix et formats en boutique";
+  return '<a class="card" href="#parfum/'+p.s+'"><div class="pic">'+img(p.i,"Flacon "+p.n+" de "+p.b)+'</div><span class="br">'+esc(p.b)+'</span><span class="nm">'+esc(p.n)+'</span><span class="meta">'+esc(meta)+'</span>'+(p.fam.length?'<span class="fams">'+p.fam.map(function(f){return '<span class="chip">'+FAM[f]+'</span>'}).join("")+'</span>':'')+'</a>';
+}
+var ico={
+ pin:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+ hand:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l3 3h6a2 2 0 0 0 0-4h-4"/><path d="M4 18h12l5-5"/></svg>',
+ drop:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg>'
+};
+
+/* ---------- vues ---------- */
+function vHome(){
+  var feat=["tilia-marc-antoine-barrois","aldebaran-marc-antoine-barrois","ganymede-marc-antoine-barrois","encelade-marc-antoine-barrois","b683-marc-antoine-barrois"];
+  var picks=["baccarat-rouge-540-francis-kurkdjian","good-girl-gone-bad-kilian","petite-cherie-goutal","eau-des-sens-diptyque","bal-dafrique-byredo","rose-omeyyade-atelier-des-ors","delina-parfum-de-marly","philosykos-diptyque"];
+  return ''+
+  '<section class="hero"><div class="wrap hero-grid">'+
+   '<div><p class="eyebrow">Parfumerie de niche · Institut de beauté · Nice</p>'+
+   '<h1>Tanagra</h1>'+
+   '<p class="lead">Un havre de senteur et de volupté, rue Alphonse Karr, depuis 1977.</p>'+
+   '<p class="txt">Des matières nobles, des maisons confidentielles, un parfum que l’on ne sent pas sur tout le monde. Nos conseillères vous aident à trouver celui qui affirmera votre personnalité, et notre institut prend soin de vous, sur rendez-vous.</p>'+
+   '<div class="ctas"><a class="btn" href="#collection">Découvrir les parfums</a><a class="btn ghost" href="#institut/reserver">Réserver un soin</a></div>'+
+   '<div class="facts"><div><b>1977</b><span>Maison fondée par Madame Abellan</span></div><div><b>4,8 / 5</b><span>221 avis Google</span></div><div><b>Click &amp; collect</b><span>Réservez en ligne, retirez en boutique</span></div><div><b>Mar.–sam.</b><span>10 h – 19 h sans interruption</span></div></div>'+
+   '</div>'+
+   '<div class="arch ph">'+img(FACADE,"La façade de Tanagra, rue Alphonse Karr à Nice, sous son auvent brun",null,true)+'</div>'+
+  '</div></section>'+
+
+  '<section style="padding-top:10px"><div class="wrap duo">'+
+   '<a class="uni" href="#collection">'+img(GAL[2],"Les flacons Diptyque et les parfums de niche exposés dans la boutique")+'<div class="in"><span class="eyebrow">La parfumerie</span><h3>Des parfums d’exception, en exclusivité à Nice</h3><p>Une sélection pointue de maisons confidentielles, choisies une à une par Madame Abellan et ses Tanagrettes.</p><span class="go">Parcourir la sélection →</span></div></a>'+
+   '<a class="uni sage" href="#institut">'+img(GAL[0],"L’intérieur lumineux de la boutique Tanagra")+'<div class="in"><span class="eyebrow">L’institut de beauté</span><h3>Des soins d’exception, entièrement manuels</h3><p>Des esthéticiennes confirmées, des produits luxueux et performants : Annayaké, Shiseido, Perris, My Blend, Manucurist.</p><span class="go">Voir la carte et réserver →</span></div></a>'+
+  '</div></section>'+
+
+  '<section><div class="wrap"><div class="sec-head"><div><p class="eyebrow">Sélection de la maison</p><h2>Ce que l’on vient sentir chez Tanagra</h2></div><a class="link" href="#collection">Voir tous les parfums</a></div>'+
+   '<div class="grid g4">'+picks.map(function(s){return card(BY[s])}).join("")+'</div></div></section>'+
+
+  '<section><div class="wrap"><div class="constel">'+
+   '<svg class="sky" viewBox="0 0 200 200" aria-hidden="true"><g fill="#F3ECE3"><circle cx="30" cy="40" r="3"/><circle cx="90" cy="20" r="2"/><circle cx="150" cy="60" r="4"/><circle cx="120" cy="120" r="2.5"/><circle cx="60" cy="150" r="3"/></g><path d="M30 40 90 20 150 60 120 120 60 150" stroke="#F3ECE3" fill="none" stroke-width=".7"/></svg>'+
+   '<p class="eyebrow">Maison à l’honneur</p><h2 style="font-size:clamp(30px,6vw,46px);margin:10px 0 12px">La constellation Marc-Antoine Barrois</h2>'+
+   '<p style="max-width:58ch;margin:0">Couturier parisien, Marc-Antoine Barrois imagine avec le parfumeur Quentin Bisch des parfums qui portent des noms d’étoiles. Tanagra les présente à Nice, de B683 à la constellation florale.</p>'+
+   '<div class="stars">'+feat.map(function(s){var p=BY[s];return '<a class="star" href="#parfum/'+s+'"><span class="nm">'+esc(p.n)+'</span><q>'+esc(QUOTE[s]||"")+'</q><span style="font-size:13px;color:#CDBBA8">'+p.c+'</span></a>'}).join("")+'</div>'+
+  '</div></div></section>'+
+
+  '<section><div class="wrap finder">'+
+   '<div><p class="eyebrow">Trouver mon parfum</p><h2 style="margin:10px 0 12px">Quatre questions, et une Tanagrette vous répond</h2><p style="color:var(--muted);margin:0 0 20px;max-width:50ch">Moment, matières, sillage : notre guide vous propose trois parfums de la boutique, à réserver pour les sentir sur place.</p><a class="btn" href="#decouverte">Commencer le guide</a></div>'+
+   '<ol><li>Pour quel moment ?</li><li>Quelles matières vous attirent ?</li><li>Quel sillage ?</li><li>Pour vous ou pour offrir ?</li></ol>'+
+  '</div></section>'+
+
+  '<section><div class="wrap"><div class="sec-head"><div><p class="eyebrow">La boutique</p><h2>200 m² rue Alphonse Karr</h2></div><p>Une boutique haut de gamme ouverte en 1977, dans un quartier qui ne laissait alors rien paraître de son développement futur.</p></div>'+
+   '<div class="strip">'+GAL.map(function(g,i){return '<figure>'+img(g,"Intérieur de la boutique Tanagra, vue "+(i+1))+'</figure>'}).join("")+'</div></div></section>'+
+
+  vVisit();
+}
+function vVisit(){
+  return '<section><div class="wrap visit">'+
+   '<div class="box"><p class="eyebrow">Nous rendre visite</p><h3>5 bis rue Alphonse Karr</h3><ul><li>06000 Nice</li><li>Du mardi au samedi, 10 h – 19 h, sans interruption</li><li><a class="link" href="tel:+33493879500">04 93 87 95 00</a></li></ul></div>'+
+   '<div class="box"><p class="eyebrow">Accès</p><h3>À deux pas de Jean-Médecin</h3><ul><li>Parking Le Louvre à 50 m</li><li>Parking Grimaldi à 100 m</li><li>Tram 2 Jean-Médecin à 4 min</li><li>Gare Nice-Ville à 15 min</li><li>Accès facilité pour les personnes à mobilité réduite</li></ul></div>'+
+   '<div class="box"><p class="eyebrow">Réserver &amp; retirer</p><h3>Click &amp; collect</h3><ul><li>Réservez vos parfums en ligne</li><li>Tanagra confirme la disponibilité</li><li>Vous sentez, vous retirez en boutique</li><li>Conseil personnalisé sur place</li></ul></div>'+
+  '</div></section>';
+}
+
+var filt={fam:"",brand:"",q:""};
+function vCollection(){
+  var famBtns='<button class="fchip" data-fam="" aria-pressed="'+(filt.fam===""?"true":"false")+'">Toutes les familles</button>'+Object.keys(FAM).map(function(k){return '<button class="fchip" data-fam="'+k+'" aria-pressed="'+(filt.fam===k?"true":"false")+'">'+FAM[k]+'</button>'}).join("");
+  return '<section style="padding-top:34px"><div class="wrap">'+
+   '<p class="eyebrow">La parfumerie</p><h1 style="font-size:clamp(38px,8vw,60px);margin:10px 0 10px">Les parfums de Tanagra</h1>'+
+   '<p style="color:var(--muted);max-width:60ch;margin:0">Une sélection de maisons de niche, de Marc-Antoine Barrois à Diptyque. Réservez en ligne, sentez et retirez rue Alphonse Karr.</p>'+
+   '<div class="filters"><div class="frow" role="group" aria-label="Filtrer par famille olfactive">'+famBtns+'</div>'+
+   '<div class="fline"><label class="sr" for="fBrand">Maison</label><select id="fBrand"><option value="">Toutes les maisons</option>'+BRANDS.map(function(b){return '<option'+(filt.brand===b?' selected':'')+'>'+esc(b)+'</option>'}).join("")+'</select>'+
+   '<label class="sr" for="fQ">Rechercher un parfum ou une note</label><input id="fQ" type="search" placeholder="Parfum, maison ou note (figue, cuir…)" value="'+esc(filt.q)+'">'+
+   '<span class="count" id="count" aria-live="polite"></span></div></div>'+
+   '<div class="grid g4" id="plist"></div>'+
+   '<div class="note-box">Les familles sont établies d’après les notes publiées par Tanagra : les parfums sans notes renseignées apparaissent sous « Toutes les familles ». La boutique présente bien d’autres maisons (Frédéric Malle, Le Labo, Serge Lutens, Xerjoff…), à ajouter au catalogue en ligne.</div>'+
+  '</div></section>';
+}
+function renderList(){
+  var q=filt.q.trim().toLowerCase();
+  var list=P.filter(function(p){
+    if(filt.fam&&p.fam.indexOf(filt.fam)<0)return false;
+    if(filt.brand&&p.b!==filt.brand)return false;
+    if(q&&(p.n+" "+p.b+" "+p.notes.join(" ")+" "+p.d).toLowerCase().indexOf(q)<0)return false;
+    return true;});
+  var el=document.getElementById("plist");if(!el)return;
+  el.innerHTML=list.length?list.map(card).join(""):'<p class="empty" style="grid-column:1/-1">Aucun parfum ne correspond. Nos conseillères en ont bien d’autres en boutique.</p>';
+  document.getElementById("count").textContent=list.length+" parfum"+(list.length>1?"s":"");
+}
+function bindCollection(){
+  app.querySelectorAll("[data-fam]").forEach(function(b){b.addEventListener("click",function(){filt.fam=b.getAttribute("data-fam");app.querySelectorAll("[data-fam]").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});renderList()})});
+  document.getElementById("fBrand").addEventListener("change",function(e){filt.brand=e.target.value;renderList()});
+  document.getElementById("fQ").addEventListener("input",function(e){filt.q=e.target.value;renderList()});
+  renderList();
+}
+
+function related(p){
+  var pool=P.filter(function(x){return x.s!==p.s});
+  var sc=pool.map(function(x){var s=0;if(x.b===p.b)s+=2;x.fam.forEach(function(f){if(p.fam.indexOf(f)>=0)s+=3});if(x.notes.length)s+=.5;return[s,x]});
+  sc.sort(function(a,b){return b[0]-a[0]});
+  return sc.slice(0,4).map(function(a){return a[1]});
+}
+function vProduct(slug){
+  var p=BY[slug];
+  if(!p)return '<section><div class="wrap"><h1>Parfum introuvable</h1><p><a class="link" href="#collection">Retour aux parfums</a></p></div></section>';
+  var sizes=p.sizes.length?'<fieldset class="sizes"><legend>Contenance</legend>'+p.sizes.map(function(s,i){return '<label><input type="radio" name="size" value="'+s+'"'+(i===p.sizes.length-1?" checked":"")+'><span>'+s+'</span></label>'}).join("")+'</fieldset>':'<p class="hint" style="margin:0 0 16px">Contenances disponibles confirmées par la boutique lors de la réservation.</p>';
+  var notes=p.notes.length?'<ul class="notes">'+p.notes.map(function(n){return '<li>'+esc(n)+'</li>'}).join("")+'</ul><p class="hint" style="margin-top:10px">Notes principales publiées par Tanagra. La pyramide tête / cœur / fond sera complétée à partir des fiches de la maison.</p>':'<div class="todo"><strong>À compléter avec Tanagra :</strong> notes olfactives et pyramide tête / cœur / fond. Aujourd’hui, cette fiche n’en indique aucune sur le site.</div>';
+  var desc=p.d?'<p>'+esc(p.d)+'</p>':'<div class="todo"><strong>À compléter avec Tanagra :</strong> le texte de conseil de la boutique (ce que l’on dit de ce parfum en boutique, pour qui, à quel moment). Aujourd’hui, cette fiche n’a aucun texte.</div>';
+  var rel=related(p);
+  return '<div class="wrap"><nav class="crumb" aria-label="Fil d’Ariane"><a href="#accueil">Accueil</a> / <a href="#collection">Parfums</a> / '+esc(p.b)+' / <span aria-current="page">'+esc(p.n)+'</span></nav>'+
+   '<div class="pdp"><div class="media arch">'+img(p.i,"Flacon "+p.n+" de "+p.b,null,true)+'</div>'+
+   '<div><p class="eyebrow">'+esc(p.b)+'</p><h1>'+esc(p.n)+'</h1><p class="conc">'+(p.c||"Concentration à préciser")+(p.fam.length?' · '+p.fam.map(function(f){return FAM[f]}).join(", "):'')+'</p>'+
+   '<div class="price-line"><b>Prix en boutique</b><small>Le prix est confirmé à la réservation. La boutique en ligne complète affichera les tarifs de Tanagra.</small></div>'+
+   sizes+
+   '<div class="buy"><button class="btn" id="addBtn">Réserver en boutique · click &amp; collect</button><a class="btn ghost" href="tel:+33493879500">Demander conseil à une Tanagrette</a></div>'+
+   '<label style="display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px"><input type="checkbox" id="sample" style="margin-top:4px;width:18px;height:18px;accent-color:var(--clay)"> Je souhaite d’abord sentir ce parfum en boutique avant de le retirer</label>'+
+   '<ul class="perks"><li>'+ico.pin+'<span>Retrait au 5 bis rue Alphonse Karr, du mardi au samedi, 10 h – 19 h</span></li><li>'+ico.hand+'<span>Disponibilité confirmée par la boutique avant votre venue</span></li><li>'+ico.drop+'<span>Conseil personnalisé sur place, comme depuis 1977</span></li></ul>'+
+   '</div></div>'+
+   '<div class="panel"><h2>L’avis de Tanagra</h2>'+desc+'</div>'+
+   '<div class="panel"><h2>Notes olfactives</h2>'+notes+'</div>'+
+   '<div class="panel"><h2>Avis clients</h2><div class="reviews"><b>Emplacement réservé aux avis vérifiés</b>Aucun avis n’est affiché dans cette maquette. Les avis des clientes et clients ayant retiré leur parfum s’afficheront ici.</div></div>'+
+   '<section style="padding:44px 0 20px"><div class="sec-head"><div><p class="eyebrow">Dans le même esprit</p><h2 style="font-size:32px">Vous aimerez aussi</h2></div></div><div class="grid g4">'+rel.map(card).join("")+'</div></section>'+
+  '</div>';
+}
+function bindProduct(slug){
+  var b=document.getElementById("addBtn");if(!b)return;
+  b.addEventListener("click",function(){
+    var r=app.querySelector('input[name="size"]:checked');
+    addToCart(slug,r?r.value:"",document.getElementById("sample").checked);
+  });
+}
+
+/* institut */
+var bk={soin:"",day:"",slot:""};
+function vInstitut(){
+  return '<div class="inst-hero"><div class="wrap"><p class="eyebrow">L’institut de beauté Tanagra</p><h1 style="margin:10px 0 14px">Des soins d’exception, sur rendez-vous</h1><p>Une équipe d’esthéticiennes confirmées et expérimentées vous accueille pour des soins réalisés avec des méthodes professionnelles et entièrement manuelles, et des produits luxueux et performants.</p><a class="btn light" href="#institut/reserver" style="margin-top:8px">Prendre rendez-vous</a></div></div>'+
+  '<section><div class="wrap"><div class="sec-head"><div><p class="eyebrow">La carte</p><h2>Soins &amp; tarifs</h2></div><p>Tarifs publiés par l’institut Tanagra.</p></div><div class="menu">'+
+   SOINS.map(function(c){return '<div class="cat"><h3>'+c.cat+(c.dur?' <small>'+c.dur+'</small>':'')+'</h3>'+(c.txt?'<p>'+c.txt+'</p>':'')+c.items.map(function(it){var priced=it[1].indexOf("€")>0;return '<div class="svc"><span class="l"><span class="n">'+it[0]+'</span></span><span class="r"><span class="p">'+it[1]+'</span>'+(priced?'<button data-book="'+esc(it[0]+" — "+it[1])+'">Réserver</button>':'')+'</span></div>'}).join("")+'</div>'}).join("")+
+  '</div></div></section>'+
+  '<section id="reserver" style="padding-top:0"><div class="wrap"><div class="sec-head"><div><p class="eyebrow" style="color:var(--sage)">Réservation en ligne</p><h2>Prendre rendez-vous</h2></div><p>Trois étapes, sans appel. L’agenda réel de l’institut (Planity ou équivalent) remplacera les créneaux d’exemple.</p></div>'+
+   '<div class="booking" id="booking"></div></div></section>';
+}
+function nextDays(){var out=[],d=new Date();d.setHours(12);while(out.length<8){d.setDate(d.getDate()+1);var w=d.getDay();if(w>=2&&w<=6)out.push(new Date(d))}return out}
+function renderBooking(){
+  var el=document.getElementById("booking");if(!el)return;
+  var opts=[];SOINS.forEach(function(c){c.items.forEach(function(it){if(it[1].indexOf("€")>0)opts.push(it[0]+" — "+it[1])})});
+  var step=bk.soin?(bk.day?(bk.slot?3:2):1):0;
+  var days=nextDays();var fmt=new Intl.DateTimeFormat("fr-FR",{weekday:"short",day:"numeric",month:"short"});
+  var slots=["10:00","11:30","13:00","14:30","16:00","17:30"];
+  el.innerHTML='<div class="steps" aria-hidden="true"><span class="'+(step>=0?"on":"")+'"></span><span class="'+(step>=1?"on":"")+'"></span><span class="'+(step>=2?"on":"")+'"></span><span class="'+(step>=3?"on":"")+'"></span></div>'+
+   '<label for="bkSoin" style="font-weight:600;display:block;margin-bottom:8px">1. Votre soin</label><select id="bkSoin"><option value="">Choisir un soin…</option>'+opts.map(function(o){return '<option'+(bk.soin===o?" selected":"")+'>'+esc(o)+'</option>'}).join("")+'</select>'+
+   (bk.soin?'<p style="font-weight:600;margin:20px 0 0">2. Le jour</p><div class="slots" role="group" aria-label="Jour">'+days.map(function(d){var k=d.toDateString();return '<button class="slot" data-day="'+k+'" aria-pressed="'+(bk.day===k)+'">'+fmt.format(d)+'</button>'}).join("")+'</div>':'')+
+   (bk.day?'<p style="font-weight:600;margin:8px 0 0">3. L’heure</p><div class="slots" role="group" aria-label="Créneau">'+slots.map(function(s){return '<button class="slot" data-slot="'+s+'" aria-pressed="'+(bk.slot===s)+'">'+s+'</button>'}).join("")+'</div><p class="hint">Créneaux d’exemple : les vraies disponibilités viendront de l’agenda de l’institut.</p>':'')+
+   (bk.slot?'<div style="margin-top:14px;padding:16px;border-radius:12px;background:var(--sage-l)"><strong>'+esc(bk.soin)+'</strong><br>'+fmt.format(new Date(bk.day))+' à '+bk.slot+' · Institut Tanagra, 5 bis rue Alphonse Karr</div><button class="btn sage" id="bkGo" style="margin-top:14px;width:100%">Confirmer le rendez-vous</button>':'');
+  var s=document.getElementById("bkSoin");s.addEventListener("change",function(){bk.soin=s.value;bk.day="";bk.slot="";renderBooking()});
+  el.querySelectorAll("[data-day]").forEach(function(b){b.addEventListener("click",function(){bk.day=b.getAttribute("data-day");bk.slot="";renderBooking()})});
+  el.querySelectorAll("[data-slot]").forEach(function(b){b.addEventListener("click",function(){bk.slot=b.getAttribute("data-slot");renderBooking();var g=document.getElementById("bkGo");if(g)g.focus()})});
+  var go=document.getElementById("bkGo");if(go)go.addEventListener("click",function(){toast("Simulation : rendez-vous demandé. L’institut vous envoie une confirmation par e-mail et SMS.");bk={soin:"",day:"",slot:""};renderBooking()});
+}
+function bindInstitut(scroll){
+  app.querySelectorAll("[data-book]").forEach(function(b){b.addEventListener("click",function(){bk.soin=b.getAttribute("data-book");bk.day="";bk.slot="";renderBooking();document.getElementById("reserver").scrollIntoView({behavior:"smooth"})})});
+  renderBooking();
+  if(scroll)setTimeout(function(){document.getElementById("reserver").scrollIntoView()},30);
+}
+
+/* maison */
+function vMaison(){
+  return '<section style="padding-top:40px"><div class="wrap story">'+
+   '<div class="arch portrait">'+img(PORTRAIT,"Madame Abellan, fondatrice de Tanagra",null,true)+'</div>'+
+   '<div><p class="eyebrow">La Maison</p><h1 style="font-size:clamp(38px,8vw,62px);margin:10px 0 20px">Une affaire de famille, depuis 1977</h1>'+
+   '<p class="big">« Tanagra », symbole antique de la beauté grecque.</p>'+
+   '<p>Tanagra est une affaire de famille créée en 1977 par Madame Abellan. Passionnée par le luxe et formée à l’école Guerlain, elle a osé ouvrir une boutique haut de gamme de 200 m² rue Alphonse Karr, dans un quartier qui ne laissait alors rien paraître de son développement futur.</p>'+
+   '<p>En quelques années, avec l’aide et la complicité de sa clientèle, Tanagra est devenue une adresse incontournable de la beauté à Nice : qualité de service irréprochable, gamme de produits uniques, point de vente remarquable.</p>'+
+   '<p>Pour affirmer sa différence, Tanagra s’est éloignée de certaines grandes marques pour se recentrer sur la parfumerie confidentielle, dite « de niche ». Un lieu où l’humain prime sur les affaires : c’est l’état d’esprit que Madame Abellan a su transmettre à ses équipes, les Tanagrettes.</p>'+
+   '</div></div></section>'+
+  '<section><div class="wrap" style="display:grid;gap:34px">'+
+   '<div><p class="eyebrow">Repères</p><h2 style="font-size:clamp(28px,5vw,40px);margin:10px 0 22px">D’une boutique de quartier à une institution niçoise</h2>'+
+   '<ol class="timeline"><li><b>1977</b>Madame Abellan, formée à l’école Guerlain, ouvre Tanagra au 5 bis rue Alphonse Karr.</li><li><b>Le choix de la niche</b>Tanagra s’éloigne de certaines grandes marques pour des maisons confidentielles et des parfums que l’on ne sent pas sur tout le monde.</li><li><b>Parfumerie &amp; institut</b>Aux parfums s’ajoutent les soins de l’institut, le maquillage, les bijoux fantaisie et les accessoires cheveux (Deliska).</li><li><b>2027</b>Cinquante ans rue Alphonse Karr.</li></ol></div>'+
+   '<div><p class="eyebrow">Nos maisons de parfum</p><h2 style="font-size:clamp(28px,5vw,40px);margin:10px 0 22px">Sélectionnées pour vous par les Tanagrettes</h2><ul class="brands">'+HOUSES.map(function(h){return '<li>'+esc(h)+'</li>'}).join("")+'</ul></div>'+
+   '<div><p class="eyebrow">Soin &amp; beauté</p><h2 style="font-size:clamp(26px,4.6vw,34px);margin:10px 0 18px">Les marques de l’institut et de la boutique</h2><p style="color:var(--muted);margin:0 0 14px;max-width:60ch">De grandes marques biologiques, naturelles ou privilégiant la technologie des ingrédients, pour élaborer la routine la plus adaptée à votre peau.</p><ul class="brands">'+COSM.map(function(h){return '<li>'+esc(h)+'</li>'}).join("")+'<li>Deliska H</li><li>La Bonne Brosse</li></ul></div>'+
+  '</div></section>'+vVisit();
+}
+
+/* découverte */
+var Q=[
+ {k:"moment",t:"Pour quel moment ?",o:[["jour","Le jour","Lumineux, au bureau, au soleil"],["soir","Le soir","Dîners, sorties, occasions"],["tous","Tous les jours","Une signature qui me suit partout"]]},
+ {k:"fam",t:"Quelles matières vous attirent ?",o:[["frais","Agrumes & verdure","Bergamote, figue, menthe, néroli"],["floral","Fleurs","Rose, tubéreuse, jasmin, iris"],["cuir","Cuir & daim","Cuir, daim, bouleau, immortelle"],["bois","Bois & oud","Oud, patchouli, vétiver, santal"],["ambre","Épices, tabac & vanille","Safran, cannelle, tabac, tonka"]]},
+ {k:"int",t:"Quel sillage ?",o:[["1","Discret","Près de la peau, pour soi"],["2","Présent","On le remarque quand on s’approche"],["3","Affirmé","Il annonce votre arrivée"]]},
+ {k:"pour",t:"Pour vous, ou pour offrir ?",o:[["moi","Pour moi","Je viendrai le sentir"],["offrir","Pour offrir","Un cadeau à retirer rue Alphonse Karr"]]}
+];
+var ans={},qi=0;
+function vDecouverte(){return '<section style="padding-top:40px"><div class="wrap"><div class="quiz"><h1 class="eyebrow" style="font-family:var(--sans);color:var(--clay)">Trouver mon parfum · guide olfactif Tanagra</h1><div id="quiz"></div></div></div></section>'}
+function renderQuiz(){
+  var el=document.getElementById("quiz");if(!el)return;
+  if(qi<Q.length){
+    var q=Q[qi];
+    el.innerHTML='<p class="q-prog" style="margin-top:12px">Question '+(qi+1)+' sur '+Q.length+'</p><div class="q"><h2 id="qT" tabindex="-1">'+q.t+'</h2><div class="opts" role="group" aria-labelledby="qT">'+q.o.map(function(o){return '<button class="opt" data-v="'+o[0]+'"><b>'+o[1]+'</b><small>'+o[2]+'</small></button>'}).join("")+'</div></div>'+
+     '<div class="q-nav">'+(qi>0?'<button id="qBack">← Question précédente</button>':'<span></span>')+'<a class="link" href="#collection" style="align-self:center">Voir tous les parfums</a></div>';
+    el.querySelectorAll(".opt").forEach(function(b){b.addEventListener("click",function(){ans[q.k]=b.getAttribute("data-v");qi++;renderQuiz();var h=document.getElementById("qT")||document.getElementById("rT");if(h)h.focus()})});
+    var bb=document.getElementById("qBack");if(bb)bb.addEventListener("click",function(){qi--;renderQuiz()});
+    return;
+  }
+  var pool=P.filter(function(p){return p.fam.length});
+  var sc=pool.map(function(p){var s=0;if(p.fam.indexOf(ans.fam)>=0)s+=10;var it=+ans.int;s+=3-Math.abs(p.int-it)*1.5;
+    if(ans.moment==="jour"&&(p.fam.indexOf("frais")>=0||p.fam.indexOf("floral")>=0))s+=2;
+    if(ans.moment==="soir"&&(p.fam.indexOf("ambre")>=0||p.fam.indexOf("bois")>=0||p.fam.indexOf("cuir")>=0))s+=2;
+    if(p.d)s+=.6;return[s,p]});
+  sc.sort(function(a,b){return b[0]-a[0]});
+  var top=sc.slice(0,3).map(function(a){return a[1]});
+  el.innerHTML='<p class="eyebrow">Votre sélection</p><h2 id="rT" tabindex="-1" style="font-size:clamp(28px,6vw,42px);margin:12px 0 10px">Trois parfums à sentir chez Tanagra</h2><p style="color:var(--muted);margin:0 0 26px">'+(ans.pour==="offrir"?"Réservez-le : la boutique le tient prêt pour votre passage rue Alphonse Karr.":"Réservez-les : une Tanagrette vous les fera sentir et vous aidera à choisir.")+'</p>'+
+   '<div class="grid">'+top.map(function(p){return '<div>'+card(p)+'<p class="why">'+(p.notes.length?"Notes : "+p.notes.slice(0,4).join(", "):(p.d?esc(p.d.slice(0,90))+"…":""))+'</p><button class="btn ghost" style="width:100%;min-height:42px;font-size:14px" data-add="'+p.s+'">Réserver pour le sentir</button></div>'}).join("")+'</div>'+
+   '<p class="hint" style="margin-top:22px">Sélection indicative établie à partir des notes publiées par Tanagra ; elle sera affinée par l’équipe. </p><div class="q-nav"><button id="qRe">Recommencer le guide</button><a class="link" href="#collection" style="align-self:center">Voir tous les parfums</a></div>';
+  el.querySelectorAll("[data-add]").forEach(function(b){b.addEventListener("click",function(){var p=BY[b.getAttribute("data-add")];addToCart(p.s,p.sizes[p.sizes.length-1]||"",true)})});
+  document.getElementById("qRe").addEventListener("click",function(){ans={};qi=0;renderQuiz()});
+}
+
+/* ---------- sélection (panier simulé) ---------- */
+var cart=[];
+function addToCart(slug,size,sample){
+  var f=cart.find(function(l){return l.s===slug&&l.size===size});
+  if(f){f.q++;f.sample=f.sample||sample}else cart.push({s:slug,size:size,q:1,sample:!!sample});
+  renderCart();openDrawer("drawer");
+}
+function renderCart(){
+  var n=cart.reduce(function(a,l){return a+l.q},0);
+  var bd=document.getElementById("badge");bd.textContent=n;bd.hidden=!n;
+  document.getElementById("cartBtn").setAttribute("aria-label","Ma sélection ("+n+" article"+(n>1?"s":"")+")");
+  var body=document.getElementById("drBody"),foot=document.getElementById("drFoot");
+  if(!cart.length){body.innerHTML='<p class="empty">Votre sélection est vide.<br><a class="link" href="#collection" data-close>Découvrir les parfums</a></p>';foot.innerHTML="";bindClose(body);return}
+  body.innerHTML=cart.map(function(l,i){var p=BY[l.s];return '<div class="line-item"><div class="th">'+img(p.i,"")+'</div><div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--clay-d);font-weight:600">'+esc(p.b)+'</div><div style="font-family:var(--serif);font-size:18px;color:var(--umber)">'+esc(p.n)+'</div><div class="hint">'+(l.size||"Contenance à confirmer")+' · Prix en boutique'+(l.sample?'<br>Je souhaite le sentir avant':'')+'</div></div><div class="qty"><button aria-label="Retirer un '+esc(p.n)+'" data-dec="'+i+'">−</button><span aria-live="polite">'+l.q+'</span><button aria-label="Ajouter un '+esc(p.n)+'" data-inc="'+i+'">+</button></div></div>'}).join("")+
+   '<div class="mode" role="radiogroup" aria-label="Mode de retrait"><label><input type="radio" name="mode" checked> <span><strong>Retrait en boutique (click &amp; collect)</strong><br>5 bis rue Alphonse Karr · du mardi au samedi, 10 h – 19 h</span></label><label class="dis"><input type="radio" name="mode" disabled> <span><strong>Livraison à domicile</strong><br>Disponible dès que les prix sont publiés en ligne</span></label></div>';
+  foot.innerHTML='<div style="display:flex;justify-content:space-between;font-size:14px"><span>'+n+' article'+(n>1?"s":"")+'</span><span>Prix confirmés par la boutique</span></div><button class="btn" id="sendRes">Envoyer ma demande de réservation</button><p class="hint" style="margin:0">Aucun paiement maintenant. Tanagra confirme la disponibilité et le prix avant votre passage.</p>';
+  body.querySelectorAll("[data-inc]").forEach(function(b){b.addEventListener("click",function(){cart[+b.getAttribute("data-inc")].q++;renderCart()})});
+  body.querySelectorAll("[data-dec]").forEach(function(b){b.addEventListener("click",function(){var i=+b.getAttribute("data-dec");cart[i].q--;if(cart[i].q<1)cart.splice(i,1);renderCart()})});
+  document.getElementById("sendRes").addEventListener("click",function(){cart=[];renderCart();document.getElementById("drBody").innerHTML='<div class="empty"><p style="font-family:var(--serif);font-size:24px;color:var(--umber);margin:0 0 8px">Merci !</p>Simulation : votre demande est transmise à la boutique. Vous recevez une confirmation de disponibilité et de prix, puis un message quand votre sélection vous attend rue Alphonse Karr.</div>'});
+}
+
+/* ---------- panneaux ---------- */
+var lastFocus=null;
+var scrim=document.getElementById("scrim");
+function openDrawer(id){lastFocus=document.activeElement;var d=document.getElementById(id);d.classList.add("on");scrim.classList.add("on");var c=d.querySelector("[data-close]");if(c)setTimeout(function(){c.focus()},50)}
+function closeAll(){["drawer","nr"].forEach(function(id){document.getElementById(id).classList.remove("on")});scrim.classList.remove("on");closeMenu();if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+function bindClose(root){root.querySelectorAll("[data-close]").forEach(function(b){b.addEventListener("click",closeAll)})}
+bindClose(document);
+scrim.addEventListener("click",closeAll);
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll()});
+document.getElementById("cartBtn").addEventListener("click",function(){renderCart();openDrawer("drawer")});
+document.getElementById("nrBtn").addEventListener("click",function(){openDrawer("nr")});
+var mnav=document.getElementById("mnav"),mbtn=document.getElementById("menuBtn");
+function closeMenu(){mnav.classList.remove("on");mnav.classList.remove("open");mbtn.setAttribute("aria-expanded","false")}
+mbtn.addEventListener("click",function(){mnav.classList.add("open");mbtn.setAttribute("aria-expanded","true");document.getElementById("menuClose").focus()});
+document.getElementById("menuClose").addEventListener("click",function(){closeMenu();mbtn.focus()});
+mnav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",closeMenu)});
+var tt;function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on")},4200)}
+
+/* ---------- routeur ---------- */
+var TITLES={accueil:"Tanagra — Parfumerie de niche & institut de beauté à Nice, depuis 1977",collection:"Parfums de niche à Nice — Tanagra",institut:"Institut de beauté à Nice : soins & réservation — Tanagra",maison:"La Maison Tanagra, rue Alphonse Karr depuis 1977",decouverte:"Trouver mon parfum — Tanagra Nice"};
+function route(){
+  var h=(location.hash||"#accueil").slice(1);var parts=h.split("/");var r=parts[0]||"accueil";
+  var html,after;
+  if(r==="collection"){html=vCollection();after=bindCollection}
+  else if(r==="parfum"){html=vProduct(parts[1]);after=function(){bindProduct(parts[1])};var p=BY[parts[1]];document.title=p?p.n+" "+p.b+" à Nice — Tanagra":"Tanagra"}
+  else if(r==="institut"){html=vInstitut();after=function(){bindInstitut(parts[1]==="reserver")}}
+  else if(r==="maison"){html=vMaison()}
+  else if(r==="decouverte"){html=vDecouverte();after=renderQuiz}
+  else {r="accueil";html=vHome()}
+  app.innerHTML=html;
+  if(TITLES[r])document.title=TITLES[r];
+  document.querySelectorAll("[data-nav]").forEach(function(a){if(a.getAttribute("data-nav")===r||(r==="parfum"&&a.getAttribute("data-nav")==="collection"))a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  if(after)after();
+  if(!(r==="institut"&&parts[1]==="reserver"))window.scrollTo(0,0);
+  app.focus({preventScroll:true});
+}
+window.addEventListener("hashchange",route);
+route();renderCart();
+})();
+</script>
+</body>
+</html>
